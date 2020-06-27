@@ -6,6 +6,6 @@ target 'Donor' do
   use_frameworks!
 
   # Pods for Donor
-  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
 
 end

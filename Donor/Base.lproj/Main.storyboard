@@ -19,13 +19,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="WGU-xF-1x6">
                                 <rect key="frame" x="20" y="92" width="374" height="80"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Login" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xUd-uV-0Vz">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xUd-uV-0Vz">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
                                         <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cbZ-AT-Lmh">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cbZ-AT-Lmh">
                                         <rect key="frame" x="0.0" y="46" width="374" height="34"/>
                                         <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -73,7 +73,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1x-F0-0ny">
                                 <rect key="frame" x="20" y="299.33333333333331" width="374" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <state key="normal" title="Log in">
+                                <state key="normal" title="Switch to Log in">
                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -117,7 +117,7 @@
                         <outlet property="bottomButton" destination="S1x-F0-0ny" id="kfx-Fd-mkH"/>
                         <outlet property="donorLabel" destination="bW6-0v-60f" id="UFH-kK-Tyh"/>
                         <outlet property="donorPatientSwitch" destination="sCu-Bb-mMu" id="dc9-42-Cgc"/>
-                        <outlet property="loginTextField" destination="S1x-F0-0ny" id="bBf-n3-4hJ"/>
+                        <outlet property="loginTextField" destination="xUd-uV-0Vz" id="z9j-vq-O04"/>
                         <outlet property="passwordTextField" destination="cbZ-AT-Lmh" id="0FV-6T-Fyp"/>
                         <outlet property="patientLabel" destination="KPe-OW-719" id="ky2-rU-Orw"/>
                         <outlet property="topButton" destination="65y-hN-tOK" id="RQ6-We-IZ8"/>
