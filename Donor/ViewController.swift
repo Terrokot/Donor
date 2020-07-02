@@ -43,6 +43,8 @@ class ViewController: UIViewController {
                         } else {
                             print("Sign Up Success")
                             print(user?.additionalUserInfo as Any)
+                            self.performSegue(withIdentifier: "patientSegue", sender: nil)
+
                         }
                     }
                 } else {
@@ -53,6 +55,7 @@ class ViewController: UIViewController {
                         } else {
                             print("Log In Success")
                             print(user?.additionalUserInfo as Any)
+                            self.performSegue(withIdentifier: "patientSegue", sender: nil)
                         }
                     }
                 }

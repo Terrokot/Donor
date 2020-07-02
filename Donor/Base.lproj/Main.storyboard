@@ -19,15 +19,15 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="WGU-xF-1x6">
                                 <rect key="frame" x="20" y="92" width="374" height="80"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xUd-uV-0Vz">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="denis@gmail.com" borderStyle="roundedRect" placeholder="email" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xUd-uV-0Vz">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
-                                        <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cbZ-AT-Lmh">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="qwerty" borderStyle="roundedRect" placeholder="Password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cbZ-AT-Lmh">
                                         <rect key="frame" x="0.0" y="46" width="374" height="34"/>
-                                        <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -121,11 +121,82 @@
                         <outlet property="passwordTextField" destination="cbZ-AT-Lmh" id="0FV-6T-Fyp"/>
                         <outlet property="patientLabel" destination="KPe-OW-719" id="ky2-rU-Orw"/>
                         <outlet property="topButton" destination="65y-hN-tOK" id="RQ6-We-IZ8"/>
+                        <segue destination="cEa-JP-NP9" kind="presentation" identifier="patientSegue" modalPresentationStyle="fullScreen" id="esW-kw-Nwj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="98.641304347826093"/>
+        </scene>
+        <!--Patient View Controller-->
+        <scene sceneID="xH6-5S-6c3">
+            <objects>
+                <viewController id="R5D-mA-Hca" customClass="PatientViewController" customModule="Donor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XzD-wG-2lA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Uzd-Fr-rvS">
+                                <rect key="frame" x="20" y="64" width="374" height="374"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Uzd-Fr-rvS" secondAttribute="height" multiplier="1:1" id="QcP-ma-WHy"/>
+                                </constraints>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZqA-nh-n89">
+                                <rect key="frame" x="20" y="458" width="374" height="30"/>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Find a Donor">
+                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="findDonorTapped:" destination="R5D-mA-Hca" eventType="touchUpInside" id="34O-Wi-5J4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UxI-pt-byB" firstAttribute="trailing" secondItem="ZqA-nh-n89" secondAttribute="trailing" constant="20" id="099-kM-3ia"/>
+                            <constraint firstItem="ZqA-nh-n89" firstAttribute="top" secondItem="Uzd-Fr-rvS" secondAttribute="bottom" constant="20" id="5Pn-q1-pfm"/>
+                            <constraint firstItem="UxI-pt-byB" firstAttribute="trailing" secondItem="Uzd-Fr-rvS" secondAttribute="trailing" constant="20" id="94T-F5-tE4"/>
+                            <constraint firstItem="Uzd-Fr-rvS" firstAttribute="leading" secondItem="UxI-pt-byB" secondAttribute="leading" constant="20" id="CUJ-DG-hb0"/>
+                            <constraint firstItem="Uzd-Fr-rvS" firstAttribute="top" secondItem="UxI-pt-byB" secondAttribute="top" constant="20" id="Jvm-HI-fSS"/>
+                            <constraint firstItem="ZqA-nh-n89" firstAttribute="leading" secondItem="UxI-pt-byB" secondAttribute="leading" constant="20" id="Yv1-aQ-q0U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UxI-pt-byB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4ms-oM-Mq0">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="kvr-ma-0YN">
+                            <connections>
+                                <action selector="logoutTapped:" destination="R5D-mA-Hca" id="DpT-7m-77V"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="findDonorButton" destination="ZqA-nh-n89" id="HM4-Lf-Sng"/>
+                        <outlet property="map" destination="Uzd-Fr-rvS" id="PVB-gk-Dby"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k2E-dj-uKI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1930.4347826086957" y="98.641304347826093"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="N5n-IG-45R">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cEa-JP-NP9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bFD-Fh-FRc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="R5D-mA-Hca" kind="relationship" relationship="rootViewController" id="99Z-bS-byz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r3F-tA-Pek" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023.1884057971015" y="98.641304347826093"/>
         </scene>
     </scenes>
 </document>
