@@ -8,23 +8,39 @@
 
 import UIKit
 import MapKit
+import FirebaseAuth
+import FirebaseDatabase
 
-class PatientViewController: UIViewController, CLLocationManagerDelegate {
 
-    @IBOutlet weak var map: MKMapView!
+class PatientViewController: UIViewController {
     
+    @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var findDonorButton: UIButton!
     
-    var locationManager = CLLocationManager()
+    let locationService = LocationService()
+    var userLocation = CLLocationCoordinate2D()
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
         
-
+        // Location service
+        locationService.manager.delegate = self
+        
+        switch locationService.status {
+        case .notDetermined:
+            locationService.getPermission()
+        case .authorizedWhenInUse:
+            break
+        case .restricted:
+            print("Get permission in settings")
+        case .denied:
+            print("Get permission in settings")
+            
+        default: assertionFailure("Location is: \(locationService.status)")
+        }
+        
         // Do any additional setup after loading the view.
     }
     
@@ -35,23 +51,16 @@ class PatientViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func logoutTapped(_ sender: Any) {
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let coord = manager.location?.coordinate {
-            let center = CLLocationCoordinate2D(latitude: coord.latitude, longitude: coord.longitude)
-            let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-            map.setRegion(region, animated: true)
-        }
-    }
-    
-
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
+
+

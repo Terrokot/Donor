@@ -7,5 +7,7 @@ target 'Donor' do
 
   # Pods for Donor
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+
 
 end
