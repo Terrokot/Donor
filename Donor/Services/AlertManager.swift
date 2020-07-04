@@ -13,9 +13,9 @@ class AlertManager {
     
     private init() {}
     
-    static func displayAlert(title:String, message:String, VC: UIViewController) {
+    static func displayAlert(title:String, message:String, vc: UIViewController) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        VC.present(alertController, animated: true, completion: nil)
+        vc.present(alertController, animated: true, completion: nil)
     }
 }

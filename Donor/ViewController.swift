@@ -36,27 +36,25 @@ class ViewController: UIViewController {
         
         switch signUpMode {
         case true:
-            // SING UP
+            // MARK: SING UP
             Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
                 if error == nil {
                     self.performSegue(withIdentifier: "patientSegue", sender: nil)
                 } else {
-                    AlertManager.displayAlert(title: "Error", message: error!.localizedDescription, VC: self)
-                }
+                    AlertManager.displayAlert(title: "Error", message: error!.localizedDescription, vc: self) }
             }
         case false:
-            // LOG IN
+            // MARK: LOG IN
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                 if error == nil {
                     print("Sign Up Success")
                     self.performSegue(withIdentifier: "patientSegue", sender: nil)
                 } else {
-                    AlertManager.displayAlert(title: "Error", message: error!.localizedDescription, VC: self)
+                    AlertManager.displayAlert(title: "Error", message: error!.localizedDescription, vc: self)
                 }
             }
         }
     }
-    
     @IBAction func bottomTapped(_ sender: Any) {
         if signUpMode {
             topButton.setTitle("Log In", for: .normal)
