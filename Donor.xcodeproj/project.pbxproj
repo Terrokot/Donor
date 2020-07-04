@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E82B96FE72FDBFA153B37F7 /* Pods_Donor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3839BBA1FF6E2F47043367 /* Pods_Donor.framework */; };
+		912150A524B0AC5200A80629 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912150A424B0AC5200A80629 /* AlertManager.swift */; };
 		91274C2E24A371A9004C020D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91274C2D24A371A9004C020D /* AppDelegate.swift */; };
 		91274C3224A371A9004C020D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91274C3124A371A9004C020D /* ViewController.swift */; };
 		91274C3524A371A9004C020D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91274C3324A371A9004C020D /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		2C5B2370E0030D2061A80B64 /* Pods-Donor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donor.release.xcconfig"; path = "Target Support Files/Pods-Donor/Pods-Donor.release.xcconfig"; sourceTree = "<group>"; };
+		912150A424B0AC5200A80629 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		91274C2A24A371A9004C020D /* Donor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Donor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91274C2D24A371A9004C020D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91274C3124A371A9004C020D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				9185165524ADE4E200F6B838 /* LocationService.swift */,
+				912150A424B0AC5200A80629 /* AlertManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			files = (
 				91274C3224A371A9004C020D /* ViewController.swift in Sources */,
 				9185165C24AE5EB700F6B838 /* LocationServiceDelegate.swift in Sources */,
+				912150A524B0AC5200A80629 /* AlertManager.swift in Sources */,
 				91274C2E24A371A9004C020D /* AppDelegate.swift in Sources */,
 				9185165624ADE4E200F6B838 /* LocationService.swift in Sources */,
 				91377B2524A7956400B450DF /* PatientViewController.swift in Sources */,

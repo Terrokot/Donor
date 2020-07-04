@@ -15,9 +15,7 @@ extension PatientViewController: CLLocationManagerDelegate  {
         if let coord = manager.location?.coordinate {
             locationService.addAnnotation(coordinate: coord,
                                           map: map,
-                                          userLocation: &userLocation
-            )
-
+                                          userLocation: &userLocation)
         }
     }
   

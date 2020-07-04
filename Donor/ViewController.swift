@@ -31,33 +31,27 @@ class ViewController: UIViewController {
     }
     
     @IBAction func topTapped(_ sender: Any) {
-        if loginTextField.text == "" || passwordTextField.text == "" {
-            displayAlert(title: "Missing Information", message: "You must provide both a email and password")
-        } else {
-            if let email = loginTextField.text, let password = passwordTextField.text {
-                if signUpMode {
-                    // SING UP
-                    Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
-                        if error != nil {
-                            self.displayAlert(title: "Error", message: error!.localizedDescription)
-                        } else {
-                            print("Sign Up Success")
-                            print(user?.additionalUserInfo as Any)
-                            self.performSegue(withIdentifier: "patientSegue", sender: nil)
-
-                        }
-                    }
+        
+        guard let email = loginTextField.text, let password = passwordTextField.text else { return }
+        
+        switch signUpMode {
+        case true:
+            // SING UP
+            Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+                if error == nil {
+                    self.performSegue(withIdentifier: "patientSegue", sender: nil)
                 } else {
-                    // LOG IN
-                    Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-                        if error != nil {
-                            self.displayAlert(title: "Error", message: error!.localizedDescription)
-                        } else {
-                            print("Log In Success")
-                            print(user?.additionalUserInfo as Any)
-                            self.performSegue(withIdentifier: "patientSegue", sender: nil)
-                        }
-                    }
+                    AlertManager.displayAlert(title: "Error", message: error!.localizedDescription, VC: self)
+                }
+            }
+        case false:
+            // LOG IN
+            Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+                if error == nil {
+                    print("Sign Up Success")
+                    self.performSegue(withIdentifier: "patientSegue", sender: nil)
+                } else {
+                    AlertManager.displayAlert(title: "Error", message: error!.localizedDescription, VC: self)
                 }
             }
         }
@@ -80,12 +74,5 @@ class ViewController: UIViewController {
             signUpMode = true
         }
     }
-    
-    func displayAlert(title:String, message:String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
 }
 

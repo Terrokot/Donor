@@ -19,12 +19,11 @@ class PatientViewController: UIViewController {
     
     let locationService = LocationService()
     var userLocation = CLLocationCoordinate2D()
+    var requestHasBeenSent = false
 
     
-    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
+        super.viewDidLoad()        
         // Location service
         locationService.manager.delegate = self
         
@@ -40,12 +39,13 @@ class PatientViewController: UIViewController {
             
         default: assertionFailure("Location is: \(locationService.status)")
         }
-        
-        // Do any additional setup after loading the view.
     }
-    
-    
+        
     @IBAction func findDonorTapped(_ sender: Any) {
+        guard let email = Auth.auth().currentUser?.email else { return }
+
+        let patientRequestDictionary : [String: Any] = ["email": email, "bloodType": "A+", "latitude": userLocation.latitude, "longitude": userLocation.longitude]
+        Database.database().reference().child("PatientsRequests").childByAutoId().setValue(patientRequestDictionary)
     }
     
     @IBAction func logoutTapped(_ sender: Any) {

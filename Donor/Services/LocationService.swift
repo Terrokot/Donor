@@ -26,14 +26,10 @@ class LocationService: NSObject {
         super.init()
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.startUpdatingLocation()
-        
-        
-        
     }
     func getPermission() {
         manager.requestWhenInUseAuthorization()
     }
-    
     
     func getLocation() {
         manager.requestLocation()
@@ -49,9 +45,7 @@ class LocationService: NSObject {
         annotation.coordinate = center
         annotation.title = "Your Location"
         map.addAnnotation(annotation)
-        
     }
-    
 }
 
 
