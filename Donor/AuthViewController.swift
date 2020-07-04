@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class ViewController: UIViewController {
+class AuthViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginTextField: UITextField!
@@ -55,6 +55,7 @@ class ViewController: UIViewController {
             }
         }
     }
+    
     @IBAction func bottomTapped(_ sender: Any) {
         if signUpMode {
             topButton.setTitle("Log In", for: .normal)
