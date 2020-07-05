@@ -21,7 +21,7 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var topButton: UIButton!
     @IBOutlet weak var bottomButton: UIButton!
     
-    var signUpMode = true
+    var signUpMode = false
     //var tapCheck = false
     
     

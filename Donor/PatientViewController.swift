@@ -17,13 +17,18 @@ class PatientViewController: UIViewController {
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var findDonorButton: UIButton!
     
+    var ref: DatabaseReference!
+    
+    
     let locationService = LocationService()
     var userLocation = CLLocationCoordinate2D()
     var requestHasBeenSent = false
-
     
     override func viewDidLoad() {
-        super.viewDidLoad()        
+        super.viewDidLoad()
+        
+        ref = Database.database().reference()
+        
         // Location service
         locationService.manager.delegate = self
         
@@ -40,15 +45,27 @@ class PatientViewController: UIViewController {
         default: assertionFailure("Location is: \(locationService.status)")
         }
     }
-        
+    
     @IBAction func findDonorTapped(_ sender: Any) {
         guard let email = Auth.auth().currentUser?.email else { return }
-
+         if requestHasBeenSent {
+            findDonorButton.setTitle("Find Donor", for: .normal)
+            requestHasBeenSent = false
+            ref.child("PatientsRequests").queryOrdered(byChild: "email").queryEqual(toValue: email).observe(.childAdded, with: { (snapshot) in
+                snapshot.ref.removeValue()
+                self.ref.child("PatientsRequests").removeAllObservers()
+            })
+        } else {
         let patientRequestDictionary : [String: Any] = ["email": email, "bloodType": "A+", "latitude": userLocation.latitude, "longitude": userLocation.longitude]
-        Database.database().reference().child("PatientsRequests").childByAutoId().setValue(patientRequestDictionary)
+        ref.child("PatientsRequests").childByAutoId().setValue(patientRequestDictionary)
+            findDonorButton.setTitle("Cancel Request", for: .normal)
+        requestHasBeenSent = true
+        }
     }
     
     @IBAction func logoutTapped(_ sender: Any) {
+        try? Auth.auth().signOut()
+        navigationController?.dismiss(animated: true, completion: nil)
     }
     
 }
