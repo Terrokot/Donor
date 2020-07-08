@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		5E82B96FE72FDBFA153B37F7 /* Pods_Donor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3839BBA1FF6E2F47043367 /* Pods_Donor.framework */; };
 		912150A524B0AC5200A80629 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912150A424B0AC5200A80629 /* AlertManager.swift */; };
+		91266B2924B5ECB1004B6859 /* DonorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91266B2824B5ECB1004B6859 /* DonorViewController.swift */; };
+		91266B2B24B606FB004B6859 /* AcceptRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91266B2A24B606FB004B6859 /* AcceptRequestViewController.swift */; };
+		91266B3024B60A20004B6859 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91266B2F24B60A20004B6859 /* R.generated.swift */; };
 		91274C2E24A371A9004C020D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91274C2D24A371A9004C020D /* AppDelegate.swift */; };
 		91274C3224A371A9004C020D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91274C3124A371A9004C020D /* AuthViewController.swift */; };
 		91274C3524A371A9004C020D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91274C3324A371A9004C020D /* Main.storyboard */; };
@@ -23,6 +26,9 @@
 /* Begin PBXFileReference section */
 		2C5B2370E0030D2061A80B64 /* Pods-Donor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donor.release.xcconfig"; path = "Target Support Files/Pods-Donor/Pods-Donor.release.xcconfig"; sourceTree = "<group>"; };
 		912150A424B0AC5200A80629 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		91266B2824B5ECB1004B6859 /* DonorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorViewController.swift; sourceTree = "<group>"; };
+		91266B2A24B606FB004B6859 /* AcceptRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptRequestViewController.swift; sourceTree = "<group>"; };
+		91266B2F24B60A20004B6859 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		91274C2A24A371A9004C020D /* Donor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Donor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91274C2D24A371A9004C020D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91274C3124A371A9004C020D /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +64,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		91266B2C24B6070F004B6859 /* Patient */ = {
+			isa = PBXGroup;
+			children = (
+				91377B2424A7956400B450DF /* PatientViewController.swift */,
+			);
+			path = Patient;
+			sourceTree = "<group>";
+		};
+		91266B2D24B6071A004B6859 /* Donor */ = {
+			isa = PBXGroup;
+			children = (
+				91266B2824B5ECB1004B6859 /* DonorViewController.swift */,
+				91266B2A24B606FB004B6859 /* AcceptRequestViewController.swift */,
+			);
+			path = Donor;
+			sourceTree = "<group>";
+		};
 		91274C2124A371A9004C020D = {
 			isa = PBXGroup;
 			children = (
@@ -81,7 +104,8 @@
 			children = (
 				91274C2D24A371A9004C020D /* AppDelegate.swift */,
 				91274C3124A371A9004C020D /* AuthViewController.swift */,
-				91377B2424A7956400B450DF /* PatientViewController.swift */,
+				91266B2C24B6070F004B6859 /* Patient */,
+				91266B2D24B6071A004B6859 /* Donor */,
 				91274C3324A371A9004C020D /* Main.storyboard */,
 				9185165724AE5E4500F6B838 /* Services */,
 				9185165824AE5E6200F6B838 /* Helpers */,
@@ -106,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				9185165B24AE5EB700F6B838 /* LocationServiceDelegate.swift */,
+				91266B2F24B60A20004B6859 /* R.generated.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -127,6 +152,7 @@
 			buildConfigurationList = 91274C3E24A371AB004C020D /* Build configuration list for PBXNativeTarget "Donor" */;
 			buildPhases = (
 				DB7DAFB5CCAE9DF93E33CAF2 /* [CP] Check Pods Manifest.lock */,
+				91266B2E24B609B0004B6859 /* ShellScript */,
 				91274C2624A371A9004C020D /* Sources */,
 				91274C2724A371A9004C020D /* Frameworks */,
 				91274C2824A371A9004C020D /* Resources */,
@@ -206,6 +232,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Donor/Pods-Donor-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		91266B2E24B609B0004B6859 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n\n";
+		};
 		DB7DAFB5CCAE9DF93E33CAF2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -237,7 +282,10 @@
 			files = (
 				91274C3224A371A9004C020D /* AuthViewController.swift in Sources */,
 				9185165C24AE5EB700F6B838 /* LocationServiceDelegate.swift in Sources */,
+				91266B3024B60A20004B6859 /* R.generated.swift in Sources */,
 				912150A524B0AC5200A80629 /* AlertManager.swift in Sources */,
+				91266B2924B5ECB1004B6859 /* DonorViewController.swift in Sources */,
+				91266B2B24B606FB004B6859 /* AcceptRequestViewController.swift in Sources */,
 				91274C2E24A371A9004C020D /* AppDelegate.swift in Sources */,
 				9185165624ADE4E200F6B838 /* LocationService.swift in Sources */,
 				91377B2524A7956400B450DF /* PatientViewController.swift in Sources */,

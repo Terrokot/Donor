@@ -27,7 +27,6 @@ class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     @IBAction func topTapped(_ sender: Any) {
@@ -47,11 +46,10 @@ class AuthViewController: UIViewController {
                         req?.commitChanges(completion: nil)
                         self.performSegue(withIdentifier: "patientSegue", sender: nil)
                     } else {
-                        //DONOR
+                        // DONOR
                         req?.displayName = "Donor"
                         req?.commitChanges(completion: nil)
                         self.performSegue(withIdentifier: "donorSegue", sender: nil)
-
                     }
                     
                 } else {
@@ -67,7 +65,6 @@ class AuthViewController: UIViewController {
                         self.performSegue(withIdentifier: "patientSegue", sender: nil)
                     case "Donor":
                         self.performSegue(withIdentifier: "donorSegue", sender: nil)
-                        print("petuh")
                     default:
                         break
                     }

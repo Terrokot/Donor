@@ -122,7 +122,7 @@
                         <outlet property="patientLabel" destination="KPe-OW-719" id="ky2-rU-Orw"/>
                         <outlet property="topButton" destination="65y-hN-tOK" id="RQ6-We-IZ8"/>
                         <segue destination="cEa-JP-NP9" kind="presentation" identifier="patientSegue" modalPresentationStyle="fullScreen" id="esW-kw-Nwj"/>
-                        <segue destination="pHa-JF-ovs" kind="presentation" identifier="donorSegue" id="OnM-vf-zei"/>
+                        <segue destination="pHa-JF-ovs" kind="presentation" identifier="donorSegue" modalPresentationStyle="fullScreen" id="OnM-vf-zei"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -199,19 +199,19 @@
             </objects>
             <point key="canvasLocation" x="1023.1884057971015" y="98.641304347826093"/>
         </scene>
-        <!--View Controller-->
+        <!--Donor View Controller-->
         <scene sceneID="PyT-PI-6gj">
             <objects>
-                <viewController id="qDx-Y9-5PK" sceneMemberID="viewController">
+                <viewController id="qDx-Y9-5PK" customClass="DonorViewController" customModule="Donor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X5o-MS-D0r">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nJA-vw-Bus">
-                                <rect key="frame" x="0.0" y="56" width="414" height="660"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="HqC-CO-ZEl">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="HqC-CO-ZEl">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HqC-CO-ZEl" id="z7q-dP-ELZ">
@@ -236,15 +236,18 @@
                         <viewLayoutGuide key="safeArea" id="qAN-lQ-3YP"/>
                     </view>
                     <navigationItem key="navigationItem" id="fGQ-MQ-pCP"/>
+                    <connections>
+                        <outlet property="tableView" destination="nJA-vw-Bus" id="za9-hX-awA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="091-bs-QLy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1930" y="853"/>
         </scene>
-        <!--View Controller-->
+        <!--Accept Request View Controller-->
         <scene sceneID="TBj-8Z-oX0">
             <objects>
-                <viewController id="qj3-39-nc0" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AcceptRequestViewController" id="qj3-39-nc0" customClass="AcceptRequestViewController" customModule="Donor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ql5-dq-AoD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -262,7 +265,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pHa-JF-ovs" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sg5-U1-YjG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
