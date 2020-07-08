@@ -27,7 +27,7 @@ class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func topTapped(_ sender: Any) {
@@ -39,19 +39,40 @@ class AuthViewController: UIViewController {
             // MARK: SING UP
             Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
                 if error == nil {
-                    self.performSegue(withIdentifier: "patientSegue", sender: nil)
+                    let req = Auth.auth().currentUser?.createProfileChangeRequest()
+                    
+                    if self.donorPatientSwitch.isOn {
+                        // PATIENT
+                        req?.displayName = "Patient"
+                        req?.commitChanges(completion: nil)
+                        self.performSegue(withIdentifier: "patientSegue", sender: nil)
+                    } else {
+                        //DONOR
+                        req?.displayName = "Donor"
+                        req?.commitChanges(completion: nil)
+                        self.performSegue(withIdentifier: "donorSegue", sender: nil)
+
+                    }
+                    
                 } else {
                     AlertManager.displayAlert(title: "Error", message: error!.localizedDescription, vc: self) }
             }
+            
         case false:
             // MARK: LOG IN
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                 if error == nil {
-                    print("Sign Up Success")
-                    self.performSegue(withIdentifier: "patientSegue", sender: nil)
+                    switch user?.user.displayName {
+                    case "Patient":
+                        self.performSegue(withIdentifier: "patientSegue", sender: nil)
+                    case "Donor":
+                        self.performSegue(withIdentifier: "donorSegue", sender: nil)
+                        print("petuh")
+                    default:
+                        break
+                    }
                 } else {
-                    AlertManager.displayAlert(title: "Error", message: error!.localizedDescription, vc: self)
-                }
+                    AlertManager.displayAlert(title: "Error", message: error!.localizedDescription, vc: self) }
             }
         }
     }
