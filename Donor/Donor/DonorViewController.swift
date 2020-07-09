@@ -12,14 +12,14 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class DonorViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     
     var patientsRequests : [DataSnapshot] = []
     let locationService = LocationService()
     var donorLocation = CLLocationCoordinate2D()
-
+    
     
     
     
@@ -46,6 +46,11 @@ class DonorViewController: UIViewController {
         
         
     }
+    
+    @IBAction func logoutTapped(_ sender: Any) {
+        try? Auth.auth().signOut()
+        navigationController?.dismiss(animated: true, completion: nil)
+    }
 }
 
 extension DonorViewController: UITableViewDelegate, UITableViewDataSource {
@@ -63,11 +68,9 @@ extension DonorViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension DonorViewController: CLLocationManagerDelegate {
-    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-          if let coord = manager.location?.coordinate {
-              donorLocation = coord
-          }
-      }
-    
+        if let coord = manager.location?.coordinate {
+            donorLocation = coord
+        }
+    }
 }

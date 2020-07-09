@@ -236,7 +236,11 @@
                         <viewLayoutGuide key="safeArea" id="qAN-lQ-3YP"/>
                     </view>
                     <navigationItem key="navigationItem" id="fGQ-MQ-pCP">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="NPX-dg-ZKj"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="NPX-dg-ZKj">
+                            <connections>
+                                <action selector="logoutTapped:" destination="qDx-Y9-5PK" id="5S2-al-hBd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="nJA-vw-Bus" id="za9-hX-awA"/>
