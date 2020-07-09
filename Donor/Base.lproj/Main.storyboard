@@ -19,7 +19,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="WGU-xF-1x6">
                                 <rect key="frame" x="20" y="92" width="374" height="80"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="denis@gmail.com" borderStyle="roundedRect" placeholder="email" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xUd-uV-0Vz">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="denisDonor@gmail.com" borderStyle="roundedRect" placeholder="email" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xUd-uV-0Vz">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -235,7 +235,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qAN-lQ-3YP"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fGQ-MQ-pCP"/>
+                    <navigationItem key="navigationItem" id="fGQ-MQ-pCP">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="NPX-dg-ZKj"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="nJA-vw-Bus" id="za9-hX-awA"/>
                     </connections>

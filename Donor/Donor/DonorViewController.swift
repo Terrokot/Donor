@@ -7,27 +7,39 @@
 //
 
 import UIKit
+import CoreLocation
+import FirebaseAuth
+import FirebaseDatabase
 
 class DonorViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    
+    var patientsRequests : [DataSnapshot] = []
+    let locationService = LocationService()
+    var donorLocation = CLLocationCoordinate2D()
+
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        locationService.manager.delegate = self
+        
+        switch locationService.status {
+        case .notDetermined:
+            locationService.getPermission()
+        case .authorizedWhenInUse:
+            break
+        case .restricted:
+            print("Get permission in settings")
+        case .denied:
+            print("Get permission in settings")
+            
+        default: assertionFailure("Location is: \(locationService.status)")
+        }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension DonorViewController: UITableViewDelegate, UITableViewDataSource {
@@ -38,6 +50,18 @@ extension DonorViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
+        let driverCLLocation = CLLocation(latitude: donorLocation.latitude, longitude: donorLocation.longitude)
+        cell.textLabel?.text = "\(driverCLLocation.coordinate)"
         return cell
     }
+}
+
+extension DonorViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+          if let coord = manager.location?.coordinate {
+              donorLocation = coord
+          }
+      }
+    
 }
