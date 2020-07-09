@@ -39,6 +39,12 @@ class DonorViewController: UIViewController {
             
         default: assertionFailure("Location is: \(locationService.status)")
         }
+        
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { (timer) in
+            self.tableView.reloadData()
+        }
+        
+        
     }
 }
 
