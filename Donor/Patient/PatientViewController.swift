@@ -77,6 +77,11 @@ class PatientViewController: UIViewController {
             try? Auth.auth().signOut()
             navigationController?.dismiss(animated: true, completion: nil)
         }
+    
+    @IBAction func selectBloodTypeTapped(_ sender: Any) {
+    }
+    
+    
 }
 
 

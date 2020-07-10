@@ -19,7 +19,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="WGU-xF-1x6">
                                 <rect key="frame" x="20" y="92" width="374" height="80"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="denisDonor@gmail.com" borderStyle="roundedRect" placeholder="email" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xUd-uV-0Vz">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="denisDonor@gmail.com" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xUd-uV-0Vz">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -153,15 +153,37 @@
                                     <action selector="findDonorTapped:" destination="R5D-mA-Hca" eventType="touchUpInside" id="34O-Wi-5J4"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your blood type: A+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tby-X9-a3v">
+                                <rect key="frame" x="20" y="508" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpD-2x-7z6">
+                                <rect key="frame" x="20" y="552" width="374" height="30"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Select blood type">
+                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectBloodTypeTapped:" destination="R5D-mA-Hca" eventType="touchUpInside" id="0o3-H9-puZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="UxI-pt-byB" firstAttribute="trailing" secondItem="ZqA-nh-n89" secondAttribute="trailing" constant="20" id="099-kM-3ia"/>
                             <constraint firstItem="ZqA-nh-n89" firstAttribute="top" secondItem="Uzd-Fr-rvS" secondAttribute="bottom" constant="20" id="5Pn-q1-pfm"/>
                             <constraint firstItem="UxI-pt-byB" firstAttribute="trailing" secondItem="Uzd-Fr-rvS" secondAttribute="trailing" constant="20" id="94T-F5-tE4"/>
+                            <constraint firstItem="SpD-2x-7z6" firstAttribute="leading" secondItem="UxI-pt-byB" secondAttribute="leading" constant="20" id="ABK-14-ltt"/>
                             <constraint firstItem="Uzd-Fr-rvS" firstAttribute="leading" secondItem="UxI-pt-byB" secondAttribute="leading" constant="20" id="CUJ-DG-hb0"/>
+                            <constraint firstItem="UxI-pt-byB" firstAttribute="trailing" secondItem="SpD-2x-7z6" secondAttribute="trailing" constant="20" id="Gre-av-5td"/>
                             <constraint firstItem="Uzd-Fr-rvS" firstAttribute="top" secondItem="UxI-pt-byB" secondAttribute="top" constant="20" id="Jvm-HI-fSS"/>
+                            <constraint firstItem="UxI-pt-byB" firstAttribute="trailing" secondItem="tby-X9-a3v" secondAttribute="trailing" constant="20" id="Ui3-ZP-yRi"/>
                             <constraint firstItem="ZqA-nh-n89" firstAttribute="leading" secondItem="UxI-pt-byB" secondAttribute="leading" constant="20" id="Yv1-aQ-q0U"/>
+                            <constraint firstItem="tby-X9-a3v" firstAttribute="leading" secondItem="UxI-pt-byB" secondAttribute="leading" constant="20" id="Z2G-ob-cnQ"/>
+                            <constraint firstItem="SpD-2x-7z6" firstAttribute="top" secondItem="tby-X9-a3v" secondAttribute="bottom" constant="20" id="cUz-lH-OO3"/>
+                            <constraint firstItem="tby-X9-a3v" firstAttribute="top" secondItem="ZqA-nh-n89" secondAttribute="bottom" constant="20" id="vwx-KD-ZfY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UxI-pt-byB"/>
                     </view>
