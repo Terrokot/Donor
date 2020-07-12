@@ -58,35 +58,33 @@ class PatientViewController: UIViewController {
             })
         }
     }
-        
-        @IBAction func findDonorTapped(_ sender: Any) {
-            guard let email = Auth.auth().currentUser?.email else { return }
-            if requestHasBeenSent {
-                findDonorButton.setTitle("Find Donor", for: .normal)
-                requestHasBeenSent = false
-                ref.child("PatientsRequests").queryOrdered(byChild: "email").queryEqual(toValue: email).observe(.childAdded, with: { (snapshot) in
-                    snapshot.ref.removeValue()
-                    self.ref.child("PatientsRequests").removeAllObservers()
-                })
-            } else {
-                let patientRequestDictionary : [String: Any] = ["email": email, "bloodType": "A+", "latitude": userLocation.latitude, "longitude": userLocation.longitude]
-                ref.child("PatientsRequests").childByAutoId().setValue(patientRequestDictionary)
-                findDonorButton.setTitle("Cancel Request", for: .normal)
-                requestHasBeenSent = true
-            }
+    
+    @IBAction func findDonorTapped(_ sender: Any) {
+        guard let email = Auth.auth().currentUser?.email else { return }
+        if requestHasBeenSent {
+            findDonorButton.setTitle("Find Donor", for: .normal)
+            requestHasBeenSent = false
+            ref.child("PatientsRequests").queryOrdered(byChild: "email").queryEqual(toValue: email).observe(.childAdded, with: { (snapshot) in
+                snapshot.ref.removeValue()
+                self.ref.child("PatientsRequests").removeAllObservers()
+            })
+        } else {
+            let patientRequestDictionary : [String: Any] = ["email": email, "bloodType": "A+", "latitude": userLocation.latitude, "longitude": userLocation.longitude]
+            ref.child("PatientsRequests").childByAutoId().setValue(patientRequestDictionary)
+            findDonorButton.setTitle("Cancel Request", for: .normal)
+            requestHasBeenSent = true
         }
-        
-        @IBAction func logoutTapped(_ sender: Any) {
-            try? Auth.auth().signOut()
-            navigationController?.dismiss(animated: true, completion: nil)
-        }
+    }
+    
+    @IBAction func logoutTapped(_ sender: Any) {
+        try? Auth.auth().signOut()
+        navigationController?.dismiss(animated: true, completion: nil)
+    }
     
     @available(iOS 13.0, *)
     @IBAction func selectBloodTypeTapped(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(identifier: "PickerViewController") as! PickerViewController
+        let vc = R.storyboard.main().instantiateViewController(withIdentifier: "PickerViewController") as! PickerViewController
         vc.pickerViewControllerDelegate = self
-      //  R.storyboard.main.pickerViewController()?.pickerViewControllerDelegate = self
-        vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
     }
 }
