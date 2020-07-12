@@ -16,7 +16,6 @@ class PickerViewController: UIViewController {
 
     @IBOutlet var pickerView: UIPickerView!
     
-    
     var pickerViewControllerDelegate: PickerViewControllerDelegate?
     var data = PatientDataModel()
     let bloodTypes: [String]  = ["O-", "O+", "B-", "B+", "A-", "A+", "AB-", "AB+"]
@@ -24,20 +23,7 @@ class PickerViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    
-    
     @IBAction func doneButton(_ sender: Any) {
         pickerViewControllerDelegate?.sendData(data)
         print(data)
@@ -45,15 +31,17 @@ class PickerViewController: UIViewController {
     }
 }
 
+
+
 extension PickerViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         1
     }
-    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         bloodTypes.count
     }
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return bloodTypes[row] 
     }
