@@ -9,4 +9,5 @@
 import Foundation
 
 struct DonorDataModel {
+    var bloodType: String = ""
 }

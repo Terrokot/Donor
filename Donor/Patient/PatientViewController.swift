@@ -81,17 +81,19 @@ class PatientViewController: UIViewController {
         navigationController?.dismiss(animated: true, completion: nil)
     }
     
-    @available(iOS 13.0, *)
     @IBAction func selectBloodTypeTapped(_ sender: Any) {
-        let vc = R.storyboard.main().instantiateViewController(withIdentifier: "PickerViewController") as! PickerViewController
+        
+        let vc = R.storyboard.main.pickerViewController()!
         vc.pickerViewControllerDelegate = self
         present(vc, animated: true, completion: nil)
+        
     }
+    
 }
 extension PatientViewController: PickerViewControllerDelegate {
     func sendData(_ data: PatientDataModel) {
         patientData = data
-        bloodTypeLabel.text = data.bloodType
+        bloodTypeLabel.text = "You blood type: \(data.bloodType)"
         print(data)
     }
     

@@ -9,5 +9,5 @@
 import Foundation
 
 struct PatientDataModel {
-    var bloodType: String? = nil
+    var bloodType: String = ""
 }
