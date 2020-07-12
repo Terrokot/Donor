@@ -11,17 +11,20 @@ import MapKit
 import FirebaseAuth
 import FirebaseDatabase
 
-
 class PatientViewController: UIViewController {
     
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var findDonorButton: UIButton!
+    
+    @IBOutlet var bloodTypeLabel: UILabel!
+    
     
     var ref: DatabaseReference!
     
     let locationService = LocationService()
     var userLocation = CLLocationCoordinate2D()
     var requestHasBeenSent = false
+    var patientData = PatientDataModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,10 +81,22 @@ class PatientViewController: UIViewController {
             navigationController?.dismiss(animated: true, completion: nil)
         }
     
+    @available(iOS 13.0, *)
     @IBAction func selectBloodTypeTapped(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(identifier: "PickerViewController") as! PickerViewController
+        vc.pickerViewControllerDelegate = self
+      //  R.storyboard.main.pickerViewController()?.pickerViewControllerDelegate = self
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+    }
+}
+extension PatientViewController: PickerViewControllerDelegate {
+    func sendData(_ data: PatientDataModel) {
+        patientData = data
+        bloodTypeLabel.text = data.bloodType
+        print(data)
     }
     
     
 }
-
 

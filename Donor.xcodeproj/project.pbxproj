@@ -23,6 +23,7 @@
 		915DC82B24B8AF6F00707A71 /* PatientDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915DC82A24B8AF6F00707A71 /* PatientDataModel.swift */; };
 		9185165624ADE4E200F6B838 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185165524ADE4E200F6B838 /* LocationService.swift */; };
 		9185165C24AE5EB700F6B838 /* LocationServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185165B24AE5EB700F6B838 /* LocationServiceDelegate.swift */; };
+		918A9E5824BB63D1004778D2 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918A9E5724BB63D1004778D2 /* PickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		915DC82A24B8AF6F00707A71 /* PatientDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDataModel.swift; sourceTree = "<group>"; };
 		9185165524ADE4E200F6B838 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		9185165B24AE5EB700F6B838 /* LocationServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceDelegate.swift; sourceTree = "<group>"; };
+		918A9E5724BB63D1004778D2 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = SOURCE_ROOT; };
 		9F3839BBA1FF6E2F47043367 /* Pods_Donor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Donor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F629AB4ED40A168EA7C3DE52 /* Pods-Donor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donor.debug.xcconfig"; path = "Target Support Files/Pods-Donor/Pods-Donor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				91377B2424A7956400B450DF /* PatientViewController.swift */,
+				918A9E5724BB63D1004778D2 /* PickerViewController.swift */,
 			);
 			path = Patient;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				91266B3024B60A20004B6859 /* R.generated.swift in Sources */,
 				912150A524B0AC5200A80629 /* AlertManager.swift in Sources */,
 				915DC82B24B8AF6F00707A71 /* PatientDataModel.swift in Sources */,
+				918A9E5824BB63D1004778D2 /* PickerViewController.swift in Sources */,
 				91266B2924B5ECB1004B6859 /* DonorViewController.swift in Sources */,
 				91266B2B24B606FB004B6859 /* AcceptRequestViewController.swift in Sources */,
 				91274C2E24A371A9004C020D /* AppDelegate.swift in Sources */,

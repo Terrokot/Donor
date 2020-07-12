@@ -195,6 +195,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bloodTypeLabel" destination="tby-X9-a3v" id="GLf-6L-pgL"/>
                         <outlet property="findDonorButton" destination="ZqA-nh-n89" id="HM4-Lf-Sng"/>
                         <outlet property="map" destination="Uzd-Fr-rvS" id="PVB-gk-Dby"/>
                     </connections>
@@ -202,6 +203,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k2E-dj-uKI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1930.4347826086957" y="98.641304347826093"/>
+        </scene>
+        <!--PickerViewController-->
+        <scene sceneID="a7K-vJ-BDk">
+            <objects>
+                <viewController storyboardIdentifier="PickerViewController" title="PickerViewController" id="ZXm-NQ-IRx" customClass="PickerViewController" customModule="Donor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6cu-jf-At8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xzE-GI-h7j">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Select blood type" id="Drb-od-KMO">
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="z2z-iB-WmL">
+                                            <connections>
+                                                <action selector="doneButton:" destination="ZXm-NQ-IRx" id="GnH-qh-uBl"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTt-Er-Q51">
+                                <rect key="frame" x="20" y="64" width="374" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZXm-NQ-IRx" id="Jlt-kt-pqm"/>
+                                    <outlet property="delegate" destination="ZXm-NQ-IRx" id="Wen-rF-5qK"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xzE-GI-h7j" firstAttribute="trailing" secondItem="eTl-bR-E5d" secondAttribute="trailing" id="15V-fP-guu"/>
+                            <constraint firstItem="xzE-GI-h7j" firstAttribute="leading" secondItem="eTl-bR-E5d" secondAttribute="leading" id="6xr-hP-SxV"/>
+                            <constraint firstItem="xzE-GI-h7j" firstAttribute="top" secondItem="eTl-bR-E5d" secondAttribute="top" id="FnA-2j-Wqe"/>
+                            <constraint firstItem="YTt-Er-Q51" firstAttribute="leading" secondItem="eTl-bR-E5d" secondAttribute="leading" constant="20" id="fj1-LI-BxG"/>
+                            <constraint firstItem="eTl-bR-E5d" firstAttribute="trailing" secondItem="YTt-Er-Q51" secondAttribute="trailing" constant="20" id="g1r-ZC-ulr"/>
+                            <constraint firstItem="YTt-Er-Q51" firstAttribute="top" secondItem="xzE-GI-h7j" secondAttribute="bottom" constant="20" id="tUc-4N-L3m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eTl-bR-E5d"/>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="YTt-Er-Q51" id="ZGt-My-L8Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Zd-z9-bpp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2773.913043478261" y="98.641304347826093"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N5n-IG-45R">

@@ -225,15 +225,21 @@ struct _R: Rswift.Validatable {
       let acceptRequestViewController = StoryboardViewControllerResource<AcceptRequestViewController>(identifier: "AcceptRequestViewController")
       let bundle = R.hostingBundle
       let name = "Main"
+      let pickerViewController = StoryboardViewControllerResource<PickerViewController>(identifier: "PickerViewController")
 
       func acceptRequestViewController(_: Void = ()) -> AcceptRequestViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: acceptRequestViewController)
+      }
+
+      func pickerViewController(_: Void = ()) -> PickerViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: pickerViewController)
       }
 
       static func validate() throws {
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
         if _R.storyboard.main().acceptRequestViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'acceptRequestViewController' could not be loaded from storyboard 'Main' as 'AcceptRequestViewController'.") }
+        if _R.storyboard.main().pickerViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'pickerViewController' could not be loaded from storyboard 'Main' as 'PickerViewController'.") }
       }
 
       fileprivate init() {}
