@@ -51,9 +51,8 @@ class PatientViewController: UIViewController {
         if let email = Auth.auth().currentUser?.email {
             ref.child("PatientsRequests").queryOrdered(byChild: "email").queryEqual(toValue: email).observe(.childAdded, with: { (snapshot) in
                 self.requestHasBeenSent = true
-                self.findDonorButton.setTitle("Cancel Uber", for: .normal)
+                self.findDonorButton.setTitle("Cancel Request", for: .normal)
                 self.ref.child("PatientsRequests").removeAllObservers()
-                
                 
             })
         }
@@ -69,7 +68,7 @@ class PatientViewController: UIViewController {
                 self.ref.child("PatientsRequests").removeAllObservers()
             })
         } else {
-            let patientRequestDictionary : [String: Any] = ["email": email, "bloodType": "A+", "latitude": userLocation.latitude, "longitude": userLocation.longitude]
+            let patientRequestDictionary : [String: Any] = ["email": email, "bloodType": patientData.bloodType, "latitude": userLocation.latitude, "longitude": userLocation.longitude]
             ref.child("PatientsRequests").childByAutoId().setValue(patientRequestDictionary)
             findDonorButton.setTitle("Cancel Request", for: .normal)
             requestHasBeenSent = true
@@ -82,11 +81,9 @@ class PatientViewController: UIViewController {
     }
     
     @IBAction func selectBloodTypeTapped(_ sender: Any) {
-        
         let vc = R.storyboard.main.pickerViewController()!
         vc.pickerViewControllerDelegate = self
         present(vc, animated: true, completion: nil)
-        
     }
     
 }
@@ -96,7 +93,5 @@ extension PatientViewController: PickerViewControllerDelegate {
         bloodTypeLabel.text = "You blood type: \(data.bloodType)"
         print(data)
     }
-    
-    
 }
 
