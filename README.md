@@ -1,6 +1,6 @@
 # Donor
 
-Write in terminal to install pods
+Run in terminal to install pods
 
 ```
 pod install
