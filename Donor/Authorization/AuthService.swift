@@ -13,7 +13,7 @@ class AuthService {
     
     private init() {}
     
-    static func signUpAndLogIn(email: String, password: String, vc: UIViewController, donorPatientSwitch: UISwitch, signUpMode: Bool ) {
+    static func signUpAndLogIn(email: String, password: String, vc: AuthViewController, signUpMode: Bool ) {
         
         if signUpMode {
             // MARK: SING UP
@@ -21,7 +21,7 @@ class AuthService {
                 if error == nil {
                     let req = Auth.auth().currentUser?.createProfileChangeRequest()
                     
-                    if donorPatientSwitch.isOn {
+                    if vc.donorPatientSwitch.isOn {
                         // PATIENT
                         req?.displayName = "Patient"
                         req?.commitChanges(completion: nil)

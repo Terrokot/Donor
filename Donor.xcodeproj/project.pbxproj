@@ -47,7 +47,7 @@
 		9169979124C0656D00280A4F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		9185165524ADE4E200F6B838 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		9185165B24AE5EB700F6B838 /* LocationServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceDelegate.swift; sourceTree = "<group>"; };
-		918A9E5724BB63D1004778D2 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = SOURCE_ROOT; };
+		918A9E5724BB63D1004778D2 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PickerViewController.swift; path = Donor/Patient/PickerViewController.swift; sourceTree = SOURCE_ROOT; };
 		9F3839BBA1FF6E2F47043367 /* Pods_Donor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Donor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F629AB4ED40A168EA7C3DE52 /* Pods-Donor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donor.debug.xcconfig"; path = "Target Support Files/Pods-Donor/Pods-Donor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				91274C3124A371A9004C020D /* AuthViewController.swift */,
+				9169979124C0656D00280A4F /* AuthService.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -149,7 +150,6 @@
 			children = (
 				9185165524ADE4E200F6B838 /* LocationService.swift */,
 				912150A424B0AC5200A80629 /* AlertManager.swift */,
-				9169979124C0656D00280A4F /* AuthService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";

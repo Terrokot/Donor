@@ -30,12 +30,8 @@ class AuthViewController: UIViewController {
     }
     
     @IBAction func topTapped(_ sender: Any) {
-        
         guard let email = loginTextField.text, let password = passwordTextField.text else { return }
-        
-        AuthService.signUpAndLogIn(email: email, password: password, vc: self, donorPatientSwitch: donorPatientSwitch, signUpMode: signUpMode)
-        
-        
+        AuthService.signUpAndLogIn(email: email, password: password, vc: self, signUpMode: signUpMode)
     }
     
     @IBAction func bottomTapped(_ sender: Any) {
