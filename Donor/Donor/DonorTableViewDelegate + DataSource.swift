@@ -19,8 +19,8 @@ extension DonorViewController: UITableViewDataSource {
         
         let snapshot = patientsRequest[indexPath.row]
         if let patientRequestDictionary = snapshot.value as? [String: AnyObject] {
-            if let email = patientRequestDictionary["email"] as? String {
-                cell.textLabel?.text = email
+            if let email = patientRequestDictionary["email"], let bloodType = patientRequestDictionary["bloodType"] {
+                cell.textLabel?.text = "\(email) with blood type:  \(bloodType)"
             }
         }
         
