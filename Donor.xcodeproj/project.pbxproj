@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E82B96FE72FDBFA153B37F7 /* Pods_Donor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3839BBA1FF6E2F47043367 /* Pods_Donor.framework */; };
+		911D23A124C0CF690040BB4F /* DonorTableViewDelegate + DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D23A024C0CF690040BB4F /* DonorTableViewDelegate + DataSource.swift */; };
 		912150A524B0AC5200A80629 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912150A424B0AC5200A80629 /* AlertManager.swift */; };
 		91266B2924B5ECB1004B6859 /* DonorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91266B2824B5ECB1004B6859 /* DonorViewController.swift */; };
 		91266B2B24B606FB004B6859 /* AcceptRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91266B2A24B606FB004B6859 /* AcceptRequestViewController.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		2C5B2370E0030D2061A80B64 /* Pods-Donor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donor.release.xcconfig"; path = "Target Support Files/Pods-Donor/Pods-Donor.release.xcconfig"; sourceTree = "<group>"; };
+		911D23A024C0CF690040BB4F /* DonorTableViewDelegate + DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DonorTableViewDelegate + DataSource.swift"; sourceTree = "<group>"; };
 		912150A424B0AC5200A80629 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		91266B2824B5ECB1004B6859 /* DonorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorViewController.swift; sourceTree = "<group>"; };
 		91266B2A24B606FB004B6859 /* AcceptRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptRequestViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			children = (
 				91266B2824B5ECB1004B6859 /* DonorViewController.swift */,
 				91266B2A24B606FB004B6859 /* AcceptRequestViewController.swift */,
+				911D23A024C0CF690040BB4F /* DonorTableViewDelegate + DataSource.swift */,
 			);
 			path = Donor;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				91266B3024B60A20004B6859 /* R.generated.swift in Sources */,
 				912150A524B0AC5200A80629 /* AlertManager.swift in Sources */,
 				915DC82B24B8AF6F00707A71 /* Patient.swift in Sources */,
+				911D23A124C0CF690040BB4F /* DonorTableViewDelegate + DataSource.swift in Sources */,
 				9169979224C0656D00280A4F /* AuthService.swift in Sources */,
 				918A9E5824BB63D1004778D2 /* PickerViewController.swift in Sources */,
 				91266B2924B5ECB1004B6859 /* DonorViewController.swift in Sources */,

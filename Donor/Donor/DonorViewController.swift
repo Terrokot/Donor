@@ -23,8 +23,8 @@ class DonorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Location
         locationService.manager.delegate = self
-        
         switch locationService.status {
         case .notDetermined:
             locationService.getPermission()
@@ -38,6 +38,10 @@ class DonorViewController: UIViewController {
         default: assertionFailure("Location is: \(locationService.status)")
         }
         
+        Database.database().reference()
+        
+        
+         //MARK: TableView Timer
         Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { (timer) in
             self.tableView.reloadData()
         }
@@ -49,20 +53,7 @@ class DonorViewController: UIViewController {
     }
 }
 
-extension DonorViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
-        let donorCLLocation = CLLocation(latitude: donorLocation.latitude, longitude: donorLocation.longitude)
-        cell.textLabel?.text = "\(donorCLLocation.coordinate)"
-        return cell
-    }
-}
-
+//MARK: CLLocationManagerDelegate
 extension DonorViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let coord = manager.location?.coordinate {

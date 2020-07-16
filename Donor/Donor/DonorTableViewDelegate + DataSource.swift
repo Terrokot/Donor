@@ -1,0 +1,32 @@
+//
+//  DonorTableViewDelegate + DataSource.swift
+//  Donor
+//
+//  Created by Egor Tereshonok on 7/16/20.
+//  Copyright © 2020 Egor Tereshonok. All rights reserved.
+//
+
+import Foundation
+import UIKit
+import CoreLocation
+
+//MARK: DataSource
+extension DonorViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
+        let donorCLLocation = CLLocation(latitude: donorLocation.latitude, longitude: donorLocation.longitude)
+        cell.textLabel?.text = "\(donorCLLocation.coordinate)"
+        return cell
+    }
+}
+
+//MARK: Delegate
+extension DonorViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+}
+
