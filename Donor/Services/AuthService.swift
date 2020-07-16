@@ -32,12 +32,12 @@ class AuthService {
                         req?.commitChanges(completion: nil)
                         vc.performSegue(withIdentifier: "donorSegue", sender: nil)
                     }
-                    
                 } else {
-                    AlertManager.displayAlert(title: "Error", message: error!.localizedDescription, vc: vc) }
+                    AlertManager.displayAlert(title: "Error", message: error!.localizedDescription, vc: vc)
+                }
             }
-        } else {
             
+        } else {
             // MARK: LOG IN
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                 
