@@ -37,15 +37,14 @@ class DonorViewController: UIViewController {
             
         default: assertionFailure("Location is: \(locationService.status)")
         }
-        
-        Database.database().reference().child("PatientsRequests").observe(.childAdded) { (DataSnapshot) in
+        let fireBaseRef = Database.database().reference().child("PatientsRequests")
+        fireBaseRef.observe(.childAdded) { (DataSnapshot) in
             self.patientsRequest.append(DataSnapshot)
             self.tableView.reloadData()
         }
         
-        Database.database().reference().child("PatientsRequests").observe(.childRemoved) { (snapshot) in
+        fireBaseRef.observe(.childRemoved) { (snapshot) in
             self.patientsRequest.removeAll {$0.key == snapshot.key}
-            print(snapshot.key)
             self.tableView.reloadData()
 
         }
