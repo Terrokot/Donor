@@ -116,7 +116,7 @@
 				91266B2C24B6070F004B6859 /* Patient */,
 				91266B2D24B6071A004B6859 /* Donor */,
 				9185165724AE5E4500F6B838 /* Services */,
-				915DC82724B8AEFE00707A71 /* Models */,
+				915DC82724B8AEFE00707A71 /* Model */,
 				9185165824AE5E6200F6B838 /* Helpers */,
 				91274C3324A371A9004C020D /* Main.storyboard */,
 				91274C3824A371AA004C020D /* LaunchScreen.storyboard */,
@@ -127,13 +127,13 @@
 			path = Donor;
 			sourceTree = "<group>";
 		};
-		915DC82724B8AEFE00707A71 /* Models */ = {
+		915DC82724B8AEFE00707A71 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				915DC82A24B8AF6F00707A71 /* PatientDataModel.swift */,
 				915DC82824B8AF3500707A71 /* DonorDataModel.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9169979024C0611500280A4F /* Authorization */ = {
