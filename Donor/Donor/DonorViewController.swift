@@ -21,8 +21,6 @@ class DonorViewController: UIViewController {
     var donorLocation = CLLocationCoordinate2D()
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         locationService.manager.delegate = self
@@ -43,8 +41,6 @@ class DonorViewController: UIViewController {
         Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { (timer) in
             self.tableView.reloadData()
         }
-        
-        
     }
     
     @IBAction func logoutTapped(_ sender: Any) {
@@ -61,8 +57,8 @@ extension DonorViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
-        let driverCLLocation = CLLocation(latitude: donorLocation.latitude, longitude: donorLocation.longitude)
-        cell.textLabel?.text = "\(driverCLLocation.coordinate)"
+        let donorCLLocation = CLLocation(latitude: donorLocation.latitude, longitude: donorLocation.longitude)
+        cell.textLabel?.text = "\(donorCLLocation.coordinate)"
         return cell
     }
 }
