@@ -9,7 +9,7 @@
 import UIKit
 
 protocol PickerViewControllerDelegate {
-    func sendData(_ data: PatientDataModel)
+    func sendData(_ data: Patient)
 }
 
 class PickerViewController: UIViewController {
@@ -17,7 +17,7 @@ class PickerViewController: UIViewController {
     @IBOutlet var pickerView: UIPickerView!
     
     var pickerViewControllerDelegate: PickerViewControllerDelegate?
-    var data = PatientDataModel()
+    var data = Patient()
     let bloodTypes: [String]  = ["O-", "O+", "B-", "B+", "A-", "A+", "AB-", "AB+"]
     override func viewDidLoad() {
         super.viewDidLoad()
