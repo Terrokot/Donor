@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct DonorDataModel {
+struct Donor {
     var bloodType: String = ""
 }

@@ -19,8 +19,8 @@
 		91274C3A24A371AA004C020D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91274C3824A371AA004C020D /* LaunchScreen.storyboard */; };
 		91377B1F24A4FD6500B450DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91377B1E24A4FD6500B450DF /* GoogleService-Info.plist */; };
 		91377B2524A7956400B450DF /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91377B2424A7956400B450DF /* PatientViewController.swift */; };
-		915DC82924B8AF3500707A71 /* DonorDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915DC82824B8AF3500707A71 /* DonorDataModel.swift */; };
-		915DC82B24B8AF6F00707A71 /* PatientDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915DC82A24B8AF6F00707A71 /* PatientDataModel.swift */; };
+		915DC82924B8AF3500707A71 /* Donor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915DC82824B8AF3500707A71 /* Donor.swift */; };
+		915DC82B24B8AF6F00707A71 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915DC82A24B8AF6F00707A71 /* Patient.swift */; };
 		9169979224C0656D00280A4F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9169979124C0656D00280A4F /* AuthService.swift */; };
 		9185165624ADE4E200F6B838 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185165524ADE4E200F6B838 /* LocationService.swift */; };
 		9185165C24AE5EB700F6B838 /* LocationServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185165B24AE5EB700F6B838 /* LocationServiceDelegate.swift */; };
@@ -42,8 +42,8 @@
 		91274C3B24A371AA004C020D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91377B1E24A4FD6500B450DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		91377B2424A7956400B450DF /* PatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
-		915DC82824B8AF3500707A71 /* DonorDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorDataModel.swift; sourceTree = "<group>"; };
-		915DC82A24B8AF6F00707A71 /* PatientDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDataModel.swift; sourceTree = "<group>"; };
+		915DC82824B8AF3500707A71 /* Donor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donor.swift; sourceTree = "<group>"; };
+		915DC82A24B8AF6F00707A71 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		9169979124C0656D00280A4F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		9185165524ADE4E200F6B838 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		9185165B24AE5EB700F6B838 /* LocationServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceDelegate.swift; sourceTree = "<group>"; };
@@ -130,8 +130,8 @@
 		915DC82724B8AEFE00707A71 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				915DC82A24B8AF6F00707A71 /* PatientDataModel.swift */,
-				915DC82824B8AF3500707A71 /* DonorDataModel.swift */,
+				915DC82A24B8AF6F00707A71 /* Patient.swift */,
+				915DC82824B8AF3500707A71 /* Donor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -310,10 +310,10 @@
 			files = (
 				91274C3224A371A9004C020D /* AuthViewController.swift in Sources */,
 				9185165C24AE5EB700F6B838 /* LocationServiceDelegate.swift in Sources */,
-				915DC82924B8AF3500707A71 /* DonorDataModel.swift in Sources */,
+				915DC82924B8AF3500707A71 /* Donor.swift in Sources */,
 				91266B3024B60A20004B6859 /* R.generated.swift in Sources */,
 				912150A524B0AC5200A80629 /* AlertManager.swift in Sources */,
-				915DC82B24B8AF6F00707A71 /* PatientDataModel.swift in Sources */,
+				915DC82B24B8AF6F00707A71 /* Patient.swift in Sources */,
 				9169979224C0656D00280A4F /* AuthService.swift in Sources */,
 				918A9E5824BB63D1004778D2 /* PickerViewController.swift in Sources */,
 				91266B2924B5ECB1004B6859 /* DonorViewController.swift in Sources */,

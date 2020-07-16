@@ -24,7 +24,7 @@ class PatientViewController: UIViewController {
     let locationService = LocationService()
     var userLocation = CLLocationCoordinate2D()
     var requestHasBeenSent = false
-    var patientData = PatientDataModel()
+    var patientData = Patient()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,7 +88,7 @@ class PatientViewController: UIViewController {
     
 }
 extension PatientViewController: PickerViewControllerDelegate {
-    func sendData(_ data: PatientDataModel) {
+    func sendData(_ data: Patient) {
         patientData = data
         bloodTypeLabel.text = "You blood type: \(data.bloodType)"
         print(data)
