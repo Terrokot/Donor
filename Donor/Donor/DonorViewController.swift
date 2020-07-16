@@ -16,7 +16,7 @@ class DonorViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
-    var patientsRequests : [DataSnapshot] = []
+    var patientsRequest : [DataSnapshot] = []
     let locationService = LocationService()
     var donorLocation = CLLocationCoordinate2D()
     
@@ -38,7 +38,10 @@ class DonorViewController: UIViewController {
         default: assertionFailure("Location is: \(locationService.status)")
         }
         
-        Database.database().reference()
+        Database.database().reference().child("PatientsRequests").observe(.childAdded) { (snapshot) in
+            self.patientsRequest.append(snapshot)
+            self.tableView.reloadData()
+        }
         
         
          //MARK: TableView Timer

@@ -16,7 +16,15 @@ extension DonorViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
         let donorCLLocation = CLLocation(latitude: donorLocation.latitude, longitude: donorLocation.longitude)
-        cell.textLabel?.text = "\(donorCLLocation.coordinate)"
+        
+        let snapshot = patientsRequest[indexPath.row]
+        if let patientRequestDictionary = snapshot.value as? [String: AnyObject] {
+            if let email = patientRequestDictionary["email"] as? String {
+                cell.textLabel?.text = email
+            }
+        }
+        
+        
         return cell
     }
 }
@@ -25,7 +33,7 @@ extension DonorViewController: UITableViewDataSource {
 extension DonorViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return patientsRequest.count
     }
     
 }
