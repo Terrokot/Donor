@@ -15,12 +15,20 @@ extension DonorViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
-        let donorCLLocation = CLLocation(latitude: donorLocation.latitude, longitude: donorLocation.longitude)
         
         let snapshot = patientsRequest[indexPath.row]
         if let patientRequestDictionary = snapshot.value as? [String: AnyObject] {
-            if let email = patientRequestDictionary["email"], let bloodType = patientRequestDictionary["bloodType"] {
-                cell.textLabel?.text = "\(email) with blood type:  \(bloodType)"
+            if let email = patientRequestDictionary["email"],
+                let bloodType = patientRequestDictionary["bloodType"],
+                let lat = patientRequestDictionary["latitude"] as? Double,
+                let lon = patientRequestDictionary["longitude"] as? Double
+            {
+                let donorCLLocation = CLLocation(latitude: donorLocation.latitude, longitude: donorLocation.longitude)
+                let patientCLLocation = CLLocation(latitude: lat, longitude: lon)
+                let distance = donorCLLocation.distance(from: patientCLLocation) / 1000
+                let roundedDistance = round(distance * 100) / 100
+                
+                cell.textLabel?.text = "\(email) - \(roundedDistance)km with blood type:  \(bloodType)"
             }
         }
         
