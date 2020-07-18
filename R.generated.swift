@@ -89,47 +89,23 @@ struct R: Rswift.Validatable {
   }
 
   #if os(iOS) || os(tvOS)
-  /// This `R.segue` struct is generated, and contains static references to 1 view controllers.
-  struct segue {
-    /// This struct is generated for `AuthViewController`, and contains static references to 2 segues.
-    struct authViewController {
-      /// Segue identifier `donorSegue`.
-      static let donorSegue: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, AuthViewController, UIKit.UINavigationController> = Rswift.StoryboardSegueIdentifier(identifier: "donorSegue")
-      /// Segue identifier `patientSegue`.
-      static let patientSegue: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, AuthViewController, UIKit.UINavigationController> = Rswift.StoryboardSegueIdentifier(identifier: "patientSegue")
-
-      #if os(iOS) || os(tvOS)
-      /// Optionally returns a typed version of segue `donorSegue`.
-      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
-      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
-      static func donorSegue(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, AuthViewController, UIKit.UINavigationController>? {
-        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.authViewController.donorSegue, segue: segue)
-      }
-      #endif
-
-      #if os(iOS) || os(tvOS)
-      /// Optionally returns a typed version of segue `patientSegue`.
-      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
-      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
-      static func patientSegue(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, AuthViewController, UIKit.UINavigationController>? {
-        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.authViewController.patientSegue, segue: segue)
-      }
-      #endif
-
-      fileprivate init() {}
-    }
-
-    fileprivate init() {}
-  }
-  #endif
-
-  #if os(iOS) || os(tvOS)
-  /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
   struct storyboard {
+    /// Storyboard `Donor`.
+    static let donor = _R.storyboard.donor()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `Main`.
     static let main = _R.storyboard.main()
+    /// Storyboard `Patient`.
+    static let patient = _R.storyboard.patient()
+
+    #if os(iOS) || os(tvOS)
+    /// `UIStoryboard(name: "Donor", bundle: ...)`
+    static func donor(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.donor)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
@@ -142,6 +118,13 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "Main", bundle: ...)`
     static func main(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.main)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIStoryboard(name: "Patient", bundle: ...)`
+    static func patient(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.patient)
     }
     #endif
 
@@ -195,12 +178,46 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       #if os(iOS) || os(tvOS)
+      try donor.validate()
+      #endif
+      #if os(iOS) || os(tvOS)
       try launchScreen.validate()
       #endif
       #if os(iOS) || os(tvOS)
       try main.validate()
       #endif
+      #if os(iOS) || os(tvOS)
+      try patient.validate()
+      #endif
     }
+
+    #if os(iOS) || os(tvOS)
+    struct donor: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = UIKit.UINavigationController
+
+      let acceptRequestViewController = StoryboardViewControllerResource<AcceptRequestViewController>(identifier: "AcceptRequestViewController")
+      let bundle = R.hostingBundle
+      let donorViewController = StoryboardViewControllerResource<DonorViewController>(identifier: "DonorViewController")
+      let name = "Donor"
+
+      func acceptRequestViewController(_: Void = ()) -> AcceptRequestViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: acceptRequestViewController)
+      }
+
+      func donorViewController(_: Void = ()) -> DonorViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: donorViewController)
+      }
+
+      static func validate() throws {
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+        if _R.storyboard.donor().acceptRequestViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'acceptRequestViewController' could not be loaded from storyboard 'Donor' as 'AcceptRequestViewController'.") }
+        if _R.storyboard.donor().donorViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'donorViewController' could not be loaded from storyboard 'Donor' as 'DonorViewController'.") }
+      }
+
+      fileprivate init() {}
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
@@ -222,13 +239,29 @@ struct _R: Rswift.Validatable {
     struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = AuthViewController
 
-      let acceptRequestViewController = StoryboardViewControllerResource<AcceptRequestViewController>(identifier: "AcceptRequestViewController")
       let bundle = R.hostingBundle
       let name = "Main"
+
+      static func validate() throws {
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+      }
+
+      fileprivate init() {}
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    struct patient: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = UIKit.UINavigationController
+
+      let bundle = R.hostingBundle
+      let name = "Patient"
+      let patientViewController = StoryboardViewControllerResource<PatientViewController>(identifier: "PatientViewController")
       let pickerViewController = StoryboardViewControllerResource<PickerViewController>(identifier: "PickerViewController")
 
-      func acceptRequestViewController(_: Void = ()) -> AcceptRequestViewController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: acceptRequestViewController)
+      func patientViewController(_: Void = ()) -> PatientViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: patientViewController)
       }
 
       func pickerViewController(_: Void = ()) -> PickerViewController? {
@@ -238,8 +271,8 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
-        if _R.storyboard.main().acceptRequestViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'acceptRequestViewController' could not be loaded from storyboard 'Main' as 'AcceptRequestViewController'.") }
-        if _R.storyboard.main().pickerViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'pickerViewController' could not be loaded from storyboard 'Main' as 'PickerViewController'.") }
+        if _R.storyboard.patient().patientViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'patientViewController' could not be loaded from storyboard 'Patient' as 'PatientViewController'.") }
+        if _R.storyboard.patient().pickerViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'pickerViewController' could not be loaded from storyboard 'Patient' as 'PickerViewController'.") }
       }
 
       fileprivate init() {}

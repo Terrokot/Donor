@@ -81,7 +81,7 @@ class PatientViewController: UIViewController {
     }
     
     @IBAction func selectBloodTypeTapped(_ sender: Any) {
-        let vc = R.storyboard.main.pickerViewController()!
+        let vc = R.storyboard.patient.pickerViewController()!
         vc.pickerViewControllerDelegate = self
         present(vc, animated: true, completion: nil)
     }

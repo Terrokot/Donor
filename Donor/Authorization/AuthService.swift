@@ -8,6 +8,7 @@
 
 import Foundation
 import FirebaseAuth
+import UIKit
 
 class AuthService {
     
@@ -25,12 +26,15 @@ class AuthService {
                         // PATIENT
                         req?.displayName = "Patient"
                         req?.commitChanges(completion: nil)
-                        vc.performSegue(withIdentifier: "patientSegue", sender: nil)
+                        //vc.performSegue(withIdentifier: "patientSegue", sender: nil)
+                        vc.present(R.storyboard.patient.patientViewController()!, animated: true, completion: nil)
                     } else {
                         // DONOR
                         req?.displayName = "Donor"
                         req?.commitChanges(completion: nil)
-                        vc.performSegue(withIdentifier: "donorSegue", sender: nil)
+                            // vc.performSegue(withIdentifier: "donorSegue", sender: nil)
+                        vc.present(R.storyboard.donor.donorViewController()!, animated: true, completion: nil)
+                        
                     }
                 } else {
                     AlertManager.displayAlert(title: "Error", message: error!.localizedDescription, vc: vc)
@@ -43,9 +47,11 @@ class AuthService {
                 
                 switch user?.user.displayName {
                 case "Patient":
-                    vc.performSegue(withIdentifier: "patientSegue", sender: nil)
+                    //vc.performSegue(withIdentifier: "patientSegue", sender: nil)
+                    vc.present(R.storyboard.patient.patientViewController()!, animated: true, completion: nil)
                 case "Donor":
-                    vc.performSegue(withIdentifier: "donorSegue", sender: nil)
+                    //vc.performSegue(withIdentifier: "donorSegue", sender: nil)
+                    vc.present(R.storyboard.donor.donorViewController()!, animated: true, completion: nil)
                 default: //ERRORS
                     AlertManager.displayAlert(title: "Error", message: error!.localizedDescription, vc: vc)
                 }

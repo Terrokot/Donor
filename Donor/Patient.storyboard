@@ -11,7 +11,7 @@
         <!--Patient View Controller-->
         <scene sceneID="Gcn-LQ-Sbr">
             <objects>
-                <viewController id="2QQ-Vw-Fvn" customClass="PatientViewController" customModule="Donor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PatientViewController" modalPresentationStyle="fullScreen" id="2QQ-Vw-Fvn" customClass="PatientViewController" customModule="Donor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qbq-90-8dg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
