@@ -214,6 +214,7 @@ struct _R: Rswift.Validatable {
       let bundle = R.hostingBundle
       let donorViewController = StoryboardViewControllerResource<DonorViewController>(identifier: "DonorViewController")
       let name = "Donor"
+      let navigationController = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "NavigationController")
 
       func acceptRequestViewController(_: Void = ()) -> AcceptRequestViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: acceptRequestViewController)
@@ -223,11 +224,16 @@ struct _R: Rswift.Validatable {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: donorViewController)
       }
 
+      func navigationController(_: Void = ()) -> UIKit.UINavigationController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: navigationController)
+      }
+
       static func validate() throws {
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
         if _R.storyboard.donor().acceptRequestViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'acceptRequestViewController' could not be loaded from storyboard 'Donor' as 'AcceptRequestViewController'.") }
         if _R.storyboard.donor().donorViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'donorViewController' could not be loaded from storyboard 'Donor' as 'DonorViewController'.") }
+        if _R.storyboard.donor().navigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'navigationController' could not be loaded from storyboard 'Donor' as 'UIKit.UINavigationController'.") }
       }
 
       fileprivate init() {}
@@ -273,8 +279,13 @@ struct _R: Rswift.Validatable {
 
       let bundle = R.hostingBundle
       let name = "Patient"
+      let navigationController = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "NavigationController")
       let patientViewController = StoryboardViewControllerResource<PatientViewController>(identifier: "PatientViewController")
       let pickerViewController = StoryboardViewControllerResource<PickerViewController>(identifier: "PickerViewController")
+
+      func navigationController(_: Void = ()) -> UIKit.UINavigationController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: navigationController)
+      }
 
       func patientViewController(_: Void = ()) -> PatientViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: patientViewController)
@@ -287,6 +298,7 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
+        if _R.storyboard.patient().navigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'navigationController' could not be loaded from storyboard 'Patient' as 'UIKit.UINavigationController'.") }
         if _R.storyboard.patient().patientViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'patientViewController' could not be loaded from storyboard 'Patient' as 'PatientViewController'.") }
         if _R.storyboard.patient().pickerViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'pickerViewController' could not be loaded from storyboard 'Patient' as 'PickerViewController'.") }
       }
