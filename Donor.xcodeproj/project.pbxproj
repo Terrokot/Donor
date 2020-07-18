@@ -20,12 +20,14 @@
 		91274C3A24A371AA004C020D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91274C3824A371AA004C020D /* LaunchScreen.storyboard */; };
 		91377B1F24A4FD6500B450DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91377B1E24A4FD6500B450DF /* GoogleService-Info.plist */; };
 		91377B2524A7956400B450DF /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91377B2424A7956400B450DF /* PatientViewController.swift */; };
+		9137F9F024C332D400EF5F04 /* Donor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9137F9EF24C332D400EF5F04 /* Donor.storyboard */; };
 		915DC82924B8AF3500707A71 /* Donor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915DC82824B8AF3500707A71 /* Donor.swift */; };
 		915DC82B24B8AF6F00707A71 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915DC82A24B8AF6F00707A71 /* Patient.swift */; };
 		9169979224C0656D00280A4F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9169979124C0656D00280A4F /* AuthService.swift */; };
 		9185165624ADE4E200F6B838 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185165524ADE4E200F6B838 /* LocationService.swift */; };
 		9185165C24AE5EB700F6B838 /* LocationServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185165B24AE5EB700F6B838 /* LocationServiceDelegate.swift */; };
 		918A9E5824BB63D1004778D2 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918A9E5724BB63D1004778D2 /* PickerViewController.swift */; };
+		918F275824C3366900636B01 /* Patient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 918F275724C3366900636B01 /* Patient.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,12 +46,14 @@
 		91274C3B24A371AA004C020D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91377B1E24A4FD6500B450DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		91377B2424A7956400B450DF /* PatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
+		9137F9EF24C332D400EF5F04 /* Donor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Donor.storyboard; sourceTree = "<group>"; };
 		915DC82824B8AF3500707A71 /* Donor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donor.swift; sourceTree = "<group>"; };
 		915DC82A24B8AF6F00707A71 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		9169979124C0656D00280A4F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		9185165524ADE4E200F6B838 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		9185165B24AE5EB700F6B838 /* LocationServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceDelegate.swift; sourceTree = "<group>"; };
 		918A9E5724BB63D1004778D2 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PickerViewController.swift; path = Donor/Patient/PickerViewController.swift; sourceTree = SOURCE_ROOT; };
+		918F275724C3366900636B01 /* Patient.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Patient.storyboard; sourceTree = "<group>"; };
 		9F3839BBA1FF6E2F47043367 /* Pods_Donor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Donor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F629AB4ED40A168EA7C3DE52 /* Pods-Donor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donor.debug.xcconfig"; path = "Target Support Files/Pods-Donor/Pods-Donor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +126,8 @@
 				915DC82724B8AEFE00707A71 /* Model */,
 				9185165824AE5E6200F6B838 /* Helpers */,
 				91274C3324A371A9004C020D /* Main.storyboard */,
+				9137F9EF24C332D400EF5F04 /* Donor.storyboard */,
+				918F275724C3366900636B01 /* Patient.storyboard */,
 				91274C3824A371AA004C020D /* LaunchScreen.storyboard */,
 				91274C3B24A371AA004C020D /* Info.plist */,
 				91377B1E24A4FD6500B450DF /* GoogleService-Info.plist */,
@@ -237,8 +243,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				91274C3A24A371AA004C020D /* LaunchScreen.storyboard in Resources */,
+				9137F9F024C332D400EF5F04 /* Donor.storyboard in Resources */,
 				91377B1F24A4FD6500B450DF /* GoogleService-Info.plist in Resources */,
 				91274C3724A371AA004C020D /* Assets.xcassets in Resources */,
+				918F275824C3366900636B01 /* Patient.storyboard in Resources */,
 				91274C3524A371A9004C020D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

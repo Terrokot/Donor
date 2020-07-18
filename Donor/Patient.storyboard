@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FJ7-HM-Vff">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Patient View Controller-->
+        <scene sceneID="Gcn-LQ-Sbr">
+            <objects>
+                <viewController id="2QQ-Vw-Fvn" customClass="PatientViewController" customModule="Donor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qbq-90-8dg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mmD-dH-BFS">
+                                <rect key="frame" x="20" y="108" width="374" height="374"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mmD-dH-BFS" secondAttribute="height" multiplier="1:1" id="H0W-N1-OFy"/>
+                                </constraints>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0D-aG-zwE">
+                                <rect key="frame" x="20" y="502" width="374" height="30"/>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Find a Donor">
+                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="findDonorTapped:" destination="2QQ-Vw-Fvn" eventType="touchUpInside" id="eRx-Qg-HuL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your blood type:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCw-xe-TO8">
+                                <rect key="frame" x="20" y="552" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Aj-Jp-FSd">
+                                <rect key="frame" x="20" y="596" width="374" height="30"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Select blood type">
+                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectBloodTypeTapped:" destination="2QQ-Vw-Fvn" eventType="touchUpInside" id="uSE-Mo-m0C"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0hp-w4-jkQ" firstAttribute="trailing" secondItem="0Aj-Jp-FSd" secondAttribute="trailing" constant="20" id="0xu-rt-fhn"/>
+                            <constraint firstItem="n0D-aG-zwE" firstAttribute="top" secondItem="mmD-dH-BFS" secondAttribute="bottom" constant="20" id="5lI-Ap-VFR"/>
+                            <constraint firstItem="0hp-w4-jkQ" firstAttribute="trailing" secondItem="n0D-aG-zwE" secondAttribute="trailing" constant="20" id="5sN-kf-Hv6"/>
+                            <constraint firstItem="0Aj-Jp-FSd" firstAttribute="top" secondItem="CCw-xe-TO8" secondAttribute="bottom" constant="20" id="6h5-Ib-fdz"/>
+                            <constraint firstItem="CCw-xe-TO8" firstAttribute="leading" secondItem="0hp-w4-jkQ" secondAttribute="leading" constant="20" id="JnL-af-X49"/>
+                            <constraint firstItem="mmD-dH-BFS" firstAttribute="leading" secondItem="0hp-w4-jkQ" secondAttribute="leading" constant="20" id="YG2-Vt-dRM"/>
+                            <constraint firstItem="0hp-w4-jkQ" firstAttribute="trailing" secondItem="mmD-dH-BFS" secondAttribute="trailing" constant="20" id="dgX-Di-QuU"/>
+                            <constraint firstItem="mmD-dH-BFS" firstAttribute="top" secondItem="0hp-w4-jkQ" secondAttribute="top" constant="20" id="ff6-3B-G35"/>
+                            <constraint firstItem="0hp-w4-jkQ" firstAttribute="trailing" secondItem="CCw-xe-TO8" secondAttribute="trailing" constant="20" id="huK-wP-GIn"/>
+                            <constraint firstItem="n0D-aG-zwE" firstAttribute="leading" secondItem="0hp-w4-jkQ" secondAttribute="leading" constant="20" id="khc-4q-pDZ"/>
+                            <constraint firstItem="CCw-xe-TO8" firstAttribute="top" secondItem="n0D-aG-zwE" secondAttribute="bottom" constant="20" id="mKd-Jm-Ssq"/>
+                            <constraint firstItem="0Aj-Jp-FSd" firstAttribute="leading" secondItem="0hp-w4-jkQ" secondAttribute="leading" constant="20" id="yN3-a4-LFX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0hp-w4-jkQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="w17-Nc-Xf2">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="G9h-pL-sqT">
+                            <connections>
+                                <action selector="logoutTapped:" destination="2QQ-Vw-Fvn" id="iax-RJ-dBh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bloodTypeLabel" destination="CCw-xe-TO8" id="4Vo-vI-Yof"/>
+                        <outlet property="findDonorButton" destination="n0D-aG-zwE" id="BAr-KD-dnR"/>
+                        <outlet property="map" destination="mmD-dH-BFS" id="CCg-vt-81v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MXE-uQ-thU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1930.4347826086957" y="98.641304347826093"/>
+        </scene>
+        <!--PickerViewController-->
+        <scene sceneID="map-uc-iln">
+            <objects>
+                <viewController storyboardIdentifier="PickerViewController" title="PickerViewController" id="MMw-sm-EpC" customClass="PickerViewController" customModule="Donor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IeB-14-dXX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMK-3Y-6T6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Select blood type" id="wBW-1m-neX">
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="FHy-eG-dWF">
+                                            <connections>
+                                                <action selector="doneButton:" destination="MMw-sm-EpC" id="PQF-1e-lN1"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahm-HL-6oF">
+                                <rect key="frame" x="20" y="108" width="374" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="MMw-sm-EpC" id="LDc-8d-N57"/>
+                                    <outlet property="delegate" destination="MMw-sm-EpC" id="IiG-At-Jau"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ahm-HL-6oF" firstAttribute="leading" secondItem="WRd-Se-5DM" secondAttribute="leading" constant="20" id="8XB-eR-tsE"/>
+                            <constraint firstItem="TMK-3Y-6T6" firstAttribute="leading" secondItem="WRd-Se-5DM" secondAttribute="leading" id="NFv-qT-iNZ"/>
+                            <constraint firstItem="TMK-3Y-6T6" firstAttribute="top" secondItem="WRd-Se-5DM" secondAttribute="top" id="Qn9-SK-yTw"/>
+                            <constraint firstItem="WRd-Se-5DM" firstAttribute="trailing" secondItem="ahm-HL-6oF" secondAttribute="trailing" constant="20" id="hfD-9B-Vb4"/>
+                            <constraint firstItem="ahm-HL-6oF" firstAttribute="top" secondItem="TMK-3Y-6T6" secondAttribute="bottom" constant="20" id="kSA-Kg-Zub"/>
+                            <constraint firstItem="TMK-3Y-6T6" firstAttribute="trailing" secondItem="WRd-Se-5DM" secondAttribute="trailing" id="lid-AG-TFU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WRd-Se-5DM"/>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="ahm-HL-6oF" id="bbX-Fc-smw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xOG-dk-3VV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2773.913043478261" y="98.641304347826093"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YU3-y2-wl4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FJ7-HM-Vff" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H0x-T8-hUP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2QQ-Vw-Fvn" kind="relationship" relationship="rootViewController" id="tzA-FK-b5P"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="42L-mq-cJi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023.1884057971015" y="98.641304347826093"/>
+        </scene>
+    </scenes>
+</document>
