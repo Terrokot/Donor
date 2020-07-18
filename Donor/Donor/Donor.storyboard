@@ -27,39 +27,33 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="Z0q-uj-Jez">
-                                                    <rect key="frame" x="30" y="76.333333333333329" width="354" height="20.333333333333329"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EW3-F2-Kvi">
-                                                            <rect key="frame" x="0.0" y="0.0" width="210.33333333333334" height="20.333333333333332"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blood type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o30-LO-Cqe">
-                                                            <rect key="frame" x="271.33333333333331" y="0.0" width="82.666666666666686" height="20.333333333333332"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EW3-F2-Kvi">
+                                                    <rect key="frame" x="10" y="70.333333333333329" width="30" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AI-qX-lfs">
-                                                    <rect key="frame" x="30" y="15.999999999999998" width="354" height="20.333333333333329"/>
+                                                    <rect key="frame" x="10" y="9.9999999999999982" width="394" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blood type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o30-LO-Cqe">
+                                                    <rect key="frame" x="311.33333333333331" y="70.333333333333329" width="82.666666666666686" height="20.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Z0q-uj-Jez" firstAttribute="top" secondItem="0AI-qX-lfs" secondAttribute="bottom" constant="40" id="5lc-oD-UBp"/>
-                                                <constraint firstItem="0AI-qX-lfs" firstAttribute="leading" secondItem="WUj-Hh-pil" secondAttribute="leadingMargin" constant="10" id="Fcs-kW-VvU"/>
-                                                <constraint firstItem="Z0q-uj-Jez" firstAttribute="leading" secondItem="WUj-Hh-pil" secondAttribute="leadingMargin" constant="10" id="J6r-7f-Q3h"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="0AI-qX-lfs" secondAttribute="trailing" constant="10" id="bX2-pW-ZYu"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Z0q-uj-Jez" secondAttribute="trailing" constant="10" id="bl7-CG-dtl"/>
-                                                <constraint firstItem="0AI-qX-lfs" firstAttribute="top" secondItem="WUj-Hh-pil" secondAttribute="topMargin" constant="5" id="pcu-vP-DlS"/>
+                                                <constraint firstAttribute="trailing" secondItem="0AI-qX-lfs" secondAttribute="trailing" constant="10" id="0VN-0S-geT"/>
+                                                <constraint firstItem="0AI-qX-lfs" firstAttribute="leading" secondItem="WUj-Hh-pil" secondAttribute="leading" constant="10" id="Wka-LR-Rag"/>
+                                                <constraint firstItem="o30-LO-Cqe" firstAttribute="top" secondItem="0AI-qX-lfs" secondAttribute="bottom" constant="40" id="dts-cH-Rwr"/>
+                                                <constraint firstItem="0AI-qX-lfs" firstAttribute="top" secondItem="WUj-Hh-pil" secondAttribute="top" constant="10" id="iLM-Tb-vQi"/>
+                                                <constraint firstItem="EW3-F2-Kvi" firstAttribute="leading" secondItem="WUj-Hh-pil" secondAttribute="leading" constant="10" id="isp-ct-dGR"/>
+                                                <constraint firstItem="EW3-F2-Kvi" firstAttribute="top" secondItem="0AI-qX-lfs" secondAttribute="bottom" constant="40" id="ma4-NB-idD"/>
+                                                <constraint firstAttribute="trailing" secondItem="o30-LO-Cqe" secondAttribute="trailing" constant="20" id="y4w-rm-XVV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
