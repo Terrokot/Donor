@@ -91,14 +91,21 @@ struct R: Rswift.Validatable {
   #if os(iOS) || os(tvOS)
   /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
   struct storyboard {
+    /// Storyboard `Authorization`.
+    static let authorization = _R.storyboard.authorization()
     /// Storyboard `Donor`.
     static let donor = _R.storyboard.donor()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
-    /// Storyboard `Main`.
-    static let main = _R.storyboard.main()
     /// Storyboard `Patient`.
     static let patient = _R.storyboard.patient()
+
+    #if os(iOS) || os(tvOS)
+    /// `UIStoryboard(name: "Authorization", bundle: ...)`
+    static func authorization(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.authorization)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIStoryboard(name: "Donor", bundle: ...)`
@@ -111,13 +118,6 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.launchScreen)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIStoryboard(name: "Main", bundle: ...)`
-    static func main(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.main)
     }
     #endif
 
@@ -193,18 +193,34 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       #if os(iOS) || os(tvOS)
+      try authorization.validate()
+      #endif
+      #if os(iOS) || os(tvOS)
       try donor.validate()
       #endif
       #if os(iOS) || os(tvOS)
       try launchScreen.validate()
       #endif
       #if os(iOS) || os(tvOS)
-      try main.validate()
-      #endif
-      #if os(iOS) || os(tvOS)
       try patient.validate()
       #endif
     }
+
+    #if os(iOS) || os(tvOS)
+    struct authorization: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = AuthViewController
+
+      let bundle = R.hostingBundle
+      let name = "Authorization"
+
+      static func validate() throws {
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+      }
+
+      fileprivate init() {}
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     struct donor: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
@@ -249,22 +265,6 @@ struct _R: Rswift.Validatable {
 
       static func validate() throws {
         if UIKit.UIImage(named: "loadingCat", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'loadingCat' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
-        if #available(iOS 11.0, tvOS 11.0, *) {
-        }
-      }
-
-      fileprivate init() {}
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = AuthViewController
-
-      let bundle = R.hostingBundle
-      let name = "Main"
-
-      static func validate() throws {
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }
