@@ -31,11 +31,8 @@ extension DonorViewController: UITableViewDataSource {
                 cell.nameLabel.text = "\(email)"
                 cell.distLabel.text = "\(roundedDistance)km"
                 cell.bloodTypeLabel.text = "Blood type:\(bloodType)"
-                
-                //cell.textLabel?.text = "\(email) - \(roundedDistance)km with blood type:  \(bloodType)"
             }
         }
-        
         
         return cell
     }
