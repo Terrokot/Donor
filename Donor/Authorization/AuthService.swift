@@ -26,7 +26,7 @@ class AuthService {
                         // PATIENT
                         req?.displayName = "Patient"
                         req?.commitChanges(completion: nil)
-                        //vc.performSegue(withIdentifier: "patientSegue", sender: nil)
+                            //vc.performSegue(withIdentifier: "patientSegue", sender: nil)
                         vc.present(R.storyboard.patient.navigationController()!, animated: true, completion: nil)
                     } else {
                         // DONOR
