@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E82B96FE72FDBFA153B37F7 /* Pods_Donor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3839BBA1FF6E2F47043367 /* Pods_Donor.framework */; };
+		91136AC624C3A39400771C3B /* DonorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91136AC524C3A39400771C3B /* DonorCell.swift */; };
 		911D23A124C0CF690040BB4F /* DonorTableViewDelegate + DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D23A024C0CF690040BB4F /* DonorTableViewDelegate + DataSource.swift */; };
 		912150A524B0AC5200A80629 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912150A424B0AC5200A80629 /* AlertManager.swift */; };
 		91266B2924B5ECB1004B6859 /* DonorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91266B2824B5ECB1004B6859 /* DonorViewController.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		2C5B2370E0030D2061A80B64 /* Pods-Donor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donor.release.xcconfig"; path = "Target Support Files/Pods-Donor/Pods-Donor.release.xcconfig"; sourceTree = "<group>"; };
+		91136AC524C3A39400771C3B /* DonorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorCell.swift; sourceTree = "<group>"; };
 		911D23A024C0CF690040BB4F /* DonorTableViewDelegate + DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DonorTableViewDelegate + DataSource.swift"; sourceTree = "<group>"; };
 		912150A424B0AC5200A80629 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		91266B2824B5ECB1004B6859 /* DonorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				91266B2824B5ECB1004B6859 /* DonorViewController.swift */,
 				91266B2A24B606FB004B6859 /* AcceptRequestViewController.swift */,
 				911D23A024C0CF690040BB4F /* DonorTableViewDelegate + DataSource.swift */,
+				91136AC524C3A39400771C3B /* DonorCell.swift */,
 				9137F9EF24C332D400EF5F04 /* Donor.storyboard */,
 			);
 			path = Donor;
@@ -333,6 +336,7 @@
 				91274C2E24A371A9004C020D /* AppDelegate.swift in Sources */,
 				9185165624ADE4E200F6B838 /* LocationService.swift in Sources */,
 				91377B2524A7956400B450DF /* PatientViewController.swift in Sources */,
+				91136AC624C3A39400771C3B /* DonorCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
