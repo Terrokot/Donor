@@ -54,7 +54,7 @@
 		9169979124C0656D00280A4F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		9185165524ADE4E200F6B838 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		9185165B24AE5EB700F6B838 /* LocationServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceDelegate.swift; sourceTree = "<group>"; };
-		918A9E5724BB63D1004778D2 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PickerViewController.swift; path = Donor/Patient/PickerViewController.swift; sourceTree = SOURCE_ROOT; };
+		918A9E5724BB63D1004778D2 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PickerViewController.swift; path = Donor/UI/Patient/PickerViewController.swift; sourceTree = SOURCE_ROOT; };
 		918F275724C3366900636B01 /* Patient.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Patient.storyboard; sourceTree = "<group>"; };
 		9F3839BBA1FF6E2F47043367 /* Pods_Donor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Donor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F629AB4ED40A168EA7C3DE52 /* Pods-Donor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donor.debug.xcconfig"; path = "Target Support Files/Pods-Donor/Pods-Donor.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				91314E7B24C447600065C3B1 /* Controllers */,
-				911D23A024C0CF690040BB4F /* DonorTableViewDelegate + DataSource.swift */,
 				91136AC524C3A39400771C3B /* DonorCell.swift */,
 				9137F9EF24C332D400EF5F04 /* Donor.storyboard */,
 			);
@@ -123,9 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				91274C2D24A371A9004C020D /* AppDelegate.swift */,
-				9169979024C0611500280A4F /* Authorization */,
-				91266B2C24B6070F004B6859 /* Patient */,
-				91266B2D24B6071A004B6859 /* Donor */,
+				918F275924C4C11000636B01 /* UI */,
 				9185165724AE5E4500F6B838 /* Services */,
 				915DC82724B8AEFE00707A71 /* Model */,
 				9185165824AE5E6200F6B838 /* Helpers */,
@@ -142,6 +139,7 @@
 			children = (
 				91266B2824B5ECB1004B6859 /* DonorViewController.swift */,
 				91266B2A24B606FB004B6859 /* AcceptRequestViewController.swift */,
+				911D23A024C0CF690040BB4F /* DonorTableViewDelegate + DataSource.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -181,6 +179,16 @@
 				91266B2F24B60A20004B6859 /* R.generated.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		918F275924C4C11000636B01 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9169979024C0611500280A4F /* Authorization */,
+				91266B2C24B6070F004B6859 /* Patient */,
+				91266B2D24B6071A004B6859 /* Donor */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		B8A06182CB6B445F8C11C4D6 /* Pods */ = {
@@ -488,7 +496,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F629AB4ED40A168EA7C3DE52 /* Pods-Donor.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3379Y22T2W;
 				INFOPLIST_FILE = Donor/Info.plist;
@@ -508,7 +516,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2C5B2370E0030D2061A80B64 /* Pods-Donor.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3379Y22T2W;
 				INFOPLIST_FILE = Donor/Info.plist;
