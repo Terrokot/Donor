@@ -49,5 +49,21 @@ extension DonorViewController: UITableViewDelegate {
         return patientsRequest.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedUserData = patientsRequest[indexPath.row]
+        
+        if let patientRequestDictionary = selectedUserData.value as? [String: AnyObject] {
+            if let email = patientRequestDictionary["email"],
+                // let bloodType = patientRequestDictionary["bloodType"],
+                let lat = patientRequestDictionary["latitude"] as? Double,
+                let lon = patientRequestDictionary["longitude"] as? Double
+            {
+                let acceptVC = R.storyboard.donor.acceptRequestViewController()!
+                acceptVC.requestEmail = "\(email)"
+                acceptVC.DonorLocation = self.donorLocation
+                acceptVC.requestLocation = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+                present(acceptVC, animated: true, completion: nil)
+            }
+        }
+    }
 }
-

@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import CoreLocation
 
 class AcceptRequestViewController: UIViewController {
+    
+    var requestLocation = CLLocationCoordinate2D()
+    var DonorLocation = CLLocationCoordinate2D()
+    var requestEmail = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
