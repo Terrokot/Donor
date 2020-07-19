@@ -146,10 +146,82 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 1 images.
+  /// This `R.image` struct is generated, and contains static references to 9 images.
   struct image {
+    /// Image `icon1024`.
+    static let icon1024 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon1024")
+    /// Image `icon120`.
+    static let icon120 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon120")
+    /// Image `icon152`.
+    static let icon152 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon152")
+    /// Image `icon167`.
+    static let icon167 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon167")
+    /// Image `icon180`.
+    static let icon180 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon180")
+    /// Image `icon58`.
+    static let icon58 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon58")
+    /// Image `icon76`.
+    static let icon76 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon76")
+    /// Image `icon84`.
+    static let icon84 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon84")
     /// Image `loadingCat`.
     static let loadingCat = Rswift.ImageResource(bundle: R.hostingBundle, name: "loadingCat")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon1024", bundle: ..., traitCollection: ...)`
+    static func icon1024(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon1024, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon120", bundle: ..., traitCollection: ...)`
+    static func icon120(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon120, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon152", bundle: ..., traitCollection: ...)`
+    static func icon152(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon152, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon167", bundle: ..., traitCollection: ...)`
+    static func icon167(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon167, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon180", bundle: ..., traitCollection: ...)`
+    static func icon180(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon180, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon58", bundle: ..., traitCollection: ...)`
+    static func icon58(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon58, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon76", bundle: ..., traitCollection: ...)`
+    static func icon76(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon76, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon84", bundle: ..., traitCollection: ...)`
+    static func icon84(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon84, compatibleWith: traitCollection)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "loadingCat", bundle: ..., traitCollection: ...)`
