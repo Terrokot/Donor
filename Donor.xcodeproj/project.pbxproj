@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		5E82B96FE72FDBFA153B37F7 /* Pods_Donor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3839BBA1FF6E2F47043367 /* Pods_Donor.framework */; };
 		91136AC624C3A39400771C3B /* DonorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91136AC524C3A39400771C3B /* DonorCell.swift */; };
-		911D23A124C0CF690040BB4F /* DonorTableViewDelegate + DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D23A024C0CF690040BB4F /* DonorTableViewDelegate + DataSource.swift */; };
+		911D23A124C0CF690040BB4F /* DonorTableDelegate + DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D23A024C0CF690040BB4F /* DonorTableDelegate + DataSource.swift */; };
 		912150A524B0AC5200A80629 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912150A424B0AC5200A80629 /* AlertManager.swift */; };
 		91266B2924B5ECB1004B6859 /* DonorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91266B2824B5ECB1004B6859 /* DonorViewController.swift */; };
 		91266B2B24B606FB004B6859 /* AcceptRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91266B2A24B606FB004B6859 /* AcceptRequestViewController.swift */; };
@@ -29,12 +29,13 @@
 		9185165C24AE5EB700F6B838 /* LocationServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185165B24AE5EB700F6B838 /* LocationServiceDelegate.swift */; };
 		918A9E5824BB63D1004778D2 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918A9E5724BB63D1004778D2 /* PickerViewController.swift */; };
 		918F275824C3366900636B01 /* Patient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 918F275724C3366900636B01 /* Patient.storyboard */; };
+		91DDA99D24C5F30700C44F01 /* DonorLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DDA99C24C5F30700C44F01 /* DonorLocationManagerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C5B2370E0030D2061A80B64 /* Pods-Donor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donor.release.xcconfig"; path = "Target Support Files/Pods-Donor/Pods-Donor.release.xcconfig"; sourceTree = "<group>"; };
 		91136AC524C3A39400771C3B /* DonorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorCell.swift; sourceTree = "<group>"; };
-		911D23A024C0CF690040BB4F /* DonorTableViewDelegate + DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DonorTableViewDelegate + DataSource.swift"; sourceTree = "<group>"; };
+		911D23A024C0CF690040BB4F /* DonorTableDelegate + DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DonorTableDelegate + DataSource.swift"; sourceTree = "<group>"; };
 		912150A424B0AC5200A80629 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		91266B2824B5ECB1004B6859 /* DonorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorViewController.swift; sourceTree = "<group>"; };
 		91266B2A24B606FB004B6859 /* AcceptRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptRequestViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		9185165B24AE5EB700F6B838 /* LocationServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceDelegate.swift; sourceTree = "<group>"; };
 		918A9E5724BB63D1004778D2 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PickerViewController.swift; path = Donor/UI/Patient/PickerViewController.swift; sourceTree = SOURCE_ROOT; };
 		918F275724C3366900636B01 /* Patient.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Patient.storyboard; sourceTree = "<group>"; };
+		91DDA99C24C5F30700C44F01 /* DonorLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorLocationManagerDelegate.swift; sourceTree = "<group>"; };
 		9F3839BBA1FF6E2F47043367 /* Pods_Donor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Donor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F629AB4ED40A168EA7C3DE52 /* Pods-Donor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donor.debug.xcconfig"; path = "Target Support Files/Pods-Donor/Pods-Donor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,11 +123,11 @@
 		91274C2C24A371A9004C020D /* Donor */ = {
 			isa = PBXGroup;
 			children = (
-				91274C2D24A371A9004C020D /* AppDelegate.swift */,
 				918F275924C4C11000636B01 /* UI */,
 				9185165724AE5E4500F6B838 /* Services */,
 				915DC82724B8AEFE00707A71 /* Model */,
 				9185165824AE5E6200F6B838 /* Helpers */,
+				91274C2D24A371A9004C020D /* AppDelegate.swift */,
 				91274C3824A371AA004C020D /* LaunchScreen.storyboard */,
 				91274C3B24A371AA004C020D /* Info.plist */,
 				91377B1E24A4FD6500B450DF /* GoogleService-Info.plist */,
@@ -139,7 +141,8 @@
 			children = (
 				91266B2824B5ECB1004B6859 /* DonorViewController.swift */,
 				91266B2A24B606FB004B6859 /* AcceptRequestViewController.swift */,
-				911D23A024C0CF690040BB4F /* DonorTableViewDelegate + DataSource.swift */,
+				911D23A024C0CF690040BB4F /* DonorTableDelegate + DataSource.swift */,
+				91DDA99C24C5F30700C44F01 /* DonorLocationManagerDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -344,7 +347,8 @@
 				91266B3024B60A20004B6859 /* R.generated.swift in Sources */,
 				912150A524B0AC5200A80629 /* AlertManager.swift in Sources */,
 				915DC82B24B8AF6F00707A71 /* Patient.swift in Sources */,
-				911D23A124C0CF690040BB4F /* DonorTableViewDelegate + DataSource.swift in Sources */,
+				911D23A124C0CF690040BB4F /* DonorTableDelegate + DataSource.swift in Sources */,
+				91DDA99D24C5F30700C44F01 /* DonorLocationManagerDelegate.swift in Sources */,
 				9169979224C0656D00280A4F /* AuthService.swift in Sources */,
 				918A9E5824BB63D1004778D2 /* PickerViewController.swift in Sources */,
 				91266B2924B5ECB1004B6859 /* DonorViewController.swift in Sources */,

@@ -60,12 +60,3 @@ class DonorViewController: UIViewController {
         navigationController?.dismiss(animated: true, completion: nil)
     }
 }
-
-//MARK: CLLocationManagerDelegate
-extension DonorViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let coord = manager.location?.coordinate {
-            donorLocation = coord
-        }
-    }
-}
