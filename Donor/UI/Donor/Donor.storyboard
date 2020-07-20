@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tdd-XH-19T">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tdd-XH-19T">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -125,6 +125,9 @@
                                 <state key="normal" title="Make a call">
                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="makeCallTapped:" destination="Hch-fW-F99" eventType="touchUpInside" id="yz6-sQ-kDU"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" &quot;Name&quot; with blood type: AB+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGc-t1-gLm">
                                 <rect key="frame" x="20" y="498" width="374" height="24"/>
@@ -138,6 +141,9 @@
                                 <state key="normal" title="Open in Apple Maps">
                                     <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="openMapsTapped:" destination="Hch-fW-F99" eventType="touchUpInside" id="Rat-3P-Hdc"/>
+                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4w-8U-pjM">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -157,6 +163,14 @@
                                     <constraint firstAttribute="width" secondItem="UAP-sb-H1R" secondAttribute="height" multiplier="1:1" id="2BK-bI-5Lf"/>
                                 </constraints>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERA-Vh-g6D">
+                                <rect key="frame" x="20" y="592" width="374" height="30"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Accept Request"/>
+                                <connections>
+                                    <action selector="acceptButtonTapped:" destination="Hch-fW-F99" eventType="touchUpInside" id="4BS-VW-0UX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -164,11 +178,14 @@
                             <constraint firstItem="8C7-gy-H6r" firstAttribute="leading" secondItem="jIm-gj-7oq" secondAttribute="leading" constant="20" id="3Jr-wB-rF0"/>
                             <constraint firstItem="UAP-sb-H1R" firstAttribute="leading" secondItem="jIm-gj-7oq" secondAttribute="leading" constant="20" id="6bJ-A8-Mi3"/>
                             <constraint firstItem="e5j-1X-4S8" firstAttribute="top" secondItem="eGc-t1-gLm" secondAttribute="bottom" constant="20" id="BgJ-Ik-Uff"/>
+                            <constraint firstItem="ERA-Vh-g6D" firstAttribute="leading" secondItem="jIm-gj-7oq" secondAttribute="leading" constant="20" id="D9u-tA-gTT"/>
                             <constraint firstItem="jIm-gj-7oq" firstAttribute="trailing" secondItem="e5j-1X-4S8" secondAttribute="trailing" constant="20" id="Ezw-QV-JYD"/>
+                            <constraint firstItem="ERA-Vh-g6D" firstAttribute="top" secondItem="e5j-1X-4S8" secondAttribute="bottom" constant="20" id="KL2-ut-SEC"/>
                             <constraint firstItem="e5j-1X-4S8" firstAttribute="leading" secondItem="jIm-gj-7oq" secondAttribute="leading" constant="20" id="RD2-EW-3Mw"/>
                             <constraint firstItem="jIm-gj-7oq" firstAttribute="trailing" secondItem="8C7-gy-H6r" secondAttribute="trailing" constant="20" id="UQT-wB-tMz"/>
                             <constraint firstItem="G4w-8U-pjM" firstAttribute="top" secondItem="jIm-gj-7oq" secondAttribute="top" id="UgP-Rt-HrM"/>
                             <constraint firstItem="G4w-8U-pjM" firstAttribute="leading" secondItem="jIm-gj-7oq" secondAttribute="leading" id="Xfb-JJ-zkk"/>
+                            <constraint firstItem="jIm-gj-7oq" firstAttribute="trailing" secondItem="ERA-Vh-g6D" secondAttribute="trailing" constant="20" id="ZWu-Zj-mFt"/>
                             <constraint firstItem="eGc-t1-gLm" firstAttribute="leading" secondItem="jIm-gj-7oq" secondAttribute="leading" constant="20" id="Zji-1A-Lbr"/>
                             <constraint firstItem="eGc-t1-gLm" firstAttribute="top" secondItem="8C7-gy-H6r" secondAttribute="bottom" constant="20" id="kDF-O6-cQF"/>
                             <constraint firstItem="UAP-sb-H1R" firstAttribute="top" secondItem="G4w-8U-pjM" secondAttribute="bottom" constant="10" id="lJg-At-HQR"/>
@@ -179,6 +196,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jIm-gj-7oq"/>
                     </view>
+                    <connections>
+                        <outlet property="map" destination="UAP-sb-H1R" id="BSV-u8-26Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V6a-gD-6Q3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
