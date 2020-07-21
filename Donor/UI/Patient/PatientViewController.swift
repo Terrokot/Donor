@@ -47,7 +47,6 @@ class PatientViewController: UIViewController {
         default: assertionFailure("Location is: \(locationService.status)")
         }
         
-        
         if let email = Auth.auth().currentUser?.email {
             ref.child("PatientsRequests").queryOrdered(byChild: "email").queryEqual(toValue: email).observe(.childAdded, with: { (snapshot) in
                 self.requestHasBeenSent = true
@@ -59,6 +58,7 @@ class PatientViewController: UIViewController {
     }
     
     @IBAction func findDonorTapped(_ sender: Any) {
+        
         guard let email = Auth.auth().currentUser?.email else { return }
         if requestHasBeenSent {
             findDonorButton.setTitle("Find Donor", for: .normal)
@@ -68,8 +68,12 @@ class PatientViewController: UIViewController {
                 self.ref.child("PatientsRequests").removeAllObservers()
             })
         } else {
+            guard let name  = patientData.name else {
+                AlertManager.displayAlert(title: "Error", message: "Enter data in settings before sent donor request", vc: self)
+                return
+            }
             let patientRequestDictionary : [String: Any] = [ "email": email,
-                                                             "name": patientData.name,
+                                                             "name": name,
                                                              "phoneNumber": patientData.phoneNumber,
                                                              "bloodType": patientData.bloodType,
                                                              "latitude": userLocation.latitude,
@@ -91,7 +95,6 @@ class PatientViewController: UIViewController {
         vc.pickerViewControllerDelegate = self
         present(vc, animated: true, completion: nil)
     }
-    
 }
 extension PatientViewController: PickerViewControllerDelegate {
     func sendData(_ data: Patient) {

@@ -9,7 +9,7 @@
 import Foundation
 
 struct Patient {
-    var name: String = ""
+    var name: String?
     var bloodType: String = "O-"
     var phoneNumber: String = ""
 }
