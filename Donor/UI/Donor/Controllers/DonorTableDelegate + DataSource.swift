@@ -60,7 +60,7 @@ extension DonorViewController: UITableViewDelegate {
             {
                 let acceptVC = R.storyboard.donor.acceptRequestViewController()!
                 acceptVC.requestEmail = "\(email)"
-                acceptVC.DonorLocation = self.donorLocation
+                acceptVC.donorLocation = self.donorLocation
                 acceptVC.requestLocation = CLLocationCoordinate2D(latitude: lat, longitude: lon)
                 present(acceptVC, animated: true, completion: nil)
             }
