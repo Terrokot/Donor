@@ -52,7 +52,6 @@ class PatientViewController: UIViewController {
                 self.requestHasBeenSent = true
                 self.findDonorButton.setTitle("Cancel Request", for: .normal)
                 self.ref.child("PatientsRequests").removeAllObservers()
-                
             })
         }
     }
@@ -82,6 +81,7 @@ class PatientViewController: UIViewController {
             ref.child("PatientsRequests").childByAutoId().setValue(patientRequestDictionary)
             findDonorButton.setTitle("Cancel Request", for: .normal)
             requestHasBeenSent = true
+            AlertManager.displayAlert(title: "Your request is registered", message: "We are already looking for a donor for you. You will be contacted soon", vc: self)
         }
     }
     

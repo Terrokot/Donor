@@ -14,7 +14,6 @@ import FirebaseDatabase
 class AcceptRequestViewController: UIViewController {
     
     
-    
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var titleNavigationItem: UINavigationItem!
     
@@ -37,16 +36,16 @@ class AcceptRequestViewController: UIViewController {
     
     @IBAction func acceptButtonTapped(_ sender: Any) {
         //MARK: ACCEPT
-        //sent location
-    }
-    
-    @IBAction func openMapsTapped(_ sender: Any) {
-        //MARK: MAPS
         // Update the ride Request
         dataBaseRef.queryOrdered(byChild: "email").queryEqual(toValue: requestEmail).observe(.childAdded) { (snapshot) in
             snapshot.ref.updateChildValues(["donorLat":self.donorLocation.latitude, "donorLon":self.donorLocation.longitude])
             self.dataBaseRef.removeAllObservers()
         }
+        
+    }
+    
+    @IBAction func openMapsTapped(_ sender: Any) {
+        //MARK: MAPS
         
         let requestCLLocation = CLLocation(latitude: requestLocation.latitude, longitude: requestLocation.longitude)
         
