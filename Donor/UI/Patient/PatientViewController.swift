@@ -68,7 +68,13 @@ class PatientViewController: UIViewController {
                 self.ref.child("PatientsRequests").removeAllObservers()
             })
         } else {
-            let patientRequestDictionary : [String: Any] = ["email": email, "bloodType": patientData.bloodType, "latitude": userLocation.latitude, "longitude": userLocation.longitude]
+            let patientRequestDictionary : [String: Any] = [ "email": email,
+                                                             "name": patientData.name,
+                                                             "phoneNumber": patientData.phoneNumber,
+                                                             "bloodType": patientData.bloodType,
+                                                             "latitude": userLocation.latitude,
+                                                             "longitude": userLocation.longitude ]
+            
             ref.child("PatientsRequests").childByAutoId().setValue(patientRequestDictionary)
             findDonorButton.setTitle("Cancel Request", for: .normal)
             requestHasBeenSent = true
