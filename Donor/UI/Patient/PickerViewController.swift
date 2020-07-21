@@ -13,7 +13,7 @@ protocol PickerViewControllerDelegate {
 }
 
 class PickerViewController: UIViewController {
-
+    
     @IBOutlet var pickerView: UIPickerView!
     
     @IBOutlet weak var nameTextField: UITextField!
@@ -27,15 +27,20 @@ class PickerViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func doneButton(_ sender: Any) {
-        data.name = nameTextField.text ?? ""
-        data.phoneNumber = mobilePhoneTextField.text ?? ""
-        pickerViewControllerDelegate?.sendData(data)
-        print(data)
-        dismiss(animated: true, completion: nil)
-    }
     
+    @IBAction func doneButton(_ sender: Any) {
+        if  nameTextField.text != "",
+            mobilePhoneTextField.text != "" {
+            data.name = nameTextField.text!
+            data.phoneNumber = mobilePhoneTextField.text!
+            pickerViewControllerDelegate?.sendData(data)
+            print(data)
+            dismiss(animated: true, completion: nil)
+        }
+        else {
+            AlertManager.displayAlert(title: "error", message: "fill all forms", vc: self)
+        }
+    }
 }
 
 extension PickerViewController: UIPickerViewDelegate, UIPickerViewDataSource {

@@ -148,7 +148,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4w-8U-pjM">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="AH1-gH-4aE">
+                                    <navigationItem title="Patient Information" id="AH1-gH-4aE">
                                         <barButtonItem key="leftBarButtonItem" title="Patients List" id="06t-tj-x5C">
                                             <connections>
                                                 <action selector="backButton:" destination="Hch-fW-F99" id="YCm-5p-fJl"/>
@@ -198,6 +198,7 @@
                     </view>
                     <connections>
                         <outlet property="map" destination="UAP-sb-H1R" id="BSV-u8-26Z"/>
+                        <outlet property="titleNavigationItem" destination="AH1-gH-4aE" id="Zfs-Af-xyH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V6a-gD-6Q3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
