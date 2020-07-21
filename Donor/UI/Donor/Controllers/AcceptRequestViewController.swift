@@ -38,8 +38,6 @@ class AcceptRequestViewController: UIViewController {
         //sent location
     }
     
-    
-    
     @IBAction func openMapsTapped(_ sender: Any) {
         //MARK: MAPS
         // Update the ride Request
@@ -47,7 +45,6 @@ class AcceptRequestViewController: UIViewController {
             snapshot.ref.updateChildValues(["donorLat":self.donorLocation.latitude, "donorLon":self.donorLocation.longitude])
             self.dataBaseRef.removeAllObservers()
         }
-        
         
         let requestCLLocation = CLLocation(latitude: requestLocation.latitude, longitude: requestLocation.longitude)
         
@@ -62,15 +59,17 @@ class AcceptRequestViewController: UIViewController {
                 }
             }
         }
-        
     }
     
     @IBAction func makeCallTapped(_ sender: Any) {
         //MARK: CALL
+        //if let url = URL(string: "tel://\(phoneNumberTextfield.text!)"),
+        let phoneNumberTextfield = "+375447376551"
+        if let url = URL(string: "tel://\(phoneNumberTextfield)"),
+        UIApplication.shared.canOpenURL(url) {
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
-    
-    
-    
+    }
     
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)

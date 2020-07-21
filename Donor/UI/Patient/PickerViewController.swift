@@ -16,21 +16,27 @@ class PickerViewController: UIViewController {
 
     @IBOutlet var pickerView: UIPickerView!
     
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var mobilePhoneTextField: UITextField!
+    
     var pickerViewControllerDelegate: PickerViewControllerDelegate?
     var data = Patient()
     let bloodTypes: [String]  = ["O-", "O+", "B-", "B+", "A-", "A+", "AB-", "AB+"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
     @IBAction func doneButton(_ sender: Any) {
+        data.name = nameTextField.text ?? ""
+        data.phoneNumber = mobilePhoneTextField.text ?? ""
         pickerViewControllerDelegate?.sendData(data)
         print(data)
         dismiss(animated: true, completion: nil)
     }
+    
 }
-
 
 extension PickerViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
