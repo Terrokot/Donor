@@ -16,12 +16,14 @@ class AcceptRequestViewController: UIViewController {
     
     
     @IBOutlet weak var map: MKMapView!
+    @IBOutlet weak var titleNavigationItem: UINavigationItem!
     
     var dataBaseRef: DatabaseReference!
     
     var requestLocation = CLLocationCoordinate2D()
     var donorLocation = CLLocationCoordinate2D()
     var requestEmail = ""
+    var requestPhoneNumber = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,8 +66,7 @@ class AcceptRequestViewController: UIViewController {
     @IBAction func makeCallTapped(_ sender: Any) {
         //MARK: CALL
         //if let url = URL(string: "tel://\(phoneNumberTextfield.text!)"),
-        let phoneNumberTextfield = "+375447376551"
-        if let url = URL(string: "tel://\(phoneNumberTextfield)"),
+        if let url = URL(string: "tel://\(requestPhoneNumber)"),
         UIApplication.shared.canOpenURL(url) {
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }

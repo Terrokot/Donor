@@ -19,6 +19,7 @@ extension DonorViewController: UITableViewDataSource {
         let snapshot = patientsRequest[indexPath.row]
         if let patientRequestDictionary = snapshot.value as? [String: AnyObject] {
             if let email = patientRequestDictionary["email"],
+                let name = patientRequestDictionary["name"],
                 let bloodType = patientRequestDictionary["bloodType"],
                 let lat = patientRequestDictionary["latitude"] as? Double,
                 let lon = patientRequestDictionary["longitude"] as? Double
@@ -28,7 +29,7 @@ extension DonorViewController: UITableViewDataSource {
                 let distance = donorCLLocation.distance(from: patientCLLocation) / 1000
                 let roundedDistance = round(distance * 100) / 100
                 
-                cell.nameLabel.text = "\(email)"
+                cell.nameLabel.text = "\(name) - \(email)"
                 cell.distLabel.text = "\(roundedDistance)km"
                 cell.bloodTypeLabel.text = "Blood type:\(bloodType)"
             }
@@ -54,12 +55,13 @@ extension DonorViewController: UITableViewDelegate {
         
         if let patientRequestDictionary = selectedUserData.value as? [String: AnyObject] {
             if let email = patientRequestDictionary["email"],
-                // let bloodType = patientRequestDictionary["bloodType"],
+                let phoneNumber = patientRequestDictionary["phoneNumber"],
                 let lat = patientRequestDictionary["latitude"] as? Double,
                 let lon = patientRequestDictionary["longitude"] as? Double
             {
                 let acceptVC = R.storyboard.donor.acceptRequestViewController()!
                 acceptVC.requestEmail = "\(email)"
+                acceptVC.requestPhoneNumber = ("\(phoneNumber)")
                 acceptVC.donorLocation = self.donorLocation
                 acceptVC.requestLocation = CLLocationCoordinate2D(latitude: lat, longitude: lon)
                 present(acceptVC, animated: true, completion: nil)
