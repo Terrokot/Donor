@@ -20,7 +20,6 @@ class DonorViewController: UIViewController {
     let locationService = LocationService()
     var donorLocation = CLLocationCoordinate2D()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Location

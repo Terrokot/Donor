@@ -19,6 +19,7 @@
 		91274C3524A371A9004C020D /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91274C3324A371A9004C020D /* Authorization.storyboard */; };
 		91274C3724A371AA004C020D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91274C3624A371AA004C020D /* Assets.xcassets */; };
 		91274C3A24A371AA004C020D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91274C3824A371AA004C020D /* LaunchScreen.storyboard */; };
+		9127A38124C71E6000E7B0FB /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9127A38024C71E6000E7B0FB /* MapManager.swift */; };
 		91377B1F24A4FD6500B450DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91377B1E24A4FD6500B450DF /* GoogleService-Info.plist */; };
 		91377B2524A7956400B450DF /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91377B2424A7956400B450DF /* PatientViewController.swift */; };
 		9137F9F024C332D400EF5F04 /* Donor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9137F9EF24C332D400EF5F04 /* Donor.storyboard */; };
@@ -47,6 +48,7 @@
 		91274C3624A371AA004C020D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91274C3924A371AA004C020D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91274C3B24A371AA004C020D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9127A38024C71E6000E7B0FB /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		91377B1E24A4FD6500B450DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		91377B2424A7956400B450DF /* PatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
 		9137F9EF24C332D400EF5F04 /* Donor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Donor.storyboard; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			children = (
 				9185165524ADE4E200F6B838 /* LocationService.swift */,
 				912150A424B0AC5200A80629 /* AlertManager.swift */,
+				9127A38024C71E6000E7B0FB /* MapManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91274C3224A371A9004C020D /* AuthViewController.swift in Sources */,
+				9127A38124C71E6000E7B0FB /* MapManager.swift in Sources */,
 				9185165C24AE5EB700F6B838 /* LocationServiceDelegate.swift in Sources */,
 				915DC82924B8AF3500707A71 /* Donor.swift in Sources */,
 				91266B3024B60A20004B6859 /* R.generated.swift in Sources */,

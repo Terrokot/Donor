@@ -23,10 +23,15 @@ class AcceptRequestViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        //make manager
+        let region = MKCoordinateRegion(center: requestLocation, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        map.setRegion(region, animated: false)
+        
+        // make manager
+        MapManager.addAnnotation(map: map, coordinate: requestLocation, title: requestEmail)
+    
     }
-    
-    
     
     @IBAction func acceptButtonTapped(_ sender: Any) {
         //sent location
