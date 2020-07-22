@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -80,6 +80,14 @@
                                     <action selector="bottomTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xpf-oJ-opw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CdP-qF-WvS">
+                                <rect key="frame" x="20" y="429.33333333333331" width="374" height="30"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Auto auth test button"/>
+                                <connections>
+                                    <action selector="autoAuthTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h1d-cA-Ayf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -92,6 +100,7 @@
                             <constraint firstItem="S1x-F0-0ny" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9tB-fe-Bhk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S1x-F0-0ny" secondAttribute="trailing" constant="20" id="ASc-MI-gf2"/>
                             <constraint firstItem="S1x-F0-0ny" firstAttribute="top" secondItem="gIz-wc-xcO" secondAttribute="bottom" constant="6" id="BMf-1O-2sL"/>
+                            <constraint firstItem="CdP-qF-WvS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Bw9-sD-7c9"/>
                             <constraint firstItem="sCu-Bb-mMu" firstAttribute="leading" secondItem="bW6-0v-60f" secondAttribute="trailing" constant="12" id="Dp5-v1-Gp4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="65y-hN-tOK" secondAttribute="trailing" constant="20" id="FWg-xb-9dX"/>
                             <constraint firstItem="bW6-0v-60f" firstAttribute="centerY" secondItem="sCu-Bb-mMu" secondAttribute="centerY" id="MjI-NA-bdo"/>
@@ -103,7 +112,9 @@
                             <constraint firstItem="sCu-Bb-mMu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VtU-L1-zlp"/>
                             <constraint firstItem="gIz-wc-xcO" firstAttribute="top" secondItem="65y-hN-tOK" secondAttribute="bottom" constant="6" id="YJa-Tg-itt"/>
                             <constraint firstItem="sCu-Bb-mMu" firstAttribute="top" secondItem="cbZ-AT-Lmh" secondAttribute="bottom" constant="17" id="Z6A-AH-GX6"/>
+                            <constraint firstItem="CdP-qF-WvS" firstAttribute="top" secondItem="S1x-F0-0ny" secondAttribute="bottom" constant="100" id="Z9k-1c-4JR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="65y-hN-tOK" secondAttribute="trailing" constant="20" id="aeP-8P-FDu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CdP-qF-WvS" secondAttribute="trailing" constant="20" id="br3-af-Lfc"/>
                             <constraint firstItem="KPe-OW-719" firstAttribute="leading" secondItem="sCu-Bb-mMu" secondAttribute="trailing" constant="12" id="eJA-UJ-38L"/>
                             <constraint firstItem="WGU-xF-1x6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ft8-TH-llE"/>
                             <constraint firstItem="WGU-xF-1x6" firstAttribute="top" secondItem="eSY-wQ-mla" secondAttribute="bottom" constant="12" id="gyc-9K-rhV"/>

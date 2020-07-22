@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 
+
 class AuthViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
@@ -51,5 +52,14 @@ class AuthViewController: UIViewController {
             signUpMode = true
         }
     }
+    
+    
+    
+    
+    @IBAction func autoAuthTapped(_ sender: Any) {
+        AuthService.autoLogIn(vc: self)
+    }
+
+    
 }
 
