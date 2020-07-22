@@ -84,6 +84,11 @@
                                 <action selector="logoutTapped:" destination="kLH-D0-H1b" id="Qto-YP-sgj"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Select blood type" id="8lP-zD-jsl">
+                            <connections>
+                                <action selector="selectBloodTypeTapped:" destination="kLH-D0-H1b" id="HoS-KQ-l5O"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="LEQ-JM-DDp" id="ws2-bs-3M2"/>
@@ -205,6 +210,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V6a-gD-6Q3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2690" y="853"/>
+        </scene>
+        <!--Donor Picker View Controller-->
+        <scene sceneID="uY2-Tj-Rzh">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AcP-4s-pKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="DonorPickerViewController" id="ruy-6X-VHP" customClass="DonorPickerViewController" customModule="Donor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pfk-VY-2Oj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w5O-6I-3gO">
+                                <rect key="frame" x="20" y="115" width="374" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ruy-6X-VHP" id="qqW-bf-Mv4"/>
+                                    <outlet property="delegate" destination="ruy-6X-VHP" id="nBR-bm-MDM"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your blood type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x27-Sm-uNI">
+                                <rect key="frame" x="20" y="84" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QFf-7O-uKx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Settings" id="1bC-We-CZZ">
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="w3D-Un-FNn">
+                                            <connections>
+                                                <action selector="doneTapped:" destination="ruy-6X-VHP" id="iy2-c9-NaJ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QFf-7O-uKx" firstAttribute="leading" secondItem="eUf-ES-uWb" secondAttribute="leading" id="359-8p-Drv"/>
+                            <constraint firstItem="x27-Sm-uNI" firstAttribute="leading" secondItem="eUf-ES-uWb" secondAttribute="leading" constant="20" id="EHd-bU-KW9"/>
+                            <constraint firstItem="w5O-6I-3gO" firstAttribute="leading" secondItem="eUf-ES-uWb" secondAttribute="leading" constant="20" id="R77-Su-MAH"/>
+                            <constraint firstItem="w5O-6I-3gO" firstAttribute="top" secondItem="x27-Sm-uNI" secondAttribute="bottom" constant="10" id="c54-dU-OsJ"/>
+                            <constraint firstItem="eUf-ES-uWb" firstAttribute="trailing" secondItem="w5O-6I-3gO" secondAttribute="trailing" constant="20" id="irR-Gu-jj9"/>
+                            <constraint firstItem="eUf-ES-uWb" firstAttribute="trailing" secondItem="x27-Sm-uNI" secondAttribute="trailing" constant="20" id="myy-Ge-lmx"/>
+                            <constraint firstItem="x27-Sm-uNI" firstAttribute="top" secondItem="QFf-7O-uKx" secondAttribute="bottom" constant="40" id="ozx-CR-JmS"/>
+                            <constraint firstItem="QFf-7O-uKx" firstAttribute="top" secondItem="eUf-ES-uWb" secondAttribute="top" id="rvY-IS-kFC"/>
+                            <constraint firstItem="QFf-7O-uKx" firstAttribute="trailing" secondItem="eUf-ES-uWb" secondAttribute="trailing" id="ui8-Pd-nxd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eUf-ES-uWb"/>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="w5O-6I-3gO" id="Qm9-4n-j9h"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1928.985507246377" y="1562.771739130435"/>
         </scene>
     </scenes>
 </document>

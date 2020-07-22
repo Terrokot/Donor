@@ -15,12 +15,11 @@ class AuthService {
     
     private init() {}
     
-    
     static func signUpAndLogIn(email: String, password: String, vc: AuthViewController, signUpMode: Bool ) {
         
         let userDefaults = UserDefaults.standard
-        let signInStatus = userDefaults.bool(forKey: "signInStatus")
-        let token = userDefaults.object(forKey: "token")
+        let _ = userDefaults.bool(forKey: "signInStatus")
+        let _ = userDefaults.object(forKey: "token")
         
         if signUpMode {
             // MARK: SING UP
@@ -33,7 +32,6 @@ class AuthService {
                     let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: EmailAuthProvider.credential(withEmail: email, password: password))
                     userDefaults.set(encodedData, forKey: "token")
                     userDefaults.synchronize()
-                    
                     
                     if vc.donorPatientSwitch.isOn {
                         // PATIENT
@@ -76,10 +74,9 @@ class AuthService {
             }
         }
     }
-    
+    //MARK: Auto Log In
     static func autoLogIn(vc: UIViewController) {
         let userDefaults = UserDefaults.standard
-        
         
         guard let decoded  = userDefaults.data(forKey: "token") else {
             print("no data")
@@ -89,7 +86,7 @@ class AuthService {
             print("decode error")
             return
         }
-        
+
         Auth.auth().signIn(with: decodedToken) { (user, error) in
             switch user?.user.displayName {
             case "Patient":
@@ -103,9 +100,6 @@ class AuthService {
             }
         }
     }
-    
-    
-    
 }
 
 

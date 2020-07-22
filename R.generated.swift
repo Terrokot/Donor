@@ -300,12 +300,17 @@ struct _R: Rswift.Validatable {
 
       let acceptRequestViewController = StoryboardViewControllerResource<AcceptRequestViewController>(identifier: "AcceptRequestViewController")
       let bundle = R.hostingBundle
+      let donorPickerViewController = StoryboardViewControllerResource<DonorPickerViewController>(identifier: "DonorPickerViewController")
       let donorViewController = StoryboardViewControllerResource<DonorViewController>(identifier: "DonorViewController")
       let name = "Donor"
       let navigationController = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "NavigationController")
 
       func acceptRequestViewController(_: Void = ()) -> AcceptRequestViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: acceptRequestViewController)
+      }
+
+      func donorPickerViewController(_: Void = ()) -> DonorPickerViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: donorPickerViewController)
       }
 
       func donorViewController(_: Void = ()) -> DonorViewController? {
@@ -320,6 +325,7 @@ struct _R: Rswift.Validatable {
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
         if _R.storyboard.donor().acceptRequestViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'acceptRequestViewController' could not be loaded from storyboard 'Donor' as 'AcceptRequestViewController'.") }
+        if _R.storyboard.donor().donorPickerViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'donorPickerViewController' could not be loaded from storyboard 'Donor' as 'DonorPickerViewController'.") }
         if _R.storyboard.donor().donorViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'donorViewController' could not be loaded from storyboard 'Donor' as 'DonorViewController'.") }
         if _R.storyboard.donor().navigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'navigationController' could not be loaded from storyboard 'Donor' as 'UIKit.UINavigationController'.") }
       }

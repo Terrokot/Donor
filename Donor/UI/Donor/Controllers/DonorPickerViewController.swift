@@ -1,0 +1,48 @@
+//
+//  DonorPickerViewController.swift
+//  Donor
+//
+//  Created by Egor Tereshonok on 7/22/20.
+//  Copyright © 2020 Egor Tereshonok. All rights reserved.
+//
+
+import UIKit
+
+protocol DonorPickerViewControllerDelegate {
+    func sendData(_ data: Donor)
+}
+
+class DonorPickerViewController: UIViewController {
+    
+    @IBOutlet weak var pickerView: UIPickerView!
+    
+    var donorPickerViewControllerDelegate: DonorPickerViewControllerDelegate?
+    var data = Donor()
+    let bloodTypes: [String]  = ["O-", "O+", "B-", "B+", "A-", "A+", "AB-", "AB+"]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    @IBAction func doneTapped(_ sender: Any) {
+        donorPickerViewControllerDelegate?.sendData(data)
+        print(data)
+        dismiss(animated: true, completion: nil)
+    }
+}
+
+extension DonorPickerViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        1
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        bloodTypes.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return bloodTypes[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        data.bloodType = bloodTypes[row]
+    }
+}

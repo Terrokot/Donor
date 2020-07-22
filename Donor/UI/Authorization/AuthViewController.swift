@@ -52,14 +52,9 @@ class AuthViewController: UIViewController {
             signUpMode = true
         }
     }
-    
-    
-    
-    
+        
     @IBAction func autoAuthTapped(_ sender: Any) {
         AuthService.autoLogIn(vc: self)
     }
-
-    
 }
 
