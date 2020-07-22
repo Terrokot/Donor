@@ -198,6 +198,7 @@
                     </view>
                     <connections>
                         <outlet property="map" destination="UAP-sb-H1R" id="BSV-u8-26Z"/>
+                        <outlet property="requestAcceptButton" destination="ERA-Vh-g6D" id="hbq-21-OP5"/>
                         <outlet property="titleNavigationItem" destination="AH1-gH-4aE" id="Zfs-Af-xyH"/>
                     </connections>
                 </viewController>

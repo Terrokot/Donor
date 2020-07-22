@@ -15,6 +15,8 @@ class DonorViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var fireBaseRef = Database.database().reference().child("PatientsRequests")
+    
     
     var patientsRequest : [DataSnapshot] = [] // change for dict
     let locationService = LocationService()
@@ -36,7 +38,7 @@ class DonorViewController: UIViewController {
             
         default: assertionFailure("Location is: \(locationService.status)")
         }
-        let fireBaseRef = Database.database().reference().child("PatientsRequests")
+        fireBaseRef = Database.database().reference().child("PatientsRequests")
         fireBaseRef.observe(.childAdded) { (DataSnapshot) in
             self.patientsRequest.append(DataSnapshot)
             self.tableView.reloadData()
@@ -45,10 +47,10 @@ class DonorViewController: UIViewController {
         fireBaseRef.observe(.childRemoved) { (snapshot) in
             self.patientsRequest.removeAll {$0.key == snapshot.key}
             self.tableView.reloadData()
-
+            
         }
         
-         //MARK: TableView Timer
+        //MARK: TableView Timer
         Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { (timer) in
             self.tableView.reloadData()
         }
