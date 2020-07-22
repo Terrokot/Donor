@@ -67,7 +67,6 @@ class DonorViewController: UIViewController {
             self.patientsRequest.append(DataSnapshot)
             self.tableView.reloadData()
             self.patientsRequestCopy = self.patientsRequest
-
         }
         fireBaseRef.observe(.childRemoved) { (snapshot) in
             self.patientsRequest.removeAll {$0.key == snapshot.key}
