@@ -67,7 +67,7 @@ class AcceptRequestViewController: UIViewController {
             userDefaults.set(true, forKey: requestEmail)
             userDefaults.set(true, forKey: "acceptAnyRequest")
             requestAcceptButton.setTitle("Cancel", for: .normal)
-            AlertManager.displayAlert(title: "You accept the request", message: "Don't forget. Donor is waiting you", vc: self)
+            AlertManager.displayAlert(title: "You accept the request", message: "Don't forget. Patient is waiting you", vc: self)
             
             
             

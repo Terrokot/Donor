@@ -45,6 +45,8 @@ class AuthService {
             // MARK: LOG IN
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                 
+                
+                
                 switch user?.user.displayName {
                 case "Patient":
                     //vc.performSegue(withIdentifier: "patientSegue", sender: nil)

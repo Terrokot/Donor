@@ -57,6 +57,9 @@ class DonorViewController: UIViewController {
     }
     
     @IBAction func logoutTapped(_ sender: Any) {
+        UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
+        UserDefaults.standard.synchronize()
+
         try? Auth.auth().signOut()
         navigationController?.dismiss(animated: true, completion: nil)
     }
