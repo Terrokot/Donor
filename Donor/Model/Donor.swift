@@ -9,5 +9,5 @@
 import Foundation
 
 struct Donor {
-    var bloodType: String = "O-"
+    var bloodType: Blood = .O_minus
 }

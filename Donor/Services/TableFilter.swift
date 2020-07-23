@@ -77,10 +77,8 @@ class TableFilter {
             return true
         }
     }
-
-   
     
-    func sortByBloodType2(donorType: Blood, patientType: Blood) -> Bool {
+    static func sortByBloodType2(donorType: Blood, patientType: Blood) -> Bool {
         let compatibilityTable: [[Bool]] = [
         [true, false, false, false, false, false, false, false],        // 1 -
         [true, true,  false, false, false, false, false, false],        // 1 +

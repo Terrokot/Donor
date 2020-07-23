@@ -38,7 +38,7 @@ enum Blood: String, CaseIterable {
             return 7
         }
     }
-    func elementByIndex(index: Int) -> Blood? {
+   static func elementByIndex(index: Int) -> Blood? {
         switch index {
         case 0:
             return .O_minus
