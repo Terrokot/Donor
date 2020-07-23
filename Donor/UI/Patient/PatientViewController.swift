@@ -68,7 +68,7 @@ class PatientViewController: UIViewController {
             })
         } else {
             guard let name  = patientData.name else {
-                AlertManager.displayAlert(title: "Error", message: "Enter data in settings before sent donor request", vc: self)
+                openSettings()
                 return
             }
             let patientRequestDictionary : [String: Any] = [ "email": email,
@@ -91,10 +91,17 @@ class PatientViewController: UIViewController {
     }
     
     @IBAction func selectBloodTypeTapped(_ sender: Any) {
+        openSettings()
+    }
+    
+    private func openSettings() {
         let vc = R.storyboard.patient.pickerViewController()!
+        vc.data.name        = patientData.name
+        vc.data.phoneNumber = patientData.phoneNumber
         vc.pickerViewControllerDelegate = self
         present(vc, animated: true, completion: nil)
     }
+    
 }
 extension PatientViewController: PickerViewControllerDelegate {
     func sendData(_ data: Patient) {

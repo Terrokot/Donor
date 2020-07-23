@@ -24,7 +24,10 @@ class PickerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        nameTextField.text = data.name
+        mobilePhoneTextField.text = data.phoneNumber
     }
     
     @IBAction func doneButton(_ sender: Any) {

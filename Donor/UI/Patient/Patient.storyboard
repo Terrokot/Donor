@@ -38,23 +38,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Aj-Jp-FSd">
-                                <rect key="frame" x="20" y="596" width="374" height="30"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Settings">
-                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="selectBloodTypeTapped:" destination="2QQ-Vw-Fvn" eventType="touchUpInside" id="uSE-Mo-m0C"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0hp-w4-jkQ" firstAttribute="trailing" secondItem="0Aj-Jp-FSd" secondAttribute="trailing" constant="20" id="0xu-rt-fhn"/>
                             <constraint firstItem="n0D-aG-zwE" firstAttribute="top" secondItem="mmD-dH-BFS" secondAttribute="bottom" constant="20" id="5lI-Ap-VFR"/>
                             <constraint firstItem="0hp-w4-jkQ" firstAttribute="trailing" secondItem="n0D-aG-zwE" secondAttribute="trailing" constant="20" id="5sN-kf-Hv6"/>
-                            <constraint firstItem="0Aj-Jp-FSd" firstAttribute="top" secondItem="CCw-xe-TO8" secondAttribute="bottom" constant="20" id="6h5-Ib-fdz"/>
                             <constraint firstItem="CCw-xe-TO8" firstAttribute="leading" secondItem="0hp-w4-jkQ" secondAttribute="leading" constant="20" id="JnL-af-X49"/>
                             <constraint firstItem="mmD-dH-BFS" firstAttribute="leading" secondItem="0hp-w4-jkQ" secondAttribute="leading" constant="20" id="YG2-Vt-dRM"/>
                             <constraint firstItem="0hp-w4-jkQ" firstAttribute="trailing" secondItem="mmD-dH-BFS" secondAttribute="trailing" constant="20" id="dgX-Di-QuU"/>
@@ -62,7 +50,6 @@
                             <constraint firstItem="0hp-w4-jkQ" firstAttribute="trailing" secondItem="CCw-xe-TO8" secondAttribute="trailing" constant="20" id="huK-wP-GIn"/>
                             <constraint firstItem="n0D-aG-zwE" firstAttribute="leading" secondItem="0hp-w4-jkQ" secondAttribute="leading" constant="20" id="khc-4q-pDZ"/>
                             <constraint firstItem="CCw-xe-TO8" firstAttribute="top" secondItem="n0D-aG-zwE" secondAttribute="bottom" constant="20" id="mKd-Jm-Ssq"/>
-                            <constraint firstItem="0Aj-Jp-FSd" firstAttribute="leading" secondItem="0hp-w4-jkQ" secondAttribute="leading" constant="20" id="yN3-a4-LFX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0hp-w4-jkQ"/>
                     </view>
@@ -70,6 +57,11 @@
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="G9h-pL-sqT">
                             <connections>
                                 <action selector="logoutTapped:" destination="2QQ-Vw-Fvn" id="iax-RJ-dBh"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="UDC-qw-f5Y">
+                            <connections>
+                                <action selector="selectBloodTypeTapped:" destination="2QQ-Vw-Fvn" id="IBO-wJ-KZV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
