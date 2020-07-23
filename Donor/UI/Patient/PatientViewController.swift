@@ -74,7 +74,7 @@ class PatientViewController: UIViewController {
             let patientRequestDictionary : [String: Any] = [ "email": email,
                                                              "name": name,
                                                              "phoneNumber": patientData.phoneNumber,
-                                                             "bloodType": patientData.bloodType,
+                                                             "bloodType": patientData.bloodType.rawValue,
                                                              "latitude": userLocation.latitude,
                                                              "longitude": userLocation.longitude ]
             
@@ -99,7 +99,7 @@ class PatientViewController: UIViewController {
 extension PatientViewController: PickerViewControllerDelegate {
     func sendData(_ data: Patient) {
         patientData = data
-        bloodTypeLabel.text = "You blood type: \(data.bloodType)"
+        bloodTypeLabel.text = "You blood type: \(data.bloodType.rawValue)"
         print(data)
     }
 }

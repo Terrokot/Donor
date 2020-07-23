@@ -10,6 +10,6 @@ import Foundation
 
 struct Patient {
     var name: String?
-    var bloodType: String = "O-"
+    var bloodType: Blood = .O_minus
     var phoneNumber: String = ""
 }

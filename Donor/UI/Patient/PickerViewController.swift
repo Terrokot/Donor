@@ -21,7 +21,6 @@ class PickerViewController: UIViewController {
     
     var pickerViewControllerDelegate: PickerViewControllerDelegate?
     var data = Patient()
-    let bloodTypes: [String]  = ["O-", "O+", "A-", "A+", "B-", "B+", "AB-", "AB+"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,13 +48,19 @@ extension PickerViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         1
     }
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        bloodTypes.count
+        return Blood.allCases.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        if let bloodType = Blood.elementByIndex(index: row)?.rawValue {
+            return bloodType
+        }
+        return nil
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return bloodTypes[row] 
-    }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        data.bloodType = bloodTypes[row]
+        if let bloodType = Blood.elementByIndex(index: row) {
+            data.bloodType = bloodType
+        }
     }
 }
