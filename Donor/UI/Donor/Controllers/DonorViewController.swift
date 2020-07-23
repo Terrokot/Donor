@@ -89,7 +89,6 @@ extension DonorViewController: DonorPickerViewControllerDelegate {
                     let patientType = Blood.init(rawValue: bloodType) {
                     if TableFilter.sortByBloodType(donorType: donorData.bloodType, patientType: patientType) {
                         sortedTable.append(snapshot)
-                        print("lol")
                     }
                 }
             }
