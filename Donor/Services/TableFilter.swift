@@ -13,19 +13,23 @@ class TableFilter {
     
     private init() {}
 
-    static func sortByBloodType(donorType: Blood, patientType: Blood) -> Bool {
+    func sortByBloodType(donorType: Blood, patientType: Blood) -> Bool {
+        let 💖 = true
+        let 🖤 = false
+        
         let compatibilityTable: [[Bool]] = [
-        [true, false, false, false, false, false, false, false],        // 1 -
-        [true, true,  false, false, false, false, false, false],        // 1 +
-        [true, false, true,  false, false, false, false, false],        // 2 -
-        [true, true,  true,  true,  false, false, false, false],        // 2 +
-        [true, false, false, false, true,  false, false, false],        // 3 -
-        [true, true,  false, false, true,  true,  false, false],        // 3 +
-        [true, false, true,  false, true,  false, true,  false],        // 4 -
-        [true, true,  true,  true,  true,  true,  true,  true ]         // 4 +
+        [💖, 🖤, 🖤, 🖤, 🖤, 🖤, 🖤, 🖤],        // 1 -
+        [💖, 💖, 🖤, 🖤, 🖤, 🖤, 🖤, 🖤],        // 1 +
+        [💖, 🖤, 💖, 🖤, 🖤, 🖤, 🖤, 🖤],        // 2 -
+        [💖, 💖, 💖, 💖, 🖤, 🖤, 🖤, 🖤],        // 2 +
+        [💖, 🖤, 🖤, 🖤, 💖, 🖤, 🖤, 🖤],        // 3 -
+        [💖, 💖, 🖤, 🖤, 💖, 💖, 🖤, 🖤],        // 3 +
+        [💖, 🖤, 💖, 🖤, 💖, 🖤, 💖, 🖤],        // 4 -
+        [💖, 💖, 💖, 💖, 💖, 💖, 💖, 💖]         // 4 +
         ]
         
         return compatibilityTable[patientType.getIndex()][donorType.getIndex()]
     }
+
 }
                  
