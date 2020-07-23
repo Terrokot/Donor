@@ -13,72 +13,7 @@ class TableFilter {
     
     private init() {}
 
-    static func sortByBloodType(donorType: String, patientType: String) -> Bool {
-        
-        switch donorType {
-        case "O-":
-            return true
-        case "O+":
-            switch patientType {
-            case "O-":
-                return false
-            case "A-":
-                return false
-            case "B-":
-                return false
-            case "AB-":
-                return false
-            default:
-                return true
-            }
-        case "A-":
-            switch patientType {
-            case "O-":
-                return false
-            case "O+":
-                return false
-            case "B-":
-                return false
-            case "B+":
-                return false
-            default:
-                return true
-            }
-        case "A+":
-            if patientType == "A+" || patientType == "AB+" {
-                return true
-            } else { return false }
-        case "B-":
-            switch patientType {
-            case "B-":
-                return  true
-            case "B+":
-                return true
-            case "AB-":
-                return  true
-            case "AB+":
-                return true
-            default:
-                return false
-            }
-        case "B+":
-            if patientType == "B+" || patientType == "AB+" {
-                return true
-            } else { return false }
-        case "AB-":
-            if patientType == "AB-" || patientType == "AB+" {
-                return true
-            } else { return false }
-        case "AB+":
-            if patientType == "AB+" {
-                return true
-            } else { return false }
-        default:
-            return true
-        }
-    }
-    
-    static func sortByBloodType2(donorType: Blood, patientType: Blood) -> Bool {
+    static func sortByBloodType(donorType: Blood, patientType: Blood) -> Bool {
         let compatibilityTable: [[Bool]] = [
         [true, false, false, false, false, false, false, false],        // 1 -
         [true, true,  false, false, false, false, false, false],        // 1 +
@@ -93,3 +28,4 @@ class TableFilter {
         return compatibilityTable[patientType.getIndex()][donorType.getIndex()]
     }
 }
+                 
