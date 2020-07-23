@@ -18,7 +18,7 @@ class DonorPickerViewController: UIViewController {
     
     var donorPickerViewControllerDelegate: DonorPickerViewControllerDelegate?
     var data = Donor()
-    let bloodTypes: [String]  = ["O-", "O+", "B-", "B+", "A-", "A+", "AB-", "AB+"]
+    let bloodTypes: [String]  = ["O-", "O+", "A-", "A+", "B-", "B+", "AB-", "AB+"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
