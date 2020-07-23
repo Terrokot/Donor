@@ -17,39 +17,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mmD-dH-BFS">
-                                <rect key="frame" x="20" y="108" width="374" height="374"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="mmD-dH-BFS" secondAttribute="height" multiplier="1:1" id="H0W-N1-OFy"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0D-aG-zwE">
-                                <rect key="frame" x="20" y="502" width="374" height="30"/>
-                                <color key="backgroundColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Find a Donor">
-                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="findDonorTapped:" destination="2QQ-Vw-Fvn" eventType="touchUpInside" id="eRx-Qg-HuL"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your blood type:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCw-xe-TO8">
-                                <rect key="frame" x="20" y="552" width="374" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTB-ra-Lvr">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0D-aG-zwE">
+                                        <rect key="frame" x="28" y="660" width="358" height="30"/>
+                                        <color key="backgroundColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Find a Donor">
+                                            <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="findDonorTapped:" destination="2QQ-Vw-Fvn" eventType="touchUpInside" id="eRx-Qg-HuL"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your blood type:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCw-xe-TO8">
+                                        <rect key="frame" x="20" y="710" width="374" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="CCw-xe-TO8" secondAttribute="trailing" constant="20" id="3D7-bV-rno"/>
+                                    <constraint firstItem="CCw-xe-TO8" firstAttribute="top" secondItem="n0D-aG-zwE" secondAttribute="bottom" constant="20" id="6LO-Wr-eDa"/>
+                                    <constraint firstItem="n0D-aG-zwE" firstAttribute="leading" secondItem="CTB-ra-Lvr" secondAttribute="leadingMargin" constant="20" id="7Cz-Eg-UrV"/>
+                                    <constraint firstItem="CCw-xe-TO8" firstAttribute="leading" secondItem="CTB-ra-Lvr" secondAttribute="leading" constant="20" id="OQq-hC-bhO"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="n0D-aG-zwE" secondAttribute="trailing" constant="20" id="T4g-yz-1FM"/>
+                                    <constraint firstAttribute="bottom" secondItem="CCw-xe-TO8" secondAttribute="bottom" constant="40" id="eij-JT-Jv9"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="n0D-aG-zwE" firstAttribute="top" secondItem="mmD-dH-BFS" secondAttribute="bottom" constant="20" id="5lI-Ap-VFR"/>
-                            <constraint firstItem="0hp-w4-jkQ" firstAttribute="trailing" secondItem="n0D-aG-zwE" secondAttribute="trailing" constant="20" id="5sN-kf-Hv6"/>
-                            <constraint firstItem="CCw-xe-TO8" firstAttribute="leading" secondItem="0hp-w4-jkQ" secondAttribute="leading" constant="20" id="JnL-af-X49"/>
-                            <constraint firstItem="mmD-dH-BFS" firstAttribute="leading" secondItem="0hp-w4-jkQ" secondAttribute="leading" constant="20" id="YG2-Vt-dRM"/>
-                            <constraint firstItem="0hp-w4-jkQ" firstAttribute="trailing" secondItem="mmD-dH-BFS" secondAttribute="trailing" constant="20" id="dgX-Di-QuU"/>
-                            <constraint firstItem="mmD-dH-BFS" firstAttribute="top" secondItem="0hp-w4-jkQ" secondAttribute="top" constant="20" id="ff6-3B-G35"/>
-                            <constraint firstItem="0hp-w4-jkQ" firstAttribute="trailing" secondItem="CCw-xe-TO8" secondAttribute="trailing" constant="20" id="huK-wP-GIn"/>
-                            <constraint firstItem="n0D-aG-zwE" firstAttribute="leading" secondItem="0hp-w4-jkQ" secondAttribute="leading" constant="20" id="khc-4q-pDZ"/>
-                            <constraint firstItem="CCw-xe-TO8" firstAttribute="top" secondItem="n0D-aG-zwE" secondAttribute="bottom" constant="20" id="mKd-Jm-Ssq"/>
+                            <constraint firstItem="mmD-dH-BFS" firstAttribute="top" secondItem="0hp-w4-jkQ" secondAttribute="top" id="62X-Ju-ONM"/>
+                            <constraint firstItem="CTB-ra-Lvr" firstAttribute="trailing" secondItem="0hp-w4-jkQ" secondAttribute="trailing" id="IOl-4z-ept"/>
+                            <constraint firstItem="CTB-ra-Lvr" firstAttribute="bottom" secondItem="0hp-w4-jkQ" secondAttribute="bottom" id="JlZ-b9-Iyz"/>
+                            <constraint firstItem="0hp-w4-jkQ" firstAttribute="trailing" secondItem="mmD-dH-BFS" secondAttribute="trailing" id="PBx-7b-1lu"/>
+                            <constraint firstItem="CTB-ra-Lvr" firstAttribute="top" secondItem="0hp-w4-jkQ" secondAttribute="top" id="fn2-ln-5wO"/>
+                            <constraint firstItem="CTB-ra-Lvr" firstAttribute="leading" secondItem="0hp-w4-jkQ" secondAttribute="leading" id="jlc-p8-6Uj"/>
+                            <constraint firstItem="mmD-dH-BFS" firstAttribute="leading" secondItem="0hp-w4-jkQ" secondAttribute="leading" id="ugq-AT-6sC"/>
+                            <constraint firstItem="0hp-w4-jkQ" firstAttribute="bottom" secondItem="mmD-dH-BFS" secondAttribute="bottom" id="vq4-tW-mia"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0hp-w4-jkQ"/>
                     </view>
@@ -73,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MXE-uQ-thU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1930.4347826086957" y="98.641304347826093"/>
+            <point key="canvasLocation" x="1930.4347826086957" y="98.4375"/>
         </scene>
         <!--PickerViewController-->
         <scene sceneID="map-uc-iln">
