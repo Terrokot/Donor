@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Blood: String {
+enum Blood: String, CaseIterable {
     case O_minus  = "O-",
          O_plus   = "O+",
          A_minus  = "A-",
@@ -36,6 +36,28 @@ enum Blood: String {
             return 6
         case .AB_plus:
             return 7
+        }
+    }
+    func elementByIndex(index: Int) -> Blood? {
+        switch index {
+        case 0:
+            return .O_minus
+        case 1:
+            return .O_plus
+        case 2:
+            return .A_minus
+        case 3:
+            return .A_plus
+        case 4:
+            return .B_minus
+        case 5:
+            return .B_plus
+        case 6:
+            return .AB_minus
+        case 7:
+            return .AB_plus
+        default:
+            return nil
         }
     }
 }
