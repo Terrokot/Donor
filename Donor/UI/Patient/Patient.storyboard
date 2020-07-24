@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FJ7-HM-Vff">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FJ7-HM-Vff">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mmD-dH-BFS">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTB-ra-Lvr">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
@@ -51,14 +51,14 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="mmD-dH-BFS" firstAttribute="top" secondItem="0hp-w4-jkQ" secondAttribute="top" id="62X-Ju-ONM"/>
+                            <constraint firstItem="mmD-dH-BFS" firstAttribute="trailing" secondItem="0hp-w4-jkQ" secondAttribute="trailing" id="FWf-Mr-gOY"/>
                             <constraint firstItem="CTB-ra-Lvr" firstAttribute="trailing" secondItem="0hp-w4-jkQ" secondAttribute="trailing" id="IOl-4z-ept"/>
                             <constraint firstItem="CTB-ra-Lvr" firstAttribute="bottom" secondItem="0hp-w4-jkQ" secondAttribute="bottom" id="JlZ-b9-Iyz"/>
-                            <constraint firstItem="0hp-w4-jkQ" firstAttribute="trailing" secondItem="mmD-dH-BFS" secondAttribute="trailing" id="PBx-7b-1lu"/>
+                            <constraint firstAttribute="bottom" secondItem="mmD-dH-BFS" secondAttribute="bottom" id="bEm-sO-Q1j"/>
                             <constraint firstItem="CTB-ra-Lvr" firstAttribute="top" secondItem="0hp-w4-jkQ" secondAttribute="top" id="fn2-ln-5wO"/>
                             <constraint firstItem="CTB-ra-Lvr" firstAttribute="leading" secondItem="0hp-w4-jkQ" secondAttribute="leading" id="jlc-p8-6Uj"/>
-                            <constraint firstItem="mmD-dH-BFS" firstAttribute="leading" secondItem="0hp-w4-jkQ" secondAttribute="leading" id="ugq-AT-6sC"/>
-                            <constraint firstItem="0hp-w4-jkQ" firstAttribute="bottom" secondItem="mmD-dH-BFS" secondAttribute="bottom" id="vq4-tW-mia"/>
+                            <constraint firstItem="mmD-dH-BFS" firstAttribute="leading" secondItem="0hp-w4-jkQ" secondAttribute="leading" id="kCk-tL-rZg"/>
+                            <constraint firstItem="mmD-dH-BFS" firstAttribute="top" secondItem="Qbq-90-8dg" secondAttribute="top" id="w0R-3z-GQE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0hp-w4-jkQ"/>
                     </view>
@@ -185,11 +185,14 @@
             <objects>
                 <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="FJ7-HM-Vff" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H0x-T8-hUP">
+                    <navigationBar key="navigationBar" alpha="0.0" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H0x-T8-hUP">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="823-xB-UMB">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="2QQ-Vw-Fvn" kind="relationship" relationship="rootViewController" id="tzA-FK-b5P"/>
                     </connections>
