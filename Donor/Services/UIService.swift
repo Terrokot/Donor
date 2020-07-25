@@ -18,7 +18,7 @@ public var topmostController: UIViewController {
     }
     
     guard let controller = topController
-        else { print("errorTopController"); return UIViewController() }
+        else { print("error TopController"); return UIViewController() }
     
     return controller
 }
@@ -27,7 +27,28 @@ public var keyWindow: UIView {
     
     guard let _window = UIApplication.shared.delegate?.window,
         let window = _window
-        else { print("errorkeyWindow"); return UIView() }
+        else { print("error keyWindow"); return UIView() }
     
     return window
 }
+
+//MARK: UIView extension
+
+public extension UIView {
+
+@IBInspectable var cornerRadius: CGFloat {
+    set { clipsToBounds = true; layer.cornerRadius = newValue }
+    get { return layer.cornerRadius }
+}
+
+@IBInspectable var borderWidth: CGFloat {
+    set { layer.borderWidth = newValue }
+    get { return layer.borderWidth }
+}
+
+@IBInspectable var borderColor: UIColor {
+    set { layer.borderColor = newValue.cgColor }
+    get { print("warning borderColor"); return UIColor.clear }
+}
+}
+
