@@ -24,6 +24,7 @@
 		91377B1F24A4FD6500B450DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91377B1E24A4FD6500B450DF /* GoogleService-Info.plist */; };
 		91377B2524A7956400B450DF /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91377B2424A7956400B450DF /* PatientViewController.swift */; };
 		9137F9F024C332D400EF5F04 /* Donor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9137F9EF24C332D400EF5F04 /* Donor.storyboard */; };
+		9145D7BA24CC456C008FADF1 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145D7B924CC456C008FADF1 /* Defaults.swift */; };
 		915DC82924B8AF3500707A71 /* Donor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915DC82824B8AF3500707A71 /* Donor.swift */; };
 		915DC82B24B8AF6F00707A71 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915DC82A24B8AF6F00707A71 /* Patient.swift */; };
 		9169979224C0656D00280A4F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9169979124C0656D00280A4F /* AuthService.swift */; };
@@ -56,6 +57,7 @@
 		91377B1E24A4FD6500B450DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		91377B2424A7956400B450DF /* PatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
 		9137F9EF24C332D400EF5F04 /* Donor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Donor.storyboard; sourceTree = "<group>"; };
+		9145D7B924CC456C008FADF1 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		915DC82824B8AF3500707A71 /* Donor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donor.swift; sourceTree = "<group>"; };
 		915DC82A24B8AF6F00707A71 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		9169979124C0656D00280A4F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			children = (
 				9185165524ADE4E200F6B838 /* LocationService.swift */,
 				91A8C38924C8A515007CE71A /* TableFilter.swift */,
+				9145D7B924CC456C008FADF1 /* Defaults.swift */,
 				912150A424B0AC5200A80629 /* AlertManager.swift */,
 				9127A38024C71E6000E7B0FB /* MapManager.swift */,
 			);
@@ -368,6 +371,7 @@
 				91266B2924B5ECB1004B6859 /* DonorViewController.swift in Sources */,
 				91266B2B24B606FB004B6859 /* AcceptRequestViewController.swift in Sources */,
 				911D2D0524C9A9970022871F /* Blood.swift in Sources */,
+				9145D7BA24CC456C008FADF1 /* Defaults.swift in Sources */,
 				91274C2E24A371A9004C020D /* AppDelegate.swift in Sources */,
 				9185165624ADE4E200F6B838 /* LocationService.swift in Sources */,
 				91A8C38824C883A7007CE71A /* DonorPickerViewController.swift in Sources */,

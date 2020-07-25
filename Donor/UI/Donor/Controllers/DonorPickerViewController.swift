@@ -35,9 +35,11 @@ extension DonorPickerViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         1
     }
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return Blood.allCases.count
     }
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
         if let bloodType = Blood.elementByIndex(index: row)?.rawValue {

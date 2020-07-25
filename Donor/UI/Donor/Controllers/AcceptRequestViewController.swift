@@ -37,9 +37,8 @@ class AcceptRequestViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let userDefaults = UserDefaults.standard
-        let acceptAnyRequest = userDefaults.bool(forKey: "acceptAnyRequest")
-        let acceptionStatus = userDefaults.bool(forKey: requestEmail) //for key email
+        let acceptAnyRequest: Bool = Defaults["acceptAnyRequest"] ?? false
+        let acceptionStatus: Bool = Defaults[requestEmail] ?? false //for key email
         
         if acceptAnyRequest, acceptionStatus {
             requestAcceptButton.setTitle("Cancel", for: .normal)
@@ -51,9 +50,8 @@ class AcceptRequestViewController: UIViewController {
     @IBAction func acceptButtonTapped(_ sender: Any) {
         //MARK: ACCEPT
         
-        let userDefaults = UserDefaults.standard
-        let acceptionStatus = userDefaults.bool(forKey: requestEmail) //for key email
-        let acceptAnyRequest = userDefaults.bool(forKey: "acceptAnyRequest")
+        let acceptAnyRequest: Bool = Defaults["acceptAnyRequest"] ?? false
+        let acceptionStatus: Bool = Defaults[requestEmail] ?? false //for key email
         
         if !acceptAnyRequest, !acceptionStatus  {
             
@@ -62,18 +60,15 @@ class AcceptRequestViewController: UIViewController {
                 snapshot.ref.updateChildValues(["donorLat":self.donorLocation.latitude, "donorLon":self.donorLocation.longitude])
                 self.dataBaseRef.removeAllObservers()
             }
-            
-            let userDefaults = UserDefaults.standard
-            userDefaults.set(true, forKey: requestEmail)
-            userDefaults.set(true, forKey: "acceptAnyRequest")
+            Defaults[requestEmail] = true
+            Defaults["acceptAnyRequest"] = true
             requestAcceptButton.setTitle("Cancel", for: .normal)
             AlertManager.displayAlert(title: "You accept the request", message: "Don't forget. Patient is waiting you", vc: self)
             
         } else {
             if acceptionStatus {
-                let userDefaults = UserDefaults.standard
-                userDefaults.set(false, forKey: requestEmail)
-                userDefaults.set(false, forKey: "acceptAnyRequest")
+                Defaults[requestEmail] = false
+                Defaults["acceptAnyRequest"] = false
                 requestAcceptButton.setTitle("Accept Request", for: .normal)
                 
             } else {

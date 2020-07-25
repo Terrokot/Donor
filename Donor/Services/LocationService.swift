@@ -27,6 +27,7 @@ class LocationService: NSObject {
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.startUpdatingLocation()
     }
+    
     func getPermission() {
         manager.requestWhenInUseAuthorization()
     }
