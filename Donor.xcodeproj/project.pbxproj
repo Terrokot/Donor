@@ -136,7 +136,7 @@
 		91274C2C24A371A9004C020D /* Donor */ = {
 			isa = PBXGroup;
 			children = (
-				9145D7BD24CC6EC9008FADF1 /* Application */,
+				9145D7BE24CC7B65008FADF1 /* Application */,
 				918F275924C4C11000636B01 /* UI */,
 				9185165724AE5E4500F6B838 /* Services */,
 				915DC82724B8AEFE00707A71 /* Model */,
@@ -157,14 +157,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		9145D7BD24CC6EC9008FADF1 /* Application */ = {
+		9145D7BE24CC7B65008FADF1 /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				91274C2D24A371A9004C020D /* AppDelegate.swift */,
 				91274C3824A371AA004C020D /* LaunchScreen.storyboard */,
+				91274C3624A371AA004C020D /* Assets.xcassets */,
 				91274C3B24A371AA004C020D /* Info.plist */,
 				91377B1E24A4FD6500B450DF /* GoogleService-Info.plist */,
-				91274C3624A371AA004C020D /* Assets.xcassets */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -464,6 +464,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -518,6 +519,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -535,7 +537,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-3";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3379Y22T2W;
-				INFOPLIST_FILE = Donor/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Donor/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -555,7 +557,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-3";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3379Y22T2W;
-				INFOPLIST_FILE = Donor/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Donor/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

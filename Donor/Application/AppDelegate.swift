@@ -44,11 +44,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         case .authorizedWhenInUse:
             break
         case .restricted:
-            topWindow?.makeKeyAndVisible()
-            topWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+           // topWindow?.makeKeyAndVisible()
+           // topWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+            AlertManager.displayAlert(title: "error", message: "please get permission in settings")
+
         case .denied:
-            topWindow?.makeKeyAndVisible()
-            topWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+           // topWindow?.makeKeyAndVisible()
+           // topWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+            AlertManager.displayAlert(title: "error", message: "please get permission in settings")
+
 
         default: assertionFailure("Location is: \(locationService.status)")
         }
