@@ -18,7 +18,7 @@ public var topmostController: UIViewController {
     }
     
     guard let controller = topController
-        else { print("error"); return UIViewController() }
+        else { print("errorTopController"); return UIViewController() }
     
     return controller
 }
@@ -27,7 +27,7 @@ public var keyWindow: UIView {
     
     guard let _window = UIApplication.shared.delegate?.window,
         let window = _window
-        else { print("error"); return UIView() }
+        else { print("errorkeyWindow"); return UIView() }
     
     return window
 }
