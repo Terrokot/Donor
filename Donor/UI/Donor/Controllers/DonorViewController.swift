@@ -29,6 +29,11 @@ class DonorViewController: UIViewController {
         locationService.manager.delegate = self
         parseData()
         
+        //table MARK: RELOCATE IT
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
+        view.backgroundColor = #colorLiteral(red: 1, green: 0.8323456645, blue: 0.4732058644, alpha: 1)
+
         //MARK: TableView Timer
         Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { (timer) in
             self.tableView.reloadData()

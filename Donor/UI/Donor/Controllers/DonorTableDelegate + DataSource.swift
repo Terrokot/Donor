@@ -14,7 +14,9 @@ import CoreLocation
 extension DonorViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! DonorCell
+        
+        tableView.register(UINib(nibName: "DonorCell", bundle: nil), forCellReuseIdentifier: DonorCell.reuseId)
+        let cell = tableView.dequeueReusableCell(withIdentifier: DonorCell.reuseId) as! DonorCell
         
         let snapshot = patientsRequest[indexPath.row]
         if let patientRequestDictionary = snapshot.value as? [String: AnyObject] {
@@ -30,7 +32,7 @@ extension DonorViewController: UITableViewDataSource {
                 let roundedDistance = round(distance * 100) / 100
                 
                 cell.nameLabel.text = "\(name) - \(email)"
-                cell.distLabel.text = "\(roundedDistance)km"
+                cell.distanceLabel.text = "\(roundedDistance)km"
                 cell.bloodTypeLabel.text = "Blood type:\(bloodType)"
             }
         }

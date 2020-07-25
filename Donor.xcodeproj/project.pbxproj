@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5E82B96FE72FDBFA153B37F7 /* Pods_Donor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3839BBA1FF6E2F47043367 /* Pods_Donor.framework */; };
-		91136AC624C3A39400771C3B /* DonorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91136AC524C3A39400771C3B /* DonorCell.swift */; };
 		911D23A124C0CF690040BB4F /* DonorTableDelegate + DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D23A024C0CF690040BB4F /* DonorTableDelegate + DataSource.swift */; };
 		911D2D0524C9A9970022871F /* Blood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D2D0424C9A9970022871F /* Blood.swift */; };
 		912150A524B0AC5200A80629 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912150A424B0AC5200A80629 /* AlertManager.swift */; };
@@ -27,6 +26,8 @@
 		9145D7BA24CC456C008FADF1 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145D7B924CC456C008FADF1 /* Defaults.swift */; };
 		9145D7BC24CC6CAD008FADF1 /* UIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145D7BB24CC6CAD008FADF1 /* UIService.swift */; };
 		9145D7C024CC96DB008FADF1 /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145D7BF24CC96DB008FADF1 /* HeartButton.swift */; };
+		9145D7C424CCCE26008FADF1 /* DonorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145D7C224CCCE26008FADF1 /* DonorCell.swift */; };
+		9145D7C524CCCE26008FADF1 /* DonorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9145D7C324CCCE26008FADF1 /* DonorCell.xib */; };
 		915DC82924B8AF3500707A71 /* Donor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915DC82824B8AF3500707A71 /* Donor.swift */; };
 		915DC82B24B8AF6F00707A71 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915DC82A24B8AF6F00707A71 /* Patient.swift */; };
 		9169979224C0656D00280A4F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9169979124C0656D00280A4F /* AuthService.swift */; };
@@ -41,7 +42,6 @@
 
 /* Begin PBXFileReference section */
 		2C5B2370E0030D2061A80B64 /* Pods-Donor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donor.release.xcconfig"; path = "Target Support Files/Pods-Donor/Pods-Donor.release.xcconfig"; sourceTree = "<group>"; };
-		91136AC524C3A39400771C3B /* DonorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorCell.swift; sourceTree = "<group>"; };
 		911D23A024C0CF690040BB4F /* DonorTableDelegate + DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DonorTableDelegate + DataSource.swift"; sourceTree = "<group>"; };
 		911D2D0424C9A9970022871F /* Blood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blood.swift; sourceTree = "<group>"; };
 		912150A424B0AC5200A80629 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
@@ -62,6 +62,8 @@
 		9145D7B924CC456C008FADF1 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		9145D7BB24CC6CAD008FADF1 /* UIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIService.swift; sourceTree = "<group>"; };
 		9145D7BF24CC96DB008FADF1 /* HeartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
+		9145D7C224CCCE26008FADF1 /* DonorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorCell.swift; sourceTree = "<group>"; };
+		9145D7C324CCCE26008FADF1 /* DonorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonorCell.xib; sourceTree = "<group>"; };
 		915DC82824B8AF3500707A71 /* Donor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donor.swift; sourceTree = "<group>"; };
 		915DC82A24B8AF6F00707A71 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		9169979124C0656D00280A4F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -111,8 +113,10 @@
 			isa = PBXGroup;
 			children = (
 				91314E7B24C447600065C3B1 /* Controllers */,
-				91136AC524C3A39400771C3B /* DonorCell.swift */,
+				9145D7C124CCCD75008FADF1 /* Cell */,
 				9137F9EF24C332D400EF5F04 /* Donor.storyboard */,
+				9145D7C224CCCE26008FADF1 /* DonorCell.swift */,
+				9145D7C324CCCE26008FADF1 /* DonorCell.xib */,
 			);
 			path = Donor;
 			sourceTree = "<group>";
@@ -169,6 +173,13 @@
 				91377B1E24A4FD6500B450DF /* GoogleService-Info.plist */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		9145D7C124CCCD75008FADF1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		915DC82724B8AEFE00707A71 /* Model */ = {
@@ -294,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91274C3A24A371AA004C020D /* LaunchScreen.storyboard in Resources */,
+				9145D7C524CCCE26008FADF1 /* DonorCell.xib in Resources */,
 				9137F9F024C332D400EF5F04 /* Donor.storyboard in Resources */,
 				91377B1F24A4FD6500B450DF /* GoogleService-Info.plist in Resources */,
 				91274C3724A371AA004C020D /* Assets.xcassets in Resources */,
@@ -389,9 +401,9 @@
 				9145D7BA24CC456C008FADF1 /* Defaults.swift in Sources */,
 				91274C2E24A371A9004C020D /* AppDelegate.swift in Sources */,
 				9185165624ADE4E200F6B838 /* LocationService.swift in Sources */,
+				9145D7C424CCCE26008FADF1 /* DonorCell.swift in Sources */,
 				91A8C38824C883A7007CE71A /* DonorPickerViewController.swift in Sources */,
 				91377B2524A7956400B450DF /* PatientViewController.swift in Sources */,
-				91136AC624C3A39400771C3B /* DonorCell.swift in Sources */,
 				9145D7C024CC96DB008FADF1 /* HeartButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

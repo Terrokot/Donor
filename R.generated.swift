@@ -251,10 +251,22 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
-  struct reuseIdentifier {
-    /// Reuse identifier `Cell`.
-    static let cell: Rswift.ReuseIdentifier<DonorCell> = Rswift.ReuseIdentifier(identifier: "Cell")
+  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  struct nib {
+    /// Nib `DonorCell`.
+    static let donorCell = _R.nib._DonorCell()
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "DonorCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.donorCell) instead")
+    static func donorCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.donorCell)
+    }
+    #endif
+
+    static func donorCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> DonorCell? {
+      return R.nib.donorCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? DonorCell
+    }
 
     fileprivate init() {}
   }
@@ -278,6 +290,23 @@ struct _R: Rswift.Validatable {
     try storyboard.validate()
     #endif
   }
+
+  #if os(iOS) || os(tvOS)
+  struct nib {
+    struct _DonorCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "DonorCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> DonorCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? DonorCell
+      }
+
+      fileprivate init() {}
+    }
+
+    fileprivate init() {}
+  }
+  #endif
 
   #if os(iOS) || os(tvOS)
   struct storyboard: Rswift.Validatable {

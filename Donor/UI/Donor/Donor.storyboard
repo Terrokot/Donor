@@ -19,53 +19,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LEQ-JM-DDp">
                                 <rect key="frame" x="0.0" y="44" width="414" height="692"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="125" id="4wi-Lv-ged" customClass="DonorCell" customModule="Donor" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="125"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4wi-Lv-ged" id="WUj-Hh-pil">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EW3-F2-Kvi">
-                                                    <rect key="frame" x="10" y="70.333333333333329" width="30" height="20"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AI-qX-lfs">
-                                                    <rect key="frame" x="10" y="9.9999999999999982" width="394" height="20.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blood type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o30-LO-Cqe">
-                                                    <rect key="frame" x="311.33333333333331" y="70.333333333333329" width="82.666666666666686" height="20.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="0AI-qX-lfs" secondAttribute="trailing" constant="10" id="0VN-0S-geT"/>
-                                                <constraint firstItem="0AI-qX-lfs" firstAttribute="leading" secondItem="WUj-Hh-pil" secondAttribute="leading" constant="10" id="Wka-LR-Rag"/>
-                                                <constraint firstItem="o30-LO-Cqe" firstAttribute="top" secondItem="0AI-qX-lfs" secondAttribute="bottom" constant="40" id="dts-cH-Rwr"/>
-                                                <constraint firstItem="0AI-qX-lfs" firstAttribute="top" secondItem="WUj-Hh-pil" secondAttribute="top" constant="10" id="iLM-Tb-vQi"/>
-                                                <constraint firstItem="EW3-F2-Kvi" firstAttribute="leading" secondItem="WUj-Hh-pil" secondAttribute="leading" constant="10" id="isp-ct-dGR"/>
-                                                <constraint firstItem="EW3-F2-Kvi" firstAttribute="top" secondItem="0AI-qX-lfs" secondAttribute="bottom" constant="40" id="ma4-NB-idD"/>
-                                                <constraint firstAttribute="trailing" secondItem="o30-LO-Cqe" secondAttribute="trailing" constant="20" id="y4w-rm-XVV"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="bloodTypeLabel" destination="o30-LO-Cqe" id="ucg-OD-Nfy"/>
-                                            <outlet property="distLabel" destination="EW3-F2-Kvi" id="LUK-uU-ZfO"/>
-                                            <outlet property="nameLabel" destination="0AI-qX-lfs" id="VS1-f4-yk1"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
+                                <color key="sectionIndexBackgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="kLH-D0-H1b" id="Zd6-ID-Niv"/>
-                                    <outlet property="delegate" destination="kLH-D0-H1b" id="Egb-dA-kJl"/>
+                                    <outlet property="dataSource" destination="kLH-D0-H1b" id="lFQ-fF-jLp"/>
+                                    <outlet property="delegate" destination="kLH-D0-H1b" id="KMA-8O-Mag"/>
                                 </connections>
                             </tableView>
                         </subviews>
