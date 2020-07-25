@@ -55,7 +55,7 @@
 		91274C3924A371AA004C020D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91274C3B24A371AA004C020D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9127A38024C71E6000E7B0FB /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
-		91377B1E24A4FD6500B450DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		91377B1E24A4FD6500B450DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		91377B2424A7956400B450DF /* PatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
 		9137F9EF24C332D400EF5F04 /* Donor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Donor.storyboard; sourceTree = "<group>"; };
 		9145D7B924CC456C008FADF1 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
@@ -136,15 +136,11 @@
 		91274C2C24A371A9004C020D /* Donor */ = {
 			isa = PBXGroup;
 			children = (
+				9145D7BD24CC6EC9008FADF1 /* Application */,
 				918F275924C4C11000636B01 /* UI */,
 				9185165724AE5E4500F6B838 /* Services */,
 				915DC82724B8AEFE00707A71 /* Model */,
 				9185165824AE5E6200F6B838 /* Helpers */,
-				91274C2D24A371A9004C020D /* AppDelegate.swift */,
-				91274C3824A371AA004C020D /* LaunchScreen.storyboard */,
-				91274C3B24A371AA004C020D /* Info.plist */,
-				91377B1E24A4FD6500B450DF /* GoogleService-Info.plist */,
-				91274C3624A371AA004C020D /* Assets.xcassets */,
 			);
 			path = Donor;
 			sourceTree = "<group>";
@@ -159,6 +155,18 @@
 				91DDA99C24C5F30700C44F01 /* DonorLocationManagerDelegate.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9145D7BD24CC6EC9008FADF1 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				91274C2D24A371A9004C020D /* AppDelegate.swift */,
+				91274C3824A371AA004C020D /* LaunchScreen.storyboard */,
+				91274C3B24A371AA004C020D /* Info.plist */,
+				91377B1E24A4FD6500B450DF /* GoogleService-Info.plist */,
+				91274C3624A371AA004C020D /* Assets.xcassets */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 		915DC82724B8AEFE00707A71 /* Model */ = {
