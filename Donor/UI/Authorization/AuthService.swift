@@ -27,11 +27,10 @@ class AuthService {
                 if error == nil {
                     let req = Auth.auth().currentUser?.createProfileChangeRequest()
                                         
-                    let userDefaults = UserDefaults.standard
-                    userDefaults.set(true, forKey: "signInStatus")
                     let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: EmailAuthProvider.credential(withEmail: email, password: password))
-                    userDefaults.set(encodedData, forKey: "token")
-                    userDefaults.synchronize()
+                    Defaults["token"] = encodedData
+                    Defaults["signInStatus"] = true
+                    _Defaults.synchronize()
                     
                     if vc.donorPatientSwitch.isOn {
                         // PATIENT
@@ -55,11 +54,10 @@ class AuthService {
             // MARK: LOG IN
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                 
-                let userDefaults = UserDefaults.standard
-                userDefaults.set(true, forKey: "signInStatus")
                 let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: EmailAuthProvider.credential(withEmail: email, password: password))
-                userDefaults.set(encodedData, forKey: "token")
-                userDefaults.synchronize()
+                Defaults["token"] = encodedData
+                Defaults["signInStatus"] = true
+                _Defaults.synchronize()
                 
                 switch user?.user.displayName {
                 case "Patient":
@@ -76,9 +74,8 @@ class AuthService {
     }
     //MARK: Auto Log In
     static func autoLogIn(vc: UIViewController) {
-        let userDefaults = UserDefaults.standard
         
-        guard let decoded  = userDefaults.data(forKey: "token") else {
+        guard let decoded: Data  = Defaults["token"] else {
             print("no data")
             return
         }

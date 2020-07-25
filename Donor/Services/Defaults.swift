@@ -11,7 +11,7 @@ import Foundation
 class _Defaults {
     
     private let defaults = UserDefaults.standard;
-
+    
     fileprivate init() { }
     
     subscript<T>(key: String) -> T? {
@@ -24,6 +24,13 @@ class _Defaults {
         }
     }
     
+    public static func synchronize() {
+        UserDefaults.standard.synchronize()
+    }
+    public static func clearAll() {
+        UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
+        UserDefaults.standard.synchronize()
+    }
 }
 
 let Defaults = _Defaults()

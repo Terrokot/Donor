@@ -72,6 +72,7 @@ class PatientViewController: UIViewController {
     }
     
     @IBAction func logoutTapped(_ sender: Any) {
+        _Defaults.clearAll()
         try? Auth.auth().signOut()
         navigationController?.dismiss(animated: true, completion: nil)
     }
