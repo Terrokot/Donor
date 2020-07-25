@@ -41,7 +41,7 @@ class PickerViewController: UIViewController {
             dismiss(animated: true, completion: nil)
         }
         else {
-            AlertManager.displayAlert(title: "error", message: "fill all forms", vc: self)
+            AlertManager.displayAlert(title: "error", message: "fill all forms")
         }
     }
 }

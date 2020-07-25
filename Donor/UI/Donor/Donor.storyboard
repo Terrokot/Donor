@@ -214,7 +214,6 @@
         <!--Donor Picker View Controller-->
         <scene sceneID="uY2-Tj-Rzh">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AcP-4s-pKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="DonorPickerViewController" id="ruy-6X-VHP" customClass="DonorPickerViewController" customModule="Donor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pfk-VY-2Oj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -264,8 +263,9 @@
                         <outlet property="pickerView" destination="w5O-6I-3gO" id="Qm9-4n-j9h"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AcP-4s-pKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1928.985507246377" y="1562.771739130435"/>
+            <point key="canvasLocation" x="3455" y="853"/>
         </scene>
     </scenes>
 </document>

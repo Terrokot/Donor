@@ -45,8 +45,6 @@ class AcceptRequestViewController: UIViewController {
         }
     }
     
-    
-    
     @IBAction func acceptButtonTapped(_ sender: Any) {
         //MARK: ACCEPT
         
@@ -63,7 +61,7 @@ class AcceptRequestViewController: UIViewController {
             Defaults[requestEmail] = true
             Defaults["acceptAnyRequest"] = true
             requestAcceptButton.setTitle("Cancel", for: .normal)
-            AlertManager.displayAlert(title: "You accept the request", message: "Don't forget. Patient is waiting you", vc: self)
+            AlertManager.displayAlert(title: "You accept the request", message: "Don't forget. Patient is waiting you")
             
         } else {
             if acceptionStatus {
@@ -72,7 +70,7 @@ class AcceptRequestViewController: UIViewController {
                 requestAcceptButton.setTitle("Accept Request", for: .normal)
                 
             } else {
-                AlertManager.displayAlert(title: "error", message: "You can't accept more than 1 request", vc: self)
+                AlertManager.displayAlert(title: "error", message: "You can't accept more than 1 request")
             }
         }
         // not shure that we need this button

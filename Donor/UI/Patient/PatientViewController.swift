@@ -67,7 +67,7 @@ class PatientViewController: UIViewController {
             ref.child("PatientsRequests").childByAutoId().setValue(patientRequestDictionary)
             findDonorButton.setTitle("Cancel Request", for: .normal)
             requestHasBeenSent = true
-            AlertManager.displayAlert(title: "Your request is registered", message: "We are already looking for a donor for you. You will be contacted soon", vc: self)
+            AlertManager.displayAlert(title: "Your request is registered", message: "We are already looking for a donor for you. You will be contacted soon")
         }
     }
     
