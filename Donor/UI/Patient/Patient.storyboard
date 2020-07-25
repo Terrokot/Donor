@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0D-aG-zwE" customClass="HeartButton" customModule="Donor" customModuleProvider="target">
-                                        <rect key="frame" x="143" y="562" width="128" height="128"/>
+                                        <rect key="frame" x="143" y="570.5" width="128" height="128"/>
                                         <color key="backgroundColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="128" id="3s9-YO-PhJ"/>
@@ -36,19 +36,19 @@
                                             <action selector="findDonorTapped:" destination="2QQ-Vw-Fvn" eventType="touchUpInside" id="eRx-Qg-HuL"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your blood type:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCw-xe-TO8">
-                                        <rect key="frame" x="20" y="710" width="374" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a donor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCw-xe-TO8">
+                                        <rect key="frame" x="20" y="708.5" width="374" height="15.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="CCw-xe-TO8" secondAttribute="trailing" constant="20" id="3D7-bV-rno"/>
-                                    <constraint firstItem="CCw-xe-TO8" firstAttribute="top" secondItem="n0D-aG-zwE" secondAttribute="bottom" constant="20" id="6LO-Wr-eDa"/>
+                                    <constraint firstItem="CCw-xe-TO8" firstAttribute="top" secondItem="n0D-aG-zwE" secondAttribute="bottom" constant="10" id="6LO-Wr-eDa"/>
                                     <constraint firstItem="CCw-xe-TO8" firstAttribute="leading" secondItem="CTB-ra-Lvr" secondAttribute="leading" constant="20" id="OQq-hC-bhO"/>
                                     <constraint firstItem="n0D-aG-zwE" firstAttribute="centerX" secondItem="CTB-ra-Lvr" secondAttribute="centerX" id="TAm-f7-A0c"/>
-                                    <constraint firstAttribute="bottom" secondItem="CCw-xe-TO8" secondAttribute="bottom" constant="40" id="eij-JT-Jv9"/>
+                                    <constraint firstAttribute="bottom" secondItem="CCw-xe-TO8" secondAttribute="bottom" constant="50" id="eij-JT-Jv9"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -78,9 +78,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="bloodTypeLabel" destination="CCw-xe-TO8" id="4Vo-vI-Yof"/>
                         <outlet property="findDonorButton" destination="n0D-aG-zwE" id="BAr-KD-dnR"/>
                         <outlet property="map" destination="mmD-dH-BFS" id="CCg-vt-81v"/>
+                        <outlet property="requestStatusLabel" destination="CCw-xe-TO8" id="4Vo-vI-Yof"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MXE-uQ-thU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

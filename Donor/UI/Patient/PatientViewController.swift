@@ -15,7 +15,7 @@ class PatientViewController: UIViewController {
     
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var findDonorButton: HeartButton!
-    @IBOutlet var bloodTypeLabel: UILabel!
+    @IBOutlet var requestStatusLabel: UILabel!
         
     
     
@@ -37,7 +37,7 @@ class PatientViewController: UIViewController {
         if let email = Auth.auth().currentUser?.email {
             ref.child("PatientsRequests").queryOrdered(byChild: "email").queryEqual(toValue: email).observe(.childAdded, with: { (snapshot) in
                 self.requestHasBeenSent = true
-                self.findDonorButton.setTitle("Cancel Request", for: .normal)
+                self.requestStatusLabel.text = "Cancel Request"
                 self.findDonorButton.cancelMode() // MARK: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 self.ref.child("PatientsRequests").removeAllObservers()
             })
@@ -48,7 +48,7 @@ class PatientViewController: UIViewController {
         
         guard let email = Auth.auth().currentUser?.email else { return }
         if requestHasBeenSent {
-            findDonorButton.setTitle("Find Donor", for: .normal)
+            self.requestStatusLabel.text = "Find a Donor"
             self.findDonorButton.setup() //MARK: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             requestHasBeenSent = false
             ref.child("PatientsRequests").queryOrdered(byChild: "email").queryEqual(toValue: email).observe(.childAdded, with: { (snapshot) in
@@ -68,7 +68,7 @@ class PatientViewController: UIViewController {
                                                              "longitude": userLocation.longitude ]
             
             ref.child("PatientsRequests").childByAutoId().setValue(patientRequestDictionary)
-            findDonorButton.setTitle("Cancel Request", for: .normal)
+            self.requestStatusLabel.text = "Cancel Request"
             self.findDonorButton.cancelMode() // MARK: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             requestHasBeenSent = true
             AlertManager.displayAlert(title: "Your request is registered", message: "We are already looking for a donor for you. You will be contacted soon")
@@ -96,7 +96,7 @@ class PatientViewController: UIViewController {
 extension PatientViewController: PickerViewControllerDelegate {
     func sendData(_ data: Patient) {
         patientData = data
-        bloodTypeLabel.text = "You blood type: \(data.bloodType.rawValue)"
+        //equestStatusLabel.text = "You blood type: \(data.bloodType.rawValue)"
         print(data)
     }
 }
