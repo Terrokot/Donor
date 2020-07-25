@@ -26,6 +26,7 @@
 		9137F9F024C332D400EF5F04 /* Donor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9137F9EF24C332D400EF5F04 /* Donor.storyboard */; };
 		9145D7BA24CC456C008FADF1 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145D7B924CC456C008FADF1 /* Defaults.swift */; };
 		9145D7BC24CC6CAD008FADF1 /* UIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145D7BB24CC6CAD008FADF1 /* UIService.swift */; };
+		9145D7C024CC96DB008FADF1 /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145D7BF24CC96DB008FADF1 /* HeartButton.swift */; };
 		915DC82924B8AF3500707A71 /* Donor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915DC82824B8AF3500707A71 /* Donor.swift */; };
 		915DC82B24B8AF6F00707A71 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915DC82A24B8AF6F00707A71 /* Patient.swift */; };
 		9169979224C0656D00280A4F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9169979124C0656D00280A4F /* AuthService.swift */; };
@@ -60,6 +61,7 @@
 		9137F9EF24C332D400EF5F04 /* Donor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Donor.storyboard; sourceTree = "<group>"; };
 		9145D7B924CC456C008FADF1 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		9145D7BB24CC6CAD008FADF1 /* UIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIService.swift; sourceTree = "<group>"; };
+		9145D7BF24CC96DB008FADF1 /* HeartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
 		915DC82824B8AF3500707A71 /* Donor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donor.swift; sourceTree = "<group>"; };
 		915DC82A24B8AF6F00707A71 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		9169979124C0656D00280A4F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 		915DC82724B8AEFE00707A71 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9145D7BF24CC96DB008FADF1 /* HeartButton.swift */,
 				915DC82A24B8AF6F00707A71 /* Patient.swift */,
 				911D2D0424C9A9970022871F /* Blood.swift */,
 				915DC82824B8AF3500707A71 /* Donor.swift */,
@@ -389,6 +392,7 @@
 				91A8C38824C883A7007CE71A /* DonorPickerViewController.swift in Sources */,
 				91377B2524A7956400B450DF /* PatientViewController.swift in Sources */,
 				91136AC624C3A39400771C3B /* DonorCell.swift in Sources */,
+				9145D7C024CC96DB008FADF1 /* HeartButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

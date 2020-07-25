@@ -22,9 +22,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTB-ra-Lvr">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0D-aG-zwE">
-                                        <rect key="frame" x="28" y="660" width="358" height="30"/>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0D-aG-zwE" customClass="HeartButton" customModule="Donor" customModuleProvider="target">
+                                        <rect key="frame" x="143" y="562" width="128" height="128"/>
                                         <color key="backgroundColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="128" id="3s9-YO-PhJ"/>
+                                            <constraint firstAttribute="height" constant="128" id="46l-RH-3JC"/>
+                                        </constraints>
                                         <state key="normal" title="Find a Donor">
                                             <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -42,9 +46,8 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="CCw-xe-TO8" secondAttribute="trailing" constant="20" id="3D7-bV-rno"/>
                                     <constraint firstItem="CCw-xe-TO8" firstAttribute="top" secondItem="n0D-aG-zwE" secondAttribute="bottom" constant="20" id="6LO-Wr-eDa"/>
-                                    <constraint firstItem="n0D-aG-zwE" firstAttribute="leading" secondItem="CTB-ra-Lvr" secondAttribute="leadingMargin" constant="20" id="7Cz-Eg-UrV"/>
                                     <constraint firstItem="CCw-xe-TO8" firstAttribute="leading" secondItem="CTB-ra-Lvr" secondAttribute="leading" constant="20" id="OQq-hC-bhO"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="n0D-aG-zwE" secondAttribute="trailing" constant="20" id="T4g-yz-1FM"/>
+                                    <constraint firstItem="n0D-aG-zwE" firstAttribute="centerX" secondItem="CTB-ra-Lvr" secondAttribute="centerX" id="TAm-f7-A0c"/>
                                     <constraint firstAttribute="bottom" secondItem="CCw-xe-TO8" secondAttribute="bottom" constant="40" id="eij-JT-Jv9"/>
                                 </constraints>
                             </view>

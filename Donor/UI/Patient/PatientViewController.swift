@@ -14,8 +14,9 @@ import FirebaseDatabase
 class PatientViewController: UIViewController {
     
     @IBOutlet weak var map: MKMapView!
-    @IBOutlet weak var findDonorButton: UIButton!
+    @IBOutlet weak var findDonorButton: HeartButton!
     @IBOutlet var bloodTypeLabel: UILabel!
+        
     
     
     var ref: DatabaseReference!
@@ -37,6 +38,7 @@ class PatientViewController: UIViewController {
             ref.child("PatientsRequests").queryOrdered(byChild: "email").queryEqual(toValue: email).observe(.childAdded, with: { (snapshot) in
                 self.requestHasBeenSent = true
                 self.findDonorButton.setTitle("Cancel Request", for: .normal)
+                self.findDonorButton.cancelMode() // MARK: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 self.ref.child("PatientsRequests").removeAllObservers()
             })
         }
@@ -47,6 +49,7 @@ class PatientViewController: UIViewController {
         guard let email = Auth.auth().currentUser?.email else { return }
         if requestHasBeenSent {
             findDonorButton.setTitle("Find Donor", for: .normal)
+            self.findDonorButton.setup() //MARK: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             requestHasBeenSent = false
             ref.child("PatientsRequests").queryOrdered(byChild: "email").queryEqual(toValue: email).observe(.childAdded, with: { (snapshot) in
                 snapshot.ref.removeValue()
@@ -66,6 +69,7 @@ class PatientViewController: UIViewController {
             
             ref.child("PatientsRequests").childByAutoId().setValue(patientRequestDictionary)
             findDonorButton.setTitle("Cancel Request", for: .normal)
+            self.findDonorButton.cancelMode() // MARK: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             requestHasBeenSent = true
             AlertManager.displayAlert(title: "Your request is registered", message: "We are already looking for a donor for you. You will be contacted soon")
         }
