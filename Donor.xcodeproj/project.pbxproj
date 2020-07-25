@@ -28,7 +28,7 @@
 		915DC82B24B8AF6F00707A71 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915DC82A24B8AF6F00707A71 /* Patient.swift */; };
 		9169979224C0656D00280A4F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9169979124C0656D00280A4F /* AuthService.swift */; };
 		9185165624ADE4E200F6B838 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185165524ADE4E200F6B838 /* LocationService.swift */; };
-		9185165C24AE5EB700F6B838 /* LocationServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185165B24AE5EB700F6B838 /* LocationServiceDelegate.swift */; };
+		9185165C24AE5EB700F6B838 /* PatientLocationServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185165B24AE5EB700F6B838 /* PatientLocationServiceDelegate.swift */; };
 		918A9E5824BB63D1004778D2 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918A9E5724BB63D1004778D2 /* PickerViewController.swift */; };
 		918F275824C3366900636B01 /* Patient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 918F275724C3366900636B01 /* Patient.storyboard */; };
 		91A8C38824C883A7007CE71A /* DonorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A8C38724C883A7007CE71A /* DonorPickerViewController.swift */; };
@@ -60,7 +60,7 @@
 		915DC82A24B8AF6F00707A71 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		9169979124C0656D00280A4F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		9185165524ADE4E200F6B838 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
-		9185165B24AE5EB700F6B838 /* LocationServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceDelegate.swift; sourceTree = "<group>"; };
+		9185165B24AE5EB700F6B838 /* PatientLocationServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientLocationServiceDelegate.swift; sourceTree = "<group>"; };
 		918A9E5724BB63D1004778D2 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PickerViewController.swift; path = Donor/UI/Patient/PickerViewController.swift; sourceTree = SOURCE_ROOT; };
 		918F275724C3366900636B01 /* Patient.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Patient.storyboard; sourceTree = "<group>"; };
 		91A8C38724C883A7007CE71A /* DonorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorPickerViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +95,7 @@
 			children = (
 				91377B2424A7956400B450DF /* PatientViewController.swift */,
 				918A9E5724BB63D1004778D2 /* PickerViewController.swift */,
+				9185165B24AE5EB700F6B838 /* PatientLocationServiceDelegate.swift */,
 				918F275724C3366900636B01 /* Patient.storyboard */,
 			);
 			path = Patient;
@@ -190,7 +191,6 @@
 		9185165824AE5E6200F6B838 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				9185165B24AE5EB700F6B838 /* LocationServiceDelegate.swift */,
 				91266B2F24B60A20004B6859 /* R.generated.swift */,
 			);
 			path = Helpers;
@@ -355,7 +355,7 @@
 			files = (
 				91274C3224A371A9004C020D /* AuthViewController.swift in Sources */,
 				9127A38124C71E6000E7B0FB /* MapManager.swift in Sources */,
-				9185165C24AE5EB700F6B838 /* LocationServiceDelegate.swift in Sources */,
+				9185165C24AE5EB700F6B838 /* PatientLocationServiceDelegate.swift in Sources */,
 				915DC82924B8AF3500707A71 /* Donor.swift in Sources */,
 				91266B3024B60A20004B6859 /* R.generated.swift in Sources */,
 				912150A524B0AC5200A80629 /* AlertManager.swift in Sources */,

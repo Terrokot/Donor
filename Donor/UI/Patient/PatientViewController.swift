@@ -15,7 +15,6 @@ class PatientViewController: UIViewController {
     
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var findDonorButton: UIButton!
-    
     @IBOutlet var bloodTypeLabel: UILabel!
     
     
@@ -88,7 +87,6 @@ class PatientViewController: UIViewController {
         vc.pickerViewControllerDelegate = self
         present(vc, animated: true, completion: nil)
     }
-    
 }
 extension PatientViewController: PickerViewControllerDelegate {
     func sendData(_ data: Patient) {

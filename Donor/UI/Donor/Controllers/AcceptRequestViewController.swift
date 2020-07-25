@@ -69,8 +69,6 @@ class AcceptRequestViewController: UIViewController {
             requestAcceptButton.setTitle("Cancel", for: .normal)
             AlertManager.displayAlert(title: "You accept the request", message: "Don't forget. Patient is waiting you", vc: self)
             
-            
-            
         } else {
             if acceptionStatus {
                 let userDefaults = UserDefaults.standard
@@ -81,9 +79,6 @@ class AcceptRequestViewController: UIViewController {
             } else {
                 AlertManager.displayAlert(title: "error", message: "You can't accept more than 1 request", vc: self)
             }
-            
-            //AlertManager.displayAlert(title: "You accept the request", message: "Don't forget that donor is waiting you", vc: self)
-            
         }
         // not shure that we need this button
         
