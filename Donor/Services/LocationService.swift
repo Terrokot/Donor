@@ -48,4 +48,25 @@ class LocationService: NSObject {
     }
 }
 
+extension LocationService: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.sorted(by: { $0.timestamp > $1.timestamp }).first {
+            self.newestLocation?(location.coordinate)
+        } else {
+            self.newestLocation?(nil)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Failed to get the user loction: \(error.localizedDescription)")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        print("Location status: \(status)")
+        self.statusUpdated?(status)
+    }
+    
+}
+
 

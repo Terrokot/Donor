@@ -27,19 +27,6 @@ class DonorViewController: UIViewController {
         super.viewDidLoad()
         // Location
         locationService.manager.delegate = self
-        switch locationService.status {
-        case .notDetermined:
-            locationService.getPermission()
-        case .authorizedWhenInUse:
-            break
-        case .restricted:
-            print("Get permission in settings")
-        case .denied:
-            print("Get permission in settings")
-            
-        default: assertionFailure("Location is: \(locationService.status)")
-        }
-        
         parseData()
         
         //MARK: TableView Timer

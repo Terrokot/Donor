@@ -34,19 +34,6 @@ class PatientViewController: UIViewController {
         // Location service
         locationService.manager.delegate = self
         
-        switch locationService.status {
-        case .notDetermined:
-            locationService.getPermission()
-        case .authorizedWhenInUse:
-            break
-        case .restricted:
-            print("Get permission in settings")
-        case .denied:
-            print("Get permission in settings")
-            
-        default: assertionFailure("Location is: \(locationService.status)")
-        }
-        
         if let email = Auth.auth().currentUser?.email {
             ref.child("PatientsRequests").queryOrdered(byChild: "email").queryEqual(toValue: email).observe(.childAdded, with: { (snapshot) in
                 self.requestHasBeenSent = true
