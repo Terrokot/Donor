@@ -38,7 +38,7 @@ class PatientViewController: UIViewController {
             ref.child("PatientsRequests").queryOrdered(byChild: "email").queryEqual(toValue: email).observe(.childAdded, with: { (snapshot) in
                 self.requestHasBeenSent = true
                 self.requestStatusLabel.text = "Cancel Request"
-                self.findDonorButton.cancelMode() // MARK: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                self.findDonorButton.cancelMode() // MARK: Button switch mode
                 self.ref.child("PatientsRequests").removeAllObservers()
             })
         }
@@ -49,7 +49,8 @@ class PatientViewController: UIViewController {
         guard let email = Auth.auth().currentUser?.email else { return }
         if requestHasBeenSent {
             self.requestStatusLabel.text = "Find a Donor"
-            self.findDonorButton.setup() //MARK: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            self.findDonorButton.setup()
+            self.findDonorButton.acceptMode() //MARK: Button switch mode
             requestHasBeenSent = false
             ref.child("PatientsRequests").queryOrdered(byChild: "email").queryEqual(toValue: email).observe(.childAdded, with: { (snapshot) in
                 snapshot.ref.removeValue()
@@ -69,7 +70,7 @@ class PatientViewController: UIViewController {
             
             ref.child("PatientsRequests").childByAutoId().setValue(patientRequestDictionary)
             self.requestStatusLabel.text = "Cancel Request"
-            self.findDonorButton.cancelMode() // MARK: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            self.findDonorButton.cancelMode() // MARK: Button switch mode
             requestHasBeenSent = true
             AlertManager.displayAlert(title: "Your request is registered", message: "We are already looking for a donor for you. You will be contacted soon")
         }
@@ -92,6 +93,8 @@ class PatientViewController: UIViewController {
         vc.pickerViewControllerDelegate = self
         present(vc, animated: true, completion: nil)
     }
+    
+    
 }
 extension PatientViewController: PickerViewControllerDelegate {
     func sendData(_ data: Patient) {

@@ -146,8 +146,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 11 images.
+  /// This `R.image` struct is generated, and contains static references to 14 images.
   struct image {
+    /// Image ` auf`.
+    static let auf = Rswift.ImageResource(bundle: R.hostingBundle, name: " auf")
+    /// Image `cancel`.
+    static let cancel = Rswift.ImageResource(bundle: R.hostingBundle, name: "cancel")
     /// Image `heartRequest`.
     static let heartRequest = Rswift.ImageResource(bundle: R.hostingBundle, name: "heartRequest")
     /// Image `icon1024`.
@@ -166,10 +170,26 @@ struct R: Rswift.Validatable {
     static let icon76 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon76")
     /// Image `icon84`.
     static let icon84 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon84")
+    /// Image `kok`.
+    static let kok = Rswift.ImageResource(bundle: R.hostingBundle, name: "kok")
     /// Image `loadingCat`.
     static let loadingCat = Rswift.ImageResource(bundle: R.hostingBundle, name: "loadingCat")
-    /// Image `loading`.
-    static let loading = Rswift.ImageResource(bundle: R.hostingBundle, name: "loading")
+    /// Image `lohebanoo`.
+    static let lohebanoo = Rswift.ImageResource(bundle: R.hostingBundle, name: "lohebanoo")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: " auf", bundle: ..., traitCollection: ...)`
+    static func auf(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.auf, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "cancel", bundle: ..., traitCollection: ...)`
+    static func cancel(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.cancel, compatibleWith: traitCollection)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "heartRequest", bundle: ..., traitCollection: ...)`
@@ -235,9 +255,9 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "loading", bundle: ..., traitCollection: ...)`
-    static func loading(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.loading, compatibleWith: traitCollection)
+    /// `UIImage(named: "kok", bundle: ..., traitCollection: ...)`
+    static func kok(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.kok, compatibleWith: traitCollection)
     }
     #endif
 
@@ -245,6 +265,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "loadingCat", bundle: ..., traitCollection: ...)`
     static func loadingCat(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.loadingCat, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "lohebanoo", bundle: ..., traitCollection: ...)`
+    static func lohebanoo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.lohebanoo, compatibleWith: traitCollection)
     }
     #endif
 
@@ -389,7 +416,7 @@ struct _R: Rswift.Validatable {
       let name = "LaunchScreen"
 
       static func validate() throws {
-        if UIKit.UIImage(named: "loadingCat", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'loadingCat' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "lohebanoo", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'lohebanoo' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }

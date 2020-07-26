@@ -10,7 +10,9 @@ import UIKit
 
 class HeartButton: UIButton {
     
-    let image = UIImage.init(named: "heartRequest")
+    let heartImage = UIImage.init(named: "heartRequest")
+    let cancelImage = UIImage.init(named: "cancel")
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,21 +27,40 @@ class HeartButton: UIButton {
     func setup() {
         setShadow()
         setTitle("", for: .normal)
-        setBackgroundImage(image, for: .normal)
+        backgroundColor = UIColor.clear
+        setBackgroundImage(heartImage, for: .normal)
         layer.cornerRadius = 150
     }
     
     func cancelMode() {
-        setBackgroundImage(.none, for: .normal)
+        setBackgroundImage(cancelImage, for: .normal)
+        setupCancelModeConstraints()
+    }
+    
+    func acceptMode() {
+        setBackgroundImage(heartImage, for: .normal)
+        setupAcceptModeConstraints()
     }
     
     private func setShadow() {
-         layer.shadowColor   = UIColor.black.cgColor
-         layer.shadowOffset  = CGSize(width: 0.0, height: 6.0)
-         layer.shadowRadius  = 20
-         layer.shadowOpacity = 0.4
-         clipsToBounds       = true
-         layer.masksToBounds = false
-     }
+        layer.shadowColor   = UIColor.black.cgColor
+        layer.shadowOffset  = CGSize(width: 0.0, height: 6.0)
+        layer.shadowRadius  = 20
+        layer.shadowOpacity = 0.4
+        clipsToBounds       = true
+        layer.masksToBounds = false
+    }
+    
+    private func setupCancelModeConstraints() {
+        translatesAutoresizingMaskIntoConstraints = false
+        heightAnchor.constraint(equalToConstant: 70).isActive = true
+        widthAnchor.constraint(equalToConstant: 70).isActive = true
+    }
+    private func setupAcceptModeConstraints() {
+        translatesAutoresizingMaskIntoConstraints = false
+        heightAnchor.constraint(equalToConstant: 128).isActive = true
+        widthAnchor.constraint(equalToConstant: 128).isActive = true
+        
+    }
     
 }
