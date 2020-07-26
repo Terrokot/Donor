@@ -11,7 +11,9 @@ import UIKit
 class HeartButton: UIButton {
     
     let heartImage = UIImage.init(named: "heartRequest")
-    let cancelImage = UIImage.init(named: "cancel")
+ //   let acceptButtonSize: CGFloat = 128
+ //   let cancelButtonSize: CGFloat = 70
+    
     
     
     override init(frame: CGRect) {
@@ -26,6 +28,7 @@ class HeartButton: UIButton {
     
     func setup() {
         setShadow()
+        setupAcceptModeConstraints()
         setTitle("", for: .normal)
         backgroundColor = UIColor.clear
         setBackgroundImage(heartImage, for: .normal)
@@ -33,8 +36,9 @@ class HeartButton: UIButton {
     }
     
     func cancelMode() {
-        setBackgroundImage(cancelImage, for: .normal)
         setupCancelModeConstraints()
+        let cancelImage = UIImage.init(named: "cancel")
+        setBackgroundImage(cancelImage, for: .normal)
     }
     
     func acceptMode() {
@@ -55,6 +59,8 @@ class HeartButton: UIButton {
         translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalToConstant: 70).isActive = true
         widthAnchor.constraint(equalToConstant: 70).isActive = true
+      //  frame.size = CGSize(width: cancelButtonSize, height: cancelButtonSize)
+
     }
     private func setupAcceptModeConstraints() {
         translatesAutoresizingMaskIntoConstraints = false

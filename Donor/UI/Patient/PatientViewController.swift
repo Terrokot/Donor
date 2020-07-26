@@ -16,7 +16,7 @@ class PatientViewController: UIViewController {
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var findDonorButton: HeartButton!
     @IBOutlet var requestStatusLabel: UILabel!
-        
+    
     
     
     var ref: DatabaseReference!
@@ -30,6 +30,8 @@ class PatientViewController: UIViewController {
         super.viewDidLoad()
         
         ref = Database.database().reference()
+        print("KOK")
+        readFromDefaults()
         
         // Location service
         locationService.manager.delegate = self
@@ -43,6 +45,7 @@ class PatientViewController: UIViewController {
             })
         }
     }
+    
     
     @IBAction func findDonorTapped(_ sender: Any) {
         
@@ -94,7 +97,11 @@ class PatientViewController: UIViewController {
         present(vc, animated: true, completion: nil)
     }
     
-    
+     func readFromDefaults() {
+        patientData.name        =  Defaults["userName"]         ?? ""
+        patientData.bloodType   =  Defaults["userPhoneNumber"]  ?? Blood.O_minus
+        patientData.phoneNumber =  Defaults["userBloodType"]    ?? ""
+    }
 }
 extension PatientViewController: PickerViewControllerDelegate {
     func sendData(_ data: Patient) {

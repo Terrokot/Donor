@@ -115,8 +115,6 @@
 				91314E7B24C447600065C3B1 /* Controllers */,
 				9145D7C124CCCD75008FADF1 /* Cell */,
 				9137F9EF24C332D400EF5F04 /* Donor.storyboard */,
-				9145D7C224CCCE26008FADF1 /* DonorCell.swift */,
-				9145D7C324CCCE26008FADF1 /* DonorCell.xib */,
 			);
 			path = Donor;
 			sourceTree = "<group>";
@@ -178,6 +176,8 @@
 		9145D7C124CCCD75008FADF1 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				9145D7C224CCCE26008FADF1 /* DonorCell.swift */,
+				9145D7C324CCCE26008FADF1 /* DonorCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";

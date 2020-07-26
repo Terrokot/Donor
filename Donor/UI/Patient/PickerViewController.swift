@@ -21,7 +21,7 @@ class PickerViewController: UIViewController {
     
     var pickerViewControllerDelegate: PickerViewControllerDelegate?
     var data = Patient()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -29,6 +29,9 @@ class PickerViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         nameTextField.text = data.name
         mobilePhoneTextField.text = data.phoneNumber
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        writeToDefaults()
     }
     
     @IBAction func doneButton(_ sender: Any) {
@@ -44,6 +47,13 @@ class PickerViewController: UIViewController {
             AlertManager.displayAlert(title: "error", message: "fill all forms")
         }
     }
+    
+    func writeToDefaults() {
+        Defaults["userName"] = data.name
+        Defaults["userPhoneNumber"] = data.phoneNumber
+        Defaults["userBloodType"] = data.bloodType
+    }
+    
 }
 
 extension PickerViewController: UIPickerViewDelegate, UIPickerViewDataSource {
