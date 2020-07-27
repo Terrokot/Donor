@@ -11,8 +11,8 @@ import UIKit
 class HeartButton: UIButton {
     
     let heartImage = UIImage.init(named: "heartRequest")
- //   let acceptButtonSize: CGFloat = 128
- //   let cancelButtonSize: CGFloat = 70
+   let acceptButtonSize: CGFloat = 128
+   let cancelButtonSize: CGFloat = 70
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -54,20 +54,22 @@ class HeartButton: UIButton {
     }
     
     private func setupCancelModeConstraints() {
-        translatesAutoresizingMaskIntoConstraints = true
+        //translatesAutoresizingMaskIntoConstraints = true
        // removeConstraint(heightAnchor.constraint(equalToConstant: 128))
        // removeConstraint(widthAnchor.constraint(equalToConstant: 128))
-        heightAnchor.constraint(equalToConstant: 70).isActive = true
-        widthAnchor.constraint(equalToConstant: 70).isActive = true
-      //  frame.size = CGSize(width: cancelButtonSize, height: cancelButtonSize)
+       // heightAnchor.constraint(equalToConstant: 70).isActive = true
+       // widthAnchor.constraint(equalToConstant: 70).isActive = true
+     // frame.size = CGSize(width: cancelButtonSize, height: cancelButtonSize)
 
     }
     private func setupAcceptModeConstraints() {
-        translatesAutoresizingMaskIntoConstraints = true
+       // translatesAutoresizingMaskIntoConstraints = true
         //removeConstraint(heightAnchor.constraint(equalToConstant: 70))
        // removeConstraint(widthAnchor.constraint(equalToConstant: 70))
-        heightAnchor.constraint(equalToConstant: 128).isActive = true
-        widthAnchor.constraint(equalToConstant: 128).isActive = true
+        //heightAnchor.constraint(equalToConstant: 128).isActive = true
+       // widthAnchor.constraint(equalToConstant: 128).isActive = true
+        //frame.size = CGSize(width: cancelButtonSize, height: acceptButtonSize)
+
         
     }
     
