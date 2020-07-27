@@ -14,8 +14,6 @@ class HeartButton: UIButton {
  //   let acceptButtonSize: CGFloat = 128
  //   let cancelButtonSize: CGFloat = 70
     
-    
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -28,8 +26,8 @@ class HeartButton: UIButton {
     
     func setup() {
         setShadow()
-        setupAcceptModeConstraints()
         setTitle("", for: .normal)
+        setupAcceptModeConstraints()
         backgroundColor = UIColor.clear
         setBackgroundImage(heartImage, for: .normal)
         layer.cornerRadius = 150
@@ -56,14 +54,18 @@ class HeartButton: UIButton {
     }
     
     private func setupCancelModeConstraints() {
-        translatesAutoresizingMaskIntoConstraints = false
+        translatesAutoresizingMaskIntoConstraints = true
+       // removeConstraint(heightAnchor.constraint(equalToConstant: 128))
+       // removeConstraint(widthAnchor.constraint(equalToConstant: 128))
         heightAnchor.constraint(equalToConstant: 70).isActive = true
         widthAnchor.constraint(equalToConstant: 70).isActive = true
       //  frame.size = CGSize(width: cancelButtonSize, height: cancelButtonSize)
 
     }
     private func setupAcceptModeConstraints() {
-        translatesAutoresizingMaskIntoConstraints = false
+        translatesAutoresizingMaskIntoConstraints = true
+        //removeConstraint(heightAnchor.constraint(equalToConstant: 70))
+       // removeConstraint(widthAnchor.constraint(equalToConstant: 70))
         heightAnchor.constraint(equalToConstant: 128).isActive = true
         widthAnchor.constraint(equalToConstant: 128).isActive = true
         

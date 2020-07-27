@@ -64,6 +64,10 @@ class PatientViewController: UIViewController {
                 openSettings()
                 return
             }
+            if name == "" {
+                openSettings()
+                return
+            }
             let patientRequestDictionary : [String: Any] = [ "email": email,
                                                              "name": name,
                                                              "phoneNumber": patientData.phoneNumber,
@@ -99,8 +103,8 @@ class PatientViewController: UIViewController {
     
      func readFromDefaults() {
         patientData.name        =  Defaults["userName"]         ?? ""
-        patientData.bloodType   =  Defaults["userPhoneNumber"]  ?? Blood.O_minus
-        patientData.phoneNumber =  Defaults["userBloodType"]    ?? ""
+        patientData.bloodType   =  Defaults["userBloodType"]    ?? Blood.O_minus
+        patientData.phoneNumber =  Defaults["userPhoneNumber"]  ?? ""
     }
 }
 extension PatientViewController: PickerViewControllerDelegate {
