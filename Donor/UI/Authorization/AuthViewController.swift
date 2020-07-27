@@ -15,9 +15,7 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginTextField: UITextField!
     
-    @IBOutlet weak var donorLabel: UILabel!
-    @IBOutlet weak var patientLabel: UILabel!
-    @IBOutlet weak var donorPatientSwitch: UISwitch!
+    @IBOutlet weak var donorPatientSegmentedController: UISegmentedControl!
     
     @IBOutlet weak var topButton: UIButton!
     @IBOutlet weak var bottomButton: UIButton!
@@ -40,19 +38,14 @@ class AuthViewController: UIViewController {
             topButton.setTitle("Log In", for: .normal)
             bottomButton.setTitle("Switch to Sign Up", for: .normal)
             
-            donorLabel.isHidden         = true
-            patientLabel.isHidden       = true
-            donorPatientSwitch.isHidden = true
+            donorPatientSegmentedController.isHidden = true
             
             signUpMode = false
         } else {
             topButton.setTitle("Sign Up", for: .normal)
             bottomButton.setTitle("Switch to Log In", for: .normal)
             
-            donorLabel.isHidden         = false
-            patientLabel.isHidden       = false
-            donorPatientSwitch.isHidden = false
-            
+            donorPatientSegmentedController.isHidden = false
             signUpMode = true
         }
     }

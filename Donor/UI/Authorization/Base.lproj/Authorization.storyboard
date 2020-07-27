@@ -49,21 +49,6 @@
                                     <action selector="topTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F5o-pb-hNY"/>
                                 </connections>
                             </button>
-                            <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sCu-Bb-mMu">
-                                <rect key="frame" x="182.66666666666666" y="189" width="51" height="31"/>
-                            </switch>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bW6-0v-60f">
-                                <rect key="frame" x="123.66666666666669" y="194.33333333333334" width="47" height="20.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patient" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPe-OW-719">
-                                <rect key="frame" x="243.66666666666666" y="194.33333333333334" width="53.333333333333343" height="20.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIz-wc-xcO">
                                 <rect key="frame" x="197.66666666666666" y="273" width="19" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -88,10 +73,19 @@
                                     <action selector="autoAuthTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h1d-cA-Ayf"/>
                                 </connections>
                             </button>
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XqM-NI-F1x">
+                                <rect key="frame" x="20" y="192" width="374" height="32"/>
+                                <color key="backgroundColor" red="0.4595872528689619" green="0.59670985964333356" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <segments>
+                                    <segment title="Donor"/>
+                                    <segment title="Patient"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.78355472392694769" green="0.84540213123417784" blue="0.98770621827411165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bW6-0v-60f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="250" constant="123.66666666666669" id="03H-xZ-1IC"/>
+                            <constraint firstItem="65y-hN-tOK" firstAttribute="top" secondItem="XqM-NI-F1x" secondAttribute="bottom" constant="14" id="0zQ-dk-9q5"/>
                             <constraint firstItem="eSY-wQ-mla" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1Up-pE-ZFn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S1x-F0-0ny" secondAttribute="trailing" constant="20" id="2My-Ef-0yk"/>
                             <constraint firstItem="S1x-F0-0ny" firstAttribute="top" secondItem="gIz-wc-xcO" secondAttribute="bottom" constant="6" id="42c-Qr-oiR"/>
@@ -101,24 +95,19 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S1x-F0-0ny" secondAttribute="trailing" constant="20" id="ASc-MI-gf2"/>
                             <constraint firstItem="S1x-F0-0ny" firstAttribute="top" secondItem="gIz-wc-xcO" secondAttribute="bottom" constant="6" id="BMf-1O-2sL"/>
                             <constraint firstItem="CdP-qF-WvS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Bw9-sD-7c9"/>
-                            <constraint firstItem="sCu-Bb-mMu" firstAttribute="leading" secondItem="bW6-0v-60f" secondAttribute="trailing" constant="12" id="Dp5-v1-Gp4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="65y-hN-tOK" secondAttribute="trailing" constant="20" id="FWg-xb-9dX"/>
-                            <constraint firstItem="bW6-0v-60f" firstAttribute="centerY" secondItem="sCu-Bb-mMu" secondAttribute="centerY" id="MjI-NA-bdo"/>
-                            <constraint firstItem="KPe-OW-719" firstAttribute="centerY" secondItem="sCu-Bb-mMu" secondAttribute="centerY" id="My9-g2-zJV"/>
+                            <constraint firstItem="XqM-NI-F1x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NEl-eO-Tj4"/>
                             <constraint firstItem="gIz-wc-xcO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PMj-Fy-WlS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XqM-NI-F1x" secondAttribute="trailing" constant="20" id="PNT-qG-Luw"/>
                             <constraint firstItem="eSY-wQ-mla" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Sbf-DW-TuC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KPe-OW-719" secondAttribute="trailing" constant="117" id="Sn4-3T-yGM"/>
                             <constraint firstItem="S1x-F0-0ny" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="TdI-OZ-sA6"/>
-                            <constraint firstItem="sCu-Bb-mMu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VtU-L1-zlp"/>
                             <constraint firstItem="gIz-wc-xcO" firstAttribute="top" secondItem="65y-hN-tOK" secondAttribute="bottom" constant="6" id="YJa-Tg-itt"/>
-                            <constraint firstItem="sCu-Bb-mMu" firstAttribute="top" secondItem="cbZ-AT-Lmh" secondAttribute="bottom" constant="17" id="Z6A-AH-GX6"/>
                             <constraint firstItem="CdP-qF-WvS" firstAttribute="top" secondItem="S1x-F0-0ny" secondAttribute="bottom" constant="100" id="Z9k-1c-4JR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="65y-hN-tOK" secondAttribute="trailing" constant="20" id="aeP-8P-FDu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CdP-qF-WvS" secondAttribute="trailing" constant="20" id="br3-af-Lfc"/>
-                            <constraint firstItem="KPe-OW-719" firstAttribute="leading" secondItem="sCu-Bb-mMu" secondAttribute="trailing" constant="12" id="eJA-UJ-38L"/>
+                            <constraint firstItem="XqM-NI-F1x" firstAttribute="top" secondItem="WGU-xF-1x6" secondAttribute="bottom" constant="20" id="eBo-Gw-dTB"/>
                             <constraint firstItem="WGU-xF-1x6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ft8-TH-llE"/>
                             <constraint firstItem="WGU-xF-1x6" firstAttribute="top" secondItem="eSY-wQ-mla" secondAttribute="bottom" constant="12" id="gyc-9K-rhV"/>
-                            <constraint firstItem="65y-hN-tOK" firstAttribute="top" secondItem="sCu-Bb-mMu" secondAttribute="bottom" constant="17" id="ptt-T4-ByW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WGU-xF-1x6" secondAttribute="trailing" constant="20" id="rwj-OW-ipS"/>
                             <constraint firstItem="65y-hN-tOK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yhf-zc-hCE"/>
                         </constraints>
@@ -126,11 +115,9 @@
                     </view>
                     <connections>
                         <outlet property="bottomButton" destination="S1x-F0-0ny" id="kfx-Fd-mkH"/>
-                        <outlet property="donorLabel" destination="bW6-0v-60f" id="UFH-kK-Tyh"/>
-                        <outlet property="donorPatientSwitch" destination="sCu-Bb-mMu" id="dc9-42-Cgc"/>
+                        <outlet property="donorPatientSegmentedController" destination="XqM-NI-F1x" id="hRc-Td-o2a"/>
                         <outlet property="loginTextField" destination="xUd-uV-0Vz" id="z9j-vq-O04"/>
                         <outlet property="passwordTextField" destination="cbZ-AT-Lmh" id="0FV-6T-Fyp"/>
-                        <outlet property="patientLabel" destination="KPe-OW-719" id="ky2-rU-Orw"/>
                         <outlet property="topButton" destination="65y-hN-tOK" id="RQ6-We-IZ8"/>
                     </connections>
                 </viewController>
