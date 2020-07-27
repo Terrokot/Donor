@@ -112,7 +112,11 @@
 		91266B2D24B6071A004B6859 /* Donor */ = {
 			isa = PBXGroup;
 			children = (
-				91314E7B24C447600065C3B1 /* Controllers */,
+				91266B2824B5ECB1004B6859 /* DonorViewController.swift */,
+				91266B2A24B606FB004B6859 /* AcceptRequestViewController.swift */,
+				91A8C38724C883A7007CE71A /* DonorPickerViewController.swift */,
+				911D23A024C0CF690040BB4F /* DonorTableDelegate + DataSource.swift */,
+				91DDA99C24C5F30700C44F01 /* DonorLocationManagerDelegate.swift */,
 				9145D7C124CCCD75008FADF1 /* Cell */,
 				9137F9EF24C332D400EF5F04 /* Donor.storyboard */,
 			);
@@ -149,18 +153,6 @@
 			path = Donor;
 			sourceTree = "<group>";
 		};
-		91314E7B24C447600065C3B1 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				91266B2824B5ECB1004B6859 /* DonorViewController.swift */,
-				91266B2A24B606FB004B6859 /* AcceptRequestViewController.swift */,
-				91A8C38724C883A7007CE71A /* DonorPickerViewController.swift */,
-				911D23A024C0CF690040BB4F /* DonorTableDelegate + DataSource.swift */,
-				91DDA99C24C5F30700C44F01 /* DonorLocationManagerDelegate.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		9145D7BE24CC7B65008FADF1 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,8 +168,8 @@
 		9145D7C124CCCD75008FADF1 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				9145D7C224CCCE26008FADF1 /* DonorCell.swift */,
 				9145D7C324CCCE26008FADF1 /* DonorCell.xib */,
+				9145D7C224CCCE26008FADF1 /* DonorCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
