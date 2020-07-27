@@ -18,7 +18,6 @@ class PatientViewController: UIViewController {
     @IBOutlet var requestStatusLabel: UILabel!
     
     
-    
     var ref: DatabaseReference!
     
     let locationService = LocationService()
@@ -45,7 +44,6 @@ class PatientViewController: UIViewController {
             })
         }
     }
-    
     
     @IBAction func findDonorTapped(_ sender: Any) {
         

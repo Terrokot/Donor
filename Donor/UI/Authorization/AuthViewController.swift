@@ -39,16 +39,20 @@ class AuthViewController: UIViewController {
         if signUpMode {
             topButton.setTitle("Log In", for: .normal)
             bottomButton.setTitle("Switch to Sign Up", for: .normal)
-            donorLabel.isHidden = true
-            patientLabel.isHidden = true
+            
+            donorLabel.isHidden         = true
+            patientLabel.isHidden       = true
             donorPatientSwitch.isHidden = true
+            
             signUpMode = false
         } else {
             topButton.setTitle("Sign Up", for: .normal)
             bottomButton.setTitle("Switch to Log In", for: .normal)
-            donorLabel.isHidden = false
-            patientLabel.isHidden = false
+            
+            donorLabel.isHidden         = false
+            patientLabel.isHidden       = false
             donorPatientSwitch.isHidden = false
+            
             signUpMode = true
         }
     }

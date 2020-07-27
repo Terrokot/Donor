@@ -31,7 +31,6 @@ class PickerViewController: UIViewController {
         mobilePhoneTextField.text = data.phoneNumber
     }
 
-    
     @IBAction func doneButton(_ sender: Any) {
         if  nameTextField.text != "",
             mobilePhoneTextField.text != "" {

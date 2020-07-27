@@ -86,7 +86,7 @@ class AcceptRequestViewController: UIViewController {
             if let placemarks = placemarks {
                 if placemarks.count > 0 {
                     let placeMark = MKPlacemark(placemark: placemarks[0])
-                    let mapItem = MKMapItem(placemark: placeMark)
+                    let mapItem   = MKMapItem(placemark: placeMark)
                     mapItem.name = self.requestEmail
                     // let options = [MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeDriving]
                     mapItem.openInMaps()

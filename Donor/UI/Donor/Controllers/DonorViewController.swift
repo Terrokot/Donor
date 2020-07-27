@@ -23,21 +23,24 @@ class DonorViewController: UIViewController {
     var donorLocation = CLLocationCoordinate2D()
     var donorData = Donor()
     
+    
+    //MARK: viewDidLoad
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Location
         locationService.manager.delegate = self
         parseData()
         
-        //table MARK: RELOCATE IT
-        tableView.separatorStyle = .none
-        tableView.backgroundColor = .clear
-        view.backgroundColor = #colorLiteral(red: 1, green: 0.8323456645, blue: 0.4732058644, alpha: 1)
-
         //MARK: TableView Timer
         Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { (timer) in
             self.tableView.reloadData()
         }
+    }
+    
+    //MARK: viewWillAppear
+    override func viewWillAppear(_ animated: Bool) {
+        tableSetup()
     }
     
     @IBAction func selectBloodTypeTapped(_ sender: Any) {        
@@ -66,6 +69,7 @@ class DonorViewController: UIViewController {
         }
     }
 }
+
 
 //MARK: DonorPickerViewControllerDelegate
 extension DonorViewController: DonorPickerViewControllerDelegate {

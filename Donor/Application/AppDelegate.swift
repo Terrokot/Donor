@@ -15,10 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     let locationService = LocationService()
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        // Override point for customization after application launch.
         
         var topWindow: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
         topWindow?.rootViewController = UIViewController()
@@ -26,8 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let alert = UIAlertController(title: "error", message: "please get permission in settings", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel) { _ in
-            // continue your work
-
+            
             topWindow?.isHidden = true
             topWindow = nil
          })

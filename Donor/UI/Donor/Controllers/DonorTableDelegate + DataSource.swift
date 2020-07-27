@@ -20,11 +20,11 @@ extension DonorViewController: UITableViewDataSource {
         
         let snapshot = patientsRequest[indexPath.row]
         if let patientRequestDictionary = snapshot.value as? [String: AnyObject] {
-            if let email = patientRequestDictionary["email"],
-                let name = patientRequestDictionary["name"],
-                let bloodType = patientRequestDictionary["bloodType"],
-                let lat = patientRequestDictionary["latitude"] as? Double,
-                let lon = patientRequestDictionary["longitude"] as? Double
+            if  let email      =  patientRequestDictionary["email"],
+                let name       =  patientRequestDictionary["name"],
+                let bloodType  =  patientRequestDictionary["bloodType"],
+                let lat        =  patientRequestDictionary["latitude"] as? Double,
+                let lon        =  patientRequestDictionary["longitude"] as? Double
             {
                 let donorCLLocation = CLLocation(latitude: donorLocation.latitude, longitude: donorLocation.longitude)
                 let patientCLLocation = CLLocation(latitude: lat, longitude: lon)
@@ -47,7 +47,6 @@ extension DonorViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return patientsRequest.count
     }
@@ -56,10 +55,10 @@ extension DonorViewController: UITableViewDelegate {
         let selectedUserData = patientsRequest[indexPath.row]
         
         if let patientRequestDictionary = selectedUserData.value as? [String: AnyObject] {
-            if let email = patientRequestDictionary["email"],
+            if  let email       = patientRequestDictionary["email"],
                 let phoneNumber = patientRequestDictionary["phoneNumber"],
-                let lat = patientRequestDictionary["latitude"] as? Double,
-                let lon = patientRequestDictionary["longitude"] as? Double
+                let lat         = patientRequestDictionary["latitude"] as? Double,
+                let lon         = patientRequestDictionary["longitude"] as? Double
             {
                 let acceptVC = R.storyboard.donor.acceptRequestViewController()!
                 acceptVC.requestEmail = "\(email)"
@@ -69,5 +68,15 @@ extension DonorViewController: UITableViewDelegate {
                 present(acceptVC, animated: true, completion: nil)
             }
         }
+    }
+}
+
+extension DonorViewController {
+    
+    func tableSetup() {
+        //table MARK: Table Setup
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
+        view.backgroundColor = #colorLiteral(red: 1, green: 0.8323456645, blue: 0.4732058644, alpha: 1)
     }
 }
