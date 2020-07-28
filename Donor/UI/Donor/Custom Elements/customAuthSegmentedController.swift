@@ -10,6 +10,9 @@ import UIKit
 
 class customAuthSegmentedController: UIButton {
     
+    // Standart segmented view alternative
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
