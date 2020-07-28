@@ -19,61 +19,50 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mmD-dH-BFS">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </mapView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTB-ra-Lvr">
-                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0D-aG-zwE" customClass="HeartButton" customModule="Donor" customModuleProvider="target">
-                                        <rect key="frame" x="167" y="581.66666666666663" width="80" height="80"/>
-                                        <color key="backgroundColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="WEQ-Nb-DdN"/>
-                                            <constraint firstAttribute="height" constant="80" id="Y80-3a-Dzr"/>
-                                        </constraints>
-                                        <state key="normal" title="Find a Donor">
-                                            <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="findDonorTapped:" destination="2QQ-Vw-Fvn" eventType="touchUpInside" id="eRx-Qg-HuL"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a donor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCw-xe-TO8">
-                                        <rect key="frame" x="20" y="666.66666666666663" width="374" height="15.333333333333371"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                        <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXr-tt-6WR">
-                                        <rect key="frame" x="20" y="516.66666666666663" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="MJU-jL-gNQ"/>
-                                            <constraint firstAttribute="width" constant="50" id="Wcg-Ls-M4l"/>
-                                        </constraints>
-                                        <state key="normal" title="showMyRegion" image="Group_16"/>
-                                        <connections>
-                                            <action selector="showMyLocationTapped:" destination="2QQ-Vw-Fvn" eventType="touchUpInside" id="hZ9-yS-xT9"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0D-aG-zwE" customClass="HeartButton" customModule="Donor" customModuleProvider="target">
+                                <rect key="frame" x="167" y="625.66666666666663" width="80" height="80"/>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="CCw-xe-TO8" firstAttribute="top" secondItem="n0D-aG-zwE" secondAttribute="bottom" constant="5" id="FMW-te-7fW"/>
-                                    <constraint firstItem="CCw-xe-TO8" firstAttribute="top" secondItem="XXr-tt-6WR" secondAttribute="bottom" constant="100" id="I7j-Se-gcx"/>
-                                    <constraint firstItem="n0D-aG-zwE" firstAttribute="centerX" secondItem="CTB-ra-Lvr" secondAttribute="centerX" id="VeG-re-TfU"/>
-                                    <constraint firstAttribute="bottom" secondItem="CCw-xe-TO8" secondAttribute="bottom" constant="10" id="dHW-Ts-yqQ"/>
-                                    <constraint firstItem="XXr-tt-6WR" firstAttribute="leading" secondItem="CTB-ra-Lvr" secondAttribute="leading" constant="20" id="m4P-MS-2WL"/>
-                                    <constraint firstItem="CCw-xe-TO8" firstAttribute="leading" secondItem="CTB-ra-Lvr" secondAttribute="leading" constant="20" id="oFh-CD-oVA"/>
-                                    <constraint firstAttribute="trailing" secondItem="CCw-xe-TO8" secondAttribute="trailing" constant="20" id="pEA-RS-DKL"/>
+                                    <constraint firstAttribute="width" constant="80" id="WEQ-Nb-DdN"/>
+                                    <constraint firstAttribute="height" constant="80" id="Y80-3a-Dzr"/>
                                 </constraints>
-                            </view>
+                                <state key="normal" title="Find a Donor">
+                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="findDonorTapped:" destination="2QQ-Vw-Fvn" eventType="touchUpInside" id="eRx-Qg-HuL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a donor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCw-xe-TO8">
+                                <rect key="frame" x="20" y="710.66666666666663" width="374" height="15.333333333333371"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXr-tt-6WR">
+                                <rect key="frame" x="20" y="560.66666666666663" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MJU-jL-gNQ"/>
+                                    <constraint firstAttribute="width" constant="50" id="Wcg-Ls-M4l"/>
+                                </constraints>
+                                <state key="normal" title="showMyRegion" image="Group_16"/>
+                                <connections>
+                                    <action selector="showMyLocationTapped:" destination="2QQ-Vw-Fvn" eventType="touchUpInside" id="hZ9-yS-xT9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="XXr-tt-6WR" firstAttribute="leading" secondItem="0hp-w4-jkQ" secondAttribute="leading" constant="20" id="3dI-P1-Aay"/>
                             <constraint firstItem="mmD-dH-BFS" firstAttribute="trailing" secondItem="0hp-w4-jkQ" secondAttribute="trailing" id="FWf-Mr-gOY"/>
-                            <constraint firstItem="CTB-ra-Lvr" firstAttribute="trailing" secondItem="0hp-w4-jkQ" secondAttribute="trailing" id="IOl-4z-ept"/>
-                            <constraint firstItem="CTB-ra-Lvr" firstAttribute="bottom" secondItem="0hp-w4-jkQ" secondAttribute="bottom" id="JlZ-b9-Iyz"/>
+                            <constraint firstItem="CCw-xe-TO8" firstAttribute="top" secondItem="n0D-aG-zwE" secondAttribute="bottom" constant="5" id="Nkc-mm-Qrb"/>
                             <constraint firstAttribute="bottom" secondItem="mmD-dH-BFS" secondAttribute="bottom" id="bEm-sO-Q1j"/>
-                            <constraint firstItem="CTB-ra-Lvr" firstAttribute="top" secondItem="0hp-w4-jkQ" secondAttribute="top" id="fn2-ln-5wO"/>
-                            <constraint firstItem="CTB-ra-Lvr" firstAttribute="leading" secondItem="0hp-w4-jkQ" secondAttribute="leading" id="jlc-p8-6Uj"/>
+                            <constraint firstItem="n0D-aG-zwE" firstAttribute="centerX" secondItem="Qbq-90-8dg" secondAttribute="centerX" id="d6K-Qo-Kuq"/>
+                            <constraint firstItem="CCw-xe-TO8" firstAttribute="top" secondItem="XXr-tt-6WR" secondAttribute="bottom" constant="100" id="dJL-iR-w7b"/>
+                            <constraint firstItem="CCw-xe-TO8" firstAttribute="leading" secondItem="0hp-w4-jkQ" secondAttribute="leading" constant="20" id="hE0-tJ-0uz"/>
+                            <constraint firstItem="0hp-w4-jkQ" firstAttribute="bottom" secondItem="CCw-xe-TO8" secondAttribute="bottom" constant="10" id="jvE-ks-h6U"/>
                             <constraint firstItem="mmD-dH-BFS" firstAttribute="leading" secondItem="0hp-w4-jkQ" secondAttribute="leading" id="kCk-tL-rZg"/>
+                            <constraint firstItem="0hp-w4-jkQ" firstAttribute="trailing" secondItem="CCw-xe-TO8" secondAttribute="trailing" constant="20" id="mih-Sf-stL"/>
                             <constraint firstItem="mmD-dH-BFS" firstAttribute="top" secondItem="Qbq-90-8dg" secondAttribute="top" id="w0R-3z-GQE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0hp-w4-jkQ"/>
