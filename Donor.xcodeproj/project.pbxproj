@@ -20,10 +20,10 @@
 		91274C3724A371AA004C020D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91274C3624A371AA004C020D /* Assets.xcassets */; };
 		91274C3A24A371AA004C020D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91274C3824A371AA004C020D /* LaunchScreen.storyboard */; };
 		9127A38124C71E6000E7B0FB /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9127A38024C71E6000E7B0FB /* MapManager.swift */; };
-		9128936524CF66DC00AFDBB9 /* donorPatientSegmentControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9128936424CF66DC00AFDBB9 /* donorPatientSegmentControll.swift */; };
 		91377B1F24A4FD6500B450DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91377B1E24A4FD6500B450DF /* GoogleService-Info.plist */; };
 		91377B2524A7956400B450DF /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91377B2424A7956400B450DF /* PatientViewController.swift */; };
 		9137F9F024C332D400EF5F04 /* Donor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9137F9EF24C332D400EF5F04 /* Donor.storyboard */; };
+		913F708724D0108000AE435D /* customAuthSegmentedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913F708624D0108000AE435D /* customAuthSegmentedController.swift */; };
 		9145D7BA24CC456C008FADF1 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145D7B924CC456C008FADF1 /* Defaults.swift */; };
 		9145D7BC24CC6CAD008FADF1 /* UIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145D7BB24CC6CAD008FADF1 /* UIService.swift */; };
 		9145D7C024CC96DB008FADF1 /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145D7BF24CC96DB008FADF1 /* HeartButton.swift */; };
@@ -57,10 +57,10 @@
 		91274C3924A371AA004C020D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91274C3B24A371AA004C020D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9127A38024C71E6000E7B0FB /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
-		9128936424CF66DC00AFDBB9 /* donorPatientSegmentControll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = donorPatientSegmentControll.swift; sourceTree = "<group>"; };
 		91377B1E24A4FD6500B450DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		91377B2424A7956400B450DF /* PatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
 		9137F9EF24C332D400EF5F04 /* Donor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Donor.storyboard; sourceTree = "<group>"; };
+		913F708624D0108000AE435D /* customAuthSegmentedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customAuthSegmentedController.swift; sourceTree = "<group>"; };
 		9145D7B924CC456C008FADF1 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		9145D7BB24CC6CAD008FADF1 /* UIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIService.swift; sourceTree = "<group>"; };
 		9145D7BF24CC96DB008FADF1 /* HeartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
@@ -170,8 +170,8 @@
 		9145D7C124CCCD75008FADF1 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				9145D7C324CCCE26008FADF1 /* DonorCell.xib */,
 				9145D7C224CCCE26008FADF1 /* DonorCell.swift */,
+				9145D7C324CCCE26008FADF1 /* DonorCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -180,7 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				9145D7BF24CC96DB008FADF1 /* HeartButton.swift */,
-				9128936424CF66DC00AFDBB9 /* donorPatientSegmentControll.swift */,
+				913F708624D0108000AE435D /* customAuthSegmentedController.swift */,
 				915DC82A24B8AF6F00707A71 /* Patient.swift */,
 				911D2D0424C9A9970022871F /* Blood.swift */,
 				915DC82824B8AF3500707A71 /* Donor.swift */,
@@ -394,8 +394,8 @@
 				91266B2B24B606FB004B6859 /* AcceptRequestViewController.swift in Sources */,
 				911D2D0524C9A9970022871F /* Blood.swift in Sources */,
 				9145D7BA24CC456C008FADF1 /* Defaults.swift in Sources */,
-				9128936524CF66DC00AFDBB9 /* donorPatientSegmentControll.swift in Sources */,
 				91274C2E24A371A9004C020D /* AppDelegate.swift in Sources */,
+				913F708724D0108000AE435D /* customAuthSegmentedController.swift in Sources */,
 				9185165624ADE4E200F6B838 /* LocationService.swift in Sources */,
 				9145D7C424CCCE26008FADF1 /* DonorCell.swift in Sources */,
 				91A8C38824C883A7007CE71A /* DonorPickerViewController.swift in Sources */,

@@ -1,15 +1,15 @@
 //
-//  donorPatientSegmentControll.swift
+//  customSegmentController.swift
 //  Donor
 //
-//  Created by Egor Tereshonok on 7/27/20.
+//  Created by Egor Tereshonok on 7/28/20.
 //  Copyright © 2020 Egor Tereshonok. All rights reserved.
 //
 
 import UIKit
 
-class donorPatientSegmentControll: UISegmentedControl {
-
+class customAuthSegmentedController: UIButton {
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -21,8 +21,5 @@ class donorPatientSegmentControll: UISegmentedControl {
     }
     
     func setup() {
-        layer.cornerRadius = frame.size.height / 2
-        
     }
-
 }
