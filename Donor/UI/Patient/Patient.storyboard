@@ -43,12 +43,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXr-tt-6WR">
-                                        <rect key="frame" x="20" y="526.66666666666663" width="40" height="40"/>
+                                        <rect key="frame" x="20" y="516.66666666666663" width="50" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="MJU-jL-gNQ"/>
-                                            <constraint firstAttribute="width" constant="40" id="Wcg-Ls-M4l"/>
+                                            <constraint firstAttribute="height" constant="50" id="MJU-jL-gNQ"/>
+                                            <constraint firstAttribute="width" constant="50" id="Wcg-Ls-M4l"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="Group_16"/>
+                                        <state key="normal" title="showMyRegion" image="Group_16"/>
                                         <connections>
                                             <action selector="showMyLocationTapped:" destination="2QQ-Vw-Fvn" eventType="touchUpInside" id="hZ9-yS-xT9"/>
                                         </connections>
