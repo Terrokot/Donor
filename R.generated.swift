@@ -146,8 +146,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 4 images.
+  /// This `R.image` struct is generated, and contains static references to 5 images.
   struct image {
+    /// Image `Group_16`.
+    static let group_16 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Group_16")
     /// Image `cancel`.
     static let cancel = Rswift.ImageResource(bundle: R.hostingBundle, name: "cancel")
     /// Image `heartRequest`.
@@ -156,6 +158,13 @@ struct R: Rswift.Validatable {
     static let launchScreenImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "launchScreenImage")
     /// Image `loadingCat`.
     static let loadingCat = Rswift.ImageResource(bundle: R.hostingBundle, name: "loadingCat")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Group_16", bundle: ..., traitCollection: ...)`
+    static func group_16(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.group_16, compatibleWith: traitCollection)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "cancel", bundle: ..., traitCollection: ...)`
@@ -358,6 +367,7 @@ struct _R: Rswift.Validatable {
       }
 
       static func validate() throws {
+        if UIKit.UIImage(named: "Group_16", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Group_16' is used in storyboard 'Patient', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
         if _R.storyboard.patient().navigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'navigationController' could not be loaded from storyboard 'Patient' as 'UIKit.UINavigationController'.") }

@@ -83,6 +83,12 @@ class PatientViewController: UIViewController {
         }
     }
     
+    
+    
+    @IBAction func showMyLocationTapped(_ sender: Any) {
+        locationService.setRegion(coordinate: userLocation, map: map)
+    }
+    
     @IBAction func logoutTapped(_ sender: Any) {
         _Defaults.clearAll()
         try? Auth.auth().signOut()

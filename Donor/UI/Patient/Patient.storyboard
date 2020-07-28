@@ -42,11 +42,24 @@
                                         <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXr-tt-6WR">
+                                        <rect key="frame" x="20" y="526.66666666666663" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="MJU-jL-gNQ"/>
+                                            <constraint firstAttribute="width" constant="40" id="Wcg-Ls-M4l"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Group_16"/>
+                                        <connections>
+                                            <action selector="showMyLocationTapped:" destination="2QQ-Vw-Fvn" eventType="touchUpInside" id="hZ9-yS-xT9"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="CCw-xe-TO8" firstAttribute="top" secondItem="n0D-aG-zwE" secondAttribute="bottom" constant="5" id="FMW-te-7fW"/>
+                                    <constraint firstItem="CCw-xe-TO8" firstAttribute="top" secondItem="XXr-tt-6WR" secondAttribute="bottom" constant="100" id="I7j-Se-gcx"/>
                                     <constraint firstItem="n0D-aG-zwE" firstAttribute="centerX" secondItem="CTB-ra-Lvr" secondAttribute="centerX" id="VeG-re-TfU"/>
                                     <constraint firstAttribute="bottom" secondItem="CCw-xe-TO8" secondAttribute="bottom" constant="10" id="dHW-Ts-yqQ"/>
+                                    <constraint firstItem="XXr-tt-6WR" firstAttribute="leading" secondItem="CTB-ra-Lvr" secondAttribute="leading" constant="20" id="m4P-MS-2WL"/>
                                     <constraint firstItem="CCw-xe-TO8" firstAttribute="leading" secondItem="CTB-ra-Lvr" secondAttribute="leading" constant="20" id="oFh-CD-oVA"/>
                                     <constraint firstAttribute="trailing" secondItem="CCw-xe-TO8" secondAttribute="trailing" constant="20" id="pEA-RS-DKL"/>
                                 </constraints>
@@ -205,4 +218,7 @@
             <point key="canvasLocation" x="1023.1884057971015" y="98.641304347826093"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Group_16" width="128" height="128"/>
+    </resources>
 </document>
