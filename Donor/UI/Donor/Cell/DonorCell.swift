@@ -25,6 +25,7 @@ class DonorCell: UITableViewCell {
         setup()
         backgroundColor = .clear
         selectionStyle = .none
+        tintColor = .systemRed
         // Initialization code
     }
 
@@ -35,7 +36,7 @@ class DonorCell: UITableViewCell {
     }
     func setup() {
         
-            setShadow()
+           setShadow()
         
             let image = UIImage.init(named: R.image.loadingCat.name)
 
@@ -44,6 +45,8 @@ class DonorCell: UITableViewCell {
             patientImage.clipsToBounds = true
             cardView.layer.cornerRadius = 10
             cardView.clipsToBounds = true
+        
+        //
         }
     
     private func setShadow() {
@@ -54,6 +57,13 @@ class DonorCell: UITableViewCell {
             clipsToBounds       = true
             layer.masksToBounds = false
         }
-    
+    private func secondShadow() {
+        let secondShadowLayer = CALayer()
+        secondShadowLayer.shadowRadius = 20
+        secondShadowLayer.shadowColor = UIColor.systemRed.cgColor
+        secondShadowLayer.shadowOpacity = 0.5
+        secondShadowLayer.masksToBounds = false
+        layer.insertSublayer(secondShadowLayer, at: 1)
+    }
     }
     

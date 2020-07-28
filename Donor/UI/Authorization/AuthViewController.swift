@@ -22,8 +22,7 @@ class AuthViewController: UIViewController {
     
     var signUpMode = false
     //var tapCheck = false
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -37,14 +36,11 @@ class AuthViewController: UIViewController {
         if signUpMode {
             topButton.setTitle("Log In", for: .normal)
             bottomButton.setTitle("Switch to Sign Up", for: .normal)
-            
             donorPatientSegmentedController.isHidden = true
-            
             signUpMode = false
         } else {
             topButton.setTitle("Sign Up", for: .normal)
             bottomButton.setTitle("Switch to Log In", for: .normal)
-            
             donorPatientSegmentedController.isHidden = false
             signUpMode = true
         }
