@@ -233,9 +233,9 @@
 		91FB866024D0CBA1008EA624 /* Custom UI Elements */ = {
 			isa = PBXGroup;
 			children = (
-				9145D7BF24CC96DB008FADF1 /* HeartButton.swift */,
 				91FB865E24D0CB25008EA624 /* TopView.swift */,
 				913F708624D0108000AE435D /* customAuthSegmentedController.swift */,
+				9145D7BF24CC96DB008FADF1 /* HeartButton.swift */,
 			);
 			path = "Custom UI Elements";
 			sourceTree = "<group>";

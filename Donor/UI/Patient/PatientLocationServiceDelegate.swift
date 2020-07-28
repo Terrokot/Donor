@@ -10,12 +10,11 @@ import Foundation
 import CoreLocation
 
 extension PatientViewController: CLLocationManagerDelegate  {
+
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let coord = manager.location?.coordinate {
-            locationService.setRegion(coordinate: coord,
-                                          map: map,
-                                          userLocation: &userLocation)
+            locationService.updateUserLocation(coordinate: coord, userLocation: &userLocation)
         }
     }
   

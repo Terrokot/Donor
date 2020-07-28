@@ -29,11 +29,13 @@ class PatientViewController: UIViewController {
         super.viewDidLoad()
         
         ref = Database.database().reference()
-        print("KOK")
         readFromDefaults()
         
         // Location service
         locationService.manager.delegate = self
+        if let coordinate = locationService.manager.location?.coordinate {
+            locationService.setRegion(coordinate: coordinate, map: map)
+        }
         
         if let email = Auth.auth().currentUser?.email {
             ref.child("PatientsRequests").queryOrdered(byChild: "email").queryEqual(toValue: email).observe(.childAdded, with: { (snapshot) in
