@@ -38,7 +38,7 @@ class DonorCell: UITableViewCell {
         
            setShadow()
         
-            let image = UIImage.init(named: R.image.loadingCat.name)
+        let image = UIImage.init(named: R.image.patientDefaultImage.name)
 
             patientImage.image = image
             patientImage.layer.cornerRadius = patientImage.frame.width / 2
