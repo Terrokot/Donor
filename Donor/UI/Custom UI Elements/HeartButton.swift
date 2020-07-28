@@ -27,21 +27,23 @@ class HeartButton: UIButton {
     func setup() {
         setShadow()
         setTitle("", for: .normal)
-        setupAcceptModeConstraints()
         backgroundColor = UIColor.clear
         setBackgroundImage(heartImage, for: .normal)
-        layer.cornerRadius = 150
+        layer.cornerRadius = frame.size.height / 2
+      //  setupAcceptModeConstraints()
+
     }
     
     func cancelMode() {
-        setupCancelModeConstraints()
         let cancelImage = UIImage.init(named: "cancel")
         setBackgroundImage(cancelImage, for: .normal)
+       // setupCancelModeConstraints()
+
     }
     
     func acceptMode() {
         setBackgroundImage(heartImage, for: .normal)
-        setupAcceptModeConstraints()
+      //  setupAcceptModeConstraints()
     }
     
     private func setShadow() {
@@ -52,25 +54,24 @@ class HeartButton: UIButton {
         clipsToBounds       = true
         layer.masksToBounds = false
     }
-    
+    /*
     private func setupCancelModeConstraints() {
-        //translatesAutoresizingMaskIntoConstraints = true
-        // removeConstraint(heightAnchor.constraint(equalToConstant: 128))
-        // removeConstraint(widthAnchor.constraint(equalToConstant: 128))
-        // heightAnchor.constraint(equalToConstant: 70).isActive = true
-        // widthAnchor.constraint(equalToConstant: 70).isActive = true
-        // frame.size = CGSize(width: cancelButtonSize, height: cancelButtonSize)
+        translatesAutoresizingMaskIntoConstraints = true
+        removeConstraint(heightAnchor.constraint(equalToConstant: 128))
+        removeConstraint(widthAnchor.constraint(equalToConstant: 128))
+        heightAnchor.constraint(equalToConstant: 70).isActive = true
+        widthAnchor.constraint(equalToConstant: 70).isActive = true
+        frame.size = CGSize(width: cancelButtonSize, height: cancelButtonSize)
         
     }
     private func setupAcceptModeConstraints() {
-        // translatesAutoresizingMaskIntoConstraints = true
-        //removeConstraint(heightAnchor.constraint(equalToConstant: 70))
-        // removeConstraint(widthAnchor.constraint(equalToConstant: 70))
-        //heightAnchor.constraint(equalToConstant: 128).isActive = true
-        // widthAnchor.constraint(equalToConstant: 128).isActive = true
-        //frame.size = CGSize(width: cancelButtonSize, height: acceptButtonSize)
-        
-        
+        translatesAutoresizingMaskIntoConstraints = true
+        removeConstraint(heightAnchor.constraint(equalToConstant: 70))
+        removeConstraint(widthAnchor.constraint(equalToConstant: 70))
+        heightAnchor.constraint(equalToConstant: 128).isActive = true
+        widthAnchor.constraint(equalToConstant: 128).isActive = true
+        frame.size = CGSize(width: cancelButtonSize, height: acceptButtonSize)
     }
+ */
     
 }

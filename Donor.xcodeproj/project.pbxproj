@@ -121,9 +121,8 @@
 				91A8C38724C883A7007CE71A /* DonorPickerViewController.swift */,
 				911D23A024C0CF690040BB4F /* DonorTableDelegate + DataSource.swift */,
 				91DDA99C24C5F30700C44F01 /* DonorLocationManagerDelegate.swift */,
-				9145D7C124CCCD75008FADF1 /* Cell */,
 				9137F9EF24C332D400EF5F04 /* Donor.storyboard */,
-				91FB866024D0CBA1008EA624 /* Custom Elements */,
+				9145D7C124CCCD75008FADF1 /* Cell */,
 			);
 			path = Donor;
 			sourceTree = "<group>";
@@ -226,18 +225,19 @@
 				9169979024C0611500280A4F /* Authorization */,
 				91266B2C24B6070F004B6859 /* Patient */,
 				91266B2D24B6071A004B6859 /* Donor */,
+				91FB866024D0CBA1008EA624 /* Custom UI Elements */,
 			);
 			path = UI;
 			sourceTree = "<group>";
 		};
-		91FB866024D0CBA1008EA624 /* Custom Elements */ = {
+		91FB866024D0CBA1008EA624 /* Custom UI Elements */ = {
 			isa = PBXGroup;
 			children = (
 				9145D7BF24CC96DB008FADF1 /* HeartButton.swift */,
 				91FB865E24D0CB25008EA624 /* TopView.swift */,
 				913F708624D0108000AE435D /* customAuthSegmentedController.swift */,
 			);
-			path = "Custom Elements";
+			path = "Custom UI Elements";
 			sourceTree = "<group>";
 		};
 		B8A06182CB6B445F8C11C4D6 /* Pods */ = {
