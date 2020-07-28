@@ -36,7 +36,6 @@ extension DonorViewController: UITableViewDataSource {
                 cell.bloodTypeLabel.text = "Blood type:\(bloodType)"
             }
         }
-        
         return cell
     }
 }

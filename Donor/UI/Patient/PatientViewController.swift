@@ -98,7 +98,7 @@ class PatientViewController: UIViewController {
         vc.pickerViewControllerDelegate = self
         present(vc, animated: true, completion: nil)
     }
-    
+    //MARK: Defaults 
      func readFromDefaults() {
         patientData.name        =  Defaults["userName"]         ?? ""
         patientData.bloodType   =  Defaults["userBloodType"]    ?? Blood.O_minus

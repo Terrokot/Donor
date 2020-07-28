@@ -36,16 +36,16 @@ class LocationService: NSObject {
         manager.requestLocation()
     }
     
-    func addAnnotation(coordinate: CLLocationCoordinate2D, map:MKMapView, userLocation: inout CLLocationCoordinate2D) {
+    func setRegion(coordinate: CLLocationCoordinate2D, map:MKMapView, userLocation: inout CLLocationCoordinate2D) {
         let center = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
         userLocation = center
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         map.setRegion(region, animated: true)
         map.removeAnnotations(map.annotations)
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = center
-        annotation.title = "Your Location"
-        map.addAnnotation(annotation)
+        //  let annotation = MKPointAnnotation()
+        //  annotation.coordinate = center
+        //  annotation.title = "Your Location"
+        //  map.addAnnotation(annotation)
     }
 }
 
