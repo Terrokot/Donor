@@ -14,18 +14,20 @@ class AuthTextField: UITextField {
     
     var mainView: UIView = {
         let view = UIView()
-        view.backgroundColor = .orange
-        view.layer.shadowRadius = 8
+        view.backgroundColor = AuthColors.backgroundTextField
+        view.layer.shadowRadius = 5
         view.layer.shadowOffset = CGSize(width: 3, height: 3)
         view.layer.shadowOpacity = 0.5
         view.layer.cornerRadius = 20
+        view.layer.borderWidth = 2
+        view.layer.borderColor = AuthColors.borderColor.cgColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     var contentsLayer: UIView = {
         let view = UIView()
-        view.backgroundColor = .orange
+        view.backgroundColor = AuthColors.backgroundTextField
         view.layer.cornerRadius = 25
         view.layer.masksToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false

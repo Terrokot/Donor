@@ -29,6 +29,7 @@
 		9145D7C024CC96DB008FADF1 /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145D7BF24CC96DB008FADF1 /* HeartButton.swift */; };
 		9145D7C424CCCE26008FADF1 /* DonorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145D7C224CCCE26008FADF1 /* DonorCell.swift */; };
 		9145D7C524CCCE26008FADF1 /* DonorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9145D7C324CCCE26008FADF1 /* DonorCell.xib */; };
+		91494EEE24D218B000F73D72 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91494EED24D218B000F73D72 /* Colors.swift */; };
 		915DC82924B8AF3500707A71 /* Donor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915DC82824B8AF3500707A71 /* Donor.swift */; };
 		915DC82B24B8AF6F00707A71 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915DC82A24B8AF6F00707A71 /* Patient.swift */; };
 		9169979224C0656D00280A4F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9169979124C0656D00280A4F /* AuthService.swift */; };
@@ -68,6 +69,7 @@
 		9145D7BF24CC96DB008FADF1 /* HeartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
 		9145D7C224CCCE26008FADF1 /* DonorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorCell.swift; sourceTree = "<group>"; };
 		9145D7C324CCCE26008FADF1 /* DonorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonorCell.xib; sourceTree = "<group>"; };
+		91494EED24D218B000F73D72 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		915DC82824B8AF3500707A71 /* Donor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donor.swift; sourceTree = "<group>"; };
 		915DC82A24B8AF6F00707A71 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		9169979124C0656D00280A4F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			children = (
 				915DC82A24B8AF6F00707A71 /* Patient.swift */,
 				911D2D0424C9A9970022871F /* Blood.swift */,
+				91494EED24D218B000F73D72 /* Colors.swift */,
 				915DC82824B8AF3500707A71 /* Donor.swift */,
 			);
 			path = Model;
@@ -401,6 +404,7 @@
 				915DC82B24B8AF6F00707A71 /* Patient.swift in Sources */,
 				911D23A124C0CF690040BB4F /* DonorTableDelegate + DataSource.swift in Sources */,
 				91DDA99D24C5F30700C44F01 /* DonorLocationManagerDelegate.swift in Sources */,
+				91494EEE24D218B000F73D72 /* Colors.swift in Sources */,
 				91A8C38A24C8A515007CE71A /* TableFilter.swift in Sources */,
 				9169979224C0656D00280A4F /* AuthService.swift in Sources */,
 				918A9E5824BB63D1004778D2 /* PickerViewController.swift in Sources */,
