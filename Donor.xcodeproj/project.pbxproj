@@ -30,6 +30,7 @@
 		9145D7C424CCCE26008FADF1 /* DonorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145D7C224CCCE26008FADF1 /* DonorCell.swift */; };
 		9145D7C524CCCE26008FADF1 /* DonorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9145D7C324CCCE26008FADF1 /* DonorCell.xib */; };
 		91494EEE24D218B000F73D72 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91494EED24D218B000F73D72 /* Colors.swift */; };
+		91494EF024D221C200F73D72 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91494EEF24D221C200F73D72 /* AuthButton.swift */; };
 		915DC82924B8AF3500707A71 /* Donor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915DC82824B8AF3500707A71 /* Donor.swift */; };
 		915DC82B24B8AF6F00707A71 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915DC82A24B8AF6F00707A71 /* Patient.swift */; };
 		9169979224C0656D00280A4F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9169979124C0656D00280A4F /* AuthService.swift */; };
@@ -41,7 +42,6 @@
 		91A8C38824C883A7007CE71A /* DonorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A8C38724C883A7007CE71A /* DonorPickerViewController.swift */; };
 		91A8C38A24C8A515007CE71A /* TableFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A8C38924C8A515007CE71A /* TableFilter.swift */; };
 		91DDA99D24C5F30700C44F01 /* DonorLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DDA99C24C5F30700C44F01 /* DonorLocationManagerDelegate.swift */; };
-		91FB865F24D0CB25008EA624 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FB865E24D0CB25008EA624 /* TopView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +70,7 @@
 		9145D7C224CCCE26008FADF1 /* DonorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorCell.swift; sourceTree = "<group>"; };
 		9145D7C324CCCE26008FADF1 /* DonorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonorCell.xib; sourceTree = "<group>"; };
 		91494EED24D218B000F73D72 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		91494EEF24D221C200F73D72 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		915DC82824B8AF3500707A71 /* Donor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donor.swift; sourceTree = "<group>"; };
 		915DC82A24B8AF6F00707A71 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		9169979124C0656D00280A4F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -81,7 +82,6 @@
 		91A8C38724C883A7007CE71A /* DonorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorPickerViewController.swift; sourceTree = "<group>"; };
 		91A8C38924C8A515007CE71A /* TableFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableFilter.swift; sourceTree = "<group>"; };
 		91DDA99C24C5F30700C44F01 /* DonorLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorLocationManagerDelegate.swift; sourceTree = "<group>"; };
-		91FB865E24D0CB25008EA624 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		9F3839BBA1FF6E2F47043367 /* Pods_Donor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Donor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F629AB4ED40A168EA7C3DE52 /* Pods-Donor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donor.debug.xcconfig"; path = "Target Support Files/Pods-Donor/Pods-Donor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -238,9 +238,9 @@
 		91FB866024D0CBA1008EA624 /* Custom UI Elements */ = {
 			isa = PBXGroup;
 			children = (
-				91FB865E24D0CB25008EA624 /* TopView.swift */,
-				91A28FE224D1EC9E00B37346 /* AuthTextField.swift */,
 				913F708624D0108000AE435D /* AuthSegmentedController.swift */,
+				91A28FE224D1EC9E00B37346 /* AuthTextField.swift */,
+				91494EEF24D221C200F73D72 /* AuthButton.swift */,
 				9145D7BF24CC96DB008FADF1 /* HeartButton.swift */,
 			);
 			path = "Custom UI Elements";
@@ -395,7 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91274C3224A371A9004C020D /* AuthViewController.swift in Sources */,
-				91FB865F24D0CB25008EA624 /* TopView.swift in Sources */,
+				91494EF024D221C200F73D72 /* AuthButton.swift in Sources */,
 				9127A38124C71E6000E7B0FB /* MapManager.swift in Sources */,
 				9185165C24AE5EB700F6B838 /* PatientLocationServiceDelegate.swift in Sources */,
 				915DC82924B8AF3500707A71 /* Donor.swift in Sources */,

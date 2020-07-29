@@ -183,7 +183,7 @@ import UIKit
     private func setShadow() {
         layer.shadowColor   = UIColor.black.cgColor
         layer.shadowOffset  = CGSize(width: 0.0, height: 6.0)
-        layer.shadowRadius  = 10
+        layer.shadowRadius  = 5
         layer.shadowOpacity = 0.4
         layer.shadowColor = UIColor.black.cgColor
         clipsToBounds       = true
