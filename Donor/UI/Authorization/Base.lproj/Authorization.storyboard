@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -13,34 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="AuthViewController" customModule="Donor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="WGU-xF-1x6">
-                                <rect key="frame" x="20" y="92" width="374" height="80"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="denisDonor@gmail.com" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xUd-uV-0Vz">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="qwerty" borderStyle="roundedRect" placeholder="Password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cbZ-AT-Lmh">
-                                        <rect key="frame" x="0.0" y="46" width="374" height="34"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSY-wQ-mla">
-                                <rect key="frame" x="20" y="50" width="374" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65y-hN-tOK">
-                                <rect key="frame" x="20" y="237" width="374" height="30"/>
+                                <rect key="frame" x="20" y="380" width="335" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -49,14 +26,8 @@
                                     <action selector="topTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F5o-pb-hNY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIz-wc-xcO">
-                                <rect key="frame" x="197.66666666666666" y="273" width="19" height="20.333333333333314"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1x-F0-0ny">
-                                <rect key="frame" x="20" y="299.33333333333331" width="374" height="30"/>
+                                <rect key="frame" x="20" y="607" width="335" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <state key="normal" title="Switch to Sign Up">
                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -65,57 +36,60 @@
                                     <action selector="bottomTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xpf-oJ-opw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CdP-qF-WvS">
-                                <rect key="frame" x="20" y="429.33333333333331" width="374" height="30"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Auto auth test button"/>
-                                <connections>
-                                    <action selector="autoAuthTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h1d-cA-Ayf"/>
-                                </connections>
-                            </button>
-                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XqM-NI-F1x">
-                                <rect key="frame" x="20" y="192" width="374" height="32"/>
-                                <color key="backgroundColor" red="0.4595872528689619" green="0.59670985964333356" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <segments>
-                                    <segment title="Donor"/>
-                                    <segment title="Patient"/>
-                                </segments>
-                                <color key="selectedSegmentTintColor" red="0.78355472392694769" green="0.84540213123417784" blue="0.98770621827411165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </segmentedControl>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 8" translatesAutoresizingMaskIntoConstraints="NO" id="AQC-dy-mHg">
+                                <rect key="frame" x="122.5" y="40" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="qt3-Rk-fUk"/>
+                                    <constraint firstAttribute="height" constant="130" id="vgQ-lp-Lp3"/>
+                                </constraints>
+                            </imageView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6a-Ue-r0L" customClass="AuthSegmentedController" customModule="Donor" customModuleProvider="target">
+                                <rect key="frame" x="50" y="180" width="275" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Otr-4e-IO2"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="WGU-xF-1x6">
+                                <rect key="frame" x="20" y="250" width="335" height="80"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="denisDonor@gmail.com" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xUd-uV-0Vz">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="34"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="qwerty" borderStyle="roundedRect" placeholder="Password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cbZ-AT-Lmh">
+                                        <rect key="frame" x="0.0" y="46" width="335" height="34"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="65y-hN-tOK" firstAttribute="top" secondItem="XqM-NI-F1x" secondAttribute="bottom" constant="14" id="0zQ-dk-9q5"/>
-                            <constraint firstItem="eSY-wQ-mla" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1Up-pE-ZFn"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S1x-F0-0ny" secondAttribute="trailing" constant="20" id="2My-Ef-0yk"/>
-                            <constraint firstItem="S1x-F0-0ny" firstAttribute="top" secondItem="gIz-wc-xcO" secondAttribute="bottom" constant="6" id="42c-Qr-oiR"/>
-                            <constraint firstItem="65y-hN-tOK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7Sh-kB-3cN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eSY-wQ-mla" secondAttribute="trailing" constant="20" id="9UG-hA-AA6"/>
+                            <constraint firstItem="65y-hN-tOK" firstAttribute="top" secondItem="WGU-xF-1x6" secondAttribute="bottom" constant="50" id="7K6-Vf-hdp"/>
+                            <constraint firstItem="WGU-xF-1x6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8AL-8F-KaQ"/>
                             <constraint firstItem="S1x-F0-0ny" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9tB-fe-Bhk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S1x-F0-0ny" secondAttribute="trailing" constant="20" id="ASc-MI-gf2"/>
-                            <constraint firstItem="S1x-F0-0ny" firstAttribute="top" secondItem="gIz-wc-xcO" secondAttribute="bottom" constant="6" id="BMf-1O-2sL"/>
-                            <constraint firstItem="CdP-qF-WvS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Bw9-sD-7c9"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="65y-hN-tOK" secondAttribute="trailing" constant="20" id="FWg-xb-9dX"/>
-                            <constraint firstItem="XqM-NI-F1x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NEl-eO-Tj4"/>
-                            <constraint firstItem="gIz-wc-xcO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PMj-Fy-WlS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XqM-NI-F1x" secondAttribute="trailing" constant="20" id="PNT-qG-Luw"/>
-                            <constraint firstItem="eSY-wQ-mla" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Sbf-DW-TuC"/>
-                            <constraint firstItem="S1x-F0-0ny" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="TdI-OZ-sA6"/>
-                            <constraint firstItem="gIz-wc-xcO" firstAttribute="top" secondItem="65y-hN-tOK" secondAttribute="bottom" constant="6" id="YJa-Tg-itt"/>
-                            <constraint firstItem="CdP-qF-WvS" firstAttribute="top" secondItem="S1x-F0-0ny" secondAttribute="bottom" constant="100" id="Z9k-1c-4JR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S1x-F0-0ny" secondAttribute="bottom" constant="30" id="Ekb-cU-CWY"/>
+                            <constraint firstItem="AQC-dy-mHg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EwE-4e-YIx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F6a-Ue-r0L" secondAttribute="trailing" constant="50" id="GOW-ec-UbX"/>
+                            <constraint firstItem="F6a-Ue-r0L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="LXe-6q-T3d"/>
+                            <constraint firstItem="F6a-Ue-r0L" firstAttribute="top" secondItem="AQC-dy-mHg" secondAttribute="bottom" constant="10" id="XcU-os-4Wr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="65y-hN-tOK" secondAttribute="trailing" constant="20" id="aeP-8P-FDu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CdP-qF-WvS" secondAttribute="trailing" constant="20" id="br3-af-Lfc"/>
-                            <constraint firstItem="XqM-NI-F1x" firstAttribute="top" secondItem="WGU-xF-1x6" secondAttribute="bottom" constant="20" id="eBo-Gw-dTB"/>
-                            <constraint firstItem="WGU-xF-1x6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ft8-TH-llE"/>
-                            <constraint firstItem="WGU-xF-1x6" firstAttribute="top" secondItem="eSY-wQ-mla" secondAttribute="bottom" constant="12" id="gyc-9K-rhV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WGU-xF-1x6" secondAttribute="trailing" constant="20" id="rwj-OW-ipS"/>
+                            <constraint firstItem="WGU-xF-1x6" firstAttribute="top" secondItem="F6a-Ue-r0L" secondAttribute="bottom" constant="30" id="tAS-9d-4eS"/>
                             <constraint firstItem="65y-hN-tOK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yhf-zc-hCE"/>
+                            <constraint firstItem="AQC-dy-mHg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="zxH-TX-9Wc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="bottomButton" destination="S1x-F0-0ny" id="kfx-Fd-mkH"/>
-                        <outlet property="donorPatientSegmentedController" destination="XqM-NI-F1x" id="hRc-Td-o2a"/>
+                        <outlet property="donorPatientSegmentedController" destination="F6a-Ue-r0L" id="LW2-uk-ktj"/>
                         <outlet property="loginTextField" destination="xUd-uV-0Vz" id="z9j-vq-O04"/>
                         <outlet property="passwordTextField" destination="cbZ-AT-Lmh" id="0FV-6T-Fyp"/>
                         <outlet property="topButton" destination="65y-hN-tOK" id="RQ6-We-IZ8"/>
@@ -126,4 +100,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="98.641304347826093"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Group 8" width="132" height="123"/>
+    </resources>
 </document>

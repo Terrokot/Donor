@@ -15,7 +15,7 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginTextField: UITextField!
     
-    @IBOutlet weak var donorPatientSegmentedController: UISegmentedControl!
+    @IBOutlet weak var donorPatientSegmentedController: AuthSegmentedController!
     
     @IBOutlet weak var topButton: UIButton!
     @IBOutlet weak var bottomButton: UIButton!
@@ -34,7 +34,33 @@ class AuthViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
         
         
+        //setup custom SegC
+       donorPatientSegmentedController.items = ["Donor", "Patient"]
+       donorPatientSegmentedController.font = UIFont(name: "Avenir-Black", size: 14)
+       donorPatientSegmentedController.borderColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
+       donorPatientSegmentedController.unselectedLabelColor = UIColor.black
+       donorPatientSegmentedController.thumbColor = .white
+       donorPatientSegmentedController.backgroundColor = UIColor(red: 0.82, green: 0.85, blue: 0.88, alpha: 1.00)
+       donorPatientSegmentedController.selectedIndex = 0
+       donorPatientSegmentedController.padding = 5
+       donorPatientSegmentedController.addTarget(self, action: #selector(AuthViewController.segmentValueChanged(_:)), for: .valueChanged)
+        
+        
     }
+    
+    
+    @objc func segmentValueChanged(_ sender: AnyObject?){
+        print(donorPatientSegmentedController.selectedIndex)
+
+        if donorPatientSegmentedController.selectedIndex == 0 {
+           // salesValue.text = "$23,399"
+        }else if donorPatientSegmentedController.selectedIndex == 1{
+           // salesValue.text = "$81,295"
+        }else{
+           // salesValue.text = "$199,392"
+        }
+    }
+    
     
     @IBAction func topTapped(_ sender: Any) {
         guard let email = loginTextField.text, let password = passwordTextField.text else { return }

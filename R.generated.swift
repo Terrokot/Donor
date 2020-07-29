@@ -297,6 +297,7 @@ struct _R: Rswift.Validatable {
       let name = "Authorization"
 
       static func validate() throws {
+        if UIKit.UIImage(named: "Group 8", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Group 8' is used in storyboard 'Authorization', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }

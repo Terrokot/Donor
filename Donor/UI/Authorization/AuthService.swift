@@ -32,7 +32,7 @@ class AuthService {
                     Defaults["signInStatus"] = true
                     _Defaults.synchronize()
                     
-                    if vc.donorPatientSegmentedController.titleForSegment(at: vc.donorPatientSegmentedController.selectedSegmentIndex) == "Patient" {
+                    if vc.donorPatientSegmentedController.selectedIndex == 1 {
                         // PATIENT
                         req?.displayName = "Patient"
                         req?.commitChanges(completion: nil)
