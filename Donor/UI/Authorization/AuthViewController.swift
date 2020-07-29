@@ -28,6 +28,9 @@ class AuthViewController: UIViewController {
         
         AuthService.autoLogIn(vc: self)
 
+        
+        bottomButton.setTitleColor(UIColor(red: 0.18, green: 0.21, blue: 0.26, alpha: 1.00), for: .normal)
+        bottomButton.titleLabel?.font = UIFont(name: "Avenir-Black", size: 20)
 
         self.passwordTextField.delegate = self
         self.loginTextField.delegate = self
@@ -36,7 +39,7 @@ class AuthViewController: UIViewController {
         
         //setup custom SegC
        donorPatientSegmentedController.items = ["Donor", "Patient"]
-       donorPatientSegmentedController.font = UIFont(name: "Avenir-Black", size: 14)
+       donorPatientSegmentedController.font = UIFont(name: "Avenir-Black", size: 20)
         donorPatientSegmentedController.borderColor = UIColor(red: 0.45, green: 0.49, blue: 0.55, alpha: 1.00)
        donorPatientSegmentedController.unselectedLabelColor = UIColor.black
        donorPatientSegmentedController.thumbColor = UIColor(red: 1.00, green: 0.50, blue: 0.31, alpha: 1.00)

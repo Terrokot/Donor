@@ -25,7 +25,7 @@
                                     <action selector="topTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F5o-pb-hNY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1x-F0-0ny">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1x-F0-0ny" customClass="AuthButton" customModule="Donor" customModuleProvider="target">
                                 <rect key="frame" x="20" y="607" width="335" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <state key="normal" title="Switch to Sign Up">
