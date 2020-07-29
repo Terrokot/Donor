@@ -43,23 +43,12 @@ class AuthViewController: UIViewController {
        donorPatientSegmentedController.backgroundColor = UIColor(red: 0.82, green: 0.85, blue: 0.88, alpha: 1.00)
        donorPatientSegmentedController.selectedIndex = 0
        donorPatientSegmentedController.padding = 5
-       donorPatientSegmentedController.addTarget(self, action: #selector(AuthViewController.segmentValueChanged(_:)), for: .valueChanged)
         
         
     }
     
     
-    @objc func segmentValueChanged(_ sender: AnyObject?){
-        print(donorPatientSegmentedController.selectedIndex)
 
-        if donorPatientSegmentedController.selectedIndex == 0 {
-           // salesValue.text = "$23,399"
-        }else if donorPatientSegmentedController.selectedIndex == 1{
-           // salesValue.text = "$81,295"
-        }else{
-           // salesValue.text = "$199,392"
-        }
-    }
     
     
     @IBAction func topTapped(_ sender: Any) {
