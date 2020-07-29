@@ -32,25 +32,7 @@ public var keyWindow: UIView {
     return window
 }
 
-//MARK: UIView extension
-
-public extension UIView {
-    
-    @IBInspectable var cornerRadius: CGFloat {
-        set { clipsToBounds = true; layer.cornerRadius = newValue }
-        get { return layer.cornerRadius }
-    }
-    
-    @IBInspectable var borderWidth: CGFloat {
-        set { layer.borderWidth = newValue }
-        get { return layer.borderWidth }
-    }
-    
-    @IBInspectable var borderColor: UIColor {
-        set { layer.borderColor = newValue.cgColor }
-        get { print("warning borderColor"); return UIColor.clear }
-    }
-}
+//MARK: UIViewController extension
 
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {

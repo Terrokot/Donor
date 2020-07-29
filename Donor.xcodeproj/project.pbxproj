@@ -23,7 +23,7 @@
 		91377B1F24A4FD6500B450DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91377B1E24A4FD6500B450DF /* GoogleService-Info.plist */; };
 		91377B2524A7956400B450DF /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91377B2424A7956400B450DF /* PatientViewController.swift */; };
 		9137F9F024C332D400EF5F04 /* Donor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9137F9EF24C332D400EF5F04 /* Donor.storyboard */; };
-		913F708724D0108000AE435D /* customAuthSegmentedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913F708624D0108000AE435D /* customAuthSegmentedController.swift */; };
+		913F708724D0108000AE435D /* AuthSegmentedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913F708624D0108000AE435D /* AuthSegmentedController.swift */; };
 		9145D7BA24CC456C008FADF1 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145D7B924CC456C008FADF1 /* Defaults.swift */; };
 		9145D7BC24CC6CAD008FADF1 /* UIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145D7BB24CC6CAD008FADF1 /* UIService.swift */; };
 		9145D7C024CC96DB008FADF1 /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145D7BF24CC96DB008FADF1 /* HeartButton.swift */; };
@@ -61,7 +61,7 @@
 		91377B1E24A4FD6500B450DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		91377B2424A7956400B450DF /* PatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
 		9137F9EF24C332D400EF5F04 /* Donor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Donor.storyboard; sourceTree = "<group>"; };
-		913F708624D0108000AE435D /* customAuthSegmentedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customAuthSegmentedController.swift; sourceTree = "<group>"; };
+		913F708624D0108000AE435D /* AuthSegmentedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSegmentedController.swift; sourceTree = "<group>"; };
 		9145D7B924CC456C008FADF1 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		9145D7BB24CC6CAD008FADF1 /* UIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIService.swift; sourceTree = "<group>"; };
 		9145D7BF24CC96DB008FADF1 /* HeartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
@@ -234,7 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				91FB865E24D0CB25008EA624 /* TopView.swift */,
-				913F708624D0108000AE435D /* customAuthSegmentedController.swift */,
+				913F708624D0108000AE435D /* AuthSegmentedController.swift */,
 				9145D7BF24CC96DB008FADF1 /* HeartButton.swift */,
 			);
 			path = "Custom UI Elements";
@@ -407,7 +407,7 @@
 				911D2D0524C9A9970022871F /* Blood.swift in Sources */,
 				9145D7BA24CC456C008FADF1 /* Defaults.swift in Sources */,
 				91274C2E24A371A9004C020D /* AppDelegate.swift in Sources */,
-				913F708724D0108000AE435D /* customAuthSegmentedController.swift in Sources */,
+				913F708724D0108000AE435D /* AuthSegmentedController.swift in Sources */,
 				9185165624ADE4E200F6B838 /* LocationService.swift in Sources */,
 				9145D7C424CCCE26008FADF1 /* DonorCell.swift in Sources */,
 				91A8C38824C883A7007CE71A /* DonorPickerViewController.swift in Sources */,
