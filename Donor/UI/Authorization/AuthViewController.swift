@@ -25,6 +25,9 @@ class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        AuthService.autoLogIn(vc: self)
+
 
         self.passwordTextField.delegate = self
         self.loginTextField.delegate = self
@@ -51,12 +54,7 @@ class AuthViewController: UIViewController {
             signUpMode = true
         }
     }
-    
-    @IBAction func autoAuthTapped(_ sender: Any) {
-        AuthService.autoLogIn(vc: self)
-    }
-    
-    
+        
 }
 //MARK: UITextFieldDelegate
 extension AuthViewController: UITextFieldDelegate {
