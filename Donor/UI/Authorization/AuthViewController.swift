@@ -22,9 +22,15 @@ class AuthViewController: UIViewController {
     
     var signUpMode = false
     //var tapCheck = false
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.passwordTextField.delegate = self
+        self.loginTextField.delegate = self
+        self.hideKeyboardWhenTappedAround()
+        
+        
     }
     
     @IBAction func topTapped(_ sender: Any) {
@@ -45,9 +51,19 @@ class AuthViewController: UIViewController {
             signUpMode = true
         }
     }
-        
+    
     @IBAction func autoAuthTapped(_ sender: Any) {
         AuthService.autoLogIn(vc: self)
+    }
+    
+    
+}
+//MARK: UITextFieldDelegate
+extension AuthViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 }
 

@@ -24,13 +24,15 @@ class PickerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.nameTextField.delegate = self
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         nameTextField.text = data.name
         mobilePhoneTextField.text = data.phoneNumber
     }
-
+    
     @IBAction func doneButton(_ sender: Any) {
         if  nameTextField.text != "",
             mobilePhoneTextField.text != "" {
@@ -52,6 +54,8 @@ class PickerViewController: UIViewController {
         Defaults["userPhoneNumber"] = data.phoneNumber
         Defaults["userBloodType"] = data.bloodType.rawValue
     }
+    
+    
     
 }
 
@@ -76,5 +80,13 @@ extension PickerViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         if let bloodType = Blood.elementByIndex(index: row) {
             data.bloodType = bloodType
         }
+    }
+}
+
+//MARK: UITextFieldDelegate
+extension PickerViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 }
