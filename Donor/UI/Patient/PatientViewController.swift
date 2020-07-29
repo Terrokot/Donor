@@ -52,7 +52,6 @@ class PatientViewController: UIViewController {
         guard let email = Auth.auth().currentUser?.email else { return }
         if requestHasBeenSent {
             self.requestStatusLabel.text = "Find a Donor"
-            self.findDonorButton.setup()
             self.findDonorButton.acceptMode() //MARK: Button switch mode
             requestHasBeenSent = false
             ref.child("PatientsRequests").queryOrdered(byChild: "email").queryEqual(toValue: email).observe(.childAdded, with: { (snapshot) in
