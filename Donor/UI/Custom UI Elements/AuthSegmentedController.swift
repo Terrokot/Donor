@@ -98,7 +98,7 @@ import UIKit
             thumbView.frame = label.frame
             thumbView.backgroundColor = thumbColor
             thumbView.layer.cornerRadius = thumbView.frame.height / 2
-            setShadow()
+            //setShadow() MARK: SHADOWS
             displayNewSelectedIndex()
         }
     }

@@ -21,12 +21,12 @@ class AuthButton: UIButton {
         }
         
         func setupButton() {
-            setShadow()
-            setTitleColor(AuthColors.fontColor, for: .normal)
+            //setShadow()
+            setTitleColor(.white, for: .normal)
             titleLabel?.font = UIFont(name: "Avenir-Black", size: 20)
-            backgroundColor      = AuthColors.backgroundTextField
-            layer.cornerRadius   = 15
-            layer.borderWidth    = 2
+            backgroundColor      = AuthColors.red
+            layer.cornerRadius   = frame.height / 2
+            layer.borderWidth    = 0.5
             layer.borderColor    = AuthColors.borderColor.cgColor
         }
         

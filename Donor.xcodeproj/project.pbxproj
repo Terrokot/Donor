@@ -11,6 +11,7 @@
 		911D23A124C0CF690040BB4F /* DonorTableDelegate + DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D23A024C0CF690040BB4F /* DonorTableDelegate + DataSource.swift */; };
 		911D2D0524C9A9970022871F /* Blood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D2D0424C9A9970022871F /* Blood.swift */; };
 		912150A524B0AC5200A80629 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912150A424B0AC5200A80629 /* AlertManager.swift */; };
+		91223E5524D2EC1B009D38DC /* AuthExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91223E5424D2EC1B009D38DC /* AuthExtensions.swift */; };
 		91266B2924B5ECB1004B6859 /* DonorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91266B2824B5ECB1004B6859 /* DonorViewController.swift */; };
 		91266B2B24B606FB004B6859 /* AcceptRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91266B2A24B606FB004B6859 /* AcceptRequestViewController.swift */; };
 		91266B3024B60A20004B6859 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91266B2F24B60A20004B6859 /* R.generated.swift */; };
@@ -49,6 +50,7 @@
 		911D23A024C0CF690040BB4F /* DonorTableDelegate + DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DonorTableDelegate + DataSource.swift"; sourceTree = "<group>"; };
 		911D2D0424C9A9970022871F /* Blood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blood.swift; sourceTree = "<group>"; };
 		912150A424B0AC5200A80629 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		91223E5424D2EC1B009D38DC /* AuthExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthExtensions.swift; sourceTree = "<group>"; };
 		91266B2824B5ECB1004B6859 /* DonorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorViewController.swift; sourceTree = "<group>"; };
 		91266B2A24B606FB004B6859 /* AcceptRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptRequestViewController.swift; sourceTree = "<group>"; };
 		91266B2F24B60A20004B6859 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				91274C3124A371A9004C020D /* AuthViewController.swift */,
+				91223E5424D2EC1B009D38DC /* AuthExtensions.swift */,
 				9169979124C0656D00280A4F /* AuthService.swift */,
 				91274C3324A371A9004C020D /* Authorization.storyboard */,
 			);
@@ -403,6 +406,7 @@
 				912150A524B0AC5200A80629 /* AlertManager.swift in Sources */,
 				915DC82B24B8AF6F00707A71 /* Patient.swift in Sources */,
 				911D23A124C0CF690040BB4F /* DonorTableDelegate + DataSource.swift in Sources */,
+				91223E5524D2EC1B009D38DC /* AuthExtensions.swift in Sources */,
 				91DDA99D24C5F30700C44F01 /* DonorLocationManagerDelegate.swift in Sources */,
 				91494EEE24D218B000F73D72 /* Colors.swift in Sources */,
 				91A8C38A24C8A515007CE71A /* TableFilter.swift in Sources */,
