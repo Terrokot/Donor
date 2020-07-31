@@ -28,7 +28,6 @@ class AuthTextField: UITextField {
         layer.borderColor    = AuthColors.borderColor.cgColor
     }
     
-    
     private func setShadow() {
         layer.shadowColor   = UIColor.black.cgColor
         layer.shadowOffset  = CGSize(width: 0.0, height: 6.0)

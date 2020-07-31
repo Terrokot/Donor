@@ -61,7 +61,6 @@ import UIKit
         layer.cornerRadius = frame.height / 2
         layer.borderColor = UIColor(white: 1.0, alpha: 0.5).cgColor
         layer.borderWidth = 1 //MARK: Border Setup
-        
         backgroundColor = UIColor.clear
         setupLabels()
         insertSubview(thumbView, at: 0)

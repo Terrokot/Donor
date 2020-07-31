@@ -38,6 +38,7 @@ enum Blood: String, CaseIterable {
             return 7
         }
     }
+    
    static func elementByIndex(index: Int) -> Blood? {
         switch index {
         case 0:

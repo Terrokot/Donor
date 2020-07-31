@@ -18,34 +18,22 @@ class AuthViewController: UIViewController {
     
     @IBOutlet weak var donorPatientSegmentedController: AuthSegmentedController!
     
-    
     @IBOutlet weak var logInStatusLabel: UILabel!
     
     @IBOutlet weak var topButton: UIButton!
     @IBOutlet weak var bottomButton: UIButton!
     
-    
     //Logo costraints
-    
     @IBOutlet weak var logoTopConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var authStackTopConstraint: NSLayoutConstraint!
-    
-    
     @IBOutlet weak var loginTopConstraint: NSLayoutConstraint!
-    
-    
     @IBOutlet weak var statusLabelTopConstraint: NSLayoutConstraint!
-    
     // Stack Views
-    
     @IBOutlet weak var AuthSwitchStack: UIStackView!
-    
     @IBOutlet weak var AuthStack: UIStackView!
+
     
-    override var shouldAutorotate: Bool {
-        return false
-    }
+    override var shouldAutorotate: Bool { return false }
     
     var signUpMode = false
     
