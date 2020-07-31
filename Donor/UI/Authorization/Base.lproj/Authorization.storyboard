@@ -30,7 +30,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="KLw-va-aIH" userLabel="Auth + Switch Stack">
-                                <rect key="frame" x="60" y="180" width="255" height="140"/>
+                                <rect key="frame" x="60" y="180" width="255" height="112"/>
                                 <subviews>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6a-Ue-r0L" customClass="AuthSegmentedController" customModule="Donor" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="255" height="50"/>
@@ -40,31 +40,38 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Bdg-IZ-Hur" userLabel="Auth Stack">
-                                        <rect key="frame" x="0.0" y="0.0" width="255" height="140"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="255" height="112"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="jBE-tl-D88" userLabel="Login Stack">
-                                                <rect key="frame" x="0.0" y="0.0" width="255" height="55"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="255" height="41"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSk-LU-EeG">
-                                                        <rect key="frame" x="0.0" y="0.0" width="255" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="255" height="36"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" image="Login-icon-active" translatesAutoresizingMaskIntoConstraints="NO" id="va8-Ye-UcP">
-                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Login-icon-active" translatesAutoresizingMaskIntoConstraints="NO" id="va8-Ye-UcP">
+                                                                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="50" id="FZS-4F-vYt"/>
-                                                                    <constraint firstAttribute="height" constant="50" id="esx-Ua-ypZ"/>
+                                                                    <constraint firstAttribute="height" constant="36" id="66a-qP-KGP"/>
+                                                                    <constraint firstAttribute="width" constant="36" id="Kpn-ng-7Eq"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" text="denisDonor@gmail.com" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xUd-uV-0Vz">
-                                                                <rect key="frame" x="50" y="0.0" width="205" height="50"/>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="bottom" text="denisDonor@gmail.com" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xUd-uV-0Vz">
+                                                                <rect key="frame" x="36" y="0.0" width="183" height="36"/>
                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                                             </textField>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m9Y-jE-dai" userLabel="Space">
+                                                                <rect key="frame" x="219" y="0.0" width="36" height="36"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="36" id="VDL-Q5-CON"/>
+                                                                    <constraint firstAttribute="height" constant="36" id="gQm-78-278"/>
+                                                                </constraints>
+                                                            </view>
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3O-cu-ceo">
-                                                        <rect key="frame" x="0.0" y="53" width="255" height="2"/>
+                                                        <rect key="frame" x="0.0" y="39" width="255" height="2"/>
                                                         <color key="backgroundColor" red="1" green="0.49019607843137253" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="2" id="NPT-K5-ilS"/>
@@ -73,28 +80,36 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Iw0-AI-bBg" userLabel="Password Stack">
-                                                <rect key="frame" x="0.0" y="85" width="255" height="55"/>
+                                                <rect key="frame" x="0.0" y="71" width="255" height="41"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="7Dj-0l-NUb">
-                                                        <rect key="frame" x="0.0" y="0.0" width="255" height="50"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Dj-0l-NUb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="255" height="36"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Password-apple-icon-active" translatesAutoresizingMaskIntoConstraints="NO" id="HyT-zb-gUl">
-                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Password-apple-icon-active" translatesAutoresizingMaskIntoConstraints="NO" id="HyT-zb-gUl">
+                                                                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="50" id="aLF-lL-iPP"/>
-                                                                    <constraint firstAttribute="width" constant="50" id="hr3-QO-kvA"/>
+                                                                    <constraint firstAttribute="width" constant="36" id="HiH-Pg-d8O"/>
+                                                                    <constraint firstAttribute="height" constant="36" id="giB-5D-Kz4"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" text="qwerty" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cbZ-AT-Lmh">
-                                                                <rect key="frame" x="106" y="0.0" width="149" height="50"/>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="bottom" text="qwerty" placeholder="Password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cbZ-AT-Lmh">
+                                                                <rect key="frame" x="36" y="0.0" width="183" height="36"/>
                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                             </textField>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JfA-JE-WPj">
+                                                                <rect key="frame" x="219" y="0.0" width="36" height="36"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="36" id="4S3-zf-V0S"/>
+                                                                    <constraint firstAttribute="height" constant="36" id="eyy-ZQ-px2"/>
+                                                                </constraints>
+                                                            </view>
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hS7-rn-M85">
-                                                        <rect key="frame" x="0.0" y="53" width="255" height="2"/>
+                                                        <rect key="frame" x="0.0" y="39" width="255" height="2"/>
                                                         <color key="backgroundColor" red="1" green="0.49019607840000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="2" id="9rb-ha-yPz"/>
