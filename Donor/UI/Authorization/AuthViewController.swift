@@ -29,6 +29,9 @@ class AuthViewController: UIViewController {
     
     @IBOutlet weak var logoTopConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var authStackTop: NSLayoutConstraint!
+    
+    @IBOutlet weak var loginButtonDown: NSLayoutConstraint!
     
     @IBOutlet weak var bottomStack: NSLayoutConstraint!
     
@@ -38,6 +41,13 @@ class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        if view.frame.height == 736 {
+            authStackTop.constant = 60
+            print("iphone 8+")
+        }
+        
         
         AuthService.autoLogIn(vc: self)
         

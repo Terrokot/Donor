@@ -30,34 +30,33 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="KLw-va-aIH" userLabel="Auth + Switch Stack">
-                                <rect key="frame" x="50" y="180" width="275" height="140"/>
+                                <rect key="frame" x="60" y="180" width="255" height="140"/>
                                 <subviews>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6a-Ue-r0L" customClass="AuthSegmentedController" customModule="Donor" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="275" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="255" height="50"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Otr-4e-IO2"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Bdg-IZ-Hur" userLabel="Auth Stack">
-                                        <rect key="frame" x="0.0" y="0.0" width="275" height="140"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="255" height="140"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="jBE-tl-D88" userLabel="Login Stack">
-                                                <rect key="frame" x="0.0" y="0.0" width="275" height="55"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="255" height="55"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSk-LU-EeG">
-                                                        <rect key="frame" x="0.0" y="0.0" width="275" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="255" height="50"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" translatesAutoresizingMaskIntoConstraints="NO" id="va8-Ye-UcP">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" image="Login-icon-active" translatesAutoresizingMaskIntoConstraints="NO" id="va8-Ye-UcP">
                                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                                <color key="backgroundColor" red="0.79700666669999998" green="0.12637355920000001" blue="0.1515271366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="FZS-4F-vYt"/>
                                                                     <constraint firstAttribute="height" constant="50" id="esx-Ua-ypZ"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" text="denisDonor@gmail.com" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xUd-uV-0Vz">
-                                                                <rect key="frame" x="50" y="0.0" width="225" height="50"/>
+                                                                <rect key="frame" x="50" y="0.0" width="205" height="50"/>
                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
@@ -65,7 +64,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3O-cu-ceo">
-                                                        <rect key="frame" x="0.0" y="53" width="275" height="2"/>
+                                                        <rect key="frame" x="0.0" y="53" width="255" height="2"/>
                                                         <color key="backgroundColor" red="1" green="0.49019607843137253" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="2" id="NPT-K5-ilS"/>
@@ -74,21 +73,20 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Iw0-AI-bBg" userLabel="Password Stack">
-                                                <rect key="frame" x="0.0" y="85" width="275" height="55"/>
+                                                <rect key="frame" x="0.0" y="85" width="255" height="55"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="7Dj-0l-NUb">
-                                                        <rect key="frame" x="0.0" y="0.0" width="275" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="255" height="50"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HyT-zb-gUl">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Password-apple-icon-active" translatesAutoresizingMaskIntoConstraints="NO" id="HyT-zb-gUl">
                                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                                <color key="backgroundColor" red="0.79700666669999998" green="0.12637355920000001" blue="0.1515271366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="aLF-lL-iPP"/>
                                                                     <constraint firstAttribute="width" constant="50" id="hr3-QO-kvA"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" text="qwerty" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cbZ-AT-Lmh">
-                                                                <rect key="frame" x="106" y="0.0" width="169" height="50"/>
+                                                                <rect key="frame" x="106" y="0.0" width="149" height="50"/>
                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -96,7 +94,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hS7-rn-M85">
-                                                        <rect key="frame" x="0.0" y="53" width="275" height="2"/>
+                                                        <rect key="frame" x="0.0" y="53" width="255" height="2"/>
                                                         <color key="backgroundColor" red="1" green="0.49019607840000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="2" id="9rb-ha-yPz"/>
@@ -147,21 +145,23 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="65y-hN-tOK" secondAttribute="trailing" constant="60" id="4u6-An-EPs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hY4-e9-SCc" secondAttribute="bottom" constant="50" id="CJs-XE-hEG"/>
                             <constraint firstItem="AQC-dy-mHg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EwE-4e-YIx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KLw-va-aIH" secondAttribute="trailing" constant="50" id="FOs-Uk-C5d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KLw-va-aIH" secondAttribute="trailing" constant="60" id="FOs-Uk-C5d"/>
                             <constraint firstItem="65y-hN-tOK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="NrR-By-fOX"/>
                             <constraint firstItem="hY4-e9-SCc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XoF-67-Osb"/>
                             <constraint firstItem="hY4-e9-SCc" firstAttribute="top" secondItem="65y-hN-tOK" secondAttribute="bottom" constant="70" id="cKJ-4r-0mf"/>
-                            <constraint firstItem="KLw-va-aIH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="ggd-AP-ERP"/>
+                            <constraint firstItem="KLw-va-aIH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="ggd-AP-ERP"/>
                             <constraint firstItem="KLw-va-aIH" firstAttribute="top" secondItem="AQC-dy-mHg" secondAttribute="bottom" constant="10" id="pZE-u5-0ne"/>
                             <constraint firstItem="AQC-dy-mHg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="zxH-TX-9Wc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="authStackTop" destination="pZE-u5-0ne" id="oTp-Gn-uqS"/>
                         <outlet property="bottomButton" destination="S1x-F0-0ny" id="kfx-Fd-mkH"/>
                         <outlet property="bottomStack" destination="CJs-XE-hEG" id="AvY-YV-MGF"/>
                         <outlet property="donorPatientSegmentedController" destination="F6a-Ue-r0L" id="LW2-uk-ktj"/>
                         <outlet property="logInStatusLabel" destination="rZv-uR-IM5" id="hrt-Mp-SQk"/>
+                        <outlet property="loginButtonDown" destination="cKJ-4r-0mf" id="TWi-81-Wum"/>
                         <outlet property="loginTextField" destination="xUd-uV-0Vz" id="z9j-vq-O04"/>
                         <outlet property="logoTopConstraint" destination="zxH-TX-9Wc" id="Yrs-jx-8k8"/>
                         <outlet property="passwordTextField" destination="cbZ-AT-Lmh" id="0FV-6T-Fyp"/>
@@ -175,5 +175,7 @@
     </scenes>
     <resources>
         <image name="Group 8" width="132" height="123"/>
+        <image name="Login-icon-active" width="512" height="512"/>
+        <image name="Password-apple-icon-active" width="512" height="512"/>
     </resources>
 </document>

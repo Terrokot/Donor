@@ -146,12 +146,16 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 7 images.
+  /// This `R.image` struct is generated, and contains static references to 9 images.
   struct image {
     /// Image `Group 8`.
     static let group8 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Group 8")
     /// Image `Group_16`.
     static let group_16 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Group_16")
+    /// Image `Login-icon-active`.
+    static let loginIconActive = Rswift.ImageResource(bundle: R.hostingBundle, name: "Login-icon-active")
+    /// Image `Password-apple-icon-active`.
+    static let passwordAppleIconActive = Rswift.ImageResource(bundle: R.hostingBundle, name: "Password-apple-icon-active")
     /// Image `cancel`.
     static let cancel = Rswift.ImageResource(bundle: R.hostingBundle, name: "cancel")
     /// Image `heartRequest`.
@@ -174,6 +178,20 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "Group_16", bundle: ..., traitCollection: ...)`
     static func group_16(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.group_16, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Login-icon-active", bundle: ..., traitCollection: ...)`
+    static func loginIconActive(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.loginIconActive, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Password-apple-icon-active", bundle: ..., traitCollection: ...)`
+    static func passwordAppleIconActive(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.passwordAppleIconActive, compatibleWith: traitCollection)
     }
     #endif
 
@@ -298,6 +316,8 @@ struct _R: Rswift.Validatable {
 
       static func validate() throws {
         if UIKit.UIImage(named: "Group 8", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Group 8' is used in storyboard 'Authorization', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "Login-icon-active", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Login-icon-active' is used in storyboard 'Authorization', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "Password-apple-icon-active", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Password-apple-icon-active' is used in storyboard 'Authorization', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }
