@@ -15,9 +15,7 @@ class DonorViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    override var shouldAutorotate: Bool {
-         return false
-     }
+    override var shouldAutorotate: Bool { return false }
     
     var fireBaseRef = Database.database().reference().child("PatientsRequests")
     

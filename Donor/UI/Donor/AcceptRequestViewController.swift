@@ -18,9 +18,7 @@ class AcceptRequestViewController: UIViewController {
     @IBOutlet weak var titleNavigationItem: UINavigationItem!
     @IBOutlet weak var requestAcceptButton: UIButton!
     
-    override var shouldAutorotate: Bool {
-         return false
-     }
+    override var shouldAutorotate: Bool { return false }
     
     var dataBaseRef: DatabaseReference!
     

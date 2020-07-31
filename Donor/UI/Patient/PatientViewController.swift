@@ -17,11 +17,8 @@ class PatientViewController: UIViewController {
     @IBOutlet weak var findDonorButton: HeartButton!
     @IBOutlet var requestStatusLabel: UILabel!
     
-    override var shouldAutorotate: Bool {
-         return false
-     }
-    
-    
+    override var shouldAutorotate: Bool { return false }
+        
     var ref: DatabaseReference!
     
     let locationService = LocationService()
@@ -85,7 +82,6 @@ class PatientViewController: UIViewController {
             AlertManager.displayAlert(title: "Your request is registered", message: "We are already looking for a donor for you. You will be contacted soon")
         }
     }
-    
     
     
     @IBAction func showMyLocationTapped(_ sender: Any) {
