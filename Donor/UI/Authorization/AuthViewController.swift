@@ -103,35 +103,7 @@ extension AuthViewController {
     }
     
     private func installConstraints() {
-        /*
-         switch view.frame.height {
-         case 736:
-         logoTopConstraint.constant         = 57
-         authStackTopConstraint.constant    = 60
-         AuthSwitchStack.spacing            = 45
-         AuthStack.spacing                  = 40
-         statusLabelTopConstraint.constant  = 75
-         print("iphone 8+")
-         case 812:
-         logoTopConstraint.constant         = 63
-         authStackTopConstraint.constant    = 73
-         AuthSwitchStack.spacing            = 47
-         AuthStack.spacing                  = 46
-         statusLabelTopConstraint.constant  = 83
-         print("iphone X/Pro")
-         case 896:
-         logoTopConstraint.constant         = 98
-         authStackTopConstraint.constant    = 86
-         AuthSwitchStack.spacing            = 54
-         AuthStack.spacing                  = 54
-         statusLabelTopConstraint.constant  = 83
-         print("iphone Xr/11/Max")
-         
-         default:
-         print("another iphone")
-         break
-         }
-         */
+
         switch view.frame.height {
         case let x where x > 667:
             logoTopConstraint.constant         = view.frame.height / 11
