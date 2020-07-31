@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tdd-XH-19T">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController storyboardIdentifier="DonorViewController" wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="kLH-D0-H1b" customClass="DonorViewController" customModule="Donor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1K3-fn-rlf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LEQ-JM-DDp">
-                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="sectionIndexBackgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -61,7 +61,7 @@
                 <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="tdd-XH-19T" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="G3V-Zc-4yI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -78,37 +78,11 @@
             <objects>
                 <viewController storyboardIdentifier="AcceptRequestViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Hch-fW-F99" customClass="AcceptRequestViewController" customModule="Donor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="anI-0i-v8u">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8C7-gy-H6r">
-                                <rect key="frame" x="20" y="448" width="374" height="30"/>
-                                <color key="backgroundColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Make a call">
-                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="makeCallTapped:" destination="Hch-fW-F99" eventType="touchUpInside" id="yz6-sQ-kDU"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" &quot;Name&quot; with blood type: AB+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGc-t1-gLm">
-                                <rect key="frame" x="20" y="498" width="374" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5j-1X-4S8">
-                                <rect key="frame" x="20" y="542" width="374" height="30"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Open in Apple Maps">
-                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="openMapsTapped:" destination="Hch-fW-F99" eventType="touchUpInside" id="Rat-3P-Hdc"/>
-                                </connections>
-                            </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4w-8U-pjM">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Patient Information" id="AH1-gH-4aE">
                                         <barButtonItem key="leftBarButtonItem" title="Patients List" id="06t-tj-x5C">
@@ -120,77 +94,140 @@
                                 </items>
                             </navigationBar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UAP-sb-H1R">
-                                <rect key="frame" x="20" y="54" width="374" height="374"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="UAP-sb-H1R" secondAttribute="height" multiplier="1:1" id="2BK-bI-5Lf"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERA-Vh-g6D">
-                                <rect key="frame" x="20" y="592" width="374" height="30"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Accept Request"/>
-                                <connections>
-                                    <action selector="acceptButtonTapped:" destination="Hch-fW-F99" eventType="touchUpInside" id="4BS-VW-0UX"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pxz-H5-BXt">
+                                <rect key="frame" x="10" y="738.66666666666663" width="394" height="142.33333333333337"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="1ab-K8-vaM" userLabel="Accept Stack">
+                                        <rect key="frame" x="157" y="39.999999999999993" width="80" height="102.33333333333331"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERA-Vh-g6D" customClass="HeartButton" customModule="Donor" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="4RE-IY-Fih"/>
+                                                    <constraint firstAttribute="width" constant="80" id="Y0p-C0-TOk"/>
+                                                </constraints>
+                                                <state key="normal" title="Accept Request"/>
+                                                <connections>
+                                                    <action selector="acceptButtonTapped:" destination="Hch-fW-F99" eventType="touchUpInside" id="4BS-VW-0UX"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accept" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGU-8E-6dc">
+                                                <rect key="frame" x="13" y="82" width="54" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="s0r-Bm-wmO" userLabel="Call Stack">
+                                        <rect key="frame" x="3" y="0.0" width="70" height="92.333333333333329"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8C7-gy-H6r">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="JsT-3Q-Jf7"/>
+                                                    <constraint firstAttribute="width" constant="70" id="Nyj-mt-sdW"/>
+                                                </constraints>
+                                                <state key="normal" image="phone"/>
+                                                <connections>
+                                                    <action selector="makeCallTapped:" destination="Hch-fW-F99" eventType="touchUpInside" id="yz6-sQ-kDU"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYf-fc-ldF" userLabel="Call">
+                                                <rect key="frame" x="0.0" y="72" width="70" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="N8R-Jn-oxp" userLabel="Maps Stack">
+                                        <rect key="frame" x="321" y="0.0" width="70" height="92.333333333333329"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5j-1X-4S8">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="MqQ-BO-KVF"/>
+                                                    <constraint firstAttribute="height" constant="70" id="tCy-dr-JAv"/>
+                                                </constraints>
+                                                <state key="normal" title="Open in Apple Maps" image="maps">
+                                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="openMapsTapped:" destination="Hch-fW-F99" eventType="touchUpInside" id="Rat-3P-Hdc"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrQ-wb-4Bi" userLabel="Maps">
+                                                <rect key="frame" x="0.0" y="72" width="70" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="1ab-K8-vaM" secondAttribute="bottom" id="DIv-fY-ZDG"/>
+                                    <constraint firstItem="1ab-K8-vaM" firstAttribute="centerX" secondItem="Pxz-H5-BXt" secondAttribute="centerX" id="I1x-Ak-Iji"/>
+                                    <constraint firstAttribute="height" constant="142.33000000000001" id="Naz-pP-Zxf"/>
+                                    <constraint firstItem="s0r-Bm-wmO" firstAttribute="top" secondItem="Pxz-H5-BXt" secondAttribute="top" id="UTz-Iz-UK0"/>
+                                    <constraint firstItem="s0r-Bm-wmO" firstAttribute="leading" secondItem="Pxz-H5-BXt" secondAttribute="leading" constant="3" id="kgJ-ud-svv"/>
+                                    <constraint firstItem="N8R-Jn-oxp" firstAttribute="top" secondItem="Pxz-H5-BXt" secondAttribute="top" id="tGZ-4d-6Kk"/>
+                                    <constraint firstAttribute="trailing" secondItem="N8R-Jn-oxp" secondAttribute="trailing" constant="3" id="vir-9l-Gti"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="G4w-8U-pjM" firstAttribute="trailing" secondItem="jIm-gj-7oq" secondAttribute="trailing" id="1MN-ai-m7k"/>
-                            <constraint firstItem="8C7-gy-H6r" firstAttribute="leading" secondItem="jIm-gj-7oq" secondAttribute="leading" constant="20" id="3Jr-wB-rF0"/>
-                            <constraint firstItem="UAP-sb-H1R" firstAttribute="leading" secondItem="jIm-gj-7oq" secondAttribute="leading" constant="20" id="6bJ-A8-Mi3"/>
-                            <constraint firstItem="e5j-1X-4S8" firstAttribute="top" secondItem="eGc-t1-gLm" secondAttribute="bottom" constant="20" id="BgJ-Ik-Uff"/>
-                            <constraint firstItem="ERA-Vh-g6D" firstAttribute="leading" secondItem="jIm-gj-7oq" secondAttribute="leading" constant="20" id="D9u-tA-gTT"/>
-                            <constraint firstItem="jIm-gj-7oq" firstAttribute="trailing" secondItem="e5j-1X-4S8" secondAttribute="trailing" constant="20" id="Ezw-QV-JYD"/>
-                            <constraint firstItem="ERA-Vh-g6D" firstAttribute="top" secondItem="e5j-1X-4S8" secondAttribute="bottom" constant="20" id="KL2-ut-SEC"/>
-                            <constraint firstItem="e5j-1X-4S8" firstAttribute="leading" secondItem="jIm-gj-7oq" secondAttribute="leading" constant="20" id="RD2-EW-3Mw"/>
-                            <constraint firstItem="jIm-gj-7oq" firstAttribute="trailing" secondItem="8C7-gy-H6r" secondAttribute="trailing" constant="20" id="UQT-wB-tMz"/>
+                            <constraint firstAttribute="trailing" secondItem="Pxz-H5-BXt" secondAttribute="trailing" constant="10" id="4KV-EH-w8z"/>
+                            <constraint firstItem="UAP-sb-H1R" firstAttribute="leading" secondItem="jIm-gj-7oq" secondAttribute="leading" id="C02-Xk-2wx"/>
+                            <constraint firstItem="Pxz-H5-BXt" firstAttribute="leading" secondItem="anI-0i-v8u" secondAttribute="leading" constant="10" id="GRG-3r-TeG"/>
+                            <constraint firstItem="UAP-sb-H1R" firstAttribute="trailing" secondItem="jIm-gj-7oq" secondAttribute="trailing" id="Kwf-HL-Jef"/>
+                            <constraint firstAttribute="bottom" secondItem="UAP-sb-H1R" secondAttribute="bottom" id="QLv-ZO-FAv"/>
                             <constraint firstItem="G4w-8U-pjM" firstAttribute="top" secondItem="jIm-gj-7oq" secondAttribute="top" id="UgP-Rt-HrM"/>
                             <constraint firstItem="G4w-8U-pjM" firstAttribute="leading" secondItem="jIm-gj-7oq" secondAttribute="leading" id="Xfb-JJ-zkk"/>
-                            <constraint firstItem="jIm-gj-7oq" firstAttribute="trailing" secondItem="ERA-Vh-g6D" secondAttribute="trailing" constant="20" id="ZWu-Zj-mFt"/>
-                            <constraint firstItem="eGc-t1-gLm" firstAttribute="leading" secondItem="jIm-gj-7oq" secondAttribute="leading" constant="20" id="Zji-1A-Lbr"/>
-                            <constraint firstItem="eGc-t1-gLm" firstAttribute="top" secondItem="8C7-gy-H6r" secondAttribute="bottom" constant="20" id="kDF-O6-cQF"/>
-                            <constraint firstItem="UAP-sb-H1R" firstAttribute="top" secondItem="G4w-8U-pjM" secondAttribute="bottom" constant="10" id="lJg-At-HQR"/>
-                            <constraint firstItem="jIm-gj-7oq" firstAttribute="trailing" secondItem="UAP-sb-H1R" secondAttribute="trailing" constant="20" id="lav-IA-06r"/>
-                            <constraint firstItem="8C7-gy-H6r" firstAttribute="top" secondItem="UAP-sb-H1R" secondAttribute="bottom" constant="20" id="slb-Xr-jhy"/>
+                            <constraint firstAttribute="bottom" secondItem="Pxz-H5-BXt" secondAttribute="bottom" constant="15" id="diJ-6F-gH4"/>
                             <constraint firstItem="G4w-8U-pjM" firstAttribute="top" secondItem="jIm-gj-7oq" secondAttribute="top" id="u0O-Ad-7Im"/>
-                            <constraint firstItem="jIm-gj-7oq" firstAttribute="trailing" secondItem="eGc-t1-gLm" secondAttribute="trailing" constant="20" id="xhu-UI-WFs"/>
+                            <constraint firstItem="UAP-sb-H1R" firstAttribute="top" secondItem="G4w-8U-pjM" secondAttribute="bottom" id="z5j-WS-6n7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jIm-gj-7oq"/>
                     </view>
                     <connections>
                         <outlet property="map" destination="UAP-sb-H1R" id="BSV-u8-26Z"/>
                         <outlet property="requestAcceptButton" destination="ERA-Vh-g6D" id="hbq-21-OP5"/>
-                        <outlet property="titleNavigationItem" destination="AH1-gH-4aE" id="Zfs-Af-xyH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V6a-gD-6Q3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2690" y="853"/>
+            <point key="canvasLocation" x="2689.8550724637685" y="852.45535714285711"/>
         </scene>
         <!--Donor Picker View Controller-->
         <scene sceneID="uY2-Tj-Rzh">
             <objects>
                 <viewController storyboardIdentifier="DonorPickerViewController" id="ruy-6X-VHP" customClass="DonorPickerViewController" customModule="Donor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pfk-VY-2Oj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w5O-6I-3gO">
-                                <rect key="frame" x="20" y="115" width="374" height="216"/>
+                                <rect key="frame" x="20" y="159" width="374" height="216"/>
                                 <connections>
                                     <outlet property="dataSource" destination="ruy-6X-VHP" id="qqW-bf-Mv4"/>
                                     <outlet property="delegate" destination="ruy-6X-VHP" id="nBR-bm-MDM"/>
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your blood type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x27-Sm-uNI">
-                                <rect key="frame" x="20" y="84" width="374" height="21"/>
+                                <rect key="frame" x="20" y="128" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QFf-7O-uKx">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Settings" id="1bC-We-CZZ">
                                         <barButtonItem key="rightBarButtonItem" title="Done" id="w3D-Un-FNn">
@@ -225,4 +262,8 @@
             <point key="canvasLocation" x="3455" y="853"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="maps" width="101" height="101"/>
+        <image name="phone" width="103" height="103"/>
+    </resources>
 </document>

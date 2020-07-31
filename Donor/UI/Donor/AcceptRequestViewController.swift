@@ -15,7 +15,6 @@ class AcceptRequestViewController: UIViewController {
     
     
     @IBOutlet weak var map: MKMapView!
-    @IBOutlet weak var titleNavigationItem: UINavigationItem!
     @IBOutlet weak var requestAcceptButton: UIButton!
     
     override var shouldAutorotate: Bool { return false }

@@ -146,7 +146,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 9 images.
+  /// This `R.image` struct is generated, and contains static references to 12 images.
   struct image {
     /// Image `Group 8`.
     static let group8 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Group 8")
@@ -154,6 +154,8 @@ struct R: Rswift.Validatable {
     static let group_16 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Group_16")
     /// Image `Login-icon-active`.
     static let loginIconActive = Rswift.ImageResource(bundle: R.hostingBundle, name: "Login-icon-active")
+    /// Image `Login-icon-inactive`.
+    static let loginIconInactive = Rswift.ImageResource(bundle: R.hostingBundle, name: "Login-icon-inactive")
     /// Image `Password-apple-icon-active`.
     static let passwordAppleIconActive = Rswift.ImageResource(bundle: R.hostingBundle, name: "Password-apple-icon-active")
     /// Image `cancel`.
@@ -164,8 +166,12 @@ struct R: Rswift.Validatable {
     static let launchScreenImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "launchScreenImage")
     /// Image `loadingCat`.
     static let loadingCat = Rswift.ImageResource(bundle: R.hostingBundle, name: "loadingCat")
+    /// Image `maps`.
+    static let maps = Rswift.ImageResource(bundle: R.hostingBundle, name: "maps")
     /// Image `patientDefaultImage`.
     static let patientDefaultImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "patientDefaultImage")
+    /// Image `phone`.
+    static let phone = Rswift.ImageResource(bundle: R.hostingBundle, name: "phone")
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "Group 8", bundle: ..., traitCollection: ...)`
@@ -185,6 +191,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "Login-icon-active", bundle: ..., traitCollection: ...)`
     static func loginIconActive(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.loginIconActive, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Login-icon-inactive", bundle: ..., traitCollection: ...)`
+    static func loginIconInactive(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.loginIconInactive, compatibleWith: traitCollection)
     }
     #endif
 
@@ -224,9 +237,23 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "maps", bundle: ..., traitCollection: ...)`
+    static func maps(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.maps, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "patientDefaultImage", bundle: ..., traitCollection: ...)`
     static func patientDefaultImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.patientDefaultImage, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "phone", bundle: ..., traitCollection: ...)`
+    static func phone(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.phone, compatibleWith: traitCollection)
     }
     #endif
 
@@ -354,6 +381,8 @@ struct _R: Rswift.Validatable {
       }
 
       static func validate() throws {
+        if UIKit.UIImage(named: "maps", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'maps' is used in storyboard 'Donor', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "phone", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'phone' is used in storyboard 'Donor', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
         if _R.storyboard.donor().acceptRequestViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'acceptRequestViewController' could not be loaded from storyboard 'Donor' as 'AcceptRequestViewController'.") }

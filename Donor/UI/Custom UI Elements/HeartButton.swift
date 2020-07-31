@@ -33,10 +33,17 @@ class HeartButton: UIButton {
     }
     
     func cancelMode() {
-        let cancelImage = UIImage.init(named: "cancel")
+        let cancelImage = UIImage.init(named: R.image.cancel.name)
         setBackgroundImage(cancelImage, for: .normal)
     }
-    
+    func phoneMode() {
+        let phoneImage = UIImage.init(named: R.image.phone.name)
+        setBackgroundImage(phoneImage, for: .normal)
+    }
+    func mapsMode() {
+        let mapsImage = UIImage.init(named: R.image.maps.name)
+        setBackgroundImage(mapsImage, for: .normal)
+    }
     func acceptMode() {
         setBackgroundImage(heartImage, for: .normal)
     }
