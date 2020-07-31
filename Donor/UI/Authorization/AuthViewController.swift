@@ -43,6 +43,9 @@ class AuthViewController: UIViewController {
     
     @IBOutlet weak var AuthStack: UIStackView!
     
+    override var shouldAutorotate: Bool {
+        return false
+    }
     
     var signUpMode = false
     
@@ -56,7 +59,6 @@ class AuthViewController: UIViewController {
         self.passwordTextField.delegate = self
         self.loginTextField.delegate = self
         self.hideKeyboardWhenTappedAround()
-        
     }
     
     @IBAction func topTapped(_ sender: Any) {

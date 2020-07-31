@@ -19,6 +19,10 @@ class PickerViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var mobilePhoneTextField: UITextField!
     
+    override var shouldAutorotate: Bool {
+         return false
+     }
+    
     var pickerViewControllerDelegate: PickerViewControllerDelegate?
     var data = Patient()
     

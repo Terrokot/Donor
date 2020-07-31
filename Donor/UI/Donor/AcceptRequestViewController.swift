@@ -18,6 +18,10 @@ class AcceptRequestViewController: UIViewController {
     @IBOutlet weak var titleNavigationItem: UINavigationItem!
     @IBOutlet weak var requestAcceptButton: UIButton!
     
+    override var shouldAutorotate: Bool {
+         return false
+     }
+    
     var dataBaseRef: DatabaseReference!
     
     var requestLocation = CLLocationCoordinate2D()

@@ -17,6 +17,10 @@ class PatientViewController: UIViewController {
     @IBOutlet weak var findDonorButton: HeartButton!
     @IBOutlet var requestStatusLabel: UILabel!
     
+    override var shouldAutorotate: Bool {
+         return false
+     }
+    
     
     var ref: DatabaseReference!
     
