@@ -146,7 +146,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 12 images.
+  /// This `R.image` struct is generated, and contains static references to 13 images.
   struct image {
     /// Image `Group 8`.
     static let group8 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Group 8")
@@ -172,6 +172,8 @@ struct R: Rswift.Validatable {
     static let patientDefaultImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "patientDefaultImage")
     /// Image `phone`.
     static let phone = Rswift.ImageResource(bundle: R.hostingBundle, name: "phone")
+    /// Image `topViewImage`.
+    static let topViewImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "topViewImage")
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "Group 8", bundle: ..., traitCollection: ...)`
@@ -254,6 +256,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "phone", bundle: ..., traitCollection: ...)`
     static func phone(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.phone, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "topViewImage", bundle: ..., traitCollection: ...)`
+    static func topViewImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.topViewImage, compatibleWith: traitCollection)
     }
     #endif
 

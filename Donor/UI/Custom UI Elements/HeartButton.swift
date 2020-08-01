@@ -10,7 +10,7 @@ import UIKit
 
 class HeartButton: UIButton {
     
-    let heartImage = UIImage.init(named: "heartRequest")
+    let heartImage = UIImage.init(named: R.image.heartRequest.name)
     let acceptButtonSize: CGFloat = 128
     let cancelButtonSize: CGFloat = 70
     
