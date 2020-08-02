@@ -36,7 +36,6 @@
 		915DC82924B8AF3500707A71 /* Donor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915DC82824B8AF3500707A71 /* Donor.swift */; };
 		915DC82B24B8AF6F00707A71 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915DC82A24B8AF6F00707A71 /* Patient.swift */; };
 		9169979224C0656D00280A4F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9169979124C0656D00280A4F /* AuthService.swift */; };
-		917F0EE724D62BAA005A03E1 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917F0EE624D62BAA005A03E1 /* TopViewController.swift */; };
 		9185165624ADE4E200F6B838 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185165524ADE4E200F6B838 /* LocationService.swift */; };
 		9185165C24AE5EB700F6B838 /* PatientLocationServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185165B24AE5EB700F6B838 /* PatientLocationServiceDelegate.swift */; };
 		918A9E5824BB63D1004778D2 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918A9E5724BB63D1004778D2 /* PickerViewController.swift */; };
@@ -82,7 +81,6 @@
 		915DC82824B8AF3500707A71 /* Donor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donor.swift; sourceTree = "<group>"; };
 		915DC82A24B8AF6F00707A71 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		9169979124C0656D00280A4F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		917F0EE624D62BAA005A03E1 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		9185165524ADE4E200F6B838 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		9185165B24AE5EB700F6B838 /* PatientLocationServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientLocationServiceDelegate.swift; sourceTree = "<group>"; };
 		918A9E5724BB63D1004778D2 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PickerViewController.swift; path = Donor/UI/Patient/PickerViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -259,7 +257,6 @@
 				913F708624D0108000AE435D /* AuthSegmentedController.swift */,
 				91A28FE224D1EC9E00B37346 /* AuthTextField.swift */,
 				91494EEF24D221C200F73D72 /* AuthButton.swift */,
-				917F0EE624D62BAA005A03E1 /* TopViewController.swift */,
 				91008CF224D6BCCC00CE0EE5 /* TopView */,
 				9145D7BF24CC96DB008FADF1 /* HeartButton.swift */,
 			);
@@ -441,7 +438,6 @@
 				913F708724D0108000AE435D /* AuthSegmentedController.swift in Sources */,
 				9185165624ADE4E200F6B838 /* LocationService.swift in Sources */,
 				9145D7C424CCCE26008FADF1 /* DonorCell.swift in Sources */,
-				917F0EE724D62BAA005A03E1 /* TopViewController.swift in Sources */,
 				91A8C38824C883A7007CE71A /* DonorPickerViewController.swift in Sources */,
 				91377B2524A7956400B450DF /* PatientViewController.swift in Sources */,
 				9145D7C024CC96DB008FADF1 /* HeartButton.swift in Sources */,

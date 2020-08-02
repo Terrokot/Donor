@@ -27,13 +27,7 @@ class DonorPickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //MARK: Top View Setup
-        topView.mailLabelText = "KOKOKOKO"
-        topView.secondLabelText = "NEEEEEET"
-        
-        topView.rightButton.isHidden = false
-        topView.rightButton.tintColor = .white
-        topView.rightButton.setImage(UIImage(named: R.image.done.name), for: .normal)
+        topViewSetup()
         topView.delegate = self
     }
     
@@ -71,8 +65,18 @@ extension DonorPickerViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     }
 }
 
+//MARK: Top View Delegate & Setup
+
 extension DonorPickerViewController: TopViewDelegate {
     func rightAction() {
         done()
+    }
+    
+    fileprivate func topViewSetup() {
+        topView.mailLabelText          = "Donor"
+        topView.secondLabelText        = "Select blood Type"
+        topView.rightButton.isHidden   = false
+        topView.rightButton.tintColor  = .white
+        topView.rightButton.setImage(UIImage(named: R.image.done.name), for: .normal)
     }
 }

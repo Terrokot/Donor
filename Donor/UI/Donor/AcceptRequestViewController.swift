@@ -22,9 +22,10 @@ class AcceptRequestViewController: UIViewController {
     var dataBaseRef: DatabaseReference!
     
     var requestLocation = CLLocationCoordinate2D()
-    var donorLocation = CLLocationCoordinate2D()
-    var requestEmail = ""
-    var requestPhoneNumber = ""
+    var donorLocation   = CLLocationCoordinate2D()
+    
+    var requestEmail        = ""
+    var requestPhoneNumber  = ""
     var acceptionStatus = false
     
     override func viewDidLoad() {

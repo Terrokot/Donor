@@ -31,15 +31,16 @@ class PickerViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        nameTextField.text = data.name
-        mobilePhoneTextField.text = data.phoneNumber
+        nameTextField.text         = data.name
+        mobilePhoneTextField.text  = data.phoneNumber
     }
     
     @IBAction func doneButton(_ sender: Any) {
         if  nameTextField.text != "",
             mobilePhoneTextField.text != "" {
-            data.name = nameTextField.text!
-            data.phoneNumber = mobilePhoneTextField.text!
+            
+            data.name         = nameTextField.text!
+            data.phoneNumber  = mobilePhoneTextField.text!
             writeToDefaults()
             pickerViewControllerDelegate?.sendData(data)
             print(data)
@@ -52,9 +53,9 @@ class PickerViewController: UIViewController {
     
     //MARK: Defaults
     func writeToDefaults() {
-        Defaults["userName"] = data.name
-        Defaults["userPhoneNumber"] = data.phoneNumber
-        Defaults["userBloodType"] = data.bloodType.rawValue
+        Defaults["userName"]         = data.name
+        Defaults["userPhoneNumber"]  = data.phoneNumber
+        Defaults["userBloodType"]    = data.bloodType.rawValue
     }
     
     

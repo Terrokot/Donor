@@ -11,7 +11,6 @@ import CoreLocation
 
 extension PatientViewController: CLLocationManagerDelegate  {
 
-    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let coord = manager.location?.coordinate {
             locationService.updateUserLocation(coordinate: coord, userLocation: &userLocation)

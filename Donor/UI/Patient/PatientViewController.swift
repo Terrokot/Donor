@@ -21,10 +21,10 @@ class PatientViewController: UIViewController {
         
     var ref: DatabaseReference!
     
-    let locationService = LocationService()
-    var userLocation = CLLocationCoordinate2D()
+    let locationService  = LocationService()
+    var userLocation     = CLLocationCoordinate2D()
+    var patientData      = Patient()
     var requestHasBeenSent = false
-    var patientData = Patient()
     
     override func viewDidLoad() {
         super.viewDidLoad()

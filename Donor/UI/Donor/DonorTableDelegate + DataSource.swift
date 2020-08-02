@@ -26,14 +26,14 @@ extension DonorViewController: UITableViewDataSource {
                 let lat        =  patientRequestDictionary["latitude"] as? Double,
                 let lon        =  patientRequestDictionary["longitude"] as? Double
             {
-                let donorCLLocation = CLLocation(latitude: donorLocation.latitude, longitude: donorLocation.longitude)
-                let patientCLLocation = CLLocation(latitude: lat, longitude: lon)
-                let distance = donorCLLocation.distance(from: patientCLLocation) / 1000
-                let roundedDistance = round(distance * 100) / 100
+                let donorCLLocation    = CLLocation(latitude: donorLocation.latitude, longitude: donorLocation.longitude)
+                let patientCLLocation  = CLLocation(latitude: lat, longitude: lon)
+                let distance           = donorCLLocation.distance(from: patientCLLocation) / 1000
+                let roundedDistance    = round(distance * 100) / 100
                 
-                cell.nameLabel.text = "\(name) - \(email)"
-                cell.distanceLabel.text = "\(roundedDistance)km"
-                cell.bloodTypeLabel.text = "Blood type:\(bloodType)"
+                cell.nameLabel.text       = "\(name) - \(email)"
+                cell.distanceLabel.text   = "\(roundedDistance)km"
+                cell.bloodTypeLabel.text  = "Blood type:\(bloodType)"
             }
         }
         return cell
@@ -54,16 +54,16 @@ extension DonorViewController: UITableViewDelegate {
         let selectedUserData = patientsRequest[indexPath.row]
         
         if let patientRequestDictionary = selectedUserData.value as? [String: AnyObject] {
-            if  let email       = patientRequestDictionary["email"],
-                let phoneNumber = patientRequestDictionary["phoneNumber"],
-                let lat         = patientRequestDictionary["latitude"] as? Double,
-                let lon         = patientRequestDictionary["longitude"] as? Double
+            if  let email        = patientRequestDictionary["email"],
+                let phoneNumber  = patientRequestDictionary["phoneNumber"],
+                let lat          = patientRequestDictionary["latitude"] as? Double,
+                let lon          = patientRequestDictionary["longitude"] as? Double
             {
                 let acceptVC = R.storyboard.donor.acceptRequestViewController()!
-                acceptVC.requestEmail = "\(email)"
-                acceptVC.requestPhoneNumber = ("\(phoneNumber)")
-                acceptVC.donorLocation = self.donorLocation
-                acceptVC.requestLocation = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+                acceptVC.requestEmail        = "\(email)"
+                acceptVC.requestPhoneNumber  = ("\(phoneNumber)")
+                acceptVC.donorLocation       = self.donorLocation
+                acceptVC.requestLocation     = CLLocationCoordinate2D(latitude: lat, longitude: lon)
                 present(acceptVC, animated: true, completion: nil)
             }
         }
@@ -74,11 +74,11 @@ extension DonorViewController {
     
     func tableSetup() {
         //table MARK: Table Setup
-        tableView.separatorStyle = .none
-        tableView.backgroundColor = .clear
+        tableView.separatorStyle   = .none
+        tableView.backgroundColor  = .clear
         let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = self.view.bounds
-        gradientLayer.colors = [UIColor(red: 0.80, green: 0.13, blue: 0.15, alpha: 1.00).cgColor, UIColor(red: 0.9882, green: 0.5412, blue: 0.5412, alpha: 1).cgColor]
+        gradientLayer.frame   = self.view.bounds
+        gradientLayer.colors  = [UIColor(red: 0.80, green: 0.13, blue: 0.15, alpha: 1.00).cgColor, UIColor(red: 0.9882, green: 0.5412, blue: 0.5412, alpha: 1).cgColor]
         self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
 }

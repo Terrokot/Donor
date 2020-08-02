@@ -21,9 +21,10 @@ class DonorViewController: UIViewController {
     
     var patientsRequest : [DataSnapshot] = [] // change for dict
     var patientsRequestCopy : [DataSnapshot] = [] // change for dict
+    
     let locationService = LocationService()
-    var donorLocation = CLLocationCoordinate2D()
-    var donorData = Donor()
+    var donorLocation   = CLLocationCoordinate2D()
+    var donorData       = Donor()
     
     
     //MARK: viewDidLoad
@@ -82,7 +83,7 @@ extension DonorViewController: DonorPickerViewControllerDelegate {
         var sortedTable: [DataSnapshot] = []
         for snapshot in patientsRequest {
             if let requestDictionary = snapshot.value as? [String: AnyObject] {
-                if let bloodType = requestDictionary["bloodType"] as? String,
+                if let bloodType    = requestDictionary["bloodType"] as? String,
                     let patientType = Blood.init(rawValue: bloodType) {
                     if TableFilter.sortByBloodType(donorType: donorData.bloodType, patientType: patientType) {
                         sortedTable.append(snapshot)
