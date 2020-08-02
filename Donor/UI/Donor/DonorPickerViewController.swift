@@ -30,10 +30,11 @@ class DonorPickerViewController: UIViewController {
         //MARK: Top View Setup
         topView.mailLabelText = "KOKOKOKO"
         topView.secondLabelText = "NEEEEEET"
+        
+        topView.rightButton.isHidden = false
+        topView.rightButton.tintColor = .white
+        topView.rightButton.setImage(UIImage(named: R.image.done.name), for: .normal)
         topView.delegate = self
-        
-        
-        
     }
     
     @IBAction func doneTapped(_ sender: Any) {
@@ -71,10 +72,7 @@ extension DonorPickerViewController: UIPickerViewDelegate, UIPickerViewDataSourc
 }
 
 extension DonorPickerViewController: TopViewDelegate {
-    func leftAction() {
-        topView.leftButton.isHidden = false
+    func rightAction() {
         done()
-        
     }
-    
 }
