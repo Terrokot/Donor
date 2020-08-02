@@ -226,30 +226,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QFf-7O-uKx">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Settings" id="1bC-We-CZZ">
-                                        <barButtonItem key="rightBarButtonItem" title="Done" id="w3D-Un-FNn">
-                                            <connections>
-                                                <action selector="doneTapped:" destination="ruy-6X-VHP" id="iy2-c9-NaJ"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zkW-Sj-zjg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="48h-h4-t6A"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="oVw-ZM-KHT" kind="embed" id="WHA-2v-xJv"/>
+                                </connections>
+                            </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="QFf-7O-uKx" firstAttribute="leading" secondItem="eUf-ES-uWb" secondAttribute="leading" id="359-8p-Drv"/>
                             <constraint firstItem="x27-Sm-uNI" firstAttribute="leading" secondItem="eUf-ES-uWb" secondAttribute="leading" constant="20" id="EHd-bU-KW9"/>
+                            <constraint firstItem="eUf-ES-uWb" firstAttribute="trailing" secondItem="zkW-Sj-zjg" secondAttribute="trailing" id="GU8-ut-mb7"/>
+                            <constraint firstItem="zkW-Sj-zjg" firstAttribute="leading" secondItem="eUf-ES-uWb" secondAttribute="leading" id="LEe-cN-AHf"/>
                             <constraint firstItem="w5O-6I-3gO" firstAttribute="leading" secondItem="eUf-ES-uWb" secondAttribute="leading" constant="20" id="R77-Su-MAH"/>
+                            <constraint firstItem="x27-Sm-uNI" firstAttribute="top" secondItem="zkW-Sj-zjg" secondAttribute="bottom" id="ZEK-da-50F"/>
                             <constraint firstItem="w5O-6I-3gO" firstAttribute="top" secondItem="x27-Sm-uNI" secondAttribute="bottom" constant="10" id="c54-dU-OsJ"/>
+                            <constraint firstItem="zkW-Sj-zjg" firstAttribute="top" secondItem="pfk-VY-2Oj" secondAttribute="top" id="dfm-X1-bGC"/>
                             <constraint firstItem="eUf-ES-uWb" firstAttribute="trailing" secondItem="w5O-6I-3gO" secondAttribute="trailing" constant="20" id="irR-Gu-jj9"/>
                             <constraint firstItem="eUf-ES-uWb" firstAttribute="trailing" secondItem="x27-Sm-uNI" secondAttribute="trailing" constant="20" id="myy-Ge-lmx"/>
-                            <constraint firstItem="x27-Sm-uNI" firstAttribute="top" secondItem="QFf-7O-uKx" secondAttribute="bottom" constant="40" id="ozx-CR-JmS"/>
-                            <constraint firstItem="QFf-7O-uKx" firstAttribute="top" secondItem="eUf-ES-uWb" secondAttribute="top" id="rvY-IS-kFC"/>
-                            <constraint firstItem="QFf-7O-uKx" firstAttribute="trailing" secondItem="eUf-ES-uWb" secondAttribute="trailing" id="ui8-Pd-nxd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eUf-ES-uWb"/>
                     </view>
@@ -260,6 +257,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AcP-4s-pKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3455" y="853"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gQu-qd-kxt">
+            <objects>
+                <viewController id="oVw-ZM-KHT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u69-J4-QLm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="1Qr-7L-K82"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vsA-82-igg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4220" y="595"/>
         </scene>
     </scenes>
     <resources>

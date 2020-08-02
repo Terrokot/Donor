@@ -269,10 +269,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
   struct nib {
     /// Nib `DonorCell`.
     static let donorCell = _R.nib._DonorCell()
+    /// Nib `TopView`.
+    static let topView = _R.nib._TopView()
 
     #if os(iOS) || os(tvOS)
     /// `UINib(name: "DonorCell", in: bundle)`
@@ -282,8 +284,20 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "TopView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.topView) instead")
+    static func topView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.topView)
+    }
+    #endif
+
     static func donorCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> DonorCell? {
       return R.nib.donorCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? DonorCell
+    }
+
+    static func topView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.topView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
 
     fileprivate init() {}
@@ -305,18 +319,42 @@ struct R: Rswift.Validatable {
 struct _R: Rswift.Validatable {
   static func validate() throws {
     #if os(iOS) || os(tvOS)
+    try nib.validate()
+    #endif
+    #if os(iOS) || os(tvOS)
     try storyboard.validate()
     #endif
   }
 
   #if os(iOS) || os(tvOS)
-  struct nib {
+  struct nib: Rswift.Validatable {
+    static func validate() throws {
+      try _TopView.validate()
+    }
+
     struct _DonorCell: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "DonorCell"
 
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> DonorCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? DonorCell
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _TopView: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "TopView"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "topViewImage", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'topViewImage' is used in nib 'TopView', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
       }
 
       fileprivate init() {}

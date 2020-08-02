@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E82B96FE72FDBFA153B37F7 /* Pods_Donor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3839BBA1FF6E2F47043367 /* Pods_Donor.framework */; };
+		91008CEF24D6BBCA00CE0EE5 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91008CEE24D6BBCA00CE0EE5 /* TopView.swift */; };
+		91008CF124D6BCC700CE0EE5 /* TopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91008CF024D6BCC700CE0EE5 /* TopView.xib */; };
 		911D23A124C0CF690040BB4F /* DonorTableDelegate + DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D23A024C0CF690040BB4F /* DonorTableDelegate + DataSource.swift */; };
 		911D2D0524C9A9970022871F /* Blood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D2D0424C9A9970022871F /* Blood.swift */; };
 		912150A524B0AC5200A80629 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912150A424B0AC5200A80629 /* AlertManager.swift */; };
@@ -35,6 +36,7 @@
 		915DC82924B8AF3500707A71 /* Donor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915DC82824B8AF3500707A71 /* Donor.swift */; };
 		915DC82B24B8AF6F00707A71 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915DC82A24B8AF6F00707A71 /* Patient.swift */; };
 		9169979224C0656D00280A4F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9169979124C0656D00280A4F /* AuthService.swift */; };
+		917F0EE724D62BAA005A03E1 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917F0EE624D62BAA005A03E1 /* TopViewController.swift */; };
 		9185165624ADE4E200F6B838 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185165524ADE4E200F6B838 /* LocationService.swift */; };
 		9185165C24AE5EB700F6B838 /* PatientLocationServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185165B24AE5EB700F6B838 /* PatientLocationServiceDelegate.swift */; };
 		918A9E5824BB63D1004778D2 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918A9E5724BB63D1004778D2 /* PickerViewController.swift */; };
@@ -42,12 +44,15 @@
 		91A28FE324D1EC9E00B37346 /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A28FE224D1EC9E00B37346 /* AuthTextField.swift */; };
 		91A8C38824C883A7007CE71A /* DonorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A8C38724C883A7007CE71A /* DonorPickerViewController.swift */; };
 		91A8C38A24C8A515007CE71A /* TableFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A8C38924C8A515007CE71A /* TableFilter.swift */; };
-		91B3364224D62041002E86CE /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B3364124D62041002E86CE /* TopView.swift */; };
 		91DDA99D24C5F30700C44F01 /* DonorLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DDA99C24C5F30700C44F01 /* DonorLocationManagerDelegate.swift */; };
+		9E3215C06A987FE2C984B080 /* Pods_Donor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20D38A01CB0686FBBB80D6A /* Pods_Donor.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2C5B2370E0030D2061A80B64 /* Pods-Donor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donor.release.xcconfig"; path = "Target Support Files/Pods-Donor/Pods-Donor.release.xcconfig"; sourceTree = "<group>"; };
+		1AABF5122CC486AD372AA8AC /* Pods-Donor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donor.release.xcconfig"; path = "Target Support Files/Pods-Donor/Pods-Donor.release.xcconfig"; sourceTree = "<group>"; };
+		21B3A52BC3388F0782A1CFAD /* Pods-Donor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donor.debug.xcconfig"; path = "Target Support Files/Pods-Donor/Pods-Donor.debug.xcconfig"; sourceTree = "<group>"; };
+		91008CEE24D6BBCA00CE0EE5 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
+		91008CF024D6BCC700CE0EE5 /* TopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopView.xib; sourceTree = "<group>"; };
 		911D23A024C0CF690040BB4F /* DonorTableDelegate + DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DonorTableDelegate + DataSource.swift"; sourceTree = "<group>"; };
 		911D2D0424C9A9970022871F /* Blood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blood.swift; sourceTree = "<group>"; };
 		912150A424B0AC5200A80629 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
@@ -77,6 +82,7 @@
 		915DC82824B8AF3500707A71 /* Donor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donor.swift; sourceTree = "<group>"; };
 		915DC82A24B8AF6F00707A71 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		9169979124C0656D00280A4F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		917F0EE624D62BAA005A03E1 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		9185165524ADE4E200F6B838 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		9185165B24AE5EB700F6B838 /* PatientLocationServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientLocationServiceDelegate.swift; sourceTree = "<group>"; };
 		918A9E5724BB63D1004778D2 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PickerViewController.swift; path = Donor/UI/Patient/PickerViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -84,10 +90,8 @@
 		91A28FE224D1EC9E00B37346 /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
 		91A8C38724C883A7007CE71A /* DonorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorPickerViewController.swift; sourceTree = "<group>"; };
 		91A8C38924C8A515007CE71A /* TableFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableFilter.swift; sourceTree = "<group>"; };
-		91B3364124D62041002E86CE /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		91DDA99C24C5F30700C44F01 /* DonorLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorLocationManagerDelegate.swift; sourceTree = "<group>"; };
-		9F3839BBA1FF6E2F47043367 /* Pods_Donor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Donor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F629AB4ED40A168EA7C3DE52 /* Pods-Donor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donor.debug.xcconfig"; path = "Target Support Files/Pods-Donor/Pods-Donor.debug.xcconfig"; sourceTree = "<group>"; };
+		E20D38A01CB0686FBBB80D6A /* Pods_Donor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Donor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,19 +99,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E82B96FE72FDBFA153B37F7 /* Pods_Donor.framework in Frameworks */,
+				9E3215C06A987FE2C984B080 /* Pods_Donor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		43AC1EF9CDD5E0585E527CB5 /* Frameworks */ = {
+		137B383B1643A44592674512 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9F3839BBA1FF6E2F47043367 /* Pods_Donor.framework */,
+				E20D38A01CB0686FBBB80D6A /* Pods_Donor.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91008CF224D6BCCC00CE0EE5 /* TopView */ = {
+			isa = PBXGroup;
+			children = (
+				91008CEE24D6BBCA00CE0EE5 /* TopView.swift */,
+				91008CF024D6BCC700CE0EE5 /* TopView.xib */,
+			);
+			path = TopView;
 			sourceTree = "<group>";
 		};
 		91266B2C24B6070F004B6859 /* Patient */ = {
@@ -141,7 +154,7 @@
 				91274C2C24A371A9004C020D /* Donor */,
 				91274C2B24A371A9004C020D /* Products */,
 				B8A06182CB6B445F8C11C4D6 /* Pods */,
-				43AC1EF9CDD5E0585E527CB5 /* Frameworks */,
+				137B383B1643A44592674512 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -246,8 +259,9 @@
 				913F708624D0108000AE435D /* AuthSegmentedController.swift */,
 				91A28FE224D1EC9E00B37346 /* AuthTextField.swift */,
 				91494EEF24D221C200F73D72 /* AuthButton.swift */,
+				917F0EE624D62BAA005A03E1 /* TopViewController.swift */,
+				91008CF224D6BCCC00CE0EE5 /* TopView */,
 				9145D7BF24CC96DB008FADF1 /* HeartButton.swift */,
-				91B3364124D62041002E86CE /* TopView.swift */,
 			);
 			path = "Custom UI Elements";
 			sourceTree = "<group>";
@@ -255,8 +269,8 @@
 		B8A06182CB6B445F8C11C4D6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F629AB4ED40A168EA7C3DE52 /* Pods-Donor.debug.xcconfig */,
-				2C5B2370E0030D2061A80B64 /* Pods-Donor.release.xcconfig */,
+				21B3A52BC3388F0782A1CFAD /* Pods-Donor.debug.xcconfig */,
+				1AABF5122CC486AD372AA8AC /* Pods-Donor.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -268,12 +282,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91274C3E24A371AB004C020D /* Build configuration list for PBXNativeTarget "Donor" */;
 			buildPhases = (
-				DB7DAFB5CCAE9DF93E33CAF2 /* [CP] Check Pods Manifest.lock */,
+				3ADF2EA1A31DE48C28626900 /* [CP] Check Pods Manifest.lock */,
 				91266B2E24B609B0004B6859 /* ShellScript */,
 				91274C2624A371A9004C020D /* Sources */,
 				91274C2724A371A9004C020D /* Frameworks */,
 				91274C2824A371A9004C020D /* Resources */,
-				6628F419786823502F5C0A33 /* [CP] Embed Pods Frameworks */,
+				56E856897A540410CC6F2C6E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -324,6 +338,7 @@
 			files = (
 				91274C3A24A371AA004C020D /* LaunchScreen.storyboard in Resources */,
 				9145D7C524CCCE26008FADF1 /* DonorCell.xib in Resources */,
+				91008CF124D6BCC700CE0EE5 /* TopView.xib in Resources */,
 				9137F9F024C332D400EF5F04 /* Donor.storyboard in Resources */,
 				91377B1F24A4FD6500B450DF /* GoogleService-Info.plist in Resources */,
 				91274C3724A371AA004C020D /* Assets.xcassets in Resources */,
@@ -335,7 +350,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6628F419786823502F5C0A33 /* [CP] Embed Pods Frameworks */ = {
+		3ADF2EA1A31DE48C28626900 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Donor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56E856897A540410CC6F2C6E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -371,28 +408,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n\n";
 		};
-		DB7DAFB5CCAE9DF93E33CAF2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Donor-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -416,6 +431,7 @@
 				9169979224C0656D00280A4F /* AuthService.swift in Sources */,
 				918A9E5824BB63D1004778D2 /* PickerViewController.swift in Sources */,
 				91266B2924B5ECB1004B6859 /* DonorViewController.swift in Sources */,
+				91008CEF24D6BBCA00CE0EE5 /* TopView.swift in Sources */,
 				91A28FE324D1EC9E00B37346 /* AuthTextField.swift in Sources */,
 				9145D7BC24CC6CAD008FADF1 /* UIService.swift in Sources */,
 				91266B2B24B606FB004B6859 /* AcceptRequestViewController.swift in Sources */,
@@ -425,8 +441,8 @@
 				913F708724D0108000AE435D /* AuthSegmentedController.swift in Sources */,
 				9185165624ADE4E200F6B838 /* LocationService.swift in Sources */,
 				9145D7C424CCCE26008FADF1 /* DonorCell.swift in Sources */,
+				917F0EE724D62BAA005A03E1 /* TopViewController.swift in Sources */,
 				91A8C38824C883A7007CE71A /* DonorPickerViewController.swift in Sources */,
-				91B3364224D62041002E86CE /* TopView.swift in Sources */,
 				91377B2524A7956400B450DF /* PatientViewController.swift in Sources */,
 				9145D7C024CC96DB008FADF1 /* HeartButton.swift in Sources */,
 			);
@@ -572,7 +588,7 @@
 		};
 		91274C3F24A371AB004C020D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F629AB4ED40A168EA7C3DE52 /* Pods-Donor.debug.xcconfig */;
+			baseConfigurationReference = 21B3A52BC3388F0782A1CFAD /* Pods-Donor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-3";
 				CODE_SIGN_STYLE = Automatic;
@@ -592,7 +608,7 @@
 		};
 		91274C4024A371AB004C020D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C5B2370E0030D2061A80B64 /* Pods-Donor.release.xcconfig */;
+			baseConfigurationReference = 1AABF5122CC486AD372AA8AC /* Pods-Donor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-3";
 				CODE_SIGN_STYLE = Automatic;

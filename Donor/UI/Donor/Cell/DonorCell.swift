@@ -51,9 +51,9 @@ class DonorCell: UITableViewCell {
     
     private func setShadow() {
             layer.shadowColor   = UIColor.black.cgColor
-            layer.shadowOffset  = CGSize(width: 0.0, height: 6.0)
-            layer.shadowRadius  = 5
-            layer.shadowOpacity = 0.4
+            layer.shadowOffset  = CGSize(width: 0.0, height: 1.0)
+            layer.shadowRadius  = 4
+            layer.shadowOpacity = 0.3
             clipsToBounds       = true
             layer.masksToBounds = false
         }
