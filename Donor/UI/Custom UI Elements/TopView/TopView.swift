@@ -12,10 +12,10 @@ import UIKit
 class TopView: UIView {
     
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var topViewImage: UIImageView!
     
     
-
-      override init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
@@ -26,11 +26,11 @@ class TopView: UIView {
     }
     
     func setup() {
-           commonInit()
-           setShadow()
-           backgroundColor = UIColor.clear
-           layer.cornerRadius = frame.size.height / 2
-       }
+        commonInit()
+        setShadow()
+        backgroundColor = UIColor.clear
+        topViewImage.layer.cornerRadius = frame.size.height / 10
+    }
     
     private func setShadow() {
         layer.shadowColor   = UIColor.black.cgColor
@@ -42,11 +42,11 @@ class TopView: UIView {
     }
     
     private func commonInit() {
-         let bundle = Bundle(for: TopView.self)
-         bundle.loadNibNamed("TopView", owner: self, options: nil)
-         addSubview(contentView)
-         contentView.frame = self.bounds
-         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-     }
+        let bundle = Bundle(for: TopView.self)
+        bundle.loadNibNamed("TopView", owner: self, options: nil)
+        addSubview(contentView)
+        contentView.frame = self.bounds
+        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    }
     
 }

@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TopView" customModule="Donor" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="gKO-zS-179"/>
+                <outlet property="topViewImage" destination="Uxp-3r-rSd" id="qtS-cO-tDZ"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -25,7 +26,6 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="56"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Uxp-3r-rSd" secondAttribute="bottom" id="7fy-8y-r4K"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="SOV-q3-Msr" secondAttribute="bottom" id="L76-QC-XAB"/>
