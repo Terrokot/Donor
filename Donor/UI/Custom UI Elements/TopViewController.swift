@@ -12,13 +12,10 @@ class TopViewController: UIViewController {
     
     let image = UIImage(named: R.image.topViewImage.name)
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
     }
-    
-    
     
     func setup() {
         setShadow()
