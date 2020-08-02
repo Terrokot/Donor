@@ -15,6 +15,19 @@ class TopView: UIView {
     @IBOutlet weak var topViewImage: UIImageView!
     
     
+    @IBOutlet weak var leftButton: UIButton!
+    @IBOutlet weak var rightButton: UIButton!
+    
+    @IBOutlet weak var mainLabel: UILabel!
+    @IBOutlet weak var secondaryLabel: UILabel!
+    
+    
+    @IBInspectable public var mailLabelText: String = "Heading" {
+        didSet { mainLabelSetup() }
+    }
+    
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -47,6 +60,11 @@ class TopView: UIView {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    }
+    
+    private func mainLabelSetup() {
+        mainLabel.isHidden = false
+        mainLabel.text = mailLabelText
     }
     
 }

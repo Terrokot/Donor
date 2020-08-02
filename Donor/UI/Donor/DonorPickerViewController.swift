@@ -16,6 +16,9 @@ class DonorPickerViewController: UIViewController {
     
     @IBOutlet weak var pickerView: UIPickerView!
     
+    
+    @IBOutlet weak var topView: TopView!
+    
     override var shouldAutorotate: Bool { return false }
     
     var donorPickerViewControllerDelegate: DonorPickerViewControllerDelegate?
@@ -23,6 +26,11 @@ class DonorPickerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        topView.mailLabelText = "KOKOKOKO"
+    
+        
+        
     }
     
     @IBAction func doneTapped(_ sender: Any) {

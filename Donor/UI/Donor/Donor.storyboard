@@ -250,6 +250,7 @@
                     </view>
                     <connections>
                         <outlet property="pickerView" destination="w5O-6I-3gO" id="Qm9-4n-j9h"/>
+                        <outlet property="topView" destination="ZhF-91-vFn" id="j0K-aE-fBl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AcP-4s-pKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
