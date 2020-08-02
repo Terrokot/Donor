@@ -27,13 +27,19 @@ class DonorPickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //MARK: Top View Setup
         topView.mailLabelText = "KOKOKOKO"
-    
+        topView.secondLabelText = "NEEEEEET"
+        topView.delegate = self
+        
         
         
     }
     
     @IBAction func doneTapped(_ sender: Any) {
+        done()
+    }
+    private func done() {
         donorPickerViewControllerDelegate?.sendData(data)
         print(data)
         dismiss(animated: true, completion: nil)
@@ -62,4 +68,13 @@ extension DonorPickerViewController: UIPickerViewDelegate, UIPickerViewDataSourc
             data.bloodType = bloodType
         }
     }
+}
+
+extension DonorPickerViewController: TopViewDelegate {
+    func leftAction() {
+        topView.leftButton.isHidden = false
+        done()
+        
+    }
+    
 }

@@ -8,8 +8,16 @@
 
 import UIKit
 
+@objc protocol TopViewDelegate: class {
+    @objc optional func leftAction()
+    @objc optional func rightAction()
+}
+
+
 @IBDesignable
 class TopView: UIView {
+    
+    weak var delegate: TopViewDelegate?
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var topViewImage: UIImageView!
@@ -25,7 +33,9 @@ class TopView: UIView {
     @IBInspectable public var mailLabelText: String = "Heading" {
         didSet { mainLabelSetup() }
     }
-    
+    @IBInspectable public var secondLabelText: String = "subheading" {
+        didSet { secondLabelSetup() }
+    }
     
     
     override init(frame: CGRect) {
@@ -62,9 +72,22 @@ class TopView: UIView {
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
     
+    //MARK: Outlets Setup
     private func mainLabelSetup() {
         mainLabel.isHidden = false
         mainLabel.text = mailLabelText
+    }
+    private func secondLabelSetup() {
+        secondaryLabel.isHidden = false
+        secondaryLabel.text = secondLabelText
+    }
+    
+    //MARK: Actions Setup
+    @IBAction func leftTapped(_ sender: Any) {
+        delegate?.leftAction?()
+    }
+    @IBAction func rightTapped(_ sender: Any) {
+        delegate?.rightAction?()
     }
     
 }
