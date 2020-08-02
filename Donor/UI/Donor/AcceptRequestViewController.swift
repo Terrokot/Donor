@@ -14,6 +14,8 @@ import FirebaseDatabase
 class AcceptRequestViewController: UIViewController {
     
     
+    @IBOutlet weak var topView: TopView!
+    
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var requestAcceptButton: UIButton!
     
@@ -24,12 +26,16 @@ class AcceptRequestViewController: UIViewController {
     var requestLocation = CLLocationCoordinate2D()
     var donorLocation   = CLLocationCoordinate2D()
     
+    var requestName         = ""
     var requestEmail        = ""
     var requestPhoneNumber  = ""
     var acceptionStatus = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        topViewSetup()
+        topView.delegate = self
         
         dataBaseRef =  Database.database().reference().child("PatientsRequests")
         
@@ -105,8 +111,18 @@ class AcceptRequestViewController: UIViewController {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
-    
-    @IBAction func backButton(_ sender: Any) {
+}
+
+extension AcceptRequestViewController: TopViewDelegate {
+    func leftAction() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    fileprivate func topViewSetup() {
+        topView.mailLabelText          = requestName
+        topView.secondLabelText        = requestEmail
+        topView.leftButton.isHidden   = false
+        topView.leftButton.tintColor  = .white
+        
     }
 }

@@ -29,20 +29,19 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOV-q3-Msr">
                     <rect key="frame" x="0.0" y="44" width="414" height="56"/>
                     <subviews>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioB-Rg-PRE">
-                            <rect key="frame" x="15" y="10" width="36" height="36"/>
-                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <button hidden="YES" opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioB-Rg-PRE">
+                            <rect key="frame" x="15" y="15" width="26" height="26"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="36" id="ZSc-fA-8LS"/>
-                                <constraint firstAttribute="width" constant="36" id="n5X-xX-5f0"/>
+                                <constraint firstAttribute="height" constant="26" id="ZSc-fA-8LS"/>
+                                <constraint firstAttribute="width" constant="26" id="n5X-xX-5f0"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
+                            <state key="normal" title="Button" image="backward"/>
                             <connections>
                                 <action selector="leftTapped:" destination="-1" eventType="touchUpInside" id="PMU-kf-hEj"/>
                             </connections>
                         </button>
                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="He7-9X-3yL">
-                            <rect key="frame" x="59" y="29.5" width="28.5" height="14.5"/>
+                            <rect key="frame" x="57" y="29.5" width="28.5" height="14.5"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -59,7 +58,7 @@
                             </connections>
                         </button>
                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bX-ZG-PFc">
-                            <rect key="frame" x="59" y="4.5" width="50" height="25"/>
+                            <rect key="frame" x="57" y="4.5" width="50" height="25"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -68,11 +67,11 @@
                     <constraints>
                         <constraint firstItem="ioB-Rg-PRE" firstAttribute="leading" secondItem="SOV-q3-Msr" secondAttribute="leading" constant="15" id="2Ve-Yj-Aoo"/>
                         <constraint firstItem="ioB-Rg-PRE" firstAttribute="centerY" secondItem="SOV-q3-Msr" secondAttribute="centerY" id="79c-ee-DFq"/>
-                        <constraint firstItem="He7-9X-3yL" firstAttribute="leading" secondItem="ioB-Rg-PRE" secondAttribute="trailing" constant="8" id="B6Z-05-Tiy"/>
+                        <constraint firstItem="He7-9X-3yL" firstAttribute="leading" secondItem="ioB-Rg-PRE" secondAttribute="trailing" constant="16" id="B6Z-05-Tiy"/>
                         <constraint firstAttribute="trailing" secondItem="gGG-pf-PRQ" secondAttribute="trailing" constant="15" id="EaB-lo-4Md"/>
                         <constraint firstItem="gGG-pf-PRQ" firstAttribute="centerY" secondItem="SOV-q3-Msr" secondAttribute="centerY" id="Kxt-TV-bgZ"/>
                         <constraint firstItem="9bX-ZG-PFc" firstAttribute="centerY" secondItem="SOV-q3-Msr" secondAttribute="centerY" constant="-11" id="Nha-fW-cWq"/>
-                        <constraint firstItem="9bX-ZG-PFc" firstAttribute="leading" secondItem="ioB-Rg-PRE" secondAttribute="trailing" constant="8" id="Xib-cR-rYn"/>
+                        <constraint firstItem="9bX-ZG-PFc" firstAttribute="leading" secondItem="ioB-Rg-PRE" secondAttribute="trailing" constant="16" id="Xib-cR-rYn"/>
                         <constraint firstItem="He7-9X-3yL" firstAttribute="top" secondItem="9bX-ZG-PFc" secondAttribute="bottom" id="khD-Ph-1do"/>
                     </constraints>
                 </view>
@@ -94,6 +93,7 @@
         </view>
     </objects>
     <resources>
+        <image name="backward" width="170" height="300"/>
         <image name="topViewImage" width="1920" height="1080"/>
     </resources>
 </document>

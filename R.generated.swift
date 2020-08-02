@@ -146,7 +146,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 14 images.
+  /// This `R.image` struct is generated, and contains static references to 17 images.
   struct image {
     /// Image `Done`.
     static let done = Rswift.ImageResource(bundle: R.hostingBundle, name: "Done")
@@ -158,8 +158,14 @@ struct R: Rswift.Validatable {
     static let loginIconActive = Rswift.ImageResource(bundle: R.hostingBundle, name: "Login-icon-active")
     /// Image `Login-icon-inactive`.
     static let loginIconInactive = Rswift.ImageResource(bundle: R.hostingBundle, name: "Login-icon-inactive")
+    /// Image `Map`.
+    static let map = Rswift.ImageResource(bundle: R.hostingBundle, name: "Map")
     /// Image `Password-apple-icon-active`.
     static let passwordAppleIconActive = Rswift.ImageResource(bundle: R.hostingBundle, name: "Password-apple-icon-active")
+    /// Image `Phone-1`.
+    static let phone1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Phone-1")
+    /// Image `backward`.
+    static let backward = Rswift.ImageResource(bundle: R.hostingBundle, name: "backward")
     /// Image `cancel`.
     static let cancel = Rswift.ImageResource(bundle: R.hostingBundle, name: "cancel")
     /// Image `heartRequest`.
@@ -213,9 +219,30 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Map", bundle: ..., traitCollection: ...)`
+    static func map(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.map, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "Password-apple-icon-active", bundle: ..., traitCollection: ...)`
     static func passwordAppleIconActive(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.passwordAppleIconActive, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Phone-1", bundle: ..., traitCollection: ...)`
+    static func phone1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.phone1, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "backward", bundle: ..., traitCollection: ...)`
+    static func backward(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.backward, compatibleWith: traitCollection)
     }
     #endif
 
@@ -361,6 +388,7 @@ struct _R: Rswift.Validatable {
       }
 
       static func validate() throws {
+        if UIKit.UIImage(named: "backward", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'backward' is used in nib 'TopView', but couldn't be loaded.") }
         if UIKit.UIImage(named: "topViewImage", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'topViewImage' is used in nib 'TopView', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
@@ -437,8 +465,8 @@ struct _R: Rswift.Validatable {
       }
 
       static func validate() throws {
-        if UIKit.UIImage(named: "maps", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'maps' is used in storyboard 'Donor', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "phone", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'phone' is used in storyboard 'Donor', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "Map", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Map' is used in storyboard 'Donor', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "Phone-1", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Phone-1' is used in storyboard 'Donor', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
         if _R.storyboard.donor().acceptRequestViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'acceptRequestViewController' could not be loaded from storyboard 'Donor' as 'AcceptRequestViewController'.") }

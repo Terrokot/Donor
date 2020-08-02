@@ -73,10 +73,11 @@ extension DonorPickerViewController: TopViewDelegate {
     }
     
     fileprivate func topViewSetup() {
+        let image = UIImage(named: R.image.done.name)
         topView.mailLabelText          = "Donor"
         topView.secondLabelText        = "Select blood Type"
         topView.rightButton.isHidden   = false
         topView.rightButton.tintColor  = .white
-        topView.rightButton.setImage(UIImage(named: R.image.done.name), for: .normal)
+        topView.rightButton.setImage(image, for: .normal)
     }
 }

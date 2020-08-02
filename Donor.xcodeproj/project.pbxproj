@@ -254,10 +254,10 @@
 		91FB866024D0CBA1008EA624 /* Custom UI Elements */ = {
 			isa = PBXGroup;
 			children = (
+				91008CF224D6BCCC00CE0EE5 /* TopView */,
 				913F708624D0108000AE435D /* AuthSegmentedController.swift */,
 				91A28FE224D1EC9E00B37346 /* AuthTextField.swift */,
 				91494EEF24D221C200F73D72 /* AuthButton.swift */,
-				91008CF224D6BCCC00CE0EE5 /* TopView */,
 				9145D7BF24CC96DB008FADF1 /* HeartButton.swift */,
 			);
 			path = "Custom UI Elements";

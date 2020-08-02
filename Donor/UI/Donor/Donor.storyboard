@@ -81,20 +81,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4w-8U-pjM">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Patient Information" id="AH1-gH-4aE">
-                                        <barButtonItem key="leftBarButtonItem" title="Patients List" id="06t-tj-x5C">
-                                            <connections>
-                                                <action selector="backButton:" destination="Hch-fW-F99" id="YCm-5p-fJl"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UAP-sb-H1R">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pxz-H5-BXt">
                                 <rect key="frame" x="10" y="738.66666666666663" width="394" height="142.33333333333337"/>
@@ -131,7 +119,7 @@
                                                     <constraint firstAttribute="height" constant="70" id="JsT-3Q-Jf7"/>
                                                     <constraint firstAttribute="width" constant="70" id="Nyj-mt-sdW"/>
                                                 </constraints>
-                                                <state key="normal" image="phone"/>
+                                                <state key="normal" image="Phone-1"/>
                                                 <connections>
                                                     <action selector="makeCallTapped:" destination="Hch-fW-F99" eventType="touchUpInside" id="yz6-sQ-kDU"/>
                                                 </connections>
@@ -153,7 +141,7 @@
                                                     <constraint firstAttribute="width" constant="70" id="MqQ-BO-KVF"/>
                                                     <constraint firstAttribute="height" constant="70" id="tCy-dr-JAv"/>
                                                 </constraints>
-                                                <state key="normal" title="Open in Apple Maps" image="maps">
+                                                <state key="normal" title="Open in Apple Maps" image="Map">
                                                     <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -179,26 +167,33 @@
                                     <constraint firstAttribute="trailing" secondItem="N8R-Jn-oxp" secondAttribute="trailing" constant="3" id="vir-9l-Gti"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sab-s6-F8N" customClass="TopView" customModule="Donor" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="zse-e8-aYu"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="G4w-8U-pjM" firstAttribute="trailing" secondItem="jIm-gj-7oq" secondAttribute="trailing" id="1MN-ai-m7k"/>
                             <constraint firstAttribute="trailing" secondItem="Pxz-H5-BXt" secondAttribute="trailing" constant="10" id="4KV-EH-w8z"/>
                             <constraint firstItem="UAP-sb-H1R" firstAttribute="leading" secondItem="jIm-gj-7oq" secondAttribute="leading" id="C02-Xk-2wx"/>
                             <constraint firstItem="Pxz-H5-BXt" firstAttribute="leading" secondItem="anI-0i-v8u" secondAttribute="leading" constant="10" id="GRG-3r-TeG"/>
                             <constraint firstItem="UAP-sb-H1R" firstAttribute="trailing" secondItem="jIm-gj-7oq" secondAttribute="trailing" id="Kwf-HL-Jef"/>
                             <constraint firstAttribute="bottom" secondItem="UAP-sb-H1R" secondAttribute="bottom" id="QLv-ZO-FAv"/>
-                            <constraint firstItem="G4w-8U-pjM" firstAttribute="top" secondItem="jIm-gj-7oq" secondAttribute="top" id="UgP-Rt-HrM"/>
-                            <constraint firstItem="G4w-8U-pjM" firstAttribute="leading" secondItem="jIm-gj-7oq" secondAttribute="leading" id="Xfb-JJ-zkk"/>
+                            <constraint firstItem="jIm-gj-7oq" firstAttribute="trailing" secondItem="Sab-s6-F8N" secondAttribute="trailing" id="Rfm-Lp-jq3"/>
+                            <constraint firstItem="Sab-s6-F8N" firstAttribute="top" secondItem="anI-0i-v8u" secondAttribute="top" id="VFf-bi-AyW"/>
+                            <constraint firstItem="Sab-s6-F8N" firstAttribute="leading" secondItem="jIm-gj-7oq" secondAttribute="leading" id="a2T-wZ-D65"/>
+                            <constraint firstItem="UAP-sb-H1R" firstAttribute="top" secondItem="jIm-gj-7oq" secondAttribute="top" id="ckc-bB-ULE"/>
                             <constraint firstAttribute="bottom" secondItem="Pxz-H5-BXt" secondAttribute="bottom" constant="15" id="diJ-6F-gH4"/>
-                            <constraint firstItem="G4w-8U-pjM" firstAttribute="top" secondItem="jIm-gj-7oq" secondAttribute="top" id="u0O-Ad-7Im"/>
-                            <constraint firstItem="UAP-sb-H1R" firstAttribute="top" secondItem="G4w-8U-pjM" secondAttribute="bottom" id="z5j-WS-6n7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jIm-gj-7oq"/>
                     </view>
                     <connections>
                         <outlet property="map" destination="UAP-sb-H1R" id="BSV-u8-26Z"/>
                         <outlet property="requestAcceptButton" destination="ERA-Vh-g6D" id="hbq-21-OP5"/>
+                        <outlet property="topView" destination="Sab-s6-F8N" id="R4y-9K-NaS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V6a-gD-6Q3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -259,7 +254,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="maps" width="101" height="101"/>
-        <image name="phone" width="103" height="103"/>
+        <image name="Map" width="2080" height="2560"/>
+        <image name="Phone-1" width="2560" height="2560"/>
     </resources>
 </document>

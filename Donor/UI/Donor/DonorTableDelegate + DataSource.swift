@@ -54,12 +54,14 @@ extension DonorViewController: UITableViewDelegate {
         let selectedUserData = patientsRequest[indexPath.row]
         
         if let patientRequestDictionary = selectedUserData.value as? [String: AnyObject] {
-            if  let email        = patientRequestDictionary["email"],
+            if  let name         = patientRequestDictionary["name"],
+                let email        = patientRequestDictionary["email"],
                 let phoneNumber  = patientRequestDictionary["phoneNumber"],
                 let lat          = patientRequestDictionary["latitude"] as? Double,
                 let lon          = patientRequestDictionary["longitude"] as? Double
             {
                 let acceptVC = R.storyboard.donor.acceptRequestViewController()!
+                acceptVC.requestName         = "\(name)"
                 acceptVC.requestEmail        = "\(email)"
                 acceptVC.requestPhoneNumber  = ("\(phoneNumber)")
                 acceptVC.donorLocation       = self.donorLocation
