@@ -83,8 +83,8 @@ extension DonorViewController: DonorPickerViewControllerDelegate {
         var sortedTable: [DataSnapshot] = []
         for snapshot in patientsRequest {
             if let requestDictionary = snapshot.value as? [String: AnyObject] {
-                if let bloodType    = requestDictionary["bloodType"] as? String,
-                    let patientType = Blood.init(rawValue: bloodType) {
+                if  let bloodType    = requestDictionary["bloodType"] as? String,
+                    let patientType  = Blood.init(rawValue: bloodType) {
                     if TableFilter.sortByBloodType(donorType: donorData.bloodType, patientType: patientType) {
                         sortedTable.append(snapshot)
                     }

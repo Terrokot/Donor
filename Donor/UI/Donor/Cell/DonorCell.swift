@@ -28,42 +28,44 @@ class DonorCell: UITableViewCell {
         tintColor = .systemRed
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     func setup() {
-        
-           setShadow()
+        setShadow()
+        backgroundColor = .clear
+        selectionStyle  = .none
+        tintColor       = .systemRed
         
         let image = UIImage.init(named: R.image.loginIconActive.name)
-
-            patientImage.image = image
-            patientImage.layer.cornerRadius = patientImage.frame.width / 2
-            patientImage.clipsToBounds = true
-            cardView.layer.cornerRadius = 10
-            cardView.clipsToBounds = true
+        patientImage.image               = image
+        patientImage.layer.cornerRadius  = patientImage.frame.width / 2
+        
+        patientImage.clipsToBounds       = true
+        cardView.layer.cornerRadius      = 10
+        cardView.clipsToBounds           = true
         
         //
-        }
+    }
     
     private func setShadow() {
-            layer.shadowColor   = UIColor.black.cgColor
-            layer.shadowOffset  = CGSize(width: 0.0, height: 1.0)
-            layer.shadowRadius  = 4
-            layer.shadowOpacity = 0.3
-            clipsToBounds       = true
-            layer.masksToBounds = false
-        }
+        layer.shadowColor   = UIColor.black.cgColor
+        layer.shadowOffset  = CGSize(width: 0.0, height: 1.0)
+        layer.shadowRadius  = 4
+        layer.shadowOpacity = 0.3
+        clipsToBounds       = true
+        layer.masksToBounds = false
+    }
     private func secondShadow() {
         let secondShadowLayer = CALayer()
-        secondShadowLayer.shadowRadius = 20
-        secondShadowLayer.shadowColor = UIColor.systemRed.cgColor
-        secondShadowLayer.shadowOpacity = 0.5
-        secondShadowLayer.masksToBounds = false
+        secondShadowLayer.shadowRadius   = 20
+        secondShadowLayer.shadowColor    = UIColor.systemRed.cgColor
+        secondShadowLayer.shadowOpacity  = 0.5
+        secondShadowLayer.masksToBounds  = false
         layer.insertSublayer(secondShadowLayer, at: 1)
     }
-    }
-    
+}
+
