@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FJ7-HM-Vff">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -50,39 +50,38 @@
                                     <action selector="showMyLocationTapped:" destination="2QQ-Vw-Fvn" eventType="touchUpInside" id="hZ9-yS-xT9"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sZc-ZH-441" customClass="TopView" customModule="Donor" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="N9o-Rs-NPN"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="XXr-tt-6WR" firstAttribute="leading" secondItem="0hp-w4-jkQ" secondAttribute="leading" constant="20" id="3dI-P1-Aay"/>
                             <constraint firstItem="mmD-dH-BFS" firstAttribute="trailing" secondItem="0hp-w4-jkQ" secondAttribute="trailing" id="FWf-Mr-gOY"/>
                             <constraint firstItem="CCw-xe-TO8" firstAttribute="top" secondItem="n0D-aG-zwE" secondAttribute="bottom" constant="5" id="Nkc-mm-Qrb"/>
-                            <constraint firstAttribute="bottom" secondItem="mmD-dH-BFS" secondAttribute="bottom" id="bEm-sO-Q1j"/>
+                            <constraint firstItem="0hp-w4-jkQ" firstAttribute="bottom" secondItem="mmD-dH-BFS" secondAttribute="bottom" id="bEm-sO-Q1j"/>
+                            <constraint firstItem="sZc-ZH-441" firstAttribute="leading" secondItem="Qbq-90-8dg" secondAttribute="leading" id="cLW-61-eLp"/>
                             <constraint firstItem="n0D-aG-zwE" firstAttribute="centerX" secondItem="Qbq-90-8dg" secondAttribute="centerX" id="d6K-Qo-Kuq"/>
                             <constraint firstItem="CCw-xe-TO8" firstAttribute="top" secondItem="XXr-tt-6WR" secondAttribute="bottom" constant="100" id="dJL-iR-w7b"/>
+                            <constraint firstItem="sZc-ZH-441" firstAttribute="top" secondItem="Qbq-90-8dg" secondAttribute="top" id="ft7-6k-FkL"/>
                             <constraint firstItem="CCw-xe-TO8" firstAttribute="leading" secondItem="0hp-w4-jkQ" secondAttribute="leading" constant="20" id="hE0-tJ-0uz"/>
                             <constraint firstItem="0hp-w4-jkQ" firstAttribute="bottom" secondItem="CCw-xe-TO8" secondAttribute="bottom" constant="10" id="jvE-ks-h6U"/>
                             <constraint firstItem="mmD-dH-BFS" firstAttribute="leading" secondItem="0hp-w4-jkQ" secondAttribute="leading" id="kCk-tL-rZg"/>
                             <constraint firstItem="0hp-w4-jkQ" firstAttribute="trailing" secondItem="CCw-xe-TO8" secondAttribute="trailing" constant="20" id="mih-Sf-stL"/>
-                            <constraint firstItem="mmD-dH-BFS" firstAttribute="top" secondItem="Qbq-90-8dg" secondAttribute="top" id="w0R-3z-GQE"/>
+                            <constraint firstAttribute="trailing" secondItem="sZc-ZH-441" secondAttribute="trailing" id="udT-io-4Qb"/>
+                            <constraint firstItem="mmD-dH-BFS" firstAttribute="top" secondItem="0hp-w4-jkQ" secondAttribute="top" id="w0R-3z-GQE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0hp-w4-jkQ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="w17-Nc-Xf2">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="G9h-pL-sqT">
-                            <connections>
-                                <action selector="logoutTapped:" destination="2QQ-Vw-Fvn" id="iax-RJ-dBh"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="UDC-qw-f5Y">
-                            <connections>
-                                <action selector="selectBloodTypeTapped:" destination="2QQ-Vw-Fvn" id="IBO-wJ-KZV"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
                         <outlet property="findDonorButton" destination="n0D-aG-zwE" id="BAr-KD-dnR"/>
                         <outlet property="map" destination="mmD-dH-BFS" id="CCg-vt-81v"/>
                         <outlet property="requestStatusLabel" destination="CCw-xe-TO8" id="4Vo-vI-Yof"/>
+                        <outlet property="topView" destination="sZc-ZH-441" id="IpM-F7-mJC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MXE-uQ-thU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -218,27 +217,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xOG-dk-3VV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2773.913043478261" y="98.641304347826093"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="YU3-y2-wl4">
-            <objects>
-                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="FJ7-HM-Vff" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" alpha="0.0" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H0x-T8-hUP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="823-xB-UMB">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="2QQ-Vw-Fvn" kind="relationship" relationship="rootViewController" id="tzA-FK-b5P"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="42L-mq-cJi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1023.1884057971015" y="98.641304347826093"/>
         </scene>
     </scenes>
     <resources>

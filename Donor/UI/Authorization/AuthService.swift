@@ -37,7 +37,7 @@ class AuthService {
                         req?.displayName = "Patient"
                         req?.commitChanges(completion: nil)
                         //vc.performSegue(withIdentifier: "patientSegue", sender: nil)
-                        vc.present(R.storyboard.patient.navigationController()!, animated: true, completion: nil)
+                        vc.present(R.storyboard.patient.patientViewController()!, animated: true, completion: nil)
                     } else {
                         // DONOR
                         req?.displayName = "Donor"
@@ -62,7 +62,7 @@ class AuthService {
                 switch user?.user.displayName {
                 case "Patient":
                     //vc.performSegue(withIdentifier: "patientSegue", sender: nil)
-                    vc.present(R.storyboard.patient.navigationController()!, animated: true, completion: nil)
+                    vc.present(R.storyboard.patient.patientViewController()!, animated: true, completion: nil)
                 case "Donor":
                     //vc.performSegue(withIdentifier: "donorSegue", sender: nil)
                     vc.present(R.storyboard.donor.navigationController()!, animated: true, completion: nil)
@@ -88,7 +88,7 @@ class AuthService {
             switch user?.user.displayName {
             case "Patient":
                 //vc.performSegue(withIdentifier: "patientSegue", sender: nil)
-                vc.present(R.storyboard.patient.navigationController()!, animated: true, completion: nil)
+                vc.present(R.storyboard.patient.patientViewController()!, animated: true, completion: nil)
             case "Donor":
                 //vc.performSegue(withIdentifier: "donorSegue", sender: nil)
                 vc.present(R.storyboard.donor.navigationController()!, animated: true, completion: nil)

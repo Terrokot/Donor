@@ -25,6 +25,7 @@
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topViewImage" translatesAutoresizingMaskIntoConstraints="NO" id="Uxp-3r-rSd">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                    <color key="backgroundColor" red="1" green="0.49019607840000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOV-q3-Msr">
                     <rect key="frame" x="0.0" y="44" width="414" height="56"/>
@@ -35,7 +36,7 @@
                                 <constraint firstAttribute="height" constant="26" id="ZSc-fA-8LS"/>
                                 <constraint firstAttribute="width" constant="26" id="n5X-xX-5f0"/>
                             </constraints>
-                            <state key="normal" title="Button" image="backward2"/>
+                            <state key="normal" image="backward2"/>
                             <connections>
                                 <action selector="leftTapped:" destination="-1" eventType="touchUpInside" id="PMU-kf-hEj"/>
                             </connections>
@@ -46,13 +47,13 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGG-pf-PRQ">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGG-pf-PRQ">
                             <rect key="frame" x="363" y="10" width="36" height="36"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="36" id="fKZ-IL-qkc"/>
                                 <constraint firstAttribute="width" constant="36" id="u8q-EC-vmT"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
+                            <state key="normal" image="Done"/>
                             <connections>
                                 <action selector="rightTapped:" destination="-1" eventType="touchUpInside" id="dkv-YO-EIn"/>
                             </connections>
@@ -76,6 +77,7 @@
                     </constraints>
                 </view>
             </subviews>
+            <color key="backgroundColor" red="1" green="0.49019607840000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Uxp-3r-rSd" secondAttribute="bottom" id="7fy-8y-r4K"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="SOV-q3-Msr" secondAttribute="bottom" id="L76-QC-XAB"/>
@@ -93,6 +95,7 @@
         </view>
     </objects>
     <resources>
+        <image name="Done" width="50" height="50"/>
         <image name="backward2" width="300" height="300"/>
         <image name="topViewImage" width="1920" height="1080"/>
     </resources>

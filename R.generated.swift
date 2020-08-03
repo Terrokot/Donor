@@ -146,7 +146,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 18 images.
+  /// This `R.image` struct is generated, and contains static references to 15 images.
   struct image {
     /// Image `Done`.
     static let done = Rswift.ImageResource(bundle: R.hostingBundle, name: "Done")
@@ -154,6 +154,8 @@ struct R: Rswift.Validatable {
     static let group8 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Group 8")
     /// Image `Group_16`.
     static let group_16 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Group_16")
+    /// Image `LOGOUT`.
+    static let logouT = Rswift.ImageResource(bundle: R.hostingBundle, name: "LOGOUT")
     /// Image `Login-icon-active`.
     static let loginIconActive = Rswift.ImageResource(bundle: R.hostingBundle, name: "Login-icon-active")
     /// Image `Login-icon-inactive`.
@@ -164,24 +166,16 @@ struct R: Rswift.Validatable {
     static let passwordAppleIconActive = Rswift.ImageResource(bundle: R.hostingBundle, name: "Password-apple-icon-active")
     /// Image `Phone-1`.
     static let phone1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Phone-1")
+    /// Image `SETTINGS`.
+    static let settingS = Rswift.ImageResource(bundle: R.hostingBundle, name: "SETTINGS")
     /// Image `backward2`.
     static let backward2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "backward2")
-    /// Image `backward`.
-    static let backward = Rswift.ImageResource(bundle: R.hostingBundle, name: "backward")
     /// Image `cancel`.
     static let cancel = Rswift.ImageResource(bundle: R.hostingBundle, name: "cancel")
     /// Image `heartRequest`.
     static let heartRequest = Rswift.ImageResource(bundle: R.hostingBundle, name: "heartRequest")
     /// Image `launchScreenImage`.
     static let launchScreenImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "launchScreenImage")
-    /// Image `loadingCat`.
-    static let loadingCat = Rswift.ImageResource(bundle: R.hostingBundle, name: "loadingCat")
-    /// Image `maps`.
-    static let maps = Rswift.ImageResource(bundle: R.hostingBundle, name: "maps")
-    /// Image `patientDefaultImage`.
-    static let patientDefaultImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "patientDefaultImage")
-    /// Image `phone`.
-    static let phone = Rswift.ImageResource(bundle: R.hostingBundle, name: "phone")
     /// Image `topViewImage`.
     static let topViewImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "topViewImage")
 
@@ -203,6 +197,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "Group_16", bundle: ..., traitCollection: ...)`
     static func group_16(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.group_16, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "LOGOUT", bundle: ..., traitCollection: ...)`
+    static func logouT(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.logouT, compatibleWith: traitCollection)
     }
     #endif
 
@@ -242,9 +243,9 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "backward", bundle: ..., traitCollection: ...)`
-    static func backward(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.backward, compatibleWith: traitCollection)
+    /// `UIImage(named: "SETTINGS", bundle: ..., traitCollection: ...)`
+    static func settingS(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.settingS, compatibleWith: traitCollection)
     }
     #endif
 
@@ -273,34 +274,6 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "launchScreenImage", bundle: ..., traitCollection: ...)`
     static func launchScreenImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.launchScreenImage, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "loadingCat", bundle: ..., traitCollection: ...)`
-    static func loadingCat(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.loadingCat, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "maps", bundle: ..., traitCollection: ...)`
-    static func maps(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.maps, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "patientDefaultImage", bundle: ..., traitCollection: ...)`
-    static func patientDefaultImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.patientDefaultImage, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "phone", bundle: ..., traitCollection: ...)`
-    static func phone(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.phone, compatibleWith: traitCollection)
     }
     #endif
 
@@ -397,6 +370,7 @@ struct _R: Rswift.Validatable {
       }
 
       static func validate() throws {
+        if UIKit.UIImage(named: "Done", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Done' is used in nib 'TopView', but couldn't be loaded.") }
         if UIKit.UIImage(named: "backward2", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'backward2' is used in nib 'TopView', but couldn't be loaded.") }
         if UIKit.UIImage(named: "topViewImage", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'topViewImage' is used in nib 'TopView', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
@@ -506,18 +480,11 @@ struct _R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    struct patient: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = UIKit.UINavigationController
-
+    struct patient: Rswift.StoryboardResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "Patient"
-      let navigationController = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "NavigationController")
       let patientViewController = StoryboardViewControllerResource<PatientViewController>(identifier: "PatientViewController")
       let pickerViewController = StoryboardViewControllerResource<PickerViewController>(identifier: "PickerViewController")
-
-      func navigationController(_: Void = ()) -> UIKit.UINavigationController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: navigationController)
-      }
 
       func patientViewController(_: Void = ()) -> PatientViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: patientViewController)
@@ -531,7 +498,6 @@ struct _R: Rswift.Validatable {
         if UIKit.UIImage(named: "Group_16", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Group_16' is used in storyboard 'Patient', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
-        if _R.storyboard.patient().navigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'navigationController' could not be loaded from storyboard 'Patient' as 'UIKit.UINavigationController'.") }
         if _R.storyboard.patient().patientViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'patientViewController' could not be loaded from storyboard 'Patient' as 'PatientViewController'.") }
         if _R.storyboard.patient().pickerViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'pickerViewController' could not be loaded from storyboard 'Patient' as 'PickerViewController'.") }
       }

@@ -13,12 +13,14 @@ import FirebaseDatabase
 
 class PatientViewController: UIViewController {
     
+    @IBOutlet weak var topView: TopView!
+    
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var findDonorButton: HeartButton!
     @IBOutlet var requestStatusLabel: UILabel!
     
     override var shouldAutorotate: Bool { return false }
-        
+    
     var ref: DatabaseReference!
     
     let locationService  = LocationService()
@@ -28,6 +30,9 @@ class PatientViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        topViewSetup()
+        topView.delegate = self
         
         ref = Database.database().reference()
         readFromDefaults()
@@ -88,16 +93,6 @@ class PatientViewController: UIViewController {
         locationService.setRegion(coordinate: userLocation, map: map)
     }
     
-    @IBAction func logoutTapped(_ sender: Any) {
-        _Defaults.clearAll()
-        try? Auth.auth().signOut()
-        navigationController?.dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func selectBloodTypeTapped(_ sender: Any) {
-        openSettings()
-    }
-    
     private func openSettings() {
         let vc = R.storyboard.patient.pickerViewController()!
         vc.data.name        = patientData.name
@@ -106,7 +101,7 @@ class PatientViewController: UIViewController {
         present(vc, animated: true, completion: nil)
     }
     //MARK: Defaults 
-     func readFromDefaults() {
+    func readFromDefaults() {
         patientData.name        =  Defaults["userName"]         ?? ""
         patientData.bloodType   =  Defaults["userBloodType"]    ?? Blood.O_minus
         patientData.phoneNumber =  Defaults["userPhoneNumber"]  ?? ""
@@ -117,6 +112,38 @@ extension PatientViewController: PickerViewControllerDelegate {
         patientData = data
         //equestStatusLabel.text = "You blood type: \(data.bloodType.rawValue)"
         print(data)
+    }
+}
+
+//MARK: Top View Delegate & Setup
+
+extension PatientViewController: TopViewDelegate {
+    
+    func leftAction() {
+        _Defaults.clearAll()
+        try? Auth.auth().signOut()
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func rightAction() {
+        openSettings()
+    }
+    
+    fileprivate func topViewSetup() {
+        let leftImage   = UIImage(named: R.image.logouT.name)
+        let rightImage  = UIImage(named: R.image.settingS.name)
+        
+        topView.leftButton.setImage(leftImage, for: .normal)
+        topView.rightButton.setImage(rightImage, for: .normal)
+        
+        topView.mailLabelText          = "Profile"
+        topView.secondLabelText        = "Fill the form"
+        
+        topView.leftButton.isHidden    = false
+        topView.rightButton.isHidden   = false
+        
+        topView.leftButton.tintColor   = .white
+        topView.rightButton.tintColor  = .white
     }
 }
 

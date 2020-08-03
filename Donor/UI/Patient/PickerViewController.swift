@@ -108,11 +108,11 @@ extension PickerViewController: TopViewDelegate {
     }
     
     fileprivate func topViewSetup() {
-        let image = UIImage(named: R.image.done.name)
+       // let image = UIImage(named: R.image.done.name)
         topView.mailLabelText          = "Profile"
         topView.secondLabelText        = "Fill the form"
         topView.rightButton.isHidden   = false
         topView.rightButton.tintColor  = .white
-        topView.rightButton.setImage(image, for: .normal)
+       // topView.rightButton.setImage(image, for: .normal)
     }
 }
