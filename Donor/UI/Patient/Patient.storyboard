@@ -97,20 +97,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMK-3Y-6T6">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Fill the form" id="wBW-1m-neX">
-                                        <barButtonItem key="rightBarButtonItem" title="Done" id="FHy-eG-dWF">
-                                            <connections>
-                                                <action selector="doneButton:" destination="MMw-sm-EpC" id="PQF-1e-lN1"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="nZt-kh-5i5" userLabel="Name Stack">
-                                <rect key="frame" x="20" y="84" width="374" height="42.666666666666657"/>
+                                <rect key="frame" x="20" y="120.00000000000001" width="374" height="42.666666666666671"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R0C-MU-aA2">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
@@ -138,7 +126,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="s40-1K-N6O" userLabel="Phone Stack">
-                                <rect key="frame" x="20" y="146.66666666666666" width="374" height="42.666666666666657"/>
+                                <rect key="frame" x="20" y="182.66666666666666" width="374" height="42.666666666666657"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile phone" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="APG-s3-tNg">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
@@ -166,7 +154,7 @@
                                 </subviews>
                             </stackView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahm-HL-6oF">
-                                <rect key="frame" x="45" y="204.33333333333337" width="324" height="180"/>
+                                <rect key="frame" x="45" y="240.33333333333337" width="324" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="ntL-6k-ZLA"/>
                                 </constraints>
@@ -176,38 +164,45 @@
                                 </connections>
                             </pickerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8zH-Ha-WR9">
-                                <rect key="frame" x="45" y="280.66666666666669" width="324" height="1"/>
+                                <rect key="frame" x="45" y="316.66666666666669" width="324" height="1"/>
                                 <color key="backgroundColor" red="1" green="0.49019607840000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="gNV-5O-gFM"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="al8-t3-61v">
-                                <rect key="frame" x="45" y="306.66666666666669" width="324" height="1"/>
+                                <rect key="frame" x="45" y="342.66666666666669" width="324" height="1"/>
                                 <color key="backgroundColor" red="1" green="0.49019607840000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="NMP-b8-8YS"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N9O-9Q-wIC" customClass="TopView" customModule="Donor" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="5Cb-lJ-S7v"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="nZt-kh-5i5" firstAttribute="top" secondItem="N9O-9Q-wIC" secondAttribute="bottom" constant="20" id="52e-qe-dbm"/>
                             <constraint firstItem="al8-t3-61v" firstAttribute="leading" secondItem="ahm-HL-6oF" secondAttribute="leadingMargin" constant="-8" id="8ha-bF-ZYk"/>
                             <constraint firstItem="WRd-Se-5DM" firstAttribute="trailing" secondItem="ahm-HL-6oF" secondAttribute="trailing" constant="45" id="C3Z-VH-bVU"/>
+                            <constraint firstItem="N9O-9Q-wIC" firstAttribute="leading" secondItem="WRd-Se-5DM" secondAttribute="leading" id="D2m-VZ-Rpn"/>
                             <constraint firstItem="al8-t3-61v" firstAttribute="top" secondItem="8zH-Ha-WR9" secondAttribute="bottom" constant="25" id="HVK-Tg-EaD"/>
                             <constraint firstItem="ahm-HL-6oF" firstAttribute="trailingMargin" secondItem="8zH-Ha-WR9" secondAttribute="trailing" constant="-8" id="Isl-kH-JJG"/>
                             <constraint firstItem="ahm-HL-6oF" firstAttribute="leading" secondItem="WRd-Se-5DM" secondAttribute="leading" constant="45" id="KDi-Gm-lZV"/>
                             <constraint firstItem="s40-1K-N6O" firstAttribute="leading" secondItem="WRd-Se-5DM" secondAttribute="leading" constant="20" id="L0q-iO-XbB"/>
-                            <constraint firstItem="TMK-3Y-6T6" firstAttribute="leading" secondItem="WRd-Se-5DM" secondAttribute="leading" id="NFv-qT-iNZ"/>
                             <constraint firstItem="8zH-Ha-WR9" firstAttribute="top" secondItem="ahm-HL-6oF" secondAttribute="top" constant="76.329999999999998" id="ObT-5c-t1R"/>
-                            <constraint firstItem="nZt-kh-5i5" firstAttribute="top" secondItem="TMK-3Y-6T6" secondAttribute="bottom" constant="40" id="PlT-lD-fgY"/>
-                            <constraint firstItem="TMK-3Y-6T6" firstAttribute="top" secondItem="WRd-Se-5DM" secondAttribute="top" id="Qn9-SK-yTw"/>
+                            <constraint firstItem="N9O-9Q-wIC" firstAttribute="top" secondItem="WRd-Se-5DM" secondAttribute="top" id="UrB-Ac-Hsx"/>
                             <constraint firstItem="ahm-HL-6oF" firstAttribute="trailingMargin" secondItem="al8-t3-61v" secondAttribute="trailing" constant="-8" id="aSY-Ga-H4p"/>
                             <constraint firstItem="ahm-HL-6oF" firstAttribute="top" secondItem="s40-1K-N6O" secondAttribute="bottom" constant="15" id="avI-wc-YaN"/>
+                            <constraint firstItem="WRd-Se-5DM" firstAttribute="trailing" secondItem="N9O-9Q-wIC" secondAttribute="trailing" id="bRo-ID-1EV"/>
                             <constraint firstItem="s40-1K-N6O" firstAttribute="top" secondItem="nZt-kh-5i5" secondAttribute="bottom" constant="20" id="fGy-ML-zcs"/>
                             <constraint firstItem="WRd-Se-5DM" firstAttribute="trailing" secondItem="s40-1K-N6O" secondAttribute="trailing" constant="20" id="i1O-Io-Epv"/>
                             <constraint firstItem="WRd-Se-5DM" firstAttribute="trailing" secondItem="nZt-kh-5i5" secondAttribute="trailing" constant="20" id="j6N-Te-dSd"/>
-                            <constraint firstItem="TMK-3Y-6T6" firstAttribute="trailing" secondItem="WRd-Se-5DM" secondAttribute="trailing" id="lid-AG-TFU"/>
                             <constraint firstItem="nZt-kh-5i5" firstAttribute="leading" secondItem="WRd-Se-5DM" secondAttribute="leading" constant="20" id="oyT-nR-5z4"/>
                             <constraint firstItem="8zH-Ha-WR9" firstAttribute="leading" secondItem="ahm-HL-6oF" secondAttribute="leadingMargin" constant="-8" id="xKi-eb-0Im"/>
                         </constraints>
@@ -217,6 +212,7 @@
                         <outlet property="mobilePhoneTextField" destination="APG-s3-tNg" id="hA4-fn-CGb"/>
                         <outlet property="nameTextField" destination="R0C-MU-aA2" id="mEi-ag-dON"/>
                         <outlet property="pickerView" destination="ahm-HL-6oF" id="bbX-Fc-smw"/>
+                        <outlet property="topView" destination="N9O-9Q-wIC" id="krp-Ee-5fX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xOG-dk-3VV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

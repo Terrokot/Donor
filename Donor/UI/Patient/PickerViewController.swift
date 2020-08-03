@@ -14,6 +14,8 @@ protocol PickerViewControllerDelegate {
 
 class PickerViewController: UIViewController {
     
+    @IBOutlet weak var topView: TopView!
+    
     @IBOutlet var pickerView: UIPickerView!
     
     @IBOutlet weak var nameTextField: UITextField!
@@ -26,6 +28,10 @@ class PickerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        topViewSetup()
+        topView.delegate = self
+        
         self.nameTextField.delegate = self
         self.hideKeyboardWhenTappedAround()
     }
@@ -35,7 +41,7 @@ class PickerViewController: UIViewController {
         mobilePhoneTextField.text  = data.phoneNumber
     }
     
-    @IBAction func doneButton(_ sender: Any) {
+    fileprivate func done() {
         if  nameTextField.text != "",
             mobilePhoneTextField.text != "" {
             
@@ -50,6 +56,7 @@ class PickerViewController: UIViewController {
             AlertManager.displayAlert(title: "error", message: "fill all forms")
         }
     }
+    
     
     //MARK: Defaults
     func writeToDefaults() {
@@ -91,5 +98,21 @@ extension PickerViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
+    }
+}
+
+//MARK: Top View Delegate & Setup
+extension PickerViewController: TopViewDelegate {
+    func rightAction() {
+        done()
+    }
+    
+    fileprivate func topViewSetup() {
+        let image = UIImage(named: R.image.done.name)
+        topView.mailLabelText          = "Profile"
+        topView.secondLabelText        = "Fill the form"
+        topView.rightButton.isHidden   = false
+        topView.rightButton.tintColor  = .white
+        topView.rightButton.setImage(image, for: .normal)
     }
 }

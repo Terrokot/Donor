@@ -30,9 +30,6 @@ class DonorPickerViewController: UIViewController {
         topView.delegate = self
     }
     
-    @IBAction func doneTapped(_ sender: Any) {
-        done()
-    }
     private func done() {
         donorPickerViewControllerDelegate?.sendData(data)
         print(data)
