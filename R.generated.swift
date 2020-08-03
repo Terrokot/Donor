@@ -421,15 +421,12 @@ struct _R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    struct donor: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = UIKit.UINavigationController
-
+    struct donor: Rswift.StoryboardResourceType, Rswift.Validatable {
       let acceptRequestViewController = StoryboardViewControllerResource<AcceptRequestViewController>(identifier: "AcceptRequestViewController")
       let bundle = R.hostingBundle
       let donorPickerViewController = StoryboardViewControllerResource<DonorPickerViewController>(identifier: "DonorPickerViewController")
       let donorViewController = StoryboardViewControllerResource<DonorViewController>(identifier: "DonorViewController")
       let name = "Donor"
-      let navigationController = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "NavigationController")
 
       func acceptRequestViewController(_: Void = ()) -> AcceptRequestViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: acceptRequestViewController)
@@ -443,10 +440,6 @@ struct _R: Rswift.Validatable {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: donorViewController)
       }
 
-      func navigationController(_: Void = ()) -> UIKit.UINavigationController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: navigationController)
-      }
-
       static func validate() throws {
         if UIKit.UIImage(named: "Map", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Map' is used in storyboard 'Donor', but couldn't be loaded.") }
         if UIKit.UIImage(named: "Phone-1", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Phone-1' is used in storyboard 'Donor', but couldn't be loaded.") }
@@ -455,7 +448,6 @@ struct _R: Rswift.Validatable {
         if _R.storyboard.donor().acceptRequestViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'acceptRequestViewController' could not be loaded from storyboard 'Donor' as 'AcceptRequestViewController'.") }
         if _R.storyboard.donor().donorPickerViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'donorPickerViewController' could not be loaded from storyboard 'Donor' as 'DonorPickerViewController'.") }
         if _R.storyboard.donor().donorViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'donorViewController' could not be loaded from storyboard 'Donor' as 'DonorViewController'.") }
-        if _R.storyboard.donor().navigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'navigationController' could not be loaded from storyboard 'Donor' as 'UIKit.UINavigationController'.") }
       }
 
       fileprivate init() {}

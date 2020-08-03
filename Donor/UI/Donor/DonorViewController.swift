@@ -13,6 +13,9 @@ import FirebaseDatabase
 
 class DonorViewController: UIViewController {
     
+    
+    @IBOutlet weak var topView: TopView!
+    
     @IBOutlet weak var tableView: UITableView!
     
     override var shouldAutorotate: Bool { return false }
@@ -31,6 +34,10 @@ class DonorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        topViewSetup()
+        topView.delegate = self
+        
         // Location
         locationService.manager.delegate = self
         parseData()
@@ -44,19 +51,6 @@ class DonorViewController: UIViewController {
     //MARK: viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         tableSetup()
-    }
-    
-    @IBAction func selectBloodTypeTapped(_ sender: Any) {        
-        let vc = R.storyboard.donor.donorPickerViewController()!
-        vc.donorPickerViewControllerDelegate = self
-        present(vc, animated: true, completion: nil)
-    }
-    
-    @IBAction func logoutTapped(_ sender: Any) {
-        _Defaults.clearAll()
-        
-        try? Auth.auth().signOut()
-        navigationController?.dismiss(animated: true, completion: nil)
     }
     
     func parseData() {
@@ -96,3 +90,39 @@ extension DonorViewController: DonorPickerViewControllerDelegate {
         tableView.reloadData()
     }
 }
+
+//MARK: Top View Delegate & Setup
+
+
+extension DonorViewController: TopViewDelegate {
+    
+    func leftAction() {
+        _Defaults.clearAll()
+        try? Auth.auth().signOut()
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func rightAction() {
+        let vc = R.storyboard.donor.donorPickerViewController()!
+        vc.donorPickerViewControllerDelegate = self
+        present(vc, animated: true, completion: nil)
+    }
+    
+    fileprivate func topViewSetup() {
+        let leftImage   = UIImage(named: R.image.logouT.name)
+        let rightImage  = UIImage(named: R.image.settingS.name)
+        
+        topView.leftButton.setImage(leftImage, for: .normal)
+        topView.rightButton.setImage(rightImage, for: .normal)
+        
+        topView.mailLabelText          = "Patients list"
+        topView.secondLabelText        = "Use settins to choose your blood type"
+        
+        topView.leftButton.isHidden    = false
+        topView.rightButton.isHidden   = false
+        
+        topView.leftButton.tintColor   = .white
+        topView.rightButton.tintColor  = .white
+    }
+}
+

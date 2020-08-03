@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tdd-XH-19T">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LEQ-JM-DDp">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="sectionIndexBackgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -25,53 +25,35 @@
                                     <outlet property="delegate" destination="kLH-D0-H1b" id="KMA-8O-Mag"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gr-cG-RbE" customClass="TopView" customModule="Donor" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Whx-EY-wUj"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="pwI-hT-BT2" firstAttribute="bottom" secondItem="LEQ-JM-DDp" secondAttribute="bottom" id="AG6-Er-yqs"/>
+                            <constraint firstItem="9gr-cG-RbE" firstAttribute="top" secondItem="pwI-hT-BT2" secondAttribute="top" constant="-44" id="20A-7X-mKl"/>
+                            <constraint firstAttribute="bottom" secondItem="LEQ-JM-DDp" secondAttribute="bottom" id="AG6-Er-yqs"/>
                             <constraint firstItem="LEQ-JM-DDp" firstAttribute="leading" secondItem="pwI-hT-BT2" secondAttribute="leading" id="HRa-Cl-2nU"/>
-                            <constraint firstItem="LEQ-JM-DDp" firstAttribute="top" secondItem="pwI-hT-BT2" secondAttribute="top" id="b8A-9K-7Os"/>
+                            <constraint firstItem="LEQ-JM-DDp" firstAttribute="top" secondItem="9gr-cG-RbE" secondAttribute="bottom" id="Kr0-NM-bY0"/>
+                            <constraint firstItem="pwI-hT-BT2" firstAttribute="trailing" secondItem="9gr-cG-RbE" secondAttribute="trailing" id="RVl-5x-bcD"/>
+                            <constraint firstItem="9gr-cG-RbE" firstAttribute="top" secondItem="1K3-fn-rlf" secondAttribute="top" id="VMC-XG-Ed5"/>
                             <constraint firstItem="pwI-hT-BT2" firstAttribute="trailing" secondItem="LEQ-JM-DDp" secondAttribute="trailing" id="l95-Ag-7d8"/>
+                            <constraint firstItem="9gr-cG-RbE" firstAttribute="leading" secondItem="pwI-hT-BT2" secondAttribute="leading" id="oRf-3b-cum"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pwI-hT-BT2"/>
                     </view>
-                    <navigationItem key="navigationItem" id="5Ez-58-mPg">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="3Qp-hk-y44">
-                            <connections>
-                                <action selector="logoutTapped:" destination="kLH-D0-H1b" id="Qto-YP-sgj"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Select blood type" id="8lP-zD-jsl">
-                            <connections>
-                                <action selector="selectBloodTypeTapped:" destination="kLH-D0-H1b" id="HoS-KQ-l5O"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="LEQ-JM-DDp" id="ws2-bs-3M2"/>
+                        <outlet property="topView" destination="9gr-cG-RbE" id="zox-Kg-DrQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="li5-kC-l3R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1928.985507246377" y="852.71739130434787"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Rq2-jY-2KD">
-            <objects>
-                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="tdd-XH-19T" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="G3V-Zc-4yI">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="kLH-D0-H1b" kind="relationship" relationship="rootViewController" id="PFJ-ad-AQ7"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rr1-6w-jVs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1000" y="853"/>
+            <point key="canvasLocation" x="1928.985507246377" y="852.45535714285711"/>
         </scene>
         <!--Accept Request View Controller-->
         <scene sceneID="d8g-cG-trT">

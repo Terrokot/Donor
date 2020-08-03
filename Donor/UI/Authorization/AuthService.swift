@@ -43,7 +43,7 @@ class AuthService {
                         req?.displayName = "Donor"
                         req?.commitChanges(completion: nil)
                         // vc.performSegue(withIdentifier: "donorSegue", sender: nil)
-                        vc.present(R.storyboard.donor.navigationController()!, animated: true, completion: nil)
+                        vc.present(R.storyboard.donor.donorViewController()!, animated: true, completion: nil)
                     }
                 } else {
                     AlertManager.displayAlert(title: "Error", message: error!.localizedDescription)
@@ -65,7 +65,7 @@ class AuthService {
                     vc.present(R.storyboard.patient.patientViewController()!, animated: true, completion: nil)
                 case "Donor":
                     //vc.performSegue(withIdentifier: "donorSegue", sender: nil)
-                    vc.present(R.storyboard.donor.navigationController()!, animated: true, completion: nil)
+                    vc.present(R.storyboard.donor.donorViewController()!, animated: true, completion: nil)
                 default: //ERRORS
                     AlertManager.displayAlert(title: "Error", message: error!.localizedDescription)
                 }
@@ -91,7 +91,7 @@ class AuthService {
                 vc.present(R.storyboard.patient.patientViewController()!, animated: true, completion: nil)
             case "Donor":
                 //vc.performSegue(withIdentifier: "donorSegue", sender: nil)
-                vc.present(R.storyboard.donor.navigationController()!, animated: true, completion: nil)
+                vc.present(R.storyboard.donor.donorViewController()!, animated: true, completion: nil)
             default: //ERRORS
                 AlertManager.displayAlert(title: "Error", message: error!.localizedDescription)
             }

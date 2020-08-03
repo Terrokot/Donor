@@ -23,9 +23,15 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7nV-kl-0Wn">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="10"/>
+                    <color key="backgroundColor" red="1" green="0.49019607840000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="q3d-Y0-zxF"/>
+                    </constraints>
+                </view>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topViewImage" translatesAutoresizingMaskIntoConstraints="NO" id="Uxp-3r-rSd">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
-                    <color key="backgroundColor" red="1" green="0.49019607840000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOV-q3-Msr">
                     <rect key="frame" x="0.0" y="44" width="414" height="56"/>
@@ -77,14 +83,16 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="0.49019607840000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Uxp-3r-rSd" secondAttribute="bottom" id="7fy-8y-r4K"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="SOV-q3-Msr" secondAttribute="bottom" id="L76-QC-XAB"/>
                 <constraint firstItem="SOV-q3-Msr" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="V0H-bI-htt"/>
                 <constraint firstItem="Uxp-3r-rSd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VtR-8A-yiZ"/>
                 <constraint firstItem="Uxp-3r-rSd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Vz3-zF-4rH"/>
+                <constraint firstItem="7nV-kl-0Wn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="X0K-7F-bVG"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Uxp-3r-rSd" secondAttribute="trailing" id="YcZ-MK-9U3"/>
+                <constraint firstAttribute="trailing" secondItem="7nV-kl-0Wn" secondAttribute="trailing" id="cbB-us-Qia"/>
+                <constraint firstItem="7nV-kl-0Wn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tbu-O2-OdI"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SOV-q3-Msr" secondAttribute="trailing" id="vW7-iU-NKR"/>
                 <constraint firstItem="SOV-q3-Msr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="vmf-uG-y9M"/>
             </constraints>
