@@ -16,7 +16,6 @@ class DonorPickerViewController: UIViewController {
     
     @IBOutlet weak var pickerView: UIPickerView!
     
-    
     @IBOutlet weak var topView: TopView!
     
     override var shouldAutorotate: Bool { return false }

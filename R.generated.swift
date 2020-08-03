@@ -146,7 +146,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 17 images.
+  /// This `R.image` struct is generated, and contains static references to 18 images.
   struct image {
     /// Image `Done`.
     static let done = Rswift.ImageResource(bundle: R.hostingBundle, name: "Done")
@@ -164,6 +164,8 @@ struct R: Rswift.Validatable {
     static let passwordAppleIconActive = Rswift.ImageResource(bundle: R.hostingBundle, name: "Password-apple-icon-active")
     /// Image `Phone-1`.
     static let phone1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Phone-1")
+    /// Image `backward2`.
+    static let backward2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "backward2")
     /// Image `backward`.
     static let backward = Rswift.ImageResource(bundle: R.hostingBundle, name: "backward")
     /// Image `cancel`.
@@ -243,6 +245,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "backward", bundle: ..., traitCollection: ...)`
     static func backward(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.backward, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "backward2", bundle: ..., traitCollection: ...)`
+    static func backward2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.backward2, compatibleWith: traitCollection)
     }
     #endif
 
@@ -388,7 +397,7 @@ struct _R: Rswift.Validatable {
       }
 
       static func validate() throws {
-        if UIKit.UIImage(named: "backward", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'backward' is used in nib 'TopView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "backward2", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'backward2' is used in nib 'TopView', but couldn't be loaded.") }
         if UIKit.UIImage(named: "topViewImage", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'topViewImage' is used in nib 'TopView', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
