@@ -24,7 +24,7 @@ extension AuthViewController {
         donorPatientSegmentedController.selectedLabelColor = .white
         donorPatientSegmentedController.borderColor = UIColor(red: 0.45, green: 0.49, blue: 0.55, alpha: 1.00)
         donorPatientSegmentedController.unselectedLabelColor = .lightGray
-        donorPatientSegmentedController.thumbColor = AuthColors.red
+        donorPatientSegmentedController.thumbColor = Colors.red
         donorPatientSegmentedController.backgroundColor = .white
         donorPatientSegmentedController.selectedIndex = 0
         donorPatientSegmentedController.padding = 0

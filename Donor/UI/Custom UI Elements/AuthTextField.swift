@@ -22,10 +22,10 @@ class AuthTextField: UITextField {
     
     func setupButton() {
         setShadow()
-        backgroundColor      = AuthColors.backgroundTextField
+        backgroundColor      = Colors.backgroundTextField
         layer.cornerRadius   = frame.height / 2
         layer.borderWidth    = 2
-        layer.borderColor    = AuthColors.borderColor.cgColor
+        layer.borderColor    = Colors.borderColor.cgColor
     }
     
     private func setShadow() {

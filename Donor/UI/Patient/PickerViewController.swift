@@ -81,7 +81,7 @@ extension PickerViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         
         if let bloodType = Blood.elementByIndex(index: row)?.rawValue {
-            return NSAttributedString(string: bloodType, attributes: [NSAttributedString.Key.foregroundColor: AuthColors.red])
+            return NSAttributedString(string: bloodType, attributes: [NSAttributedString.Key.foregroundColor: Colors.red])
         }
         return nil
     }
