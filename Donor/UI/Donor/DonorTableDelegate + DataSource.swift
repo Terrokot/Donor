@@ -71,21 +71,19 @@ extension DonorViewController: UITableViewDelegate {
         }
     }
 }
-
+//MARK: Table Setup
 extension DonorViewController {
     
     func tableSetup() {
-        //table MARK: Table Setup
-        tableView.contentInset.top = 10
         
-        tableView.separatorStyle   = .none
-        tableView.backgroundColor  = .clear
+        tableView.contentInset.top  = 10
+        tableView.separatorStyle    = .none
+        tableView.backgroundColor   = .clear
+        
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame   = self.view.bounds
         gradientLayer.colors  = [UIColor(red: 0.83, green: 0.83, blue: 0.83, alpha: 1.00).cgColor, Colors.white.cgColor]
         self.view.layer.insertSublayer(gradientLayer, at: 0)
         //tableView.backgroundColor = Colors.white
-        
-        
     }
 }
