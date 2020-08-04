@@ -136,6 +136,9 @@ extension PatientViewController: TopViewDelegate {
         topView.leftButton.setImage(leftImage, for: .normal)
         topView.rightButton.setImage(rightImage, for: .normal)
         
+        topView.rightButtonWidthConstraint.constant = 26
+        topView.rightButtonHeightConstraint.constant = 26
+        
         topView.mailLabelText          = "Profile"
         topView.secondLabelText        = "Fill the form"
         

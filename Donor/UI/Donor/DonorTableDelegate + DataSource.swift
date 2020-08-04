@@ -81,6 +81,7 @@ extension DonorViewController {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame   = self.view.bounds
         gradientLayer.colors  = [UIColor(red: 0.80, green: 0.13, blue: 0.15, alpha: 1.00).cgColor, UIColor(red: 0.9882, green: 0.5412, blue: 0.5412, alpha: 1).cgColor]
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
+       // self.view.layer.insertSublayer(gradientLayer, at: 0)
+        tableView.backgroundColor = AuthColors.white
     }
 }
