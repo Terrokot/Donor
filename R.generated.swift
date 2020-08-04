@@ -146,7 +146,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 15 images.
+  /// This `R.image` struct is generated, and contains static references to 19 images.
   struct image {
     /// Image `Done`.
     static let done = Rswift.ImageResource(bundle: R.hostingBundle, name: "Done")
@@ -176,6 +176,14 @@ struct R: Rswift.Validatable {
     static let heartRequest = Rswift.ImageResource(bundle: R.hostingBundle, name: "heartRequest")
     /// Image `launchScreenImage`.
     static let launchScreenImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "launchScreenImage")
+    /// Image `logout-btn-salmon`.
+    static let logoutBtnSalmon = Rswift.ImageResource(bundle: R.hostingBundle, name: "logout-btn-salmon")
+    /// Image `logout-btn`.
+    static let logoutBtn = Rswift.ImageResource(bundle: R.hostingBundle, name: "logout-btn")
+    /// Image `settings-btn-salmon`.
+    static let settingsBtnSalmon = Rswift.ImageResource(bundle: R.hostingBundle, name: "settings-btn-salmon")
+    /// Image `settings-btn`.
+    static let settingsBtn = Rswift.ImageResource(bundle: R.hostingBundle, name: "settings-btn")
     /// Image `topViewImage`.
     static let topViewImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "topViewImage")
 
@@ -274,6 +282,34 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "launchScreenImage", bundle: ..., traitCollection: ...)`
     static func launchScreenImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.launchScreenImage, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "logout-btn", bundle: ..., traitCollection: ...)`
+    static func logoutBtn(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.logoutBtn, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "logout-btn-salmon", bundle: ..., traitCollection: ...)`
+    static func logoutBtnSalmon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.logoutBtnSalmon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "settings-btn", bundle: ..., traitCollection: ...)`
+    static func settingsBtn(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.settingsBtn, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "settings-btn-salmon", bundle: ..., traitCollection: ...)`
+    static func settingsBtnSalmon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.settingsBtnSalmon, compatibleWith: traitCollection)
     }
     #endif
 

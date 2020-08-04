@@ -109,11 +109,15 @@ extension DonorViewController: TopViewDelegate {
     }
     
     fileprivate func topViewSetup() {
-        let leftImage   = UIImage(named: R.image.logouT.name)
-        let rightImage  = UIImage(named: R.image.settingS.name)
+        let leftImage   = UIImage(named: R.image.logoutBtn.name)
+        let rightImage  = UIImage(named: R.image.settingsBtn.name)
         
         topView.leftButton.setImage(leftImage, for: .normal)
         topView.rightButton.setImage(rightImage, for: .normal)
+        
+        topView.rightButtonWidthConstraint.constant = 26
+        topView.rightButtonHeightConstraint.constant = 26
+        
         
         topView.mailLabelText          = "Patients list"
         topView.secondLabelText        = "Use settins to choose your blood type"

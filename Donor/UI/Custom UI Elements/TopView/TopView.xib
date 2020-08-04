@@ -14,6 +14,8 @@
                 <outlet property="leftButton" destination="ioB-Rg-PRE" id="dnl-F0-GQM"/>
                 <outlet property="mainLabel" destination="9bX-ZG-PFc" id="z4G-W8-qrI"/>
                 <outlet property="rightButton" destination="gGG-pf-PRQ" id="ZBY-87-T8O"/>
+                <outlet property="rightButtonHeightConstraint" destination="fKZ-IL-qkc" id="Dwy-6l-5JL"/>
+                <outlet property="rightButtonWidthConstraint" destination="u8q-EC-vmT" id="o9P-2g-Zjq"/>
                 <outlet property="secondaryLabel" destination="He7-9X-3yL" id="duj-mq-hja"/>
                 <outlet property="topViewImage" destination="Uxp-3r-rSd" id="qtS-cO-tDZ"/>
             </connections>

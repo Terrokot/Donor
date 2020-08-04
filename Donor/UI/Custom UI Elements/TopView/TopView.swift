@@ -29,6 +29,9 @@ class TopView: UIView {
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var secondaryLabel: UILabel!
     
+    @IBOutlet weak var rightButtonHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var rightButtonWidthConstraint: NSLayoutConstraint!
+    
     
     @IBInspectable public var mailLabelText: String = "Heading" {
         didSet { mainLabelSetup() }
