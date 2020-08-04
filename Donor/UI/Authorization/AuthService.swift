@@ -46,7 +46,7 @@ class AuthService {
                         vc.present(R.storyboard.donor.donorViewController()!, animated: true, completion: nil)
                     }
                 } else {
-                    AlertManager.displayAlert(title: "Error", message: error!.localizedDescription)
+                    AlertManager.displayAlert(title: "Error", message: error?.localizedDescription ?? "Sing up error")
                 }
             }
             
@@ -67,7 +67,7 @@ class AuthService {
                     //vc.performSegue(withIdentifier: "donorSegue", sender: nil)
                     vc.present(R.storyboard.donor.donorViewController()!, animated: true, completion: nil)
                 default: //ERRORS
-                    AlertManager.displayAlert(title: "Error", message: error!.localizedDescription)
+                    AlertManager.displayAlert(title: "Error", message: error?.localizedDescription ?? "Sing in error")
                 }
             }
         }
@@ -93,7 +93,7 @@ class AuthService {
                 //vc.performSegue(withIdentifier: "donorSegue", sender: nil)
                 vc.present(R.storyboard.donor.donorViewController()!, animated: true, completion: nil)
             default: //ERRORS
-                AlertManager.displayAlert(title: "Error", message: error!.localizedDescription)
+                AlertManager.displayAlert(title: "Error", message: error?.localizedDescription ?? "Sing in error")
             }
         }
     }

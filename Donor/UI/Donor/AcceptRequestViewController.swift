@@ -61,11 +61,12 @@ class AcceptRequestViewController: UIViewController {
         
         if !acceptAnyRequest, !acceptionStatus  {
             
-            // Update the Request
+            /* Update the Request
             dataBaseRef.queryOrdered(byChild: "email").queryEqual(toValue: requestEmail).observe(.childAdded) { (snapshot) in
                 snapshot.ref.updateChildValues(["donorLat":self.donorLocation.latitude, "donorLon":self.donorLocation.longitude])
                 self.dataBaseRef.removeAllObservers()
             }
+            */
             Defaults[requestEmail] = true
             Defaults["acceptAnyRequest"] = true
             requestAcceptButton.setTitle("Cancel", for: .normal)
