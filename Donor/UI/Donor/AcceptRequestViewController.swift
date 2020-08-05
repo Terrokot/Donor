@@ -17,7 +17,7 @@ class AcceptRequestViewController: UIViewController {
     @IBOutlet weak var topView: TopView!
     
     @IBOutlet weak var map: MKMapView!
-    @IBOutlet weak var requestAcceptButton: UIButton!
+    @IBOutlet weak var requestAcceptButton: HeartButton!
     
     override var shouldAutorotate: Bool { return false }
     
@@ -42,6 +42,8 @@ class AcceptRequestViewController: UIViewController {
         let region = MKCoordinateRegion(center: requestLocation, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         map.setRegion(region, animated: false)
         MapManager.addAnnotation(map: map, coordinate: requestLocation, title: requestEmail)
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,7 +51,7 @@ class AcceptRequestViewController: UIViewController {
         let acceptionStatus: Bool = Defaults[requestEmail] ?? false //for key email
         
         if acceptAnyRequest, acceptionStatus {
-            requestAcceptButton.setTitle("Cancel", for: .normal)
+            requestAcceptButton.cancelMode()
         }
     }
     
@@ -69,21 +71,20 @@ class AcceptRequestViewController: UIViewController {
             */
             Defaults[requestEmail] = true
             Defaults["acceptAnyRequest"] = true
-            requestAcceptButton.setTitle("Cancel", for: .normal)
+            requestAcceptButton.cancelMode()
+
             AlertManager.displayAlert(title: "You accept the request", message: "Don't forget. Patient is waiting you")
             
         } else {
             if acceptionStatus {
                 Defaults[requestEmail] = false
                 Defaults["acceptAnyRequest"] = false
-                requestAcceptButton.setTitle("Accept Request", for: .normal)
-                
+                requestAcceptButton.acceptMode()
             } else {
                 AlertManager.displayAlert(title: "error", message: "You can't accept more than 1 request")
             }
         }
         // not shure that we need this button
-        
     }
     
     @IBAction func openMapsTapped(_ sender: Any) {
