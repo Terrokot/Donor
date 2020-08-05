@@ -39,7 +39,7 @@ class LocationService: NSObject {
     func updateUserLocation(coordinate: CLLocationCoordinate2D, userLocation: inout CLLocationCoordinate2D) {
         let center = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
         userLocation = center
-        print(userLocation)
+        //print(userLocation)
     }
     
     func setRegion(coordinate: CLLocationCoordinate2D, map:MKMapView) {

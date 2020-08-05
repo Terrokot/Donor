@@ -146,7 +146,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 19 images.
+  /// This `R.image` struct is generated, and contains static references to 17 images.
   struct image {
     /// Image `Done`.
     static let done = Rswift.ImageResource(bundle: R.hostingBundle, name: "Done")
@@ -154,8 +154,6 @@ struct R: Rswift.Validatable {
     static let group8 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Group 8")
     /// Image `Group_16`.
     static let group_16 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Group_16")
-    /// Image `LOGOUT`.
-    static let logouT = Rswift.ImageResource(bundle: R.hostingBundle, name: "LOGOUT")
     /// Image `Login-icon-active`.
     static let loginIconActive = Rswift.ImageResource(bundle: R.hostingBundle, name: "Login-icon-active")
     /// Image `Login-icon-inactive`.
@@ -166,8 +164,6 @@ struct R: Rswift.Validatable {
     static let passwordAppleIconActive = Rswift.ImageResource(bundle: R.hostingBundle, name: "Password-apple-icon-active")
     /// Image `Phone-1`.
     static let phone1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Phone-1")
-    /// Image `SETTINGS`.
-    static let settingS = Rswift.ImageResource(bundle: R.hostingBundle, name: "SETTINGS")
     /// Image `backward2`.
     static let backward2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "backward2")
     /// Image `cancel`.
@@ -209,13 +205,6 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "LOGOUT", bundle: ..., traitCollection: ...)`
-    static func logouT(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.logouT, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "Login-icon-active", bundle: ..., traitCollection: ...)`
     static func loginIconActive(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.loginIconActive, compatibleWith: traitCollection)
@@ -247,13 +236,6 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "Phone-1", bundle: ..., traitCollection: ...)`
     static func phone1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.phone1, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "SETTINGS", bundle: ..., traitCollection: ...)`
-    static func settingS(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.settingS, compatibleWith: traitCollection)
     }
     #endif
 

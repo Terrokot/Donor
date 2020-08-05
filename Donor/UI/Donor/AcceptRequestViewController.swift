@@ -106,7 +106,6 @@ class AcceptRequestViewController: UIViewController {
     
     @IBAction func makeCallTapped(_ sender: Any) {
         //MARK: CALL
-        //if let url = URL(string: "tel://\(phoneNumberTextfield.text!)"),
         if let url = URL(string: "tel://\(requestPhoneNumber)"),
             UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
