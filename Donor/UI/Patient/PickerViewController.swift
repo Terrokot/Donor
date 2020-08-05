@@ -57,16 +57,12 @@ class PickerViewController: UIViewController {
         }
     }
     
-    
     //MARK: Defaults
     func writeToDefaults() {
         Defaults["userName"]         = data.name
         Defaults["userPhoneNumber"]  = data.phoneNumber
         Defaults["userBloodType"]    = data.bloodType.rawValue
     }
-    
-    
-    
 }
 
 extension PickerViewController: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -108,11 +104,9 @@ extension PickerViewController: TopViewDelegate {
     }
     
     fileprivate func topViewSetup() {
-       // let image = UIImage(named: R.image.done.name)
         topView.mailLabelText          = "Profile"
         topView.secondLabelText        = "Fill the form"
         topView.rightButton.isHidden   = false
         topView.rightButton.tintColor  = .white
-       // topView.rightButton.setImage(image, for: .normal)
     }
 }

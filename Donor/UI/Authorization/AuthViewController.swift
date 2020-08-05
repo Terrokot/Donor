@@ -69,5 +69,4 @@ class AuthViewController: UIViewController {
             signUpMode = true
         }
     }
-    
 }

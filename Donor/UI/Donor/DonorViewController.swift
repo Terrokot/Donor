@@ -118,7 +118,6 @@ extension DonorViewController: TopViewDelegate {
         topView.rightButtonWidthConstraint.constant = 26
         topView.rightButtonHeightConstraint.constant = 26
         
-        
         topView.mailLabelText          = "Patients list"
         topView.secondLabelText        = "Use settins to choose your blood type"
         

@@ -18,5 +18,4 @@ class AlertManager {
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         topmostController.present(alertController, animated: true, completion: nil)
     }
-    
 }
