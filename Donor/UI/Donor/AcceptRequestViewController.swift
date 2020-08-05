@@ -123,8 +123,8 @@ extension AcceptRequestViewController: TopViewDelegate {
     fileprivate func topViewSetup() {
         topView.mailLabelText          = requestName
         topView.secondLabelText        = requestEmail
+        
         topView.leftButton.isHidden   = false
         topView.leftButton.tintColor  = .white
-        
     }
 }

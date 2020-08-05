@@ -32,6 +32,16 @@ public var keyWindow: UIView {
     return window
 }
 
+//MARK: UIImage extension
+
+extension UIImage {
+    func resized(to size: CGSize) -> UIImage {
+        return UIGraphicsImageRenderer(size: size).image { _ in
+            draw(in: CGRect(origin: .zero, size: size))
+        }
+    }
+}
+
 //MARK: UIViewController extension
 
 extension UIViewController {

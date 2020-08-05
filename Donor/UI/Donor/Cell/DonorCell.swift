@@ -41,6 +41,7 @@ class DonorCell: UITableViewCell {
         tintColor       = .systemRed
         
         let image = UIImage.init(named: R.image.loginIconActive.name)
+            //?.resized(to: CGSize(width: patientImage.frame.width, height: patientImage.frame.height))
         patientImage.image               = image
         patientImage.layer.cornerRadius  = patientImage.frame.width / 2
         
