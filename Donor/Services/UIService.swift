@@ -40,6 +40,7 @@ extension UIImage {
             draw(in: CGRect(origin: .zero, size: size))
         }
     }
+    // use image.resized(to: CGSize(width: width, height: height))
 }
 
 //MARK: UIViewController extension
