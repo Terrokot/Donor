@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -13,14 +13,14 @@
             <objects>
                 <viewController storyboardIdentifier="PatientViewController" modalPresentationStyle="fullScreen" id="2QQ-Vw-Fvn" customClass="PatientViewController" customModule="Donor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qbq-90-8dg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mmD-dH-BFS">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                             </mapView>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0D-aG-zwE" customClass="HeartButton" customModule="Donor" customModuleProvider="target">
-                                <rect key="frame" x="167" y="625.66666666666663" width="80" height="80"/>
+                                <rect key="frame" x="167" y="751.66666666666663" width="80" height="80"/>
                                 <color key="backgroundColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="WEQ-Nb-DdN"/>
@@ -34,13 +34,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a donor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCw-xe-TO8">
-                                <rect key="frame" x="20" y="710.66666666666663" width="374" height="15.333333333333371"/>
+                                <rect key="frame" x="20" y="836.66666666666663" width="374" height="15.333333333333371"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                 <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXr-tt-6WR">
-                                <rect key="frame" x="20" y="560.66666666666663" width="50" height="50"/>
+                                <rect key="frame" x="20" y="686.66666666666663" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="MJU-jL-gNQ"/>
                                     <constraint firstAttribute="width" constant="50" id="Wcg-Ls-M4l"/>
@@ -63,7 +63,7 @@
                             <constraint firstItem="XXr-tt-6WR" firstAttribute="leading" secondItem="0hp-w4-jkQ" secondAttribute="leading" constant="20" id="3dI-P1-Aay"/>
                             <constraint firstItem="mmD-dH-BFS" firstAttribute="trailing" secondItem="0hp-w4-jkQ" secondAttribute="trailing" id="FWf-Mr-gOY"/>
                             <constraint firstItem="CCw-xe-TO8" firstAttribute="top" secondItem="n0D-aG-zwE" secondAttribute="bottom" constant="5" id="Nkc-mm-Qrb"/>
-                            <constraint firstItem="0hp-w4-jkQ" firstAttribute="bottom" secondItem="mmD-dH-BFS" secondAttribute="bottom" id="bEm-sO-Q1j"/>
+                            <constraint firstAttribute="bottom" secondItem="mmD-dH-BFS" secondAttribute="bottom" id="bEm-sO-Q1j"/>
                             <constraint firstItem="sZc-ZH-441" firstAttribute="leading" secondItem="Qbq-90-8dg" secondAttribute="leading" id="cLW-61-eLp"/>
                             <constraint firstItem="n0D-aG-zwE" firstAttribute="centerX" secondItem="Qbq-90-8dg" secondAttribute="centerX" id="d6K-Qo-Kuq"/>
                             <constraint firstItem="CCw-xe-TO8" firstAttribute="top" secondItem="XXr-tt-6WR" secondAttribute="bottom" constant="100" id="dJL-iR-w7b"/>
@@ -93,11 +93,11 @@
             <objects>
                 <viewController storyboardIdentifier="PickerViewController" title="PickerViewController" id="MMw-sm-EpC" customClass="PickerViewController" customModule="Donor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IeB-14-dXX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="nZt-kh-5i5" userLabel="Name Stack">
-                                <rect key="frame" x="20" y="120.00000000000001" width="374" height="42.666666666666671"/>
+                                <rect key="frame" x="20" y="164" width="374" height="42.666666666666657"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R0C-MU-aA2">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
@@ -125,7 +125,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="s40-1K-N6O" userLabel="Phone Stack">
-                                <rect key="frame" x="20" y="182.66666666666666" width="374" height="42.666666666666657"/>
+                                <rect key="frame" x="20" y="226.66666666666666" width="374" height="42.666666666666657"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile phone" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="APG-s3-tNg">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
@@ -153,7 +153,7 @@
                                 </subviews>
                             </stackView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahm-HL-6oF">
-                                <rect key="frame" x="45" y="240.33333333333337" width="324" height="180"/>
+                                <rect key="frame" x="45" y="284.33333333333331" width="324" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="ntL-6k-ZLA"/>
                                 </constraints>
@@ -163,21 +163,21 @@
                                 </connections>
                             </pickerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8zH-Ha-WR9">
-                                <rect key="frame" x="45" y="316.66666666666669" width="324" height="1"/>
+                                <rect key="frame" x="45" y="360.66666666666669" width="324" height="1"/>
                                 <color key="backgroundColor" red="1" green="0.49019607840000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="gNV-5O-gFM"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="al8-t3-61v">
-                                <rect key="frame" x="45" y="342.66666666666669" width="324" height="1"/>
+                                <rect key="frame" x="45" y="386.66666666666669" width="324" height="1"/>
                                 <color key="backgroundColor" red="1" green="0.49019607840000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="NMP-b8-8YS"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N9O-9Q-wIC" customClass="TopView" customModule="Donor" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="5Cb-lJ-S7v"/>
