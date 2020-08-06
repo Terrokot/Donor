@@ -44,7 +44,6 @@ class AcceptRequestViewController: UIViewController {
         let region = MKCoordinateRegion(center: requestLocation, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         map.setRegion(region, animated: false)
         MapManager.addAnnotation(map: map, coordinate: requestLocation, title: requestEmail)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

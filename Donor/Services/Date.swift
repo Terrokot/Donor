@@ -8,19 +8,6 @@
 
 import Foundation
 
-fileprivate var dateFormatterLocale: Locale?
-
-public extension DateFormatter {
-    
-    static func setLocale(_ locale: Locale) { dateFormatterLocale = locale }
-    
-    convenience init(_ format: String) {
-        self.init()
-        self.dateFormat = format
-        if let locale = dateFormatterLocale { self.locale = locale }
-    }
-}
-
 public extension Date {
     
     //MARK: - Elements
@@ -41,6 +28,7 @@ public extension Date {
         dateComponents.day = current.day 
         return NSCalendar(calendarIdentifier: .gregorian)!.date(from: dateComponents)!
     }
+    
     static func todayPlus1() -> Date {
         let current = Date()
         var dateComponents = DateComponents()
@@ -49,8 +37,4 @@ public extension Date {
         dateComponents.day = current.day + 1
         return NSCalendar(calendarIdentifier: .gregorian)!.date(from: dateComponents)!
     }
-}
-
-public func -(left: Date, right: Date) -> Date {
-    return Date(timeIntervalSinceReferenceDate: left.timeIntervalSinceReferenceDate - right.timeIntervalSinceReferenceDate)
 }
