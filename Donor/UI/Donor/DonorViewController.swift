@@ -67,7 +67,6 @@ class DonorViewController: UIViewController {
     }
 }
 
-
 //MARK: DonorPickerViewControllerDelegate
 extension DonorViewController: DonorPickerViewControllerDelegate {
     func sendData(_ data: Donor) {
@@ -92,8 +91,6 @@ extension DonorViewController: DonorPickerViewControllerDelegate {
 }
 
 //MARK: Top View Delegate & Setup
-
-
 extension DonorViewController: TopViewDelegate {
     
     func leftAction() {
@@ -128,4 +125,3 @@ extension DonorViewController: TopViewDelegate {
         topView.rightButton.tintColor  = .white
     }
 }
-
