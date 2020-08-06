@@ -37,11 +37,7 @@ class AcceptRequestViewController: UIViewController {
         topViewSetup()
         topView.delegate = self
         
-        let lastRequestDate: Date = Defaults["lastRequestDate"] ?? Date.today()
-        if  Date.today() > lastRequestDate {
-            Defaults["lastRequestDate"] = Date.today()
-            Defaults["acceptAnyRequest"] = false
-        }
+        lastRequestDateCheck()
         
         dataBaseRef =  Database.database().reference().child("PatientsRequests")
         
@@ -114,6 +110,14 @@ class AcceptRequestViewController: UIViewController {
         if let url = URL(string: "tel://\(requestPhoneNumber)"),
             UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    
+    fileprivate func lastRequestDateCheck() {
+        let lastRequestDate: Date = Defaults["lastRequestDate"] ?? Date.today()
+        if  Date.today() > lastRequestDate {
+            Defaults["lastRequestDate"] = Date.today()
+            Defaults["acceptAnyRequest"] = false
         }
     }
 }
