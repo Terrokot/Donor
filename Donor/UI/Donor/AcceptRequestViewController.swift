@@ -37,20 +37,24 @@ class AcceptRequestViewController: UIViewController {
         topViewSetup()
         topView.delegate = self
         
+        let lastRequestDate: Date = Defaults["lastRequestDate"] ?? Date.today()
+        if  Date.today() > lastRequestDate {
+            Defaults["lastRequestDate"] = Date.today()
+            Defaults["acceptAnyRequest"] = false
+        }
+        
         dataBaseRef =  Database.database().reference().child("PatientsRequests")
         
         let region = MKCoordinateRegion(center: requestLocation, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         map.setRegion(region, animated: false)
         MapManager.addAnnotation(map: map, coordinate: requestLocation, title: requestEmail)
         
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let acceptAnyRequest: Bool = Defaults["acceptAnyRequest"] ?? false
         let acceptionStatus: Bool = Defaults[requestEmail] ?? false //for key email
         
-        if acceptAnyRequest, acceptionStatus {
+        if  acceptionStatus {
             requestAcceptButton.cancelMode()
         }
     }
@@ -59,20 +63,20 @@ class AcceptRequestViewController: UIViewController {
         //MARK: ACCEPT
         
         let acceptAnyRequest: Bool = Defaults["acceptAnyRequest"] ?? false
-        let acceptionStatus: Bool = Defaults[requestEmail] ?? false //for key email
+        let acceptionStatus:  Bool = Defaults[requestEmail] ?? false //for key email
         
         if !acceptAnyRequest, !acceptionStatus  {
             
             /* Update the Request
-            dataBaseRef.queryOrdered(byChild: "email").queryEqual(toValue: requestEmail).observe(.childAdded) { (snapshot) in
-                snapshot.ref.updateChildValues(["donorLat":self.donorLocation.latitude, "donorLon":self.donorLocation.longitude])
-                self.dataBaseRef.removeAllObservers()
-            }
-            */
+             dataBaseRef.queryOrdered(byChild: "email").queryEqual(toValue: requestEmail).observe(.childAdded) { (snapshot) in
+             snapshot.ref.updateChildValues(["donorLat":self.donorLocation.latitude, "donorLon":self.donorLocation.longitude])
+             self.dataBaseRef.removeAllObservers()
+             }
+             */
             Defaults[requestEmail] = true
             Defaults["acceptAnyRequest"] = true
             requestAcceptButton.cancelMode()
-
+            
             AlertManager.displayAlert(title: "You accept the request", message: "Don't forget. Patient is waiting you")
             
         } else {
@@ -81,7 +85,7 @@ class AcceptRequestViewController: UIViewController {
                 Defaults["acceptAnyRequest"] = false
                 requestAcceptButton.acceptMode()
             } else {
-                AlertManager.displayAlert(title: "error", message: "You can't accept more than 1 request")
+                AlertManager.displayAlert(title: "error", message: "You can't accept more than 1 request in a day. Try again tomorrow")
             }
         }
         // not shure that we need this button
