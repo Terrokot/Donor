@@ -28,7 +28,7 @@
 		9137F9F024C332D400EF5F04 /* Donor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9137F9EF24C332D400EF5F04 /* Donor.storyboard */; };
 		913F708724D0108000AE435D /* AuthSegmentedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913F708624D0108000AE435D /* AuthSegmentedController.swift */; };
 		9145D7BA24CC456C008FADF1 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145D7B924CC456C008FADF1 /* Defaults.swift */; };
-		9145D7BC24CC6CAD008FADF1 /* UIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145D7BB24CC6CAD008FADF1 /* UIService.swift */; };
+		9145D7BC24CC6CAD008FADF1 /* UITools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145D7BB24CC6CAD008FADF1 /* UITools.swift */; };
 		9145D7C024CC96DB008FADF1 /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145D7BF24CC96DB008FADF1 /* HeartButton.swift */; };
 		9145D7C424CCCE26008FADF1 /* DonorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9145D7C224CCCE26008FADF1 /* DonorCell.swift */; };
 		9145D7C524CCCE26008FADF1 /* DonorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9145D7C324CCCE26008FADF1 /* DonorCell.xib */; };
@@ -44,6 +44,7 @@
 		91A28FE324D1EC9E00B37346 /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A28FE224D1EC9E00B37346 /* AuthTextField.swift */; };
 		91A8C38824C883A7007CE71A /* DonorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A8C38724C883A7007CE71A /* DonorPickerViewController.swift */; };
 		91A8C38A24C8A515007CE71A /* TableFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A8C38924C8A515007CE71A /* TableFilter.swift */; };
+		91CA135124DC494A0056A718 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CA135024DC494A0056A718 /* Date.swift */; };
 		91DDA99D24C5F30700C44F01 /* DonorLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DDA99C24C5F30700C44F01 /* DonorLocationManagerDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,7 +73,7 @@
 		9137F9EF24C332D400EF5F04 /* Donor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Donor.storyboard; sourceTree = "<group>"; };
 		913F708624D0108000AE435D /* AuthSegmentedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSegmentedController.swift; sourceTree = "<group>"; };
 		9145D7B924CC456C008FADF1 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
-		9145D7BB24CC6CAD008FADF1 /* UIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIService.swift; sourceTree = "<group>"; };
+		9145D7BB24CC6CAD008FADF1 /* UITools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITools.swift; sourceTree = "<group>"; };
 		9145D7BF24CC96DB008FADF1 /* HeartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
 		9145D7C224CCCE26008FADF1 /* DonorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorCell.swift; sourceTree = "<group>"; };
 		9145D7C324CCCE26008FADF1 /* DonorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonorCell.xib; sourceTree = "<group>"; };
@@ -88,6 +89,7 @@
 		91A28FE224D1EC9E00B37346 /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
 		91A8C38724C883A7007CE71A /* DonorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorPickerViewController.swift; sourceTree = "<group>"; };
 		91A8C38924C8A515007CE71A /* TableFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableFilter.swift; sourceTree = "<group>"; };
+		91CA135024DC494A0056A718 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		91DDA99C24C5F30700C44F01 /* DonorLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonorLocationManagerDelegate.swift; sourceTree = "<group>"; };
 		DAC36DDCD5ECF414B05B06EC /* Pods-Donor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donor.release.xcconfig"; path = "Target Support Files/Pods-Donor/Pods-Donor.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -219,7 +221,8 @@
 				9145D7B924CC456C008FADF1 /* Defaults.swift */,
 				912150A424B0AC5200A80629 /* AlertManager.swift */,
 				9127A38024C71E6000E7B0FB /* MapManager.swift */,
-				9145D7BB24CC6CAD008FADF1 /* UIService.swift */,
+				9145D7BB24CC6CAD008FADF1 /* UITools.swift */,
+				91CA135024DC494A0056A718 /* Date.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91274C3224A371A9004C020D /* AuthViewController.swift in Sources */,
+				91CA135124DC494A0056A718 /* Date.swift in Sources */,
 				91494EF024D221C200F73D72 /* AuthButton.swift in Sources */,
 				9127A38124C71E6000E7B0FB /* MapManager.swift in Sources */,
 				9185165C24AE5EB700F6B838 /* PatientLocationServiceDelegate.swift in Sources */,
@@ -430,7 +434,7 @@
 				91266B2924B5ECB1004B6859 /* DonorViewController.swift in Sources */,
 				91008CEF24D6BBCA00CE0EE5 /* TopView.swift in Sources */,
 				91A28FE324D1EC9E00B37346 /* AuthTextField.swift in Sources */,
-				9145D7BC24CC6CAD008FADF1 /* UIService.swift in Sources */,
+				9145D7BC24CC6CAD008FADF1 /* UITools.swift in Sources */,
 				91266B2B24B606FB004B6859 /* AcceptRequestViewController.swift in Sources */,
 				911D2D0524C9A9970022871F /* Blood.swift in Sources */,
 				9145D7BA24CC456C008FADF1 /* Defaults.swift in Sources */,
