@@ -1,17 +1,17 @@
 # Donor
 
-##Tools & Technologies: 
+## Tools & Technologies: 
 
 Swift, Firebase(Auth, Database), Rswift, Git
 Arcitecure:  MVC
 
 
-##Role: 
+## Role: 
 
 Developer and designer 
 
 
-##Description
+## Description
 
 Application is designed to help people with rare blood types to find donors faster. It also gives donors an opportunity to know who are they actually helping.
 
