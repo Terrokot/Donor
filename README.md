@@ -9,7 +9,7 @@
 
 ## Role: 
 
-Developer and designer 
+* Developer and designer 
 
 
 ## Description
