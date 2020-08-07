@@ -2,7 +2,7 @@
 
 ## Tools & Technologies: 
 
-* Swift, Firebase(Auth, Database), Rswift, Git
+* Swift, MapKit, Firebase(Auth, Database), Rswift, Git
 
 * Arcitecure:  MVC
 
