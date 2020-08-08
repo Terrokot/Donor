@@ -71,7 +71,7 @@ extension DonorViewController: UITableViewDelegate {
         }
     }
 }
-//MARK: Table Setup
+//MARK: - Table Setup
 extension DonorViewController {
     
     func tableSetup() {

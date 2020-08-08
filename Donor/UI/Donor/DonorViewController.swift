@@ -67,7 +67,7 @@ class DonorViewController: UIViewController {
     }
 }
 
-//MARK: DonorPickerViewControllerDelegate
+//MARK: - DonorPickerViewControllerDelegate
 extension DonorViewController: DonorPickerViewControllerDelegate {
     func sendData(_ data: Donor) {
         donorData = data

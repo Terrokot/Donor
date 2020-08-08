@@ -107,6 +107,7 @@ class PatientViewController: UIViewController {
         patientData.phoneNumber =  Defaults["userPhoneNumber"]  ?? ""
     }
 }
+//MARK: - PickerViewControllerDelegate
 extension PatientViewController: PickerViewControllerDelegate {
     func sendData(_ data: Patient) {
         patientData = data
@@ -115,7 +116,7 @@ extension PatientViewController: PickerViewControllerDelegate {
     }
 }
 
-//MARK: Top View Delegate & Setup
+//MARK: - Top View Delegate & Setup
 
 extension PatientViewController: TopViewDelegate {
     

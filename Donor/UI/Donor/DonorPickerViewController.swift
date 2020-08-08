@@ -61,7 +61,7 @@ extension DonorPickerViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     }
 }
 
-//MARK: Top View Delegate & Setup
+//MARK: - Top View Delegate & Setup
 
 extension DonorPickerViewController: TopViewDelegate {
     func rightAction() {

@@ -121,7 +121,7 @@ class AcceptRequestViewController: UIViewController {
     }
 }
 
-//MARK: Top View Delegate & Setup
+//MARK: - Top View Delegate & Setup
 
 extension AcceptRequestViewController: TopViewDelegate {
     func leftAction() {

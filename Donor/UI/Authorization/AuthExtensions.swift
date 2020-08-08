@@ -55,7 +55,7 @@ extension AuthViewController {
     }
 }
 
-//MARK: UITextFieldDelegate
+//MARK: - UITextFieldDelegate
 extension AuthViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
