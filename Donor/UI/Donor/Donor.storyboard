@@ -175,6 +175,7 @@
                     <connections>
                         <outlet property="map" destination="UAP-sb-H1R" id="BSV-u8-26Z"/>
                         <outlet property="requestAcceptButton" destination="ERA-Vh-g6D" id="hbq-21-OP5"/>
+                        <outlet property="requestStatusLabel" destination="uGU-8E-6dc" id="LYh-iX-hPg"/>
                         <outlet property="topView" destination="Sab-s6-F8N" id="R4y-9K-NaS"/>
                     </connections>
                 </viewController>
@@ -259,7 +260,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Map" width="2080" height="2560"/>
-        <image name="Phone-1" width="2560" height="2560"/>
+        <image name="Map" width="71" height="71"/>
+        <image name="Phone-1" width="70" height="70"/>
     </resources>
 </document>

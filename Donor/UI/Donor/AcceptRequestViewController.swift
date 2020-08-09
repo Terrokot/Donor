@@ -18,6 +18,7 @@ class AcceptRequestViewController: UIViewController {
     
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var requestAcceptButton: HeartButton!
+    @IBOutlet weak var requestStatusLabel: UILabel!
     
     override var shouldAutorotate: Bool { return false }
     
@@ -51,6 +52,7 @@ class AcceptRequestViewController: UIViewController {
         
         if  acceptionStatus {
             requestAcceptButton.cancelMode()
+            requestStatusLabel.text = "Cancel Request"
         }
     }
     
@@ -70,6 +72,8 @@ class AcceptRequestViewController: UIViewController {
              */
             Defaults[requestEmail] = true
             Defaults["acceptAnyRequest"] = true
+            
+            requestStatusLabel.text = "Cancel Request"
             requestAcceptButton.cancelMode()
             
             AlertManager.displayAlert(title: "You accept the request", message: "Don't forget. Patient is waiting you")
