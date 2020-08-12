@@ -52,7 +52,7 @@ class AcceptRequestViewController: UIViewController {
         
         if  acceptionStatus {
             requestAcceptButton.cancelMode()
-            requestStatusLabel.text = "Cancel Request"
+            requestStatusLabel.text = "Cancel"
         }
     }
     
@@ -73,7 +73,7 @@ class AcceptRequestViewController: UIViewController {
             Defaults[requestEmail] = true
             Defaults["acceptAnyRequest"] = true
             
-            requestStatusLabel.text = "Cancel Request"
+            requestStatusLabel.text = "Cancel"
             requestAcceptButton.cancelMode()
             
             AlertManager.displayAlert(title: "You accept the request", message: "Don't forget. Patient is waiting you")
@@ -82,6 +82,7 @@ class AcceptRequestViewController: UIViewController {
             if acceptionStatus {
                 Defaults[requestEmail] = false
                 Defaults["acceptAnyRequest"] = false
+                requestStatusLabel.text = "Accept"
                 requestAcceptButton.acceptMode()
             } else {
                 AlertManager.displayAlert(title: "error", message: "You can't accept more than 1 request in a day. Try again tomorrow")
