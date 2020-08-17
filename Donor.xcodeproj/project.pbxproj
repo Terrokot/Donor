@@ -599,7 +599,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = egortereshonok.Donor;
 				PRODUCT_NAME = DonorMAP;
 				SWIFT_VERSION = 5.0;
@@ -620,7 +620,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = egortereshonok.Donor;
 				PRODUCT_NAME = DonorMAP;
 				SWIFT_VERSION = 5.0;
